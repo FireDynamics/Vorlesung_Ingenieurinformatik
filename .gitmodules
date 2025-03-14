@@ -1,0 +1,6 @@
+[submodule "w-python"]
+	path = books/w-python
+	url = https://github.com/bausteine-der-datenanalyse/w-python
+[submodule "w-python-numpy-grundlagen"]
+	path = books/w-python-numpy-grundlagen
+	url = https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen
