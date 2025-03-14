@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.556">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Vorlesung Ingenieurinformatik - 4&nbsp; Sammeltypen</title>
+<title>5&nbsp; Sammeltypen – Vorlesung Ingenieurinformatik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
 <link href="../../../books/w-python/skript/funktionen-definieren.html" rel="next">
-<link href="../../../books/w-python/skript/funktionen.html" rel="prev">
+<link href="../../../books/w-python/skript/flusskontrolle.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -112,13 +112,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/sammeltypen.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sammeltypen</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/sammeltypen.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -148,9 +148,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">w-python</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -181,35 +181,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flusskontrolle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/sammeltypen.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sammeltypen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/funktionen-definieren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Eigene Funktionen definieren</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigene Funktionen definieren</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/dateien-lesen-und-schreiben.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dateien lesen und schreiben</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dateien lesen und schreiben</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/module-und-pakete-importieren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Module und Pakete importieren</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Module und Pakete importieren</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">w-python-numpy-grundlagen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -223,67 +229,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_info.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_read_n_write.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/uebungen/uebung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Klausurfragen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Klausurfragen</span></span></a>
   </div>
 </li>
       </ul>
@@ -298,24 +304,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#listen" id="toc-listen" class="nav-link active" data-scroll-target="#listen"><span class="header-section-number">4.1</span> Listen</a></li>
-  <li><a href="#tupel" id="toc-tupel" class="nav-link" data-scroll-target="#tupel"><span class="header-section-number">4.2</span> Tupel</a></li>
-  <li><a href="#mengen" id="toc-mengen" class="nav-link" data-scroll-target="#mengen"><span class="header-section-number">4.3</span> Mengen</a></li>
-  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries"><span class="header-section-number">4.4</span> Dictionaries</a></li>
-  <li><a href="#übersicht-sammeltypen" id="toc-übersicht-sammeltypen" class="nav-link" data-scroll-target="#übersicht-sammeltypen"><span class="header-section-number">4.5</span> Übersicht Sammeltypen</a></li>
-  <li><a href="#löschen-das-schlüsselwort-del" id="toc-löschen-das-schlüsselwort-del" class="nav-link" data-scroll-target="#löschen-das-schlüsselwort-del"><span class="header-section-number">4.6</span> Löschen: das Schlüsselwort del</a></li>
-  <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen"><span class="header-section-number">4.7</span> Funktionen</a></li>
-  <li><a href="#operationen-verwendung-von-schleifen" id="toc-operationen-verwendung-von-schleifen" class="nav-link" data-scroll-target="#operationen-verwendung-von-schleifen"><span class="header-section-number">4.8</span> Operationen: Verwendung von Schleifen</a></li>
-  <li><a href="#aufgaben-sammeltypen" id="toc-aufgaben-sammeltypen" class="nav-link" data-scroll-target="#aufgaben-sammeltypen"><span class="header-section-number">4.9</span> Aufgaben Sammeltypen</a></li>
+  <li><a href="#listen" id="toc-listen" class="nav-link active" data-scroll-target="#listen"><span class="header-section-number">5.1</span> Listen</a></li>
+  <li><a href="#tupel" id="toc-tupel" class="nav-link" data-scroll-target="#tupel"><span class="header-section-number">5.2</span> Tupel</a></li>
+  <li><a href="#mengen" id="toc-mengen" class="nav-link" data-scroll-target="#mengen"><span class="header-section-number">5.3</span> Mengen</a></li>
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries"><span class="header-section-number">5.4</span> Dictionaries</a></li>
+  <li><a href="#übersicht-sammeltypen" id="toc-übersicht-sammeltypen" class="nav-link" data-scroll-target="#übersicht-sammeltypen"><span class="header-section-number">5.5</span> Übersicht Sammeltypen</a></li>
+  <li><a href="#löschen-das-schlüsselwort-del" id="toc-löschen-das-schlüsselwort-del" class="nav-link" data-scroll-target="#löschen-das-schlüsselwort-del"><span class="header-section-number">5.6</span> Löschen: das Schlüsselwort del</a></li>
+  <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen"><span class="header-section-number">5.7</span> Funktionen</a></li>
+  <li><a href="#operationen-verwendung-von-schleifen" id="toc-operationen-verwendung-von-schleifen" class="nav-link" data-scroll-target="#operationen-verwendung-von-schleifen"><span class="header-section-number">5.8</span> Operationen: Verwendung von Schleifen</a></li>
+  <li><a href="#aufgaben-sammeltypen" id="toc-aufgaben-sammeltypen" class="nav-link" data-scroll-target="#aufgaben-sammeltypen"><span class="header-section-number">5.9</span> Aufgaben Sammeltypen</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/sammeltypen.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sammeltypen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/sammeltypen.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sammeltypen</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></h1>
 </div>
 
 
@@ -340,8 +346,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://de.wikipedia.org/wiki/Zuordnungstabelle_%28Datenstruktur%29">assoziative Arrays</a> oder Dictionaries sind Zuordnungstabellen, d.&nbsp;h. sie bestehen aus Schlüssel-Wert-Paaren.</p></li>
 </ul>
 <p>In diesem Kapitel werden die vier Sammeltypen zunächst kurz vorgestellt. Anschließend wird die Arbeitsweise insbesondere mit Listen erläutert.</p>
-<section id="listen" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="listen"><span class="header-section-number">4.1</span> Listen</h2>
+<section id="listen" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="listen"><span class="header-section-number">5.1</span> Listen</h2>
 <p>Wie alle Typen in Python werden Listen durch Zuweisung erstellt. Bei der Definition einer Liste werden die Elemente durch eckige Klammern <code>[]</code> eingeklammert und mit Kommata <code>,</code> getrennt. Listen können mit dem <code>+</code>-Operator verkettet werden. <code>*</code> verkettet eine Liste n-mal.</p>
 <div id="ee9d1b50" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>text_variable <span class="op">=</span> <span class="st">'abc'</span></span>
@@ -371,11 +377,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[]</code></pre>
 </div>
 </div>
-<section id="slicing-der-zugriffsoperator" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="slicing-der-zugriffsoperator"><span class="header-section-number">4.1.1</span> Slicing: der Zugriffsoperator []</h3>
+<section id="slicing-der-zugriffsoperator" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="slicing-der-zugriffsoperator"><span class="header-section-number">5.1.1</span> Slicing: der Zugriffsoperator []</h3>
 <p>Der Zugriff auf einzelne oder mehrere Elemente einer Liste (und andere Sammeltypen) erfolgt über den Zugriffsoperator []. Ein Ausschnitt aus einem Objekt wird Slice genannt, der Operator heißt deshalb auch Slice Operator.</p>
-<section id="zugriff-auf-einzelne-elemente" class="level4" data-number="4.1.1.1">
-<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="zugriff-auf-einzelne-elemente"><span class="header-section-number">4.1.1.1</span> Zugriff auf einzelne Elemente</h4>
+<section id="zugriff-auf-einzelne-elemente" class="level4" data-number="5.1.1.1">
+<h4 data-number="5.1.1.1" class="anchored" data-anchor-id="zugriff-auf-einzelne-elemente"><span class="header-section-number">5.1.1.1</span> Zugriff auf einzelne Elemente</h4>
 <p>Elemente werden über ihren Index, bei 0 beginnend, angesprochen.</p>
 <div id="bd812e9d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste1)</span>
@@ -408,8 +414,8 @@ abc xy</code></pre>
 </div>
 </div>
 </section>
-<section id="zugriff-auf-mehrere-elemente" class="level4" data-number="4.1.1.2">
-<h4 data-number="4.1.1.2" class="anchored" data-anchor-id="zugriff-auf-mehrere-elemente"><span class="header-section-number">4.1.1.2</span> Zugriff auf mehrere Elemente</h4>
+<section id="zugriff-auf-mehrere-elemente" class="level4" data-number="5.1.1.2">
+<h4 data-number="5.1.1.2" class="anchored" data-anchor-id="zugriff-auf-mehrere-elemente"><span class="header-section-number">5.1.1.2</span> Zugriff auf mehrere Elemente</h4>
 <p>Indexbereiche können in der Form <code>[start:stop:step]</code> angesprochen werden. <code>start</code> ist das erste adressierte Element, <code>stop</code> <em>das erste nicht mehr adressierte Element</em> und <code>step</code> die Schrittweite.</p>
 <div class="border">
 <table class="caption-top table">
@@ -490,8 +496,8 @@ abc xy</code></pre>
 <p>(Beispiele von Greg Hewgill unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> verfügbar auf <a href="https://stackoverflow.com/a/509295">stackoverflow</a>. 2009)</p>
 </div>
 </section>
-<section id="zeichenfolgen" class="level4" data-number="4.1.1.3">
-<h4 data-number="4.1.1.3" class="anchored" data-anchor-id="zeichenfolgen"><span class="header-section-number">4.1.1.3</span> Zeichenfolgen</h4>
+<section id="zeichenfolgen" class="level4" data-number="5.1.1.3">
+<h4 data-number="5.1.1.3" class="anchored" data-anchor-id="zeichenfolgen"><span class="header-section-number">5.1.1.3</span> Zeichenfolgen</h4>
 <p>Auch aus Zeichenfolgen können mit dem Slice Operator Ausschnitte ausgewählt werden.</p>
 <div id="084f14af" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Ich bin ein string'</span>[::<span class="dv">2</span>])</span>
@@ -505,11 +511,11 @@ cba</code></pre>
 </div>
 </section>
 </section>
-<section id="listenmethoden" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="listenmethoden"><span class="header-section-number">4.1.2</span> Listenmethoden</h3>
+<section id="listenmethoden" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="listenmethoden"><span class="header-section-number">5.1.2</span> Listenmethoden</h3>
 <p>Für den Listentyp sind verschiedene Methoden definiert.</p>
-<section id="elemente-bestimmen" class="level4" data-number="4.1.2.1">
-<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="elemente-bestimmen"><span class="header-section-number">4.1.2.1</span> Elemente bestimmen</h4>
+<section id="elemente-bestimmen" class="level4" data-number="5.1.2.1">
+<h4 data-number="5.1.2.1" class="anchored" data-anchor-id="elemente-bestimmen"><span class="header-section-number">5.1.2.1</span> Elemente bestimmen</h4>
 <ul>
 <li><p><code>list.index(x, start, stop)</code> gibt die Indexposition des ersten Elements x aus. Die optionalen Argumente <code>start</code> und <code>stop</code> erlauben es, den Suchbereich einzuschränken.</p></li>
 <li><p><code>list.count(x)</code> gibt die Häufigkeit von x in der Liste aus.</p></li>
@@ -531,8 +537,8 @@ True wird als 1 gezählt: 1 2</code></pre>
 </div>
 </div>
 </section>
-<section id="elemente-einfügen" class="level4" data-number="4.1.2.2">
-<h4 data-number="4.1.2.2" class="anchored" data-anchor-id="elemente-einfügen"><span class="header-section-number">4.1.2.2</span> Elemente einfügen</h4>
+<section id="elemente-einfügen" class="level4" data-number="5.1.2.2">
+<h4 data-number="5.1.2.2" class="anchored" data-anchor-id="elemente-einfügen"><span class="header-section-number">5.1.2.2</span> Elemente einfügen</h4>
 <ul>
 <li><p><code>list.append(x)</code> hängt ein einzelnes Element an das Ende der Liste an.</p></li>
 <li><p><code>list.extend(sammeltyp)</code> hängt alle mit <code>sammeltyp</code> übergebenen Elemente an das Ende der Liste an. Der Sammeltyp kann eine Liste, ein Tupel, eine Menge oder ein Dictionary sein.</p></li>
@@ -553,8 +559,8 @@ True wird als 1 gezählt: 1 2</code></pre>
 </div>
 </div>
 </section>
-<section id="elemente-entfernen" class="level4" data-number="4.1.2.3">
-<h4 data-number="4.1.2.3" class="anchored" data-anchor-id="elemente-entfernen"><span class="header-section-number">4.1.2.3</span> Elemente entfernen</h4>
+<section id="elemente-entfernen" class="level4" data-number="5.1.2.3">
+<h4 data-number="5.1.2.3" class="anchored" data-anchor-id="elemente-entfernen"><span class="header-section-number">5.1.2.3</span> Elemente entfernen</h4>
 <ul>
 <li><p><code>list.remove(x)</code> entfernt <em>das erste</em> Element x in der Liste und gibt einen ValueError zurück, wenn x nicht in der Liste enthalten ist.</p></li>
 <li><p><code>liste.pop(i)</code> entfernt das Element an der Indexposition i. Wird kein Index angegeben, wird das letzte Element entfernt. Die Methode <code>liste.pop(i)</code> gibt die entfernten Elemente zurück.</p></li>
@@ -573,8 +579,8 @@ True wird als 1 gezählt: 1 2</code></pre>
 </div>
 </div>
 </section>
-<section id="listen-und-listenelemente-kopieren" class="level4" data-number="4.1.2.4">
-<h4 data-number="4.1.2.4" class="anchored" data-anchor-id="listen-und-listenelemente-kopieren"><span class="header-section-number">4.1.2.4</span> Listen und Listenelemente kopieren</h4>
+<section id="listen-und-listenelemente-kopieren" class="level4" data-number="5.1.2.4">
+<h4 data-number="5.1.2.4" class="anchored" data-anchor-id="listen-und-listenelemente-kopieren"><span class="header-section-number">5.1.2.4</span> Listen und Listenelemente kopieren</h4>
 <p>In Python enthalten Listen Daten nicht direkt, sondern bestehen aus Zeigern auf die Speicherorte der enthaltenen Elemente. Wird eine Liste durch Zuweisung einer anderen Liste angelegt, dann werden nicht die Elemente der Liste kopiert, sondern beide Listen greifen dann auf den selben Speicherort zu.</p>
 <div id="e442a1d4" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kopieren durch Zuweisung</span></span>
@@ -676,8 +682,8 @@ True</code></pre>
 </div>
 </section>
 </section>
-<section id="aufgaben-listen" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="aufgaben-listen"><span class="header-section-number">4.1.3</span> Aufgaben Listen</h3>
+<section id="aufgaben-listen" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="aufgaben-listen"><span class="header-section-number">5.1.3</span> Aufgaben Listen</h3>
 <ol type="1">
 <li><p>Erstellen Sie eine Liste ‘wochentage’, die die sieben Tage der Woche enthält. Verwenden Sie den Slice-Operator, um eine neue Liste ‘wochenende’ mit den Tagen des Wochenendes zu erstellen. Entfernen Sie die Tage des Wochenendes aus der Liste ‘wochentage’.</p></li>
 <li><p>4-Tage-Woche: Verwenden Sie Listenmethoden, um den Freitag aus der Liste ‘wochentage’ zu entfernen und der Liste ‘wochenende’ vor dem Samstag hinzuzufügen.</p></li>
@@ -691,7 +697,7 @@ True</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;4.1: Musterlösung
+Tip&nbsp;5.1: Musterlösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -703,8 +709,8 @@ Tip&nbsp;4.1: Musterlösung
 </div>
 </section>
 </section>
-<section id="tupel" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="tupel"><span class="header-section-number">4.2</span> Tupel</h2>
+<section id="tupel" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="tupel"><span class="header-section-number">5.2</span> Tupel</h2>
 <p>Tupel sind Listen sehr ähnlich, jedoch sind Tupel unveränderbare Datenobjekte. Das heißt, die Elemente eines angelegten Tupels können weder geändert, noch entfernt werden. Auch können keine neuen Elemente zum Tupel hinzugefügt werden.</p>
 <p>Tupel werdem mit runden Klammern <code>()</code> erzeugt, die Elemente werden mit einem Komma <code>,</code> getrennt. Ein Tupel mit einem Wert wird mit einem Komma in der Form <code>(wert, )</code> angelegt. Der Zugriff auf die Elemente eines Tupels ist mit dem Slice-Operator <code>[start:stop:step]</code> möglich. Tupel können mit den Operatoren <code>+</code> und <code>*</code> verkettet werden.</p>
 <div id="72993f24" class="cell" data-execution_count="15">
@@ -726,8 +732,8 @@ abc
 (1, 1, 1)</code></pre>
 </div>
 </div>
-<section id="tupel-kopieren" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="tupel-kopieren"><span class="header-section-number">4.2.1</span> Tupel kopieren</h3>
+<section id="tupel-kopieren" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="tupel-kopieren"><span class="header-section-number">5.2.1</span> Tupel kopieren</h3>
 <p>Tupel verhalten sich beim Kopieren gegensätzlich zu Listen. Für Tupel ist die Methode <code>.copy()</code> nicht definiert. Dagegen bewirkt die Kopie mittels dem Zugriffsoperator <code>[:]</code> zwar, dass zwei Tupel auf den selben Speicherplatz zugreifen. Bei der Neuzuweisung eines Tupels legt Python, wie für jedes Objekt, ein neues Objekt im Speicher an.</p>
 <div id="58e1bdd8" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kopieren durch Zuweisung</span></span>
@@ -756,8 +762,8 @@ True
 </div>
 </section>
 </section>
-<section id="mengen" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="mengen"><span class="header-section-number">4.3</span> Mengen</h2>
+<section id="mengen" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="mengen"><span class="header-section-number">5.3</span> Mengen</h2>
 <p>In Python können Mengen mit der <code>set()</code> Funktion z. B. aus einer Liste oder aus einem Tupel erzeugt oder durch geschweiften Klammern <code>{}</code> erstellt werden (eine leere Menge kann nur mit <code>set()</code> erzeugt werden, da <code>{}</code> ein leeres Dictionary anlegt). Mengen sind ungeordnete Sammelung, dementsprechend haben die Elemente keine Reihenfolge.</p>
 <div id="6b7b319b" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="st">'a'</span>, <span class="dv">123</span>, <span class="dv">1000</span>, (<span class="st">'tupel'</span>, <span class="dv">5</span>)]</span>
@@ -798,8 +804,8 @@ Menge a &amp; b: {'t'}
 Menge a ^ b: {'u', 'P', 'o', 's', 'e', 'r', 'h', 'y', ' ', 'p', 'i', 'n'}</code></pre>
 </div>
 </div>
-<section id="mengen-kopieren" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="mengen-kopieren"><span class="header-section-number">4.3.1</span> Mengen kopieren</h3>
+<section id="mengen-kopieren" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="mengen-kopieren"><span class="header-section-number">5.3.1</span> Mengen kopieren</h3>
 <p>Mengen verhalten sich wie Tupel mit dem Unterschied, dass die Methode <code>.copy()</code> für Mengen definiert ist. Allerdings kann der Zugriffsoperator <code>[]</code> nicht auf Mengen angewendet werden.</p>
 <div id="ad7ff1f9" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kopieren durch Zuweisung</span></span>
@@ -830,8 +836,8 @@ Die in set2 gespeicherten Werte sind unverändert:
 </div>
 </section>
 </section>
-<section id="dictionaries" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="dictionaries"><span class="header-section-number">4.4</span> Dictionaries</h2>
+<section id="dictionaries" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="dictionaries"><span class="header-section-number">5.4</span> Dictionaries</h2>
 <p>Dictionaries bestehen aus Schlüssel-Wert-Paaren. Die Schlüssel können Zahlen oder Zeichenketten sein, jeder Schlüssel darf nur einmal vorkommen. Dictionaries werden mit geschweiften Klammern <code>{}</code> definiert. Die Schlüssel und deren zugehörigen Werte werden mit einem Doppelpunkt <code>:</code> getrennt. Der Zugriff auf die Werte erfolgt mit dem Zugriffsoperator <code>[]</code>, welcher den oder die Schlüssel beinhaltet. Ein Zugriff über die Indexposition der Schlüssel ist nicht möglich, da Zahlen als Schlüssel interpretiert werden.</p>
 <div id="fca9ceae" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>dictionary1 <span class="op">=</span> {<span class="dv">1</span>: <span class="st">'abc'</span>, <span class="st">'b'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">'c'</span>: (<span class="st">'tupel'</span>, <span class="dv">5</span>, <span class="dv">6</span>)}</span>
@@ -856,8 +862,8 @@ Werte des Schlüssels 'b': [1, 2, 3]</code></pre>
 Werte: dict_values(['abc', [1, 2, 3], ('tupel', 5, 6)])</code></pre>
 </div>
 </div>
-<section id="dictionaries-kopieren" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="dictionaries-kopieren"><span class="header-section-number">4.4.1</span> Dictionaries kopieren</h3>
+<section id="dictionaries-kopieren" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="dictionaries-kopieren"><span class="header-section-number">5.4.1</span> Dictionaries kopieren</h3>
 <p>Dictionaries verhalten sich beim Kopieren wie Listen, das heißt beim Kopieren durch Zuweisung teilen sich Dictionaries den Speicherbereich.</p>
 <div id="e9508728" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kopieren durch Zuweisung</span></span>
@@ -890,8 +896,8 @@ dictionary1 bleibt durch die Zuweisung in dictionary2 unverändert:
 </div>
 </section>
 </section>
-<section id="übersicht-sammeltypen" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="übersicht-sammeltypen"><span class="header-section-number">4.5</span> Übersicht Sammeltypen</h2>
+<section id="übersicht-sammeltypen" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="übersicht-sammeltypen"><span class="header-section-number">5.5</span> Übersicht Sammeltypen</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 57%">
@@ -942,8 +948,8 @@ dictionary1 bleibt durch die Zuweisung in dictionary2 unverändert:
 </table>
 <p>&nbsp;</p>
 </section>
-<section id="löschen-das-schlüsselwort-del" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="löschen-das-schlüsselwort-del"><span class="header-section-number">4.6</span> Löschen: das Schlüsselwort del</h2>
+<section id="löschen-das-schlüsselwort-del" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="löschen-das-schlüsselwort-del"><span class="header-section-number">5.6</span> Löschen: das Schlüsselwort del</h2>
 <p>Um Sammeltypen, Elemente oder Slices zu löschen kann das Schlüsselwort <code>del</code> verwendet werden.</p>
 <div id="5bf60524" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Löschen einer Liste</span></span>
@@ -966,8 +972,8 @@ Dictionary nach dem Löschen {'b': [1, 2, 3], 'c': ('tupel', 5, 6)}</code></pre>
 </div>
 </div>
 </section>
-<section id="funktionen" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="funktionen"><span class="header-section-number">4.7</span> Funktionen</h2>
+<section id="funktionen" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="funktionen"><span class="header-section-number">5.7</span> Funktionen</h2>
 <p>Die Sammeltypen können ineinander umgewandelt werden.</p>
 <div id="e3d7c773" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>dictionary <span class="op">=</span> {<span class="dv">1</span>: <span class="st">'Kater'</span>, <span class="dv">2</span>: <span class="st">'Fähre'</span>, <span class="dv">3</span>: <span class="st">'Ricke'</span>}</span>
@@ -986,13 +992,13 @@ Dictionary nach dem Löschen {'b': [1, 2, 3], 'c': ('tupel', 5, 6)}</code></pre>
 <li><code>min()</code>, <code>max()</code>, <code>sum()</code> gibt das Minimum, Maximum bzw. die Summe eines Sammeltyps zurück (bei Dictionaries wird die Anzahl der Schlüssel gezählt).</li>
 </ul>
 </section>
-<section id="operationen-verwendung-von-schleifen" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="operationen-verwendung-von-schleifen"><span class="header-section-number">4.8</span> Operationen: Verwendung von Schleifen</h2>
+<section id="operationen-verwendung-von-schleifen" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="operationen-verwendung-von-schleifen"><span class="header-section-number">5.8</span> Operationen: Verwendung von Schleifen</h2>
 <p>Um arithmetische und logische Operatoren auf die in einem Sammeltyp gespeicherten Elemente anzuwenden, wird eine for-Schleife verwendet. Im folgenden Beispiel wird eine Liste ‘zahlen’ durchlaufen, die darin gespeicherten Zahlen quadriert und das jeweilige Ergebnis an die Liste ‘quadratzahlen’ angehängt. Auch wird geprüft, ob die quadrierten Zahlen ganzzahlig durch 3 teilbar sind und das Prüfergebnis in einer Liste ‘modulo_3’ gespeichert.</p>
-<div id="lst-quadratzahlen" class="listing quarto-float">
+<div id="lst-quadratzahlen" class="listing quarto-float quarto-figure quarto-figure-left anchored">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-quadratzahlen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;4.1
+Listing&nbsp;5.1
 </figcaption>
 <div aria-describedby="lst-quadratzahlen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div id="abcd5e33" class="cell" data-execution_count="25">
@@ -1017,10 +1023,10 @@ Listing&nbsp;4.1
 </figure>
 </div>
 </section>
-<section id="aufgaben-sammeltypen" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="aufgaben-sammeltypen"><span class="header-section-number">4.9</span> Aufgaben Sammeltypen</h2>
+<section id="aufgaben-sammeltypen" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="aufgaben-sammeltypen"><span class="header-section-number">5.9</span> Aufgaben Sammeltypen</h2>
 <ol type="1">
-<li><p>Modifizieren Sie den Programmcode in <a href="#lst-quadratzahlen" class="quarto-xref">Listing&nbsp;<span>4.1</span></a> so, dass nur die Quadratzahlen gespeichert werden, die ganzzahlig durch 3 teilbar sind.</p></li>
+<li><p>Modifizieren Sie den Programmcode in <a href="#lst-quadratzahlen" class="quarto-xref">Listing&nbsp;<span>5.1</span></a> so, dass nur die Quadratzahlen gespeichert werden, die ganzzahlig durch 3 teilbar sind.</p></li>
 <li><p>Umrechnung von Geschwindigkeiten Erstellen Sie ein Skript, welches eine Umrechnungstabelle für Geschwindigkeiten erzeugt. Folgende Randbedingungen sollen beachtet werden:</p></li>
 </ol>
 <ul>
@@ -1038,7 +1044,7 @@ Listing&nbsp;4.1
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;4.2: Musterlösung Aufgaben Sammeltypen
+Tip&nbsp;5.2: Musterlösung Aufgaben Sammeltypen
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1190,18 +1196,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1233,7 +1228,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1241,7 +1258,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1566,13 +1583,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../books/w-python/skript/funktionen.html" class="pagination-link" aria-label="Funktionen: Grundlagen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funktionen: Grundlagen</span></span>
+      <a href="../../../books/w-python/skript/flusskontrolle.html" class="pagination-link" aria-label="Flusskontrolle">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Flusskontrolle</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../../books/w-python/skript/funktionen-definieren.html" class="pagination-link" aria-label="Eigene Funktionen definieren">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Eigene Funktionen definieren</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigene Funktionen definieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
