@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "gitsubmodule"
-    directory: "/books/" # Root directory where your `.gitmodules` file is located
+    directory: "/" # Root directory where your `.gitmodules` file is located
     schedule:
       interval: "daily"
     commit-message:
