@@ -42,7 +42,7 @@ SUBMODULES_ORDER=(
 for ITEM in "${SUBMODULES_ORDER[@]}"; do
   SUBMODULE="$ITEM"  # Define SUBMODULE from ITEM
   PART_NAME=$(basename "$SUBMODULE")  # Dynamically use folder name as part title
-  YAML_PATH="${SUBMODULE}/_quarto-vorlesung.yml"
+  YAML_PATH="${SUBMODULE}/_quarto-full.yml"
 
   if [[ -f "$YAML_PATH" ]]; then
     CHAPTERS=$(yq eval '.book.chapters[]' "$YAML_PATH")
