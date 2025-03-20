@@ -22,6 +22,39 @@ book:
     logo: "https://github.com/bausteine-der-datenanalyse/shared-media/blob/main/logo/logo_with_text.svg"
   chapters:
     - index.qmd
+    - part: "w-python"
+      chapters:
+        - books/w-python/index.qmd
+        - books/w-python/skript/einleitung.qmd
+        - books/w-python/skript/datentypen.qmd
+        - books/w-python/skript/funktionen.qmd
+        - books/w-python/skript/flusskontrolle.qmd
+        - books/w-python/skript/sammeltypen.qmd
+        - books/w-python/skript/funktionen-definieren.qmd
+        - books/w-python/skript/dateien-lesen-und-schreiben.qmd
+        - books/w-python/skript/module-und-pakete-importieren.qmd
+    - part: "w-python-numpy-grundlagen"
+      chapters:
+        - books/w-python-numpy-grundlagen/index.qmd
+        - books/w-python-numpy-grundlagen/skript/introduction.qmd
+        - books/w-python-numpy-grundlagen/skript/array_creation.qmd
+        - books/w-python-numpy-grundlagen/skript/array_info.qmd
+        - books/w-python-numpy-grundlagen/skript/array_calculation.qmd
+        - books/w-python-numpy-grundlagen/skript/array_slicing.qmd
+        - books/w-python-numpy-grundlagen/skript/array_manipulation.qmd
+        - books/w-python-numpy-grundlagen/skript/array_read_n_write.qmd
+        - books/w-python-numpy-grundlagen/skript/array_images.qmd
+        - books/w-python-numpy-grundlagen/skript/assessment.qmd
+        - books/w-python-numpy-grundlagen/uebungen/uebung.qmd
+        - books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.qmd
+    - part: "w-python-matplotlib"
+      chapters:
+        - books/w-python-matplotlib/index.qmd
+        - books/w-python-matplotlib/skript/introduction.qmd
+        - books/w-python-matplotlib/skript/basic_plot_types.qmd
+        - books/w-python-matplotlib/skript/adapting_plots.qmd
+        - books/w-python-matplotlib/skript/advanced_techniques.qmd
+        - books/w-python-matplotlib/skript/scientific_plotting.qmd
 format:
   html:
     theme: flatly
