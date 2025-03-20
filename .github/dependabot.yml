@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "submodules"
+    directory: "/books/" # Root directory where your `.gitmodules` file is located
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
