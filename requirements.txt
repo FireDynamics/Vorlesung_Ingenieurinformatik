@@ -1,4 +1,5 @@
 
+fdsreader
 jupyter
 matplotlib
 numpy
