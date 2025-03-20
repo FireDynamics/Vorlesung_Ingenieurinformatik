@@ -39,6 +39,14 @@ book:
         - books/w-python-numpy-grundlagen/skript/assessment.qmd
         - books/w-python-numpy-grundlagen/uebungen/uebung.qmd
         - books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.qmd
+    - part: "w-python-matplotlib"
+      chapters:
+        - books/w-python-matplotlib/index.qmd
+        - books/w-python-matplotlib/skript/introduction.qmd
+        - books/w-python-matplotlib/skript/basic_plot_types.qmd
+        - books/w-python-matplotlib/skript/adapting_plots.qmd
+        - books/w-python-matplotlib/skript/advanced_techniques.qmd
+        - books/w-python-matplotlib/skript/scientific_plotting.qmd
 format:
   html:
     theme: flatly
