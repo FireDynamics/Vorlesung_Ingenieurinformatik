@@ -19,6 +19,14 @@ book:
     - Maik Poetzsch
     - Sebastian Seipel
   date: today
+  language: de-DE
+  downloads: [pdf]
+  repo-url: "https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik"
+  repo-actions: [source]
+  favicon: "https://github.com/bausteine-der-datenanalyse/shared-media/blob/main/logo/favicon.svg"
+  sidebar:
+    title: "Vorlesung Ingenieurinformatik"
+    logo: "https://github.com/bausteine-der-datenanalyse/shared-media/blob/main/logo/logo_with_text.svg"
   chapters:
     - index.qmd
 EOF
@@ -34,7 +42,7 @@ SUBMODULES_ORDER=(
 for ITEM in "${SUBMODULES_ORDER[@]}"; do
   SUBMODULE="$ITEM"  # Define SUBMODULE from ITEM
   PART_NAME=$(basename "$SUBMODULE")  # Dynamically use folder name as part title
-  YAML_PATH="${SUBMODULE}/_quarto-full.yml"
+  YAML_PATH="${SUBMODULE}/_quarto-vorlesung.yml"
 
   if [[ -f "$YAML_PATH" ]]; then
     CHAPTERS=$(yq eval '.book.chapters[]' "$YAML_PATH")
