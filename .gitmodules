@@ -4,3 +4,6 @@
 [submodule "w-python-numpy-grundlagen"]
 	path = books/w-python-numpy-grundlagen
 	url = https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen
+[submodule "books/w-python-matplotlib"]
+	path = books/w-python-matplotlib
+	url = https://github.com/bausteine-der-datenanalyse/w-python-matplotlib

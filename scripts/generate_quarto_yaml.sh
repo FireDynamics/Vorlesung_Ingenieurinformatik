@@ -27,6 +27,7 @@ EOF
 SUBMODULES_ORDER=(
   "books/w-python"
   "books/w-python-numpy-grundlagen"
+  "books/w-python-matplotlib"
 )
 
 # Step 2: Append parts and chapters under one unified 'book' section
