@@ -3,3 +3,5 @@
 This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+<img src="https://raw.githubusercontent.com/bausteine-der-datenanalyse/shared-media/main/logo/favicon.svg" width="200px" alt="Logo"/>
