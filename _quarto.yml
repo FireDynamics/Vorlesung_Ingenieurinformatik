@@ -16,10 +16,10 @@ book:
   downloads: [pdf]
   repo-url: "https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik"
   repo-actions: [source]
-  favicon: "https://github.com/bausteine-der-datenanalyse/shared-media/blob/main/logo/favicon.svg"
+  favicon: books/shared-media/logo/favicon.svg
   sidebar:
     title: "Vorlesung Ingenieurinformatik"
-    logo: "https://github.com/bausteine-der-datenanalyse/shared-media/blob/main/logo/logo_with_text.svg"
+    logo: books/shared-media/logo/logo_with_text.svg
   chapters:
     - index.qmd
     - part: "w-python"

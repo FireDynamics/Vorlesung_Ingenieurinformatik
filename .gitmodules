@@ -7,3 +7,6 @@
 [submodule "books/w-python-matplotlib"]
 	path = books/w-python-matplotlib
 	url = https://github.com/bausteine-der-datenanalyse/w-python-matplotlib
+[submodule "books/shared-media"]
+	path = books/shared-media
+	url = https://github.com/bausteine-der-datenanalyse/shared-media
