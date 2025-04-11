@@ -14,18 +14,7 @@
     "href": "books/w-python/index.html",
     "title": "Werkzeugbaustein Python",
     "section": "",
-    "text": "Voraussetzungen\nKeine Voraussetzungen, hilfreich ist der w-Pseudocode\nQuerverweis auf:",
-    "crumbs": [
-      "w-python",
-      "Werkzeugbaustein Python"
-    ]
-  },
-  {
-    "objectID": "books/w-python/index.html#voraussetzungen",
-    "href": "books/w-python/index.html#voraussetzungen",
-    "title": "Werkzeugbaustein Python",
-    "section": "",
-    "text": "w-NumPy\nw-Pandas",
+    "text": "Voraussetzungen\nKeine Voraussetzungen",
     "crumbs": [
       "w-python",
       "Werkzeugbaustein Python"
@@ -89,133 +78,89 @@
   {
     "objectID": "books/w-python/skript/datentypen.html",
     "href": "books/w-python/skript/datentypen.html",
-    "title": "2  Datentypen",
+    "title": "2  Einführung: Datentypen verstehen",
     "section": "",
-    "text": "2.1 Zahlen\nZu den Zahlen gehören Ganzzahlen, boolsche Werte (Wahrheitswerte), Gleitkommazahlen sowie komplexe Zahlen (die hier nicht näher vorgestellt werden).",
+    "text": "2.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - die wichtigsten Datentypen unterscheiden, - mit Zahlen und Texten rechnen bzw. arbeiten, - einfache Berechnungen und Ausgaben erstellen.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#zahlen",
-    "href": "books/w-python/skript/datentypen.html#zahlen",
-    "title": "2  Datentypen",
-    "section": "",
-    "text": "2.1.1 Ganzzahlen\nGanzzahlen werden standardmäßig im Dezimalsystem eingegeben und können positiv oder negativ sein.\n\nprint(12, -8)\n\n12 -8\n\n\nDarüber hinaus können Ganzzahlen auch in anderen Basen angegeben werden:\n\nDualsystem: Ziffern 0 und 1 mit dem Präfix 0b\n\n\nprint(0b1000, \"plus\", 0b0000, \"plus\", 0b0010, \\\n      \"plus\", 0b0001, \"ist\", 0b1011)\n\n8 plus 0 plus 2 plus 1 ist 11\n\n\n\nOktalsystem: Ziffern 0 bis 7 mit dem Präfix 0o\n\n\nprint(0o7000, \"plus\", 0o0700, \"plus\", 0o0020, \\\n      \"plus\", 0o0000, \"ist\", 0o7720)\n\n3584 plus 448 plus 16 plus 0 ist 4048\n\n\n\nHexadezimalsystem: Ziffern 0 bis F mit dem Präfix 0x\n\n\nprint(0xF000, \"plus\", 0x0200, \"plus\", 0x00A0, \\\n      \"plus\", 0x0001, \"ist\", 0xF2A1)\n\n61440 plus 512 plus 160 plus 1 ist 62113\n\n\n\n\n2.1.2 Gleitkommazahlen\nGleitkommazahlen werden entweder mit dem Dezimaltrennzeichen . oder in Exponentialschreibweise angegeben. Gleitkommazahlen haben den Typ float.\n\nprint(120.6, 1206e-1, 12060e-2, \"\\n\")\n\nprint(\"Beim Lottogewinn in Exponentialschreibeweise zählt das Vorzeichen.\")\nprint(1e-3, \"oder\", 1e+3)\n\n120.6 120.6 120.6 \n\nBeim Lottogewinn in Exponentialschreibeweise zählt das Vorzeichen.\n0.001 oder 1000.0\n\n\nDa Computer im Binärsystem arbeiten, können Dezimalzahlen nicht exakt gespeichert werden. Beispielsweise ist die Division von 1 durch 10 dezimal gleich 0.1. Binär ist 12 durch 10102 aber ein periodischer Bruch: \\[ \\frac{1_2}{1010_2} ~ {=} ~ 0,000\\overline{1100}_2 \\]\nDezimalzahlen müssen deshalb als Bruch zweier Ganzzahlen approximiert werden (Der Binärbruch, der 0.1 annähert, ist in Dezimalschreibweise 3602879701896397 / 255). Dadurch kommt es vor, dass mehrere Gleitkommazahlen durch die selbe Binärapproximation repräsentiert werden. Python gibt zwar die jeweils kürzeste Dezimalzahl aus, da Berechnungen aber binär durchgeführt werden, kann sich bei Berechnungen die nächste Binärapproximation und damit die zugehörige kürzeste Dezimalzahl ändern (weitere Informationen in der Python Dokumentation).\n\nprint(0.1) # Die kürzeste Dezimalzahl zur Binärapproximation\nprint(format(0.1, '.17g')) # Die nächstlängere Dezimalzahl zur selben Binärapproximation\nprint(0.3 - 0.2) # binär gerechnet, ändert sich die Binärapproximation\n\n0.1\n0.10000000000000001\n0.09999999999999998\n\n\nIn der praktischen Arbeit mit Python kommen deshalb gelegentlich auf den ersten Blick ungewöhnlich wirkende Ergebnisse vor.\n\nprint(0.1 + 0.2)\nprint(0.01 + 0.02)\nprint(0.001 + 0.002)\nprint(0.0001 + 0.0002)\nprint(0.00001 + 0.00002)\n\n0.30000000000000004\n0.03\n0.003\n0.00030000000000000003\n3.0000000000000004e-05",
+    "objectID": "books/w-python/skript/datentypen.html#einleitung",
+    "href": "books/w-python/skript/datentypen.html#einleitung",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.2 Einleitung",
+    "text": "2.2 Einleitung\nIn Python gibt es verschiedene Datentypen. Diese beschreiben, welche Art von Daten Sie in Variablen speichern. Das ist wichtig, weil viele Operationen – wie zum Beispiel + – je nach Datentyp etwas anderes bedeuten:\n\n+ bei Zahlen bedeutet Addition,\n+ bei Text bedeutet Zusammenfügen (Konkatenation).\n\nBevor wir also mit komplexeren Programmen arbeiten, sollten wir verstehen, welche Datentypen es gibt und wie man mit ihnen umgeht.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#arithmetische-operatoren",
-    "href": "books/w-python/skript/datentypen.html#arithmetische-operatoren",
-    "title": "2  Datentypen",
-    "section": "2.2 Arithmetische Operatoren",
-    "text": "2.2 Arithmetische Operatoren\nMit arithmetischen Operatoren können die Grundrechenarten verwendet werden. Das Ergebnis ist meist vom Typ float, außer, wenn beide Operanden vom Typ int sind und das Ergebnis als ganze Zahl darstellbar ist.\n\n\n\nOperator\nBeschreibung\n\n\n\n\n+, -\nAddition / Subtraktion\n\n\n*, /\nMultiplikation / Division\n\n\n//, %\nGanzzahlige Division / Rest\n\n\n**\nPotenzieren\n\n\n\n \nWerden mehrere Operatoren kombiniert, so muss deren Reihenfolge beachtet bzw. durch die Verwendung von Klammern (1 + 2) * 3 hergestellt werden. Es gelten die gleichen Regeln wie beim schriftlichen Rechen. Die vollständige Übersicht der Reihenfolge der Ausführung ist in der Pythondokumentation aufgeführt. Für die arithmethischen Operatoren gilt folgende, absteigende Reihenfolge.\n\n\n\nOperator\n\n\n\n\n**\n\n\n* , / , // , %\n\n\n+ , -\n\n\n\nBei gleichrangigen Operationen werden diese von links nach rechts ausgeführt.",
+    "objectID": "books/w-python/skript/datentypen.html#die-wichtigsten-datentypen",
+    "href": "books/w-python/skript/datentypen.html#die-wichtigsten-datentypen",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.3 Die wichtigsten Datentypen",
+    "text": "2.3 Die wichtigsten Datentypen\nHier sind die grundlegenden Datentypen in Python:\n\n\n\nTyp\nBeispiel\nBedeutung\n\n\n\n\nint\n10\nGanze Zahl\n\n\nfloat\n3.14\nKommazahl\n\n\nstr\n\"Hallo\"\nText (String)\n\n\nbool\nTrue, False\nWahrheitswert (Ja/Nein)\n\n\n\nSie können den Typ einer Variable mit der Funktion type(...) herausfinden:\n\nwert = 42\nprint(type(wert))  # Ausgabe: &lt;class 'int'&gt;\n\n&lt;class 'int'&gt;",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#aufgaben-zahlen",
-    "href": "books/w-python/skript/datentypen.html#aufgaben-zahlen",
-    "title": "2  Datentypen",
-    "section": "2.3 Aufgaben Zahlen",
-    "text": "2.3 Aufgaben Zahlen\nLösen Sie die folgenden Aufgaben mit Python.\n\n4 + 2 * 4 = ?\n2 hoch 12 = ?\nWas ist der Rest aus 315 geteilt durch 4?\n𝟣 + 𝟤6 / 𝟧 = ?\nWelche Dezimalzahl ist 111111010012 ?\n111111010012 / 1012 = ?\nWelcher Kapitalertrag ist größer, wenn 1000 Euro angelegt werden?\n\n20 Jahre Anlagedauer mit 3 Prozent jährlicher Rendite\n30 Jahre Anlagedauer mit 2 Prozent jährlicher Rendite\n\n\nDie Musterlösung kann Marc machen.\n\n\n\n\n\n\nTip 2.1: Musterlösung Zahlen",
+    "objectID": "books/w-python/skript/datentypen.html#unterschiede-zwischen-int-und-float",
+    "href": "books/w-python/skript/datentypen.html#unterschiede-zwischen-int-und-float",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.4 🔍 Unterschiede zwischen int und float",
+    "text": "2.4 🔍 Unterschiede zwischen int und float\nIn Python unterscheidet man zwischen ganzen Zahlen (int) und Kommazahlen (float):\n\nint steht für „integer“ – also ganze Zahlen wie 1, 0, -10\nfloat steht für „floating point number“ – also Zahlen mit Dezimalstellen wie 3.14, 0.5, -2.0\n\n\na = 10       # int\nb = 2.5      # float\n\nprint(\"a:\", a, \"| Typ:\", type(a))\nprint(\"b:\", b, \"| Typ:\", type(b))\n\na: 10 | Typ: &lt;class 'int'&gt;\nb: 2.5 | Typ: &lt;class 'float'&gt;\n\n\n💡 Die Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#boolsche-werte",
-    "href": "books/w-python/skript/datentypen.html#boolsche-werte",
-    "title": "2  Datentypen",
-    "section": "2.4 Boolsche Werte",
-    "text": "2.4 Boolsche Werte\nDie boolschen Werte True und False sind das Ergebnis logischer Abfragen, die wir später genauer kennenlernen. Sie nehmen auch die Werte 1 und 0 an und gehören in Python deshalb zu den Zahlen.\n\nprint(\"Ist 10 größer als 9?\", 10 &gt; 9)\nprint(\"Ist 11 kleiner als 10?\", 11 &lt; 10)\nprint(\"Ist 10 genau 10.0?\", 10 == 10.0, \"\\n\")\n\nprint(\"True und False können mit + addiert:\", True + False)\nprint(\"... und mit * multipliziert werden:\", True * False, \"\\n\")\n\nIst 10 größer als 9? True\nIst 11 kleiner als 10? False\nIst 10 genau 10.0? True \n\nTrue und False können mit + addiert: 1\n... und mit * multipliziert werden: 0 \n\n\n\nDie Multiplikation von Wahrheitswerten ist nützlich, um mehrere logische Abfragen zu einem logischen UND zu kombinieren:\n\nprint(\"Ist 10 &gt; 9 UND 10 &gt; 8?\", (10 &gt; 9) * (10 &gt; 8))\n\nIst 10 &gt; 9 UND 10 &gt; 8? 1\n\n\nDie Funktion bool() gibt den Wahrheitswert eines Werts zurück.\n\nprint(\"Ist 10 &gt; 9 UND &gt; 8?\", bool((10 &gt; 9) * (10 &gt; 8)))\n\nIst 10 &gt; 9 UND &gt; 8? True\n\n\nDie meisten Werte in Python haben den Wahrheitswert True.\n\nprint(bool(1), bool(2), bool(2.4))\nprint(bool('a'), bool('b'), bool('ab'))\n\nTrue True True\nTrue True True\n\n\nNeben False und 0 haben leere und nicht existierende Werte oder Objekte den Wahrheitswert False.\n\nprint(bool(False), bool(0))\nprint(bool(\"\")) # eine leere Zeichenfolge\nprint(bool([])) # eine leere Liste\nprint(bool(())) # eine leeres Tupel\nprint(bool({})) # ein leeres Dictionary\nprint(bool(None)) # None deklariert einen nicht existenten Wert\n\nFalse False\nFalse\nFalse\nFalse\nFalse\nFalse\n\n\nDie Sammeltypen Liste, Tupel und Dictionary lernen wir in den folgenden Kapiteln kennen. Boolsche Werte können die Ausführung von Programmcode steuern, indem sie wie an und aus wirken. So kann Programmcode mit einer if-Anweisung nur dann ausgeführt werden, wenn ein Sammeltyp auch Werte enthält.\n\nmeine_Liste = ['Äpfel', 'Butter']\nif meine_Liste:\n    print(f\"Wir müssen {meine_Liste} einkaufen.\")\n\nmeine_Liste = [] # eine leere Liste\nif meine_Liste:\n    print(f\"Wir müssen {meine_Liste} einkaufen.\")\n\nWir müssen ['Äpfel', 'Butter'] einkaufen.",
+    "objectID": "books/w-python/skript/datentypen.html#was-sind-booleans-bool",
+    "href": "books/w-python/skript/datentypen.html#was-sind-booleans-bool",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.5 🔍 Was sind Booleans (bool)?",
+    "text": "2.5 🔍 Was sind Booleans (bool)?\nEin Boolean ist ein Wahrheitswert: Er kann nur zwei Zustände annehmen:\n\nTrue (wahr)\nFalse (falsch)\n\nSolche Werte begegnen uns zum Beispiel bei Fragen wie:\n\nIst die Temperatur über 30 °C?\nHat die Datei einen bestimmten Namen?\nIst die Liste leer?\n\n\nist_sonnig = True\nhat_regenschirm = False\n\nprint(\"Sonnig:\", ist_sonnig)\nprint(\"Regenschirm dabei?\", hat_regenschirm)\nprint(\"Typ von 'ist_sonnig':\", type(ist_sonnig))\n\nSonnig: True\nRegenschirm dabei? False\nTyp von 'ist_sonnig': &lt;class 'bool'&gt;\n\n\nBooleans werden besonders in Bedingungen und Vergleichen verwendet, was Sie in Kapitel 4 genauer kennenlernen.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#logische-operatoren",
-    "href": "books/w-python/skript/datentypen.html#logische-operatoren",
-    "title": "2  Datentypen",
-    "section": "2.5 Logische Operatoren",
-    "text": "2.5 Logische Operatoren\nZu den logischen Operatoren gehören die logischen Verknüpfungen and, or und not. Darüber hinaus können auch vergleichende Operatoren wie &gt;, &gt;= oder == verwendet werden. Das Ergebnis dieser Operationen ist vom Typ bool. Die Operatoren werden in folgender Reihenfolge ausgeführt. Gleichrangige Operatoren werden von links nach rechts ausgeführt.\n\n\n\n\n\n\n\nOperator\nBeschreibung\n\n\n\n\n&\nbitweises UND\n\n\n^\nbitweises XOR\n\n\n|\nbitweises ODER\n\n\n&lt;, &lt;=, &gt;, &gt;=, !=, ==\nkleiner / kleiner gleich / größer als / größer gleich / ungleich / gleich\n\n\nnot\nlogisches NICHT\n\n\nand\nlogisches UND\n\n\nor\nlogisches ODER\n\n\n\n\n\n\n\n\n\nWarning 2.1: Bitweise Operatoren\n\n\n\n\n\nBesondere Vorsicht ist mit den bitweisen Operatoren geboten. Diese vergleichen Zahlen nicht als Ganzes, sondern stellenweise (im Binärsystem). Zu beachten ist, dass die bitweisen Operatoren Ausführungspriorität vor Vergleichsoperationen haben.\n\nprint(10 &gt; 5 and 10 &gt; 6)\nprint(10 &gt; 5 & 10 &gt; 6)\nprint(5 & 10)\nprint(10 &gt; False &gt; 6)\nprint((10 &gt; 5) & (10 &gt; 6))\n\nTrue\nFalse\n0\nFalse\nTrue\n\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nIm Allgemeinen werden die bitweisen Operatoren für die Datenanalyse nicht benötigt. Vermeiden Sie unnötige Fehler: Vermeiden Sie die bitweisen Operatoren &, ^ und |.\nDie Operatoren &, ^ und | haben jedoch für Mengen (die wir später kennenlernen werden) eine andere Bedeutung. Auch in anderen Modulen kommt den Operatoren syntaktisch eine andere Bedeutung zu, bspw. im Paket Pandas bei der Übergabe mehrerer Slicing-Bedingungen df = df[(Bedingung1) & (Bedingung2) | (Bedingung3)].",
+    "objectID": "books/w-python/skript/datentypen.html#rechnen-mit-zahlen",
+    "href": "books/w-python/skript/datentypen.html#rechnen-mit-zahlen",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.6 Rechnen mit Zahlen",
+    "text": "2.6 Rechnen mit Zahlen\nPython kann wie ein Taschenrechner verwendet werden:\n\n\n\nOperator\nBeschreibung\n\n\n\n\n+, -\nAddition / Subtraktion\n\n\n*, /\nMultiplikation / Division\n\n\n//, %\nGanzzahlige Division / Rest\n\n\n**\nPotenzieren\n\n\n\n\na = 10\nb = 3\n\nprint(\"Addition:\", a + b)\nprint(\"Subtraktion:\", a - b)\nprint(\"Multiplikation:\", a * b)\nprint(\"Potenzieren\", a**b)\nprint(\"Division:\", a / b)\nprint(\"Ganzzahlige Division:\", a // b)\nprint(\"Division mit Rest:\", a % b)\n\nAddition: 13\nSubtraktion: 7\nMultiplikation: 30\nPotenzieren 1000\nDivision: 3.3333333333333335\nGanzzahlige Division: 3\nDivision mit Rest: 1\n\n\n💡 // bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch %. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#aufgaben-boolsche-werte",
-    "href": "books/w-python/skript/datentypen.html#aufgaben-boolsche-werte",
-    "title": "2  Datentypen",
-    "section": "2.6 Aufgaben boolsche Werte",
-    "text": "2.6 Aufgaben boolsche Werte\nLösen Sie die Aufgaben mit Python.\n\nIst das Verhältnis aus 44 zu 4.5 größer als 10?\nIst es wahr, dass 4.5 größer als 4 aber kleiner als 5 ist?\nIst 2 hoch 10 gleich 1024?\nSind die Zahlen 3, 4 und 5 ganzzahlig durch 2 teilbar ODER ungleich 10?\nPrüfen Sie, ob eine Person den Vollpreis bezahlen muss, wenn Sie Ihr Alter angibt.\nKinder unter 14 Jahren fahren kostenlos, Jugendliche zwischen 14 und 18 Jahren und Senior:innen ab 65 Jahren erhalten einen Rabatt.\n\nDie Musterlösung kann Marc machen\n\n\n\n\n\n\nTip 2.2",
+    "objectID": "books/w-python/skript/datentypen.html#arbeiten-mit-text",
+    "href": "books/w-python/skript/datentypen.html#arbeiten-mit-text",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.7 Arbeiten mit Text",
+    "text": "2.7 Arbeiten mit Text\nTexte (Strings) können miteinander kombiniert werden:\n\nvorname = \"Anna\"\nnachname = \"Beispiel\"\nprint(\"Willkommen, \" + vorname + \" \" + nachname + \"!\")\n\nWillkommen, Anna Beispiel!\n\n\nWenn Sie Text und Zahlen kombinieren wollen, müssen Sie die Zahl in einen String umwandeln:\n\npunkte = 95\nprint(\"Sie haben \" + str(punkte) + \" Punkte erreicht.\")\n\nSie haben 95 Punkte erreicht.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/datentypen.html#zeichenfolgen",
-    "href": "books/w-python/skript/datentypen.html#zeichenfolgen",
-    "title": "2  Datentypen",
-    "section": "2.7 Zeichenfolgen",
-    "text": "2.7 Zeichenfolgen\nZeichenfolgen (Englisch string) werden in Python in einfache oder doppelte Anführungszeichen gesetzt.\n\nprint('eine Zeichenfolge')\nprint(\"noch eine Zeichenfolge\")\n\neine Zeichenfolge\nnoch eine Zeichenfolge\n\n\nInnerhalb einer Zeichenfolge können einfache oder doppelte Anführungszeichen verwendet werden, solange diese nicht den die Zeichenfolge umschließenden Anführungszeichen entsprechen.\n\nprint('A sophisticated heap beam, which we call a \"LASER\".')\nprint(\"I've turned the moon into what I like to call a 'Death Star'.\")\n\nA sophisticated heap beam, which we call a \"LASER\".\nI've turned the moon into what I like to call a 'Death Star'.\n\n\nDas Steuerzeichen \\ (oder Fluchtzeichen, escape character) erlaubt es, bestimmte Sondernzeichen zu verwenden.\n\nprint(\"Das Steuerzeichen \\\\ ermöglicht die gleichen \\\"Anführungszeichen\\\" in der Ausgabe von print.\")\nprint(\"Erst ein\\tTabstopp, dann eine\\nneue Zeile.\")\n\nDas Steuerzeichen \\ ermöglicht die gleichen \"Anführungszeichen\" in der Ausgabe von print.\nErst ein    Tabstopp, dann eine\nneue Zeile.\n\n\nEin vorangestelltes r bewirkt, dass das Steuerzeichen \\ nicht verarbeitet wird (raw string literal). Dies ist beispielsweise bei der Arbeit mit Dateipfaden praktisch.\n\nprint(\"Die Daten liegen unter: C:\\tolle_daten\\nordpol\\weihnachtsmann\")\nprint(r\"Die Daten liegen unter: C:\\tolle_daten\\nordpol\\weihnachtsmann\")\n\nDie Daten liegen unter: C:  olle_daten\nordpol\\weihnachtsmann\nDie Daten liegen unter: C:\\tolle_daten\\nordpol\\weihnachtsmann",
+    "objectID": "books/w-python/skript/datentypen.html#umwandlung-von-datentypen-typecasting",
+    "href": "books/w-python/skript/datentypen.html#umwandlung-von-datentypen-typecasting",
+    "title": "2  Einführung: Datentypen verstehen",
+    "section": "2.8 🔁 Umwandlung von Datentypen (Typecasting)",
+    "text": "2.8 🔁 Umwandlung von Datentypen (Typecasting)\nManchmal müssen Sie einen Wert von einem Datentyp in einen anderen umwandeln – z. B. eine Zahl in einen Text (String), damit sie ausgegeben werden kann.\nDas nennt man Typecasting. Hier sind die wichtigsten Funktionen dafür:\n\n\n\nFunktion\nBeschreibung\nBeispiel\n\n\n\n\nstr(...)\nZahl → Text\nstr(42) → \"42\"\n\n\nint(...)\nText/Zahl → ganze Zahl\nint(\"10\") → 10\n\n\nfloat(...)\nText/Zahl → Kommazahl\nfloat(\"3.14\") → 3.14\n\n\n\n\n# Beispiel: Zahl als Text anzeigen\npunkte = 100\nprint(\"Sie haben \" + str(punkte) + \" Punkte.\")\n\n# Beispiel: String in Zahl umwandeln und berechnen\neingabe = \"3.5\"\nwert = float(eingabe) * 2\nprint(\"Doppelt so viel:\", wert)\n\nSie haben 100 Punkte.\nDoppelt so viel: 7.0\n\n\n💡 Achten Sie beim Umwandeln darauf, dass der Inhalt auch wirklich passt – int(\"abc\") führt zu einem Fehler.\n\n\n\n\n\n\n✏️ Aufgabe: Alter in Tagen\n\n\n\n\n\nBerechnen Sie, wie alt eine Person in Tagen ist.\n\nalter_jahre = 32\ntage = alter_jahre * 365\nprint(\"Sie sind ungefähr \" + str(tage) + \" Tage alt.\")\n\nSie sind ungefähr 11680 Tage alt.\n\n\nTipp: Denken Sie an die Umwandlung in einen String, wenn Sie die Zahl ausgeben möchten.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nalter = 32\ntage = alter * 365\nprint(\"Sie sind ungefähr \" + str(tage) + \" Tage alt.\")\n\nSie sind ungefähr 11680 Tage alt.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/datentypen.html#operationen-mit-zeichenfolgen",
-    "href": "books/w-python/skript/datentypen.html#operationen-mit-zeichenfolgen",
-    "title": "2  Datentypen",
-    "section": "2.8 Operationen mit Zeichenfolgen",
-    "text": "2.8 Operationen mit Zeichenfolgen\nEinige Operatoren funktionieren auch mit Daten vom Typ string.\n\n# string + string\nprint('a' + 'b')\n\n# string + Zahl\nprint(15 * 'a')\n\n# logische Operatoren\nprint('a' &lt; 'b', 'a' &gt;= 'b', 'a' != 'b')\nprint('a' or 'b', 'a' and 'b')\n\nab\naaaaaaaaaaaaaaa\nTrue False True\na b",
-    "crumbs": [
-      "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/datentypen.html#aufgaben-zeichenfolgen",
-    "href": "books/w-python/skript/datentypen.html#aufgaben-zeichenfolgen",
-    "title": "2  Datentypen",
-    "section": "2.9 Aufgaben Zeichenfolgen",
-    "text": "2.9 Aufgaben Zeichenfolgen\nLösen Sie die Aufgaben mit Python.\n\nWas passiert, wenn Sie die Zeichenfolge “Python” mit “for beginners” addieren?\nErzeugen Sie eine Zeichenfolge, die 10 mal die Zeichenfolge “tick tack”.\nWelche Zeichenfolge ist kleiner, “Aachen” oder “Bern”. Warum ist das so, wie werden Zeichenfolgen verglichen?\nGeben Sie den Dateipfad aus: “~\\home\\tobi\\neue_daten”\n\nDie Musterlösung kann Marc machen.\n\n\n\n\n\n\nTip 2.3: Musterlösung Aufgaben Zeichenfolgen",
-    "crumbs": [
-      "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/datentypen.html#variablen",
-    "href": "books/w-python/skript/datentypen.html#variablen",
-    "title": "2  Datentypen",
-    "section": "2.10 Variablen",
-    "text": "2.10 Variablen\nVariablen sind Platzhalter bzw. Referenzen auf Daten. Die Zuweisung wird durch den Zuweisungsoperator = dargestellt. Der Name einer Variablen darf nur aus Buchstaben, Zahlen und Unterstrichen bestehen. Dabei darf das erste Zeichen keine Zahl sein.\n\nvar_1 = 'ABC'\nvar_2 = 26\nvar_3 = True\n\nprint(\"Das\", var_1, \"hat\", var_2, \"Buchstaben. Das ist\", var_3)\n\nDas ABC hat 26 Buchstaben. Das ist True\n\n\nVariablen müssen in Python nicht initialisiert werden. Der Datentyp der Variablen wird durch die Zuweisung eines entsprechenden Werts festgelegt.\n\nprint(\"Die Variable var_1 hat den Typ\", type(var_1))\nprint(\"Die Variable var_2 hat den Typ\", type(var_2))\nprint(\"Die Variable var_3 hat den Typ\", type(var_3))\n\nDie Variable var_1 hat den Typ &lt;class 'str'&gt;\nDie Variable var_2 hat den Typ &lt;class 'int'&gt;\nDie Variable var_3 hat den Typ &lt;class 'bool'&gt;\n\n\nDer Datentyp einer Variable ändert sich, wenn ihr ein neuer Wert eines anderen Datentyps zugewiesen wird.\n\nvar_1 = 100\nprint(\"Die Variable var_1 hat den Typ\", type(var_1))\n\nDie Variable var_1 hat den Typ &lt;class 'int'&gt;\n\n\nEbenso kann sich der Datentyp einer Variable ändern, um das Ergebnis einer Operation aufnehmen zu können. In diesem Beispiel kann das Ergebnis nicht in Form einer Ganzzahl gespeichert werden. Python weist dem Objekt var_1 deshalb den Datentyp ‘float’ zu.\n\nvar_1 = var_1 / 11\nprint(\"Die Variable var_1 hat den Typ\", type(var_1))\n\nDie Variable var_1 hat den Typ &lt;class 'float'&gt;\n\n\nPython enthält Funktionen, um den Datentyp einer Variablen zu bestimmen und umzuwandeln. Die Funktion type() wurde in den Code-Beispielen bereits benutzt, um den Datentyp (bzw. die Klasse) von Objekten zu bestimmen. Die Umwandlung des Datentyps zeigt der folgende Code-Block.\n\na = 67 \nprint(a, type(a))\n\nb = a + 1.8\nprint(b, type(b), \"\\n\")\n\nprint(f\"Beachten Sie das Abschneiden der Nachkommastelle:\\nUmwandlung in Ganzzahlen mit int(): {( a := int(a) ), (b := int(b) )}\\n\")\n\nprint(f\"Umwandlung in ASCII-Zeichen mit chr(): {( a := chr(a) ), ( b := chr(b) )}\\n\")\n\nprint(f\"Umwandlung in eine ASCII-Zahl mit ord(): {( a := ord(a) ), ( b := ord(b) )}\\n\")\n\nprint(f\"Umwandlung in Fließkommazahlen mit float(): {( a := float(a) ), ( b := float(b) )}\\n\")\n\nprint(f\"Umwandlung in Zeichen mit str(): {( a := str(a) ), ( b:= str(b) )}\\n\")\n\nprint(f\"Umwandlung in Wahrheitswerte mit bool(): {bool(a), bool(b)}\")\n\n67 &lt;class 'int'&gt;\n68.8 &lt;class 'float'&gt; \n\nBeachten Sie das Abschneiden der Nachkommastelle:\nUmwandlung in Ganzzahlen mit int(): (67, 68)\n\nUmwandlung in ASCII-Zeichen mit chr(): ('C', 'D')\n\nUmwandlung in eine ASCII-Zahl mit ord(): (67, 68)\n\nUmwandlung in Fließkommazahlen mit float(): (67.0, 68.0)\n\nUmwandlung in Zeichen mit str(): ('67.0', '68.0')\n\nUmwandlung in Wahrheitswerte mit bool(): (True, True)\n\n\n\n2.10.1 Weitere Zuweisungsoperatoren\nIn dem obenstehenden Code-Block wurde der sogenannte Walross-Operator := verwendet. Dieser erlaubt es, Zuweisungen innerhalb eines Ausdrucks (hier innerhalb der Funktion print()) vorzunehmen. Python kennt eine ganze Reihe weiterer Zuweisungsoperatoren (weitere Operatoren siehe Python-Dokumentation oder übersichtlicher hier).\n\n\n\nOperator\nentspricht der Zuweisung\n\n\n\n\na += 2\na = a + 2\n\n\na -= 2\na = a - 2\n\n\na *= 2\na = a * 2\n\n\na /= 2\na = a / 2\n\n\na %= 2\na = a % 2\n\n\na //= 2\na = a // 2\n\n\na **= 2\na = a ** 2\n\n\n\n\n\n\n\n\n\nLesbare Zuweisungen\n\n\n\n\n\nDie in der Tabelle gezeigten Zuweisungsoperatoren sind für jemanden, der*die Ihren Code liest, gut zu lesen und nachzuvollziehen, da Zuweisungen immer am Beginn einer Zeile, also ganz links, stehen.\nDagegen kann der Walross-Operator an einer beliebigen Stelle in Ihrem Code stehen. Das mag für Sie beim Schreiben ein Vorteil sein, der Lesbarkeit ist das aber abträglich. Wenn Sie den Walross-Operator verwenden, achten Sie deshalb auf die Nachvollziehbarkeit Ihres Codes.\n\n\n\n\n\n2.10.2 Benennung von Variablen\nFür die Benennung von Variablen gibt es (meist) nur wenige Vorgaben. Trotzdem ist es besser, einen langen, aber ausführlichen Variablennamen zu vergeben, als einen kurzen, der sich schnell schreiben lässt. Denn Programmcode wird deutlich häufiger gelesen als geschrieben. Können Sie sich erinnern? Welcher Wert ist in der Variablen Var_3 gespeichert, und welche Werte sind in variable1 und a gespeichert? Es reicht schon, wenn Sie sich an den richtigen Datentyp erinnern können.\nFalls Sie sich nicht erinnern können, dann ist dieses Beispiel gelungen: Die Namensgebung dieser Variablen ist alles andere als gut. Die Auflösung steht im folgenden Aufklapper.\n\n\n\n\n\n\nAuflösung Variablen\n\n\n\n\n\n\nprint(var_3, type(var_3))\nprint(variable1, type(variable1))\nprint(a, type(a))\n\nTrue &lt;class 'bool'&gt;\n15 &lt;class 'int'&gt;\n67.0 &lt;class 'str'&gt;\n\n\n\n\n\nDeshalb empfiehlt es sich “sprechende”, das heißt selbsterklärende, Variablennamen zu vergeben. Unter selbsterklärenden Variablennamen versteht sich, dass der Variablenname den Inhalt der Variable beschreibt. Wird bspw. in einer Variable der Studienabschluss gespeichert, so kann diese mit academic_degree oder studienabschluss bezeichnet werden. Werden Daten aus verschiedenen Jahren verarbeitet, kann das Jahr zu besseren Unterscheidbarkeit in den Variablennamen einfließen, etwa: academic_degree_2023 oder studienabschluss2024. Dies verbessert die Lesbarkeit des Codes und vereinfacht die Benutzung der Variable. Mehr Informationen finden sich in diesem Wikipedia Abschnitt.\n\n\n\n\n\n\nSchlüsselwörter und Funktionsnamen\n\n\n\nIn Python reservierte Schlüsselwörter und Funktionsnamen sind ungeeignete Variablennamen. Während Python die Wertzuweisung zu Schlüsselwörtern wie True oder break mit einem Syntaxfehler quittiert, lassen sich Funktionsnamen neue Werte zuweisen, beispielsweise mit print = 6. Wenn Sie die Funktion print dann aufrufen, funktioniert diese natürlich nicht mehr. In diesem Fall müssen Sie die Zuweisung aus dem Skript entfernen und Python neu starten.\nFolgende Schlüsselwörter gibt es in Python:\nand        continue   for        lambda     try\nas         def        from       nonlocal   while\nassert     del        global     not        with\nasync      elif       if         or         yield\nawait      else       import     pass       True\nbreak      except     in         raise      class\nFalse      finally    is         return     None",
-    "crumbs": [
-      "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/datentypen.html#aufgaben-variablen",
-    "href": "books/w-python/skript/datentypen.html#aufgaben-variablen",
-    "title": "2  Datentypen",
-    "section": "2.11 Aufgaben Variablen",
-    "text": "2.11 Aufgaben Variablen\n\nSchreiben Sie ein Skript, welches eine gegebene Zeit 𝗍 in Sekunden in die Anzahl Tage, Stunden, Minuten und Sekunden aufteilt und diese Aufteilung ausgibt.\nBerechnen Sie die Aufteilung für folgende Zeiten:\n\n79222 s\n90061 s\n300000 s\n\nDie Position eines Fahrzeugs zur Zeit \\(t\\), welches konstant mit der Beschleunigung \\(a\\) beschleunigt, ist gegeben durch:\n\n\\[\nx(t) = x_0 + v_0 \\cdot t + \\frac{1}{2} \\cdot a t^2\n\\]\nDabei ist \\(x_0\\) die Anfangsposition und \\(v_0\\) die Anfangsgeschwindigkeit. Erstellen Sie Variablen für \\(x_0\\), \\(v_0\\) und \\(a\\) und weisen Sie ihnen Werte zu. Da die Variablen nur Werte, aber keine Einheiten abbilden, überlegen Sie sich die ggf. notwendigen Umrechnungen. Folgende Werte können sie als Beispiel verwenden:\n\\[\nx_0 = 10 \\, km \\,\\,\\,v_0 = 50 \\frac{km}{h} \\,\\,\\,a = 0.1 \\frac{m}{s^2}\n\\]\nErzeugen Sie eine Variable für den Zeitpunkt \\(t\\), z. B.: \\(t = 10 \\, min\\). Berechnen Sie mit obiger Gleichung und mit Hilfe der Variablen die Position \\(x(t)\\). Geben Sie nicht nur den Wert von \\(x(t)\\) in Kilometer aus, sondern betten ihn in einen ganzen Antwortsatz (einschließlich Einheiten) ein.\nDie Musterlösung kann Marc machen.\n\n\n\n\n\n\nTip 2.4: Musterlösung Aufgaben Variablen\n\n\n\n\n\n\n\n\n\n[@Arnold-2023-datentypen-und-grundlagen]\n[@Arnold-2023-funktionen-module-dateien]",
-    "crumbs": [
-      "w-python",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einführung: Datentypen verstehen</span>"
     ]
   },
   {
