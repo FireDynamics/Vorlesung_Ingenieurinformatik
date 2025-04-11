@@ -210,23 +210,67 @@
   {
     "objectID": "books/w-python/skript/flusskontrolle.html",
     "href": "books/w-python/skript/flusskontrolle.html",
-    "title": "4  Flusskontrolle",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
     "section": "",
-    "text": "4.0.1 Abzweigungen\nAbzweigungen ermöglichen eine Fallunterscheidung, bei der abhängig von einer oder mehreren Bedingungen verschiedene Teile des Skripts ausgeführt werden.\nIn Python werden Abzweigungen mit dem Schlüsselwort if eingeleitet. Dieses wird von der Abzweigbedingung gefolgt und mit einem Doppelpunkt : abgeschlossen. Falls die Abzweigbedingung wahr ist, wird der eingerückte Anweisungsblock ausgeführt.\n# Beispiel: Zahl kleiner als ein Schwellwert\n\na = 7\nif a &lt; 10:\n    print( 'Die Zahl', a, 'ist kleiner als 10.')\n\nDie Zahl 7 ist kleiner als 10.\nEs ist auch möglich einen alternativen Anweisungsblock zu definieren, welcher ausgeführt wird, wenn die Bedingung falsch ist. Dieser wird mit dem else Schlüsselwort umgesetzt.\n# Beispiel: Zahl kleiner als ein Schwellwert mit alternativer Ausgabe\n\na = 13\nif a &lt; 10:\n    print( 'Die Zahl', a, 'ist kleiner als 10.')\nelse:\n    print( 'Die Zahl', a, 'ist nicht kleiner als 10.')\n\nDie Zahl 13 ist nicht kleiner als 10.\nEs können auch mehrere Bedingungen übergeben werden.\n# Beispiel: Zahl im Wertebereich zwischen 10 und 20\n\na = 1\nif a &lt; 20 and a &gt; 10:\n    print( 'Die Zahl', a, 'liegt zwischen 10 und 20.')\nelse:\n    print( 'Die Zahl', a, 'liegt nicht zwischen 10 und 20.')\n\nDie Zahl 1 liegt nicht zwischen 10 und 20.\nSchließlich können mehrere alternative Bedingungen geprüft werden. Dies ist zum einen durch das Verschachteln von Abzweigungen möglich.\n# Beispiel: Zahl im Wertebereich zwischen 10 und 20 mit verschachtelten Abzweigungen\n\na = 12\nif a &gt; 10:\n    print( 'Die Zahl', a, 'ist größer als 10.' )\n    \n    if a &lt; 20:\n        print( 'Die Zahl', a, 'ist kleiner als 20.' )\n        print( 'Damit liegt die Zahl zwischen 10 und 20.')\n    else:\n        print( 'Die Zahl', a, 'ist größer als 20 und liegt nicht im gesuchten Wertebereich.' )\nelse:\n        print( 'Die Zahl', a, 'ist kleiner als 10 und liegt nicht im gesuchten Wertebereich.' )\n\nDie Zahl 12 ist größer als 10.\nDie Zahl 12 ist kleiner als 20.\nDamit liegt die Zahl zwischen 10 und 20.\nZum anderen ist dies mit dem Schlüsselwort elif möglich.\n# Beispiel: Zahl im Wertebereich zwischen 10 und 20 mit elif\n\na = 112\nif a &lt; 20 and a &gt; 10:\n  print('Die Zahl', a, 'liegt zwischen 10 und 20.')\nelif a &lt; 10:\n  print('Die Zahl', a, 'ist kleiner als 10 und liegt nicht im gesuchten Wertebereich.' )\nelif a &gt; 20 and a &lt;= 100:\n  print('Die Zahl', a, 'ist größer als 20, aber nicht größer als 100.')\nelif a &gt; 20 and a &lt;= 1000:\n  print('Die Zahl', a, 'ist größer als 20, aber nicht größer als 1000.')\nelse:\n  print('Die Zahl', a, 'liegt nicht zwischen 10 und 20 und ist größer als 1000.')\n\nDie Zahl 112 ist größer als 20, aber nicht größer als 1000.",
+    "text": "4.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - Bedingungen formulieren und mit if, elif, else nutzen, - Vergleichsoperatoren verwenden (==, &lt;, !=, …), - Wiederholungen mit while und for umsetzen.",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flusskontrolle</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
     ]
   },
   {
-    "objectID": "books/w-python/skript/flusskontrolle.html#aufgaben-flusskontrolle",
-    "href": "books/w-python/skript/flusskontrolle.html#aufgaben-flusskontrolle",
-    "title": "4  Flusskontrolle",
-    "section": "4.1 Aufgaben Flusskontrolle",
-    "text": "4.1 Aufgaben Flusskontrolle\n\nSchreiben Sie ein Programm, dass von 1 bis 25 und von 38 bis 50 zählt und jeden Wert, der ganzzahlig durch 7 teilbar ist, mit print() ausgibt.\nRoulette: Schreiben Sie ein Programm, dass für eine Zahl prüft, ob diese im Wertebereich des Spieltischs liegt. Falls nein, soll eine Fehlermeldung ausgegeben werden. Falls ja, soll das Programm ausgeben, ob die Zahl\n\n\ngerade oder ungerade ist,\nrot oder schwarz ist,\nniedrig (1-18) oder hoch (19-36) ist und\nim 1., 2. oder 3. Dutzend liegt.\n\n\n\n\n\nRoulette Tableau\n\n\nEuropean roulette von Betzaar.com ist lizensiert unter CC 3.0 BY-SA und verfügbar auf wikimedia.org. 2010\n\n \nDie Musterlösung kann Marc machen.\n\n\n\n\n\n\nMusterlösung Aufgaben Flusskontrolle\n\n\n\n\n\n\n\n\n\n \n(@Arnold-2023-schleifen-abzweigungen)",
+    "objectID": "books/w-python/skript/flusskontrolle.html#bedingungen-mit-if-elif-else",
+    "href": "books/w-python/skript/flusskontrolle.html#bedingungen-mit-if-elif-else",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
+    "section": "4.2 Bedingungen mit if, elif, else",
+    "text": "4.2 Bedingungen mit if, elif, else\n\nalter = 17\n\nif alter &gt;= 18:\n    print(\"Sie sind volljährig.\")\nelse:\n    print(\"Sie sind minderjährig.\")\n\nSie sind minderjährig.\n\n\nMehrere Fälle unterscheiden:\n\nnote = 2.3\n\nif note &lt;= 1.5:\n    print(\"Sehr gut\")\nelif note &lt;= 2.5:\n    print(\"Gut\")\nelif note &lt;= 3.5:\n    print(\"Befriedigend\")\nelse:\n    print(\"Ausreichend oder schlechter\")\n\nGut",
     "crumbs": [
       "w-python",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Flusskontrolle</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/flusskontrolle.html#vergleichsoperatoren",
+    "href": "books/w-python/skript/flusskontrolle.html#vergleichsoperatoren",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
+    "section": "4.3 Vergleichsoperatoren",
+    "text": "4.3 Vergleichsoperatoren\n\n\n\nAusdruck\nBedeutung\n\n\n\n\na == b\ngleich\n\n\na != b\nungleich\n\n\na &lt; b\nkleiner als\n\n\na &gt; b\ngrößer als\n\n\na &lt;= b\nkleiner oder gleich\n\n\na &gt;= b\ngrößer oder gleich",
+    "crumbs": [
+      "w-python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/flusskontrolle.html#wiederholungen-mit-while",
+    "href": "books/w-python/skript/flusskontrolle.html#wiederholungen-mit-while",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
+    "section": "4.4 Wiederholungen mit while",
+    "text": "4.4 Wiederholungen mit while\n\nzähler = 0\n\nwhile zähler &lt; 5:\n    print(\"Zähler ist:\", zähler)\n    zähler += 1\n\nZähler ist: 0\nZähler ist: 1\nZähler ist: 2\nZähler ist: 3\nZähler ist: 4\n\n\n💡 Achten Sie auf eine Abbruchbedingung – sonst läuft die Schleife endlos!",
+    "crumbs": [
+      "w-python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/flusskontrolle.html#schleifen-mit-for-und-range...",
+    "href": "books/w-python/skript/flusskontrolle.html#schleifen-mit-for-und-range...",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
+    "section": "4.5 Schleifen mit for und range(...)",
+    "text": "4.5 Schleifen mit for und range(...)\nWenn Sie eine Schleife genau eine bestimmte Anzahl von Malen durchlaufen möchten, nutzen Sie for mit range(...):\n\nfor i in range(5):\n    print(\"Durchlauf:\", i)\n\nDurchlauf: 0\nDurchlauf: 1\nDurchlauf: 2\nDurchlauf: 3\nDurchlauf: 4\n\n\nStart- und Endwert festlegen:\n\nfor i in range(1, 6):\n    print(i)\n\n1\n2\n3\n4\n5",
+    "crumbs": [
+      "w-python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/flusskontrolle.html#was-macht-range...-genau",
+    "href": "books/w-python/skript/flusskontrolle.html#was-macht-range...-genau",
+    "title": "4  Einführung: Entscheidungen und Wiederholungen",
+    "section": "4.6 Was macht range(...) genau?",
+    "text": "4.6 Was macht range(...) genau?\nDie Funktion range(...) erzeugt eine Abfolge von Zahlen, über die Sie mit einer for-Schleife iterieren können.\n\n4.6.1 🔢 Varianten:\nrange(5)\n➡️ ergibt: 0, 1, 2, 3, 4 (startet bei 0, endet vor 5)\nrange(2, 6)\n➡️ ergibt: 2, 3, 4, 5 (startet bei 2, endet vor 6)\nrange(1, 10, 2)\n➡️ ergibt: 1, 3, 5, 7, 9 (Schrittweite = 2)\n💡 range(...) erzeugt keine echte Liste, sondern ein sogenanntes „range-Objekt“, das wie eine Liste verwendet werden kann.\n\n\n\n\n\n\n✏️ Aufgabe: Zähle von 1 bis 10\n\n\n\n\n\nNutzen Sie eine for-Schleife, um die Zahlen von 1 bis 10 auszugeben.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor i in range(1, 11):\n    print(i)\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Aufgabe: Gerade Zahlen ausgeben\n\n\n\n\n\nGeben Sie alle geraden Zahlen von 0 bis 20 aus. Tipp: Eine Zahl ist gerade, wenn zahl % 2 == 0.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor zahl in range(0, 21):\n    if zahl % 2 == 0:\n        print(zahl)\n\n0\n2\n4\n6\n8\n10\n12\n14\n16\n18\n20",
+    "crumbs": [
+      "w-python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Einführung: Entscheidungen und Wiederholungen</span>"
     ]
   },
   {
