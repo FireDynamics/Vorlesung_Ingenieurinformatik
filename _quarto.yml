@@ -27,8 +27,8 @@ book:
         - books/w-python/index.qmd
         - books/w-python/skript/einleitung.qmd
         - books/w-python/skript/datentypen.qmd
-        - books/w-python/skript/flusskontrolle.qmd
         - books/w-python/skript/funktionen.qmd
+        - books/w-python/skript/flusskontrolle.qmd
         - books/w-python/skript/sammeltypen.qmd
         - books/w-python/skript/funktionen-definieren.qmd
         - books/w-python/skript/dateien-lesen-und-schreiben.qmd
