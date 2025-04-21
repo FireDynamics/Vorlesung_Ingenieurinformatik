@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.556">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Einführung: Entscheidungen und Wiederholungen – Vorlesung Ingenieurinformatik</title>
+<title>Vorlesung Ingenieurinformatik - 4&nbsp; Einführung: Entscheidungen und Wiederholungen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../books/w-python/skript/listen_iterationen.html" rel="next">
-<link href="../../../books/w-python/skript/datentypen.html" rel="prev">
+<link href="../../../books/w-python/skript/sammeltypen.html" rel="next">
+<link href="../../../books/w-python/skript/funktionen.html" rel="prev">
 <link href="../../../books/shared-media/logo/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -113,13 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/flusskontrolle.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/flusskontrolle.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -156,9 +156,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">w-python</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -183,29 +183,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/listen_iterationen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kapitel 4 – Listen und Iteration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/funktionen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/sammeltypen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/funktionen-definieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigene Funktionen definieren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/dateien-lesen-und-schreiben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dateien lesen und schreiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/module-und-pakete-importieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Module und Pakete importieren</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">w-python-numpy-grundlagen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -219,76 +237,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_info.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_read_n_write.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/array_images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/skript/assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/uebungen/uebung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Klausurfragen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Klausurfragen</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">w-python-matplotlib</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -302,31 +320,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Einführung in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Einführung in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/basic_plot_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Diagrammtypen in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Diagrammtypen in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/adapting_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Anpassung und Gestaltung von Plots in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Anpassung und Gestaltung von Plots in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/advanced_techniques.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Erweiterte Techniken in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Erweiterte Techniken in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/scientific_plotting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Best Practices in Matplotlib: Fehler und Verbesserungen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Best Practices in Matplotlib: Fehler und Verbesserungen</span></span></a>
   </div>
 </li>
       </ul>
@@ -341,21 +359,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#lernziele-dieses-kapitels" id="toc-lernziele-dieses-kapitels" class="nav-link active" data-scroll-target="#lernziele-dieses-kapitels"><span class="header-section-number">3.1</span> Lernziele dieses Kapitels</a></li>
-  <li><a href="#bedingungen-mit-if-elif-else" id="toc-bedingungen-mit-if-elif-else" class="nav-link" data-scroll-target="#bedingungen-mit-if-elif-else"><span class="header-section-number">3.2</span> Bedingungen mit <code>if</code>, <code>elif</code>, <code>else</code></a></li>
-  <li><a href="#vergleichsoperatoren" id="toc-vergleichsoperatoren" class="nav-link" data-scroll-target="#vergleichsoperatoren"><span class="header-section-number">3.3</span> Vergleichsoperatoren</a></li>
-  <li><a href="#wiederholungen-mit-while" id="toc-wiederholungen-mit-while" class="nav-link" data-scroll-target="#wiederholungen-mit-while"><span class="header-section-number">3.4</span> Wiederholungen mit <code>while</code></a></li>
-  <li><a href="#schleifen-mit-for-und-range..." id="toc-schleifen-mit-for-und-range..." class="nav-link" data-scroll-target="#schleifen-mit-for-und-range..."><span class="header-section-number">3.5</span> Schleifen mit <code>for</code> und <code>range(...)</code></a></li>
-  <li><a href="#was-macht-range...-genau" id="toc-was-macht-range...-genau" class="nav-link" data-scroll-target="#was-macht-range...-genau"><span class="header-section-number">3.6</span> Was macht <code>range(...)</code> genau?</a></li>
+  <li><a href="#lernziele-dieses-kapitels" id="toc-lernziele-dieses-kapitels" class="nav-link active" data-scroll-target="#lernziele-dieses-kapitels"><span class="header-section-number">4.1</span> Lernziele dieses Kapitels</a></li>
+  <li><a href="#bedingungen-mit-if-elif-else" id="toc-bedingungen-mit-if-elif-else" class="nav-link" data-scroll-target="#bedingungen-mit-if-elif-else"><span class="header-section-number">4.2</span> Bedingungen mit <code>if</code>, <code>elif</code>, <code>else</code></a></li>
+  <li><a href="#vergleichsoperatoren" id="toc-vergleichsoperatoren" class="nav-link" data-scroll-target="#vergleichsoperatoren"><span class="header-section-number">4.3</span> Vergleichsoperatoren</a></li>
+  <li><a href="#wiederholungen-mit-while" id="toc-wiederholungen-mit-while" class="nav-link" data-scroll-target="#wiederholungen-mit-while"><span class="header-section-number">4.4</span> Wiederholungen mit <code>while</code></a></li>
+  <li><a href="#schleifen-mit-for-und-range..." id="toc-schleifen-mit-for-und-range..." class="nav-link" data-scroll-target="#schleifen-mit-for-und-range..."><span class="header-section-number">4.5</span> Schleifen mit <code>for</code> und <code>range(...)</code></a></li>
+  <li><a href="#was-macht-range...-genau" id="toc-was-macht-range...-genau" class="nav-link" data-scroll-target="#was-macht-range...-genau"><span class="header-section-number">4.6</span> Was macht <code>range(...)</code> genau?</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python/skript/flusskontrolle.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/flusskontrolle.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">w-python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/flusskontrolle.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></h1>
 </div>
 
 
@@ -379,13 +397,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Schleifen</strong>: <code>while</code> und <code>for</code></li>
 </ul>
 <hr>
-<section id="lernziele-dieses-kapitels" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="lernziele-dieses-kapitels"><span class="header-section-number">3.1</span> Lernziele dieses Kapitels</h2>
+<section id="lernziele-dieses-kapitels" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="lernziele-dieses-kapitels"><span class="header-section-number">4.1</span> Lernziele dieses Kapitels</h2>
 <p>Am Ende dieses Kapitels können Sie: - Bedingungen formulieren und mit <code>if</code>, <code>elif</code>, <code>else</code> nutzen, - Vergleichsoperatoren verwenden (<code>==</code>, <code>&lt;</code>, <code>!=</code>, …), - Wiederholungen mit <code>while</code> und <code>for</code> umsetzen.</p>
 <hr>
 </section>
-<section id="bedingungen-mit-if-elif-else" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="bedingungen-mit-if-elif-else"><span class="header-section-number">3.2</span> Bedingungen mit <code>if</code>, <code>elif</code>, <code>else</code></h2>
+<section id="bedingungen-mit-if-elif-else" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="bedingungen-mit-if-elif-else"><span class="header-section-number">4.2</span> Bedingungen mit <code>if</code>, <code>elif</code>, <code>else</code></h2>
 <div id="90b380ac" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>alter <span class="op">=</span> <span class="dv">17</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -415,8 +433,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="vergleichsoperatoren" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="vergleichsoperatoren"><span class="header-section-number">3.3</span> Vergleichsoperatoren</h2>
+<section id="vergleichsoperatoren" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="vergleichsoperatoren"><span class="header-section-number">4.3</span> Vergleichsoperatoren</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -453,8 +471,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="wiederholungen-mit-while" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="wiederholungen-mit-while"><span class="header-section-number">3.4</span> Wiederholungen mit <code>while</code></h2>
+<section id="wiederholungen-mit-while" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="wiederholungen-mit-while"><span class="header-section-number">4.4</span> Wiederholungen mit <code>while</code></h2>
 <div id="dd88944b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>zähler <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -472,8 +490,8 @@ Zähler ist: 4</code></pre>
 <p>💡 Achten Sie auf eine Abbruchbedingung – sonst läuft die Schleife endlos!</p>
 <hr>
 </section>
-<section id="schleifen-mit-for-und-range..." class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="schleifen-mit-for-und-range..."><span class="header-section-number">3.5</span> Schleifen mit <code>for</code> und <code>range(...)</code></h2>
+<section id="schleifen-mit-for-und-range..." class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="schleifen-mit-for-und-range..."><span class="header-section-number">4.5</span> Schleifen mit <code>for</code> und <code>range(...)</code></h2>
 <p>Wenn Sie eine Schleife <strong>genau eine bestimmte Anzahl von Malen</strong> durchlaufen möchten, nutzen Sie <code>for</code> mit <code>range(...)</code>:</p>
 <div id="f108af00" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
@@ -499,11 +517,11 @@ Durchlauf: 4</code></pre>
 </div>
 </div>
 </section>
-<section id="was-macht-range...-genau" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="was-macht-range...-genau"><span class="header-section-number">3.6</span> Was macht <code>range(...)</code> genau?</h2>
+<section id="was-macht-range...-genau" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="was-macht-range...-genau"><span class="header-section-number">4.6</span> Was macht <code>range(...)</code> genau?</h2>
 <p>Die Funktion <code>range(...)</code> erzeugt eine Abfolge von Zahlen, über die Sie mit einer <code>for</code>-Schleife iterieren können.</p>
-<section id="varianten" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="varianten"><span class="header-section-number">3.6.1</span> 🔢 Varianten:</h3>
+<section id="varianten" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="varianten"><span class="header-section-number">4.6.1</span> 🔢 Varianten:</h3>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>➡️ ergibt: <code>0, 1, 2, 3, 4</code> (startet bei 0, endet <strong>vor</strong> 5)</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -649,7 +667,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -681,29 +710,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -711,7 +718,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1036,13 +1043,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../books/w-python/skript/datentypen.html" class="pagination-link" aria-label="Einführung: Datentypen verstehen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Einführung: Datentypen verstehen</span></span>
+      <a href="../../../books/w-python/skript/funktionen.html" class="pagination-link" aria-label="Einführung: Wiederverwendbarer Code mit Funktionen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../books/w-python/skript/listen_iterationen.html" class="pagination-link" aria-label="Kapitel 4 – Listen und Iteration">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kapitel 4 – Listen und Iteration</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../books/w-python/skript/sammeltypen.html" class="pagination-link" aria-label="Sammeltypen">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sammeltypen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
