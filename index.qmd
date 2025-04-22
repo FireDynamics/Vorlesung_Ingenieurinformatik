@@ -1,4 +1,4 @@
-# Übersicht
+# Übersicht {.unnumbered}
 
 ## Allgemeine Infos
 

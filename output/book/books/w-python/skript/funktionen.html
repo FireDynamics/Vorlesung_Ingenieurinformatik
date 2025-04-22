@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Einführung: Wiederverwendbarer Code mit Funktionen – Vorlesung Ingenieurinformatik</title>
+<title>5&nbsp; Wiederverwendbarer Code mit Funktionen – Vorlesung Ingenieurinformatik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../books/w-python-numpy-grundlagen/index.html" rel="next">
+<link href="../../../books/w-python/skript/lesen_schreiben.html" rel="next">
 <link href="../../../books/w-python/skript/listen_iterationen.html" rel="prev">
 <link href="../../../books/shared-media/logo/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">Grundlagen Python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/funktionen.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">Grundlagen Python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/funktionen.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederverwendbarer Code mit Funktionen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Übersicht</span></span></a>
+ <span class="menu-text">Übersicht</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,31 +172,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Einleitung: Datenanalyse mit Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/datentypen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Einführung: Datentypen verstehen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Datentypen verstehen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Einführung: Entscheidungen und Wiederholungen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Entscheidungen und Wiederholungen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/listen_iterationen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung: Mehrere Werte speichern</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mehrere Werte speichern</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python/skript/funktionen.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederverwendbarer Code mit Funktionen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python/skript/lesen_schreiben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Arbeiten mit Dateien</span></span></a>
   </div>
 </li>
       </ul>
@@ -341,23 +347,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#lernziele-dieses-kapitels" id="toc-lernziele-dieses-kapitels" class="nav-link active" data-scroll-target="#lernziele-dieses-kapitels"><span class="header-section-number">6.1</span> Lernziele dieses Kapitels</a></li>
-  <li><a href="#eine-funktion-definieren" id="toc-eine-funktion-definieren" class="nav-link" data-scroll-target="#eine-funktion-definieren"><span class="header-section-number">6.2</span> Eine Funktion definieren</a></li>
-  <li><a href="#parameter-übergeben" id="toc-parameter-übergeben" class="nav-link" data-scroll-target="#parameter-übergeben"><span class="header-section-number">6.3</span> Parameter übergeben</a></li>
-  <li><a href="#rückgabewerte-mit-return" id="toc-rückgabewerte-mit-return" class="nav-link" data-scroll-target="#rückgabewerte-mit-return"><span class="header-section-number">6.4</span> Rückgabewerte mit <code>return</code></a></li>
-  <li><a href="#weitere-beispiele-umrechnungen" id="toc-weitere-beispiele-umrechnungen" class="nav-link" data-scroll-target="#weitere-beispiele-umrechnungen"><span class="header-section-number">6.5</span> Weitere Beispiele: Umrechnungen</a></li>
-  <li><a href="#parameter-mit-standardwerten" id="toc-parameter-mit-standardwerten" class="nav-link" data-scroll-target="#parameter-mit-standardwerten"><span class="header-section-number">6.6</span> Parameter mit Standardwerten</a></li>
-  <li><a href="#print-vs.-return" id="toc-print-vs.-return" class="nav-link" data-scroll-target="#print-vs.-return"><span class="header-section-number">6.7</span> <code>print()</code> vs.&nbsp;<code>return</code></a></li>
-  <li><a href="#zusammenfassung-aufbau-einer-funktion" id="toc-zusammenfassung-aufbau-einer-funktion" class="nav-link" data-scroll-target="#zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">6.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</a></li>
+  <li><a href="#lernziele-dieses-kapitels" id="toc-lernziele-dieses-kapitels" class="nav-link active" data-scroll-target="#lernziele-dieses-kapitels"><span class="header-section-number">5.1</span> Lernziele dieses Kapitels</a></li>
+  <li><a href="#eine-funktion-definieren" id="toc-eine-funktion-definieren" class="nav-link" data-scroll-target="#eine-funktion-definieren"><span class="header-section-number">5.2</span> Eine Funktion definieren</a></li>
+  <li><a href="#parameter-übergeben" id="toc-parameter-übergeben" class="nav-link" data-scroll-target="#parameter-übergeben"><span class="header-section-number">5.3</span> Parameter übergeben</a></li>
+  <li><a href="#rückgabewerte-mit-return" id="toc-rückgabewerte-mit-return" class="nav-link" data-scroll-target="#rückgabewerte-mit-return"><span class="header-section-number">5.4</span> Rückgabewerte mit <code>return</code></a></li>
+  <li><a href="#weitere-beispiele-umrechnungen" id="toc-weitere-beispiele-umrechnungen" class="nav-link" data-scroll-target="#weitere-beispiele-umrechnungen"><span class="header-section-number">5.5</span> Weitere Beispiele: Umrechnungen</a></li>
+  <li><a href="#parameter-mit-standardwerten" id="toc-parameter-mit-standardwerten" class="nav-link" data-scroll-target="#parameter-mit-standardwerten"><span class="header-section-number">5.6</span> Parameter mit Standardwerten</a></li>
+  <li><a href="#print-vs.-return" id="toc-print-vs.-return" class="nav-link" data-scroll-target="#print-vs.-return"><span class="header-section-number">5.7</span> <code>print()</code> vs.&nbsp;<code>return</code></a></li>
+  <li><a href="#zusammenfassung-aufbau-einer-funktion" id="toc-zusammenfassung-aufbau-einer-funktion" class="nav-link" data-scroll-target="#zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">5.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python/skript/funktionen.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">Grundlagen Python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/funktionen.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python/index.html">Grundlagen Python</a></li><li class="breadcrumb-item"><a href="../../../books/w-python/skript/funktionen.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederverwendbarer Code mit Funktionen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Einführung: Wiederverwendbarer Code mit Funktionen</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederverwendbarer Code mit Funktionen</span></h1>
 </div>
 
 
@@ -376,29 +382,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Stellen Sie sich vor, Sie müssen eine bestimmte Berechnung mehrfach im Programm durchführen. Anstatt den Code jedes Mal neu zu schreiben, können Sie ihn in einer <strong>Funktion</strong> bündeln.</p>
 <p>Funktionen sind ein zentrales Werkzeug, um Code: - übersichtlich, - wiederverwendbar und - testbar zu machen.</p>
-<section id="lernziele-dieses-kapitels" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="lernziele-dieses-kapitels"><span class="header-section-number">6.1</span> Lernziele dieses Kapitels</h2>
+<section id="lernziele-dieses-kapitels" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="lernziele-dieses-kapitels"><span class="header-section-number">5.1</span> Lernziele dieses Kapitels</h2>
 <p>Am Ende dieses Kapitels können Sie: - eigene Funktionen mit <code>def</code> erstellen, - Parameter übergeben und Rückgabewerte nutzen, - Funktionen sinnvoll in Programmen einsetzen.</p>
 </section>
-<section id="eine-funktion-definieren" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="eine-funktion-definieren"><span class="header-section-number">6.2</span> Eine Funktion definieren</h2>
+<section id="eine-funktion-definieren" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="eine-funktion-definieren"><span class="header-section-number">5.2</span> Eine Funktion definieren</h2>
 <p>Funktionen werden mit <code>def</code> definiert und können beliebig oft aufgerufen werden:</p>
-<div id="e9a1efdf" class="cell" data-execution_count="1">
+<div id="4c7a39ce" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo und willkommen!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Sie wird erst ausgeführt, wenn Sie sie aufrufen:</p>
-<div id="2e8538c6" class="cell" data-execution_count="2">
+<div id="a2b4d230" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>begruessung()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo und willkommen!</code></pre>
 </div>
 </div>
 </section>
-<section id="parameter-übergeben" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="parameter-übergeben"><span class="header-section-number">6.3</span> Parameter übergeben</h2>
+<section id="parameter-übergeben" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="parameter-übergeben"><span class="header-section-number">5.3</span> Parameter übergeben</h2>
 <p>Funktionen können Eingabewerte (Parameter) erhalten:</p>
-<div id="a7053c1b" class="cell" data-execution_count="3">
+<div id="72697dd7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -408,10 +414,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="rückgabewerte-mit-return" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="rückgabewerte-mit-return"><span class="header-section-number">6.4</span> Rückgabewerte mit <code>return</code></h2>
+<section id="rückgabewerte-mit-return" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="rückgabewerte-mit-return"><span class="header-section-number">5.4</span> Rückgabewerte mit <code>return</code></h2>
 <p>Eine Funktion kann auch einen Wert <strong>zurückgeben</strong>:</p>
-<div id="6148f6a7" class="cell" data-execution_count="4">
+<div id="7361d755" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quadrat(zahl):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl <span class="op">*</span> zahl</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -422,11 +428,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="weitere-beispiele-umrechnungen" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="weitere-beispiele-umrechnungen"><span class="header-section-number">6.5</span> Weitere Beispiele: Umrechnungen</h2>
-<section id="euro-zu-us-dollar" class="level3" data-number="6.5.1">
-<h3 data-number="6.5.1" class="anchored" data-anchor-id="euro-zu-us-dollar"><span class="header-section-number">6.5.1</span> 💱 Euro zu US-Dollar</h3>
-<div id="7ab7c46e" class="cell" data-execution_count="5">
+<section id="weitere-beispiele-umrechnungen" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="weitere-beispiele-umrechnungen"><span class="header-section-number">5.5</span> Weitere Beispiele: Umrechnungen</h2>
+<section id="euro-zu-us-dollar" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="euro-zu-us-dollar"><span class="header-section-number">5.5.1</span> 💱 Euro zu US-Dollar</h3>
+<div id="7cb140c7" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> euro_zu_usd(betrag_euro):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    wechselkurs <span class="op">=</span> <span class="fl">1.09</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> betrag_euro <span class="op">*</span> wechselkurs</span>
@@ -437,9 +443,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="zoll-inch-zu-zentimeter" class="level3" data-number="6.5.2">
-<h3 data-number="6.5.2" class="anchored" data-anchor-id="zoll-inch-zu-zentimeter"><span class="header-section-number">6.5.2</span> Zoll (inch) zu Zentimeter</h3>
-<div id="e3d7ad5d" class="cell" data-execution_count="6">
+<section id="zoll-inch-zu-zentimeter" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="zoll-inch-zu-zentimeter"><span class="header-section-number">5.5.2</span> Zoll (inch) zu Zentimeter</h3>
+<div id="7eefd80f" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inch_zu_cm(inch):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> inch <span class="op">*</span> <span class="fl">2.54</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -474,7 +480,7 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="6e4da59a" class="cell" data-execution_count="7">
+<div id="5f49b9d5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruesse(name):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">", schön dich zu sehen!"</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -515,7 +521,7 @@ Lösung
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="4b1e715d" class="cell" data-execution_count="8">
+<div id="7506118e" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> celsius_zu_fahrenheit(c):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -532,10 +538,10 @@ Lösung
 </div>
 </section>
 </section>
-<section id="parameter-mit-standardwerten" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="parameter-mit-standardwerten"><span class="header-section-number">6.6</span> Parameter mit Standardwerten</h2>
+<section id="parameter-mit-standardwerten" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="parameter-mit-standardwerten"><span class="header-section-number">5.6</span> Parameter mit Standardwerten</h2>
 <p>Sie können Parametern <strong>Standardwerte</strong> zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:</p>
-<div id="b73b8a84" class="cell" data-execution_count="9">
+<div id="f8361422" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -547,8 +553,8 @@ Hallo Maria!</code></pre>
 </div>
 </div>
 </section>
-<section id="print-vs.-return" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="print-vs.-return"><span class="header-section-number">6.7</span> <code>print()</code> vs.&nbsp;<code>return</code></h2>
+<section id="print-vs.-return" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="print-vs.-return"><span class="header-section-number">5.7</span> <code>print()</code> vs.&nbsp;<code>return</code></h2>
 <p>Diese beiden Begriffe werden oft verwechselt:</p>
 <table class="caption-top table">
 <thead>
@@ -569,7 +575,7 @@ Hallo Maria!</code></pre>
 </tbody>
 </table>
 <p>Beispiel:</p>
-<div id="e6878424" class="cell" data-execution_count="10">
+<div id="65decc9f" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verdoppeln(x):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -580,8 +586,8 @@ Hallo Maria!</code></pre>
 </div>
 </div>
 </section>
-<section id="zusammenfassung-aufbau-einer-funktion" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">6.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</h2>
+<section id="zusammenfassung-aufbau-einer-funktion" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">5.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</h2>
 <p>Eine Funktion besteht aus folgenden Teilen:</p>
 <ol type="1">
 <li><strong>Definition</strong> mit <code>def</code></li>
@@ -591,7 +597,7 @@ Hallo Maria!</code></pre>
 <li>(optional) <strong><code>return</code>-Anweisung</strong></li>
 </ol>
 <p>Beispiel:</p>
-<div id="29c31a08" class="cell" data-execution_count="11">
+<div id="98ddbf67" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hallo(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    begruessung <span class="op">=</span> <span class="st">"Hallo "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> begruessung</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1023,13 +1029,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../books/w-python/skript/listen_iterationen.html" class="pagination-link" aria-label="Einführung: Mehrere Werte speichern">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Einführung: Mehrere Werte speichern</span></span>
+      <a href="../../../books/w-python/skript/listen_iterationen.html" class="pagination-link" aria-label="Mehrere Werte speichern">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mehrere Werte speichern</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../books/w-python-numpy-grundlagen/index.html" class="pagination-link" aria-label="Preamble">
-        <span class="nav-page-text">Preamble</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../books/w-python/skript/lesen_schreiben.html" class="pagination-link" aria-label="Arbeiten mit Dateien">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Arbeiten mit Dateien</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

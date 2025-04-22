@@ -30,6 +30,7 @@ book:
         - books/w-python/skript/flusskontrolle.qmd
         - books/w-python/skript/listen_iterationen.qmd 
         - books/w-python/skript/funktionen.qmd
+        - books/w-python/skript/lesen_schreiben.qmd
     - part: "NumPy"
       chapters:
         - books/w-python-numpy-grundlagen/index.qmd
