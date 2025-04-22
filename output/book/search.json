@@ -252,17 +252,6 @@
     ]
   },
   {
-    "objectID": "books/w-python/skript/funktionen.html#vorschau",
-    "href": "books/w-python/skript/funktionen.html#vorschau",
-    "title": "3  Einführung: Wiederverwendbarer Code mit Funktionen",
-    "section": "3.9 Vorschau",
-    "text": "3.9 Vorschau\nIm nächsten Kapitel lernen Sie: - wie Sie einfache Texte verarbeiten, - mit Zeichenketten arbeiten, - Zeichen aus Strings gezielt auswählen und manipulieren.",
-    "crumbs": [
-      "w-python",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Einführung: Wiederverwendbarer Code mit Funktionen</span>"
-    ]
-  },
-  {
     "objectID": "books/w-python/skript/flusskontrolle.html",
     "href": "books/w-python/skript/flusskontrolle.html",
     "title": "4  Einführung: Entscheidungen und Wiederholungen",
