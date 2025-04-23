@@ -55,7 +55,6 @@ book:
         - books/w-python-matplotlib/skript/scientific_plotting.qmd
 format:
   html:
-    theme: flatly
     toc: true
     toc-depth: 2
   pdf:
