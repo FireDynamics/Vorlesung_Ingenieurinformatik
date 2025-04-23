@@ -351,10 +351,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#eine-funktion-definieren" id="toc-eine-funktion-definieren" class="nav-link" data-scroll-target="#eine-funktion-definieren"><span class="header-section-number">5.2</span> Eine Funktion definieren</a></li>
   <li><a href="#parameter-übergeben" id="toc-parameter-übergeben" class="nav-link" data-scroll-target="#parameter-übergeben"><span class="header-section-number">5.3</span> Parameter übergeben</a></li>
   <li><a href="#rückgabewerte-mit-return" id="toc-rückgabewerte-mit-return" class="nav-link" data-scroll-target="#rückgabewerte-mit-return"><span class="header-section-number">5.4</span> Rückgabewerte mit <code>return</code></a></li>
-  <li><a href="#weitere-beispiele-umrechnungen" id="toc-weitere-beispiele-umrechnungen" class="nav-link" data-scroll-target="#weitere-beispiele-umrechnungen"><span class="header-section-number">5.5</span> Weitere Beispiele: Umrechnungen</a></li>
+  <li><a href="#beispiel-umrechnungen" id="toc-beispiel-umrechnungen" class="nav-link" data-scroll-target="#beispiel-umrechnungen"><span class="header-section-number">5.5</span> Beispiel: Umrechnungen</a></li>
   <li><a href="#parameter-mit-standardwerten" id="toc-parameter-mit-standardwerten" class="nav-link" data-scroll-target="#parameter-mit-standardwerten"><span class="header-section-number">5.6</span> Parameter mit Standardwerten</a></li>
-  <li><a href="#print-vs.-return" id="toc-print-vs.-return" class="nav-link" data-scroll-target="#print-vs.-return"><span class="header-section-number">5.7</span> <code>print()</code> vs.&nbsp;<code>return</code></a></li>
-  <li><a href="#zusammenfassung-aufbau-einer-funktion" id="toc-zusammenfassung-aufbau-einer-funktion" class="nav-link" data-scroll-target="#zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">5.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python/skript/funktionen.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -388,14 +386,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="eine-funktion-definieren" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="eine-funktion-definieren"><span class="header-section-number">5.2</span> Eine Funktion definieren</h2>
-<p>Funktionen werden mit <code>def</code> definiert und können beliebig oft aufgerufen werden:</p>
-<div id="4c7a39ce" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo und willkommen!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Eine Funktion besteht aus folgenden Teilen:</p>
+<ol type="1">
+<li><strong>Definition</strong> mit <code>def</code></li>
+<li><strong>Funktionsname</strong></li>
+<li><strong>Parameter in Klammern (optional)</strong></li>
+<li><strong>Einrückung</strong> für den Funktionskörper</li>
+<li>(optional) <strong><code>return</code>-Anweisung</strong></li>
+</ol>
+<p>Beispiel:</p>
+<div id="05d78300" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hallo(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    begruessung <span class="op">=</span> <span class="st">"Hallo "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> begruessung</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fangen wir mit dem ersten Stichwort an. Funktionen werden mit <code>def</code> definiert und können beliebig oft aufgerufen werden:</p>
+<div id="47a9a724" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung():</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo und willkommen!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Sie wird erst ausgeführt, wenn Sie sie aufrufen:</p>
-<div id="a2b4d230" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>begruessung()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="04a20239" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>begruessung()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo und willkommen!</code></pre>
 </div>
@@ -404,11 +416,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="parameter-übergeben" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="parameter-übergeben"><span class="header-section-number">5.3</span> Parameter übergeben</h2>
 <p>Funktionen können Eingabewerte (Parameter) erhalten:</p>
-<div id="72697dd7" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>begruessung(<span class="st">"Alex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b5c8f479" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>begruessung(<span class="st">"Alex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Alex!</code></pre>
 </div>
@@ -417,41 +429,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="rückgabewerte-mit-return" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="rückgabewerte-mit-return"><span class="header-section-number">5.4</span> Rückgabewerte mit <code>return</code></h2>
 <p>Eine Funktion kann auch einen Wert <strong>zurückgeben</strong>:</p>
-<div id="7361d755" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quadrat(zahl):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl <span class="op">*</span> zahl</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> quadrat(<span class="dv">5</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebnis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="99225d00" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quadrat(zahl):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl <span class="op">*</span> zahl</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> quadrat(<span class="dv">5</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebnis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>25</code></pre>
 </div>
 </div>
 </section>
-<section id="weitere-beispiele-umrechnungen" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="weitere-beispiele-umrechnungen"><span class="header-section-number">5.5</span> Weitere Beispiele: Umrechnungen</h2>
+<section id="beispiel-umrechnungen" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="beispiel-umrechnungen"><span class="header-section-number">5.5</span> Beispiel: Umrechnungen</h2>
 <section id="euro-zu-us-dollar" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="euro-zu-us-dollar"><span class="header-section-number">5.5.1</span> 💱 Euro zu US-Dollar</h3>
-<div id="7cb140c7" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> euro_zu_usd(betrag_euro):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    wechselkurs <span class="op">=</span> <span class="fl">1.09</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> betrag_euro <span class="op">*</span> wechselkurs</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"20 € sind"</span>, euro_zu_usd(<span class="dv">20</span>), <span class="st">"US-Dollar."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="euro-zu-us-dollar"><span class="header-section-number">5.5.1</span> Euro zu US-Dollar</h3>
+<div id="047e8143" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> euro_zu_usd(betrag_euro):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    wechselkurs <span class="op">=</span> <span class="fl">1.09</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> betrag_euro <span class="op">*</span> wechselkurs</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"20 € sind"</span>, euro_zu_usd(<span class="dv">20</span>), <span class="st">"US-Dollar."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>20 € sind 21.8 US-Dollar.</code></pre>
-</div>
-</div>
-</section>
-<section id="zoll-inch-zu-zentimeter" class="level3" data-number="5.5.2">
-<h3 data-number="5.5.2" class="anchored" data-anchor-id="zoll-inch-zu-zentimeter"><span class="header-section-number">5.5.2</span> Zoll (inch) zu Zentimeter</h3>
-<div id="7eefd80f" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inch_zu_cm(inch):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> inch <span class="op">*</span> <span class="fl">2.54</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"10 inch sind"</span>, inch_zu_cm(<span class="dv">10</span>), <span class="st">"cm."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>10 inch sind 25.4 cm.</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -480,11 +480,11 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="5f49b9d5" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruesse(name):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">", schön dich zu sehen!"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>begruesse(<span class="st">"Fatima"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3f99f592" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruesse(name):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">", schön dich zu sehen!"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>begruesse(<span class="st">"Fatima"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Fatima, schön dich zu sehen!</code></pre>
 </div>
@@ -501,14 +501,14 @@ Lösung
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✏️ Aufgabe: Temperaturumrechnung
+Aufgabe: Temperaturumrechnung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Schreiben Sie eine Funktion, die Celsius in Fahrenheit umrechnet:</p>
-<p>Formel: [ F = C imes 1.8 + 32 ]</p>
+<p>Formel: [ F = C + 32 ]</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -521,11 +521,11 @@ Lösung
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="7506118e" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> celsius_zu_fahrenheit(c):</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(celsius_zu_fahrenheit(<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="95d40e8d" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> celsius_zu_fahrenheit(c):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(celsius_zu_fahrenheit(<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>68.0</code></pre>
 </div>
@@ -541,20 +541,29 @@ Lösung
 <section id="parameter-mit-standardwerten" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="parameter-mit-standardwerten"><span class="header-section-number">5.6</span> Parameter mit Standardwerten</h2>
 <p>Sie können Parametern <strong>Standardwerte</strong> zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:</p>
-<div id="f8361422" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>begruessung()         <span class="co"># Hallo Gast!</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>begruessung(<span class="st">"Maria"</span>)  <span class="co"># Hallo Maria!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5f34af39" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>begruessung()         <span class="co"># Hallo Gast!</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>begruessung(<span class="st">"Maria"</span>)  <span class="co"># Hallo Maria!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo Gast!
 Hallo Maria!</code></pre>
 </div>
 </div>
-</section>
-<section id="print-vs.-return" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="print-vs.-return"><span class="header-section-number">5.7</span> <code>print()</code> vs.&nbsp;<code>return</code></h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<code>print()</code> vs.&nbsp;<code>return</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <p>Diese beiden Begriffe werden oft verwechselt:</p>
 <table class="caption-top table">
 <thead>
@@ -575,32 +584,18 @@ Hallo Maria!</code></pre>
 </tbody>
 </table>
 <p>Beispiel:</p>
-<div id="65decc9f" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verdoppeln(x):</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ausgabe sichtbar machen</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verdoppeln(<span class="dv">5</span>))  <span class="co"># Ausgabe: 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="33293757" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verdoppeln(x):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ausgabe sichtbar machen</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verdoppeln(<span class="dv">5</span>))  <span class="co"># Ausgabe: 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10</code></pre>
 </div>
 </div>
-</section>
-<section id="zusammenfassung-aufbau-einer-funktion" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="zusammenfassung-aufbau-einer-funktion"><span class="header-section-number">5.8</span> 🔄 Zusammenfassung: Aufbau einer Funktion</h2>
-<p>Eine Funktion besteht aus folgenden Teilen:</p>
-<ol type="1">
-<li><strong>Definition</strong> mit <code>def</code></li>
-<li><strong>Funktionsname</strong></li>
-<li><strong>Parameter in Klammern (optional)</strong></li>
-<li><strong>Einrückung</strong> für den Funktionskörper</li>
-<li>(optional) <strong><code>return</code>-Anweisung</strong></li>
-</ol>
-<p>Beispiel:</p>
-<div id="98ddbf67" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hallo(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    begruessung <span class="op">=</span> <span class="st">"Hallo "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> begruessung</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div>
 
 

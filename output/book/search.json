@@ -153,7 +153,7 @@
     "href": "books/w-python/skript/datentypen.html#unterschiede-zwischen-int-und-float",
     "title": "2  Datentypen verstehen",
     "section": "2.4 Unterschiede zwischen int und float",
-    "text": "2.4 Unterschiede zwischen int und float\nIn Python unterscheidet man zwischen ganzen Zahlen (int) und Kommazahlen (float):\n\nint steht für „integer“ – also ganze Zahlen wie 1, 0, -10\nfloat steht für „floating point number“ – also Zahlen mit Dezimalstellen wie 3.14, 0.5, -2.0\n\n\na = 10       # int\nb = 2.5      # float\n\nprint(\"a:\", a, \"| Typ:\", type(a))\nprint(\"b:\", b, \"| Typ:\", type(b))\n\na: 10 | Typ: &lt;class 'int'&gt;\nb: 2.5 | Typ: &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\n\nDie Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.",
+    "text": "2.4 Unterschiede zwischen int und float\nIn Python unterscheidet man zwischen ganzen Zahlen (int) und Kommazahlen (float):\n\nint steht für „integer“ – also ganze Zahlen wie 1, 0, -10\nfloat steht für „floating point number“ – also Zahlen mit Dezimalstellen wie 3.14, 0.5, -2.0\n\n\na = 10       # int\nb = 2.5      # float\n\nprint(\"a:\", a, \"| Typ:\", type(a))\nprint(\"b:\", b, \"| Typ:\", type(b))\n\na: 10 | Typ: &lt;class 'int'&gt;\nb: 2.5 | Typ: &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nDie Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
@@ -175,7 +175,7 @@
     "href": "books/w-python/skript/datentypen.html#rechnen-mit-zahlen",
     "title": "2  Datentypen verstehen",
     "section": "2.6 Rechnen mit Zahlen",
-    "text": "2.6 Rechnen mit Zahlen\nPython kann wie ein Taschenrechner verwendet werden:\n\n\n\nOperator\nBeschreibung\n\n\n\n\n+, -\nAddition / Subtraktion\n\n\n*, /\nMultiplikation / Division\n\n\n//, %\nGanzzahlige Division / Rest\n\n\n**\nPotenzieren\n\n\n\n\na = 10\nb = 3\n\nprint(\"Addition:\", a + b)\nprint(\"Subtraktion:\", a - b)\nprint(\"Multiplikation:\", a * b)\nprint(\"Potenzieren\", a**b)\nprint(\"Division:\", a / b)\nprint(\"Ganzzahlige Division:\", a // b)\nprint(\"Division mit Rest:\", a % b)\n\nAddition: 13\nSubtraktion: 7\nMultiplikation: 30\nPotenzieren 1000\nDivision: 3.3333333333333335\nGanzzahlige Division: 3\nDivision mit Rest: 1\n\n\n\n// bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch %. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.",
+    "text": "2.6 Rechnen mit Zahlen\nPython kann wie ein Taschenrechner verwendet werden:\n\n\n\nOperator\nBeschreibung\n\n\n\n\n+, -\nAddition / Subtraktion\n\n\n*, /\nMultiplikation / Division\n\n\n//, %\nGanzzahlige Division / Rest\n\n\n**\nPotenzieren\n\n\n\n\na = 10\nb = 3\n\nprint(\"Addition:\", a + b)\nprint(\"Subtraktion:\", a - b)\nprint(\"Multiplikation:\", a * b)\nprint(\"Potenzieren\", a**b)\nprint(\"Division:\", a / b)\nprint(\"Ganzzahlige Division:\", a // b)\nprint(\"Division mit Rest:\", a % b)\n\nAddition: 13\nSubtraktion: 7\nMultiplikation: 30\nPotenzieren 1000\nDivision: 3.3333333333333335\nGanzzahlige Division: 3\nDivision mit Rest: 1\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n// bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch %. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
@@ -241,7 +241,7 @@
     "href": "books/w-python/skript/flusskontrolle.html#wiederholungen-mit-while",
     "title": "3  Entscheidungen und Wiederholungen",
     "section": "3.4 Wiederholungen mit while",
-    "text": "3.4 Wiederholungen mit while\n\nzähler = 0\n\nwhile zähler &lt; 5:\n    print(\"Zähler ist:\", zähler)\n    zähler += 1\n\nZähler ist: 0\nZähler ist: 1\nZähler ist: 2\nZähler ist: 3\nZähler ist: 4\n\n\n💡 Achten Sie auf eine Abbruchbedingung – sonst läuft die Schleife endlos!",
+    "text": "3.4 Wiederholungen mit while\n\nzähler = 0\n\nwhile zähler &lt; 5:\n    print(\"Zähler ist:\", zähler)\n    zähler += 1\n\nZähler ist: 0\nZähler ist: 1\nZähler ist: 2\nZähler ist: 3\nZähler ist: 4\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nAchten Sie auf eine Abbruchbedingung – sonst läuft die Schleife endlos!",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
@@ -274,7 +274,7 @@
     "href": "books/w-python/skript/listen_iterationen.html",
     "title": "4  Mehrere Werte speichern",
     "section": "",
-    "text": "4.1 Was ist eine Liste?\nEine Liste ist eine geordnete Sammlung von Werten.\nnamen = [\"Ali\", \"Bente\", \"Carlos\"]\nnoten = [1.7, 2.3, 1.3, 2.0]\nAuf Elemente greifen Sie mit eckigen Klammern zu:\nprint(namen[0])  # erstes Element\nprint(noten[-1]) # letztes Element\n\nAli\n2.0",
+    "text": "4.1 Was ist eine Liste?\nEine Liste ist eine geordnete Sammlung von Werten eines Datentyps.\nnamen = [\"Ali\", \"Bente\", \"Carlos\"]\nnoten = [1.7, 2.3, 1.3, 2.0]\nAuf Elemente greifen Sie mit eckigen Klammern zu:\nprint(namen[0])  # erstes Element\nprint(noten[-1]) # letztes Element\n\nAli\n2.0",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
@@ -285,7 +285,7 @@
     "href": "books/w-python/skript/listen_iterationen.html#teile-aus-listen-ausschneiden-slicing",
     "title": "4  Mehrere Werte speichern",
     "section": "4.2 Teile aus Listen ausschneiden – Slicing",
-    "text": "4.2 Teile aus Listen ausschneiden – Slicing\nMit dem sogenannten Slicing können Sie gezielt Ausschnitte aus einer Liste entnehmen. Dabei geben Sie an, wo der Ausschnitt beginnt und wo er endet (der Endwert wird nicht mehr mitgenommen):\n\nzahlen = [10, 20, 30, 40, 50, 60]\nprint(zahlen[1:4])  # Ausgabe: [20, 30, 40]\n\n[20, 30, 40]\n\n\n\n4.2.1 🔢 Syntax: liste[start:stop]\n\nstart: Index, bei dem das Slicing beginnt (inklusive)\nstop: Index, an dem es endet (exklusive)\nDer Startwert kann auch weggelassen werden: [:3] → erstes bis drittes Element\nEbenso der Endwert: [3:] → ab dem vierten Element bis zum Ende\nGanze Kopie: [:]\n\n\nprint(zahlen[:3])   # [10, 20, 30]\nprint(zahlen[3:])   # [40, 50, 60]\nprint(zahlen[:])    # vollständige Kopie\n\n[10, 20, 30]\n[40, 50, 60]\n[10, 20, 30, 40, 50, 60]\n\n\n💡 Sie können auch mit negativen Indizes arbeiten (-1 ist das letzte Element):\n\nprint(zahlen[-3:])  # [40, 50, 60]\n\n[40, 50, 60]",
+    "text": "4.2 Teile aus Listen ausschneiden – Slicing\nMit dem sogenannten Slicing können Sie gezielt Ausschnitte aus einer Liste entnehmen. Dabei geben Sie an, wo der Ausschnitt beginnt und wo er endet (der Endwert wird nicht mehr mitgenommen):\n\nzahlen = [10, 20, 30, 40, 50, 60]\nprint(zahlen[1:4])  # Ausgabe: [20, 30, 40]\n\n[20, 30, 40]\n\n\n\n4.2.1 Syntax: liste[start:stop]\n\nstart: Index, bei dem das Slicing beginnt (inklusive)\nstop: Index, an dem es endet (exklusive)\nDer Startwert kann auch weggelassen werden: [:3] → erstes bis drittes Element\nEbenso der Endwert: [3:] → ab dem vierten Element bis zum Ende\nGanze Kopie: [:]\n\n\nprint(zahlen[:3])   # [10, 20, 30]\nprint(zahlen[3:])   # [40, 50, 60]\nprint(zahlen[:])    # vollständige Kopie\n\n[10, 20, 30]\n[40, 50, 60]\n[10, 20, 30, 40, 50, 60]\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nSie können auch mit negativen Indizes arbeiten (-1 ist das letzte Element):\n\nprint(zahlen[-3:])  # [40, 50, 60]\n\n[40, 50, 60]",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
@@ -329,7 +329,7 @@
     "href": "books/w-python/skript/listen_iterationen.html#listen-erweitern-.append",
     "title": "4  Mehrere Werte speichern",
     "section": "4.6 Listen erweitern: .append()",
-    "text": "4.6 Listen erweitern: .append()\nManchmal kennen Sie die Listenelemente nicht vorher – dann können Sie neue Werte nachträglich hinzufügen:\n\nnamen = []\n\nnamen.append(\"Ali\")\nnamen.append(\"Bente\")\n\nprint(namen)\n\n['Ali', 'Bente']\n\n\n💡 Die Methode .append()) hängt einen neuen Wert an das Ende der Liste.",
+    "text": "4.6 Listen erweitern: .append()\nManchmal kennen Sie die Listenelemente nicht vorher – dann können Sie neue Werte nachträglich hinzufügen:\n\nnamen = []\n\nnamen.append(\"Ali\")\nnamen.append(\"Bente\")\n\nprint(namen)\n\n['Ali', 'Bente']\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nDie Methode .append()) hängt einen neuen Wert an das Ende der Liste.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
@@ -351,7 +351,7 @@
     "href": "books/w-python/skript/listen_iterationen.html#listen-sortieren",
     "title": "4  Mehrere Werte speichern",
     "section": "4.8 Listen sortieren",
-    "text": "4.8 Listen sortieren\nMit sorted() können Sie Listen alphabetisch oder numerisch sortieren:\n\nnamen = [\"Zoe\", \"Anna\", \"Ben\"]\nsortiert = sorted(namen)\n\nprint(sortiert)\n\n['Anna', 'Ben', 'Zoe']\n\n\n💡 Die Original-Liste bleibt unverändert.\nWenn Sie die Liste direkt verändern möchten, geht das mit:\n\nnamen.sort()",
+    "text": "4.8 Listen sortieren\nMit sorted() können Sie Listen alphabetisch oder numerisch sortieren:\n\nnamen = [\"Zoe\", \"Anna\", \"Ben\"]\nsortiert = sorted(namen)\n\nprint(sortiert)\n\n['Anna', 'Ben', 'Zoe']\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nDie Original-Liste bleibt unverändert.\nWenn Sie die Liste direkt verändern möchten, geht das mit:\n\nnamen.sort()",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
@@ -373,7 +373,7 @@
     "href": "books/w-python/skript/funktionen.html#eine-funktion-definieren",
     "title": "5  Wiederverwendbarer Code mit Funktionen",
     "section": "5.2 Eine Funktion definieren",
-    "text": "5.2 Eine Funktion definieren\nFunktionen werden mit def definiert und können beliebig oft aufgerufen werden:\n\ndef begruessung():\n    print(\"Hallo und willkommen!\")\n\nSie wird erst ausgeführt, wenn Sie sie aufrufen:\n\nbegruessung()\n\nHallo und willkommen!",
+    "text": "5.2 Eine Funktion definieren\nEine Funktion besteht aus folgenden Teilen:\n\nDefinition mit def\nFunktionsname\nParameter in Klammern (optional)\nEinrückung für den Funktionskörper\n(optional) return-Anweisung\n\nBeispiel:\n\ndef hallo(name=\"Gast\"):\n    begruessung = \"Hallo \" + name + \"!\"\n    return begruessung\n\nFangen wir mit dem ersten Stichwort an. Funktionen werden mit def definiert und können beliebig oft aufgerufen werden:\n\ndef begruessung():\n    print(\"Hallo und willkommen!\")\n\nSie wird erst ausgeführt, wenn Sie sie aufrufen:\n\nbegruessung()\n\nHallo und willkommen!",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
@@ -402,11 +402,11 @@
     ]
   },
   {
-    "objectID": "books/w-python/skript/funktionen.html#weitere-beispiele-umrechnungen",
-    "href": "books/w-python/skript/funktionen.html#weitere-beispiele-umrechnungen",
+    "objectID": "books/w-python/skript/funktionen.html#beispiel-umrechnungen",
+    "href": "books/w-python/skript/funktionen.html#beispiel-umrechnungen",
     "title": "5  Wiederverwendbarer Code mit Funktionen",
-    "section": "5.5 Weitere Beispiele: Umrechnungen",
-    "text": "5.5 Weitere Beispiele: Umrechnungen\n\n5.5.1 💱 Euro zu US-Dollar\n\ndef euro_zu_usd(betrag_euro):\n    wechselkurs = 1.09\n    return betrag_euro * wechselkurs\n\nprint(\"20 € sind\", euro_zu_usd(20), \"US-Dollar.\")\n\n20 € sind 21.8 US-Dollar.\n\n\n\n\n5.5.2 Zoll (inch) zu Zentimeter\n\ndef inch_zu_cm(inch):\n    return inch * 2.54\n\nprint(\"10 inch sind\", inch_zu_cm(10), \"cm.\")\n\n10 inch sind 25.4 cm.\n\n\n\n\n\n\n\n\nAufgabe: Begrüßung mit Name\n\n\n\n\n\nErstellen Sie eine Funktion begruesse(name), die den Namen in einem Begrüßungstext verwendet:\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef begruesse(name):\n    print(\"Hallo\", name + \", schön dich zu sehen!\")\n\nbegruesse(\"Fatima\")\n\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n✏️ Aufgabe: Temperaturumrechnung\n\n\n\n\n\nSchreiben Sie eine Funktion, die Celsius in Fahrenheit umrechnet:\nFormel: [ F = C imes 1.8 + 32 ]\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef celsius_zu_fahrenheit(c):\n    return c * 1.8 + 32\n\nprint(celsius_zu_fahrenheit(20))\n\n68.0",
+    "section": "5.5 Beispiel: Umrechnungen",
+    "text": "5.5 Beispiel: Umrechnungen\n\n5.5.1 Euro zu US-Dollar\n\ndef euro_zu_usd(betrag_euro):\n    wechselkurs = 1.09\n    return betrag_euro * wechselkurs\n\nprint(\"20 € sind\", euro_zu_usd(20), \"US-Dollar.\")\n\n20 € sind 21.8 US-Dollar.\n\n\n\n\n\n\n\n\nAufgabe: Begrüßung mit Name\n\n\n\n\n\nErstellen Sie eine Funktion begruesse(name), die den Namen in einem Begrüßungstext verwendet:\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef begruesse(name):\n    print(\"Hallo\", name + \", schön dich zu sehen!\")\n\nbegruesse(\"Fatima\")\n\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAufgabe: Temperaturumrechnung\n\n\n\n\n\nSchreiben Sie eine Funktion, die Celsius in Fahrenheit umrechnet:\nFormel: [ F = C + 32 ]\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef celsius_zu_fahrenheit(c):\n    return c * 1.8 + 32\n\nprint(celsius_zu_fahrenheit(20))\n\n68.0",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
@@ -417,29 +417,7 @@
     "href": "books/w-python/skript/funktionen.html#parameter-mit-standardwerten",
     "title": "5  Wiederverwendbarer Code mit Funktionen",
     "section": "5.6 Parameter mit Standardwerten",
-    "text": "5.6 Parameter mit Standardwerten\nSie können Parametern Standardwerte zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:\n\ndef begruessung(name=\"Gast\"):\n    print(\"Hallo\", name + \"!\")\n\nbegruessung()         # Hallo Gast!\nbegruessung(\"Maria\")  # Hallo Maria!\n\nHallo Gast!\nHallo Maria!",
-    "crumbs": [
-      "Grundlagen Python",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/funktionen.html#print-vs.-return",
-    "href": "books/w-python/skript/funktionen.html#print-vs.-return",
-    "title": "5  Wiederverwendbarer Code mit Funktionen",
-    "section": "5.7 print() vs. return",
-    "text": "5.7 print() vs. return\nDiese beiden Begriffe werden oft verwechselt:\n\n\n\nAusdruck\nBedeutung\n\n\n\n\nprint()\nzeigt einen Text auf dem Bildschirm\n\n\nreturn\ngibt einen Wert an den Aufrufer zurück\n\n\n\nBeispiel:\n\ndef verdoppeln(x):\n    return x * 2\n\n# Ausgabe sichtbar machen\nprint(verdoppeln(5))  # Ausgabe: 10\n\n10",
-    "crumbs": [
-      "Grundlagen Python",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
-    ]
-  },
-  {
-    "objectID": "books/w-python/skript/funktionen.html#zusammenfassung-aufbau-einer-funktion",
-    "href": "books/w-python/skript/funktionen.html#zusammenfassung-aufbau-einer-funktion",
-    "title": "5  Wiederverwendbarer Code mit Funktionen",
-    "section": "5.8 🔄 Zusammenfassung: Aufbau einer Funktion",
-    "text": "5.8 🔄 Zusammenfassung: Aufbau einer Funktion\nEine Funktion besteht aus folgenden Teilen:\n\nDefinition mit def\nFunktionsname\nParameter in Klammern (optional)\nEinrückung für den Funktionskörper\n(optional) return-Anweisung\n\nBeispiel:\n\ndef hallo(name=\"Gast\"):\n    begruessung = \"Hallo \" + name + \"!\"\n    return begruessung",
+    "text": "5.6 Parameter mit Standardwerten\nSie können Parametern Standardwerte zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:\n\ndef begruessung(name=\"Gast\"):\n    print(\"Hallo\", name + \"!\")\n\nbegruessung()         # Hallo Gast!\nbegruessung(\"Maria\")  # Hallo Maria!\n\nHallo Gast!\nHallo Maria!\n\n\n\n\n\n\n\n\nprint() vs. return\n\n\n\n\n\nDiese beiden Begriffe werden oft verwechselt:\n\n\n\nAusdruck\nBedeutung\n\n\n\n\nprint()\nzeigt einen Text auf dem Bildschirm\n\n\nreturn\ngibt einen Wert an den Aufrufer zurück\n\n\n\nBeispiel:\n\ndef verdoppeln(x):\n    return x * 2\n\n# Ausgabe sichtbar machen\nprint(verdoppeln(5))  # Ausgabe: 10\n\n10",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
