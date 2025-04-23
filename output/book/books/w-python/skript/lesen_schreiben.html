@@ -352,6 +352,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#zeilenweise-lesen" id="toc-zeilenweise-lesen" class="nav-link" data-scroll-target="#zeilenweise-lesen"><span class="header-section-number">6.3</span> Zeilenweise lesen</a></li>
   <li><a href="#in-eine-datei-schreiben" id="toc-in-eine-datei-schreiben" class="nav-link" data-scroll-target="#in-eine-datei-schreiben"><span class="header-section-number">6.4</span> In eine Datei schreiben</a></li>
   <li><a href="#zeilenweise-schreiben-mit-schleife" id="toc-zeilenweise-schreiben-mit-schleife" class="nav-link" data-scroll-target="#zeilenweise-schreiben-mit-schleife"><span class="header-section-number">6.5</span> Zeilenweise schreiben mit Schleife</a></li>
+  <li><a href="#alle-zeilen-auf-einmal-lesen-mit-readlines" id="toc-alle-zeilen-auf-einmal-lesen-mit-readlines" class="nav-link" data-scroll-target="#alle-zeilen-auf-einmal-lesen-mit-readlines"><span class="header-section-number">6.6</span> Alle Zeilen auf einmal lesen mit <code>readlines()</code></a></li>
+  <li><a href="#dateien-manuell-schließen-mit-close" id="toc-dateien-manuell-schließen-mit-close" class="nav-link" data-scroll-target="#dateien-manuell-schließen-mit-close"><span class="header-section-number">6.7</span> Dateien manuell schließen mit <code>close()</code></a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python/skript/lesen_schreiben.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -378,14 +380,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Programme arbeiten oft nicht nur mit Benutzereingaben, sondern auch mit <strong>Textdateien</strong> – zum Beispiel um Daten zu speichern oder zu laden.</p>
-<p>Python bietet einfache Funktionen, um: - Dateien <strong>zu öffnen</strong>, - ihren <strong>Inhalt zu lesen</strong> oder <strong>hineinzuschreiben</strong>, - und die Datei <strong>wieder zu schließen</strong>.</p>
+<p>Python bietet einfache Funktionen, um:</p>
+<ul>
+<li>Dateien <strong>zu öffnen</strong>,</li>
+<li>ihren <strong>Inhalt zu lesen</strong> oder <strong>hineinzuschreiben</strong>,</li>
+<li>und die Datei <strong>wieder zu schließen</strong>.</li>
+</ul>
 <section id="lernziele-dieses-kapitels" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="lernziele-dieses-kapitels"><span class="header-section-number">6.1</span> Lernziele dieses Kapitels</h2>
-<p>Am Ende dieses Kapitels können Sie: - Dateien mit <code>open()</code> öffnen, - Inhalte aus Textdateien einlesen, - Texte in Dateien schreiben, - mit <code>with</code>-Blöcken sicher und einfach arbeiten.</p>
+<p>Am Ende dieses Kapitels können Sie:</p>
+<ul>
+<li>Dateien mit <code>open()</code> öffnen,</li>
+<li>Inhalte aus Textdateien einlesen,</li>
+<li>Texte in Dateien schreiben,</li>
+<li>mit <code>with</code>-Blöcken sicher und einfach arbeiten.</li>
+</ul>
 </section>
 <section id="eine-datei-einlesen" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="eine-datei-einlesen"><span class="header-section-number">6.2</span> Eine Datei einlesen</h2>
-<div id="8673182b" class="cell" data-execution_count="1">
+<div id="9a75c65c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel: Datei lesen</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"01-daten/beispiel.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> datei:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    inhalt <span class="op">=</span> datei.read()</span>
@@ -405,7 +418,7 @@ Zum Üben des Dateilesens in Python.
 </section>
 <section id="zeilenweise-lesen" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="zeilenweise-lesen"><span class="header-section-number">6.3</span> Zeilenweise lesen</h2>
-<div id="c3b9833f" class="cell" data-execution_count="2">
+<div id="5ef5a7c9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"01-daten/beispiel.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> datei:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> zeile <span class="kw">in</span> datei:</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Zeile:"</span>, zeile.strip())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -415,9 +428,24 @@ Zeile: Sie enthält mehrere Zeilen Text.
 Zeile: Zum Üben des Dateilesens in Python.</code></pre>
 </div>
 </div>
-<p>💡 <code>.strip()</code> entfernt Leerzeichen und Zeilenumbrüche am Anfang und Ende.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><code>.strip()</code> entfernt Leerzeichen und Zeilenumbrüche am Anfang und Ende.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -426,7 +454,7 @@ Aufgabe: Datei lesen
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Angenommen, es gibt eine Datei <code>gruesse.txt</code> mit folgendem Inhalt:</p>
 <pre><code>Hallo Anna
@@ -434,7 +462,7 @@ Guten Morgen Ben
 Willkommen Carla</code></pre>
 <p>Schreiben Sie ein Programm, das jede Zeile einzeln einliest und mit <code>print(...)</code> wiedergibt.</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -443,9 +471,9 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="7d2e090b" class="cell" data-execution_count="3">
+<div id="6f4aa2b5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"01-daten/gruesse.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> zeile <span class="kw">in</span> f:</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(zeile.strip())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -464,7 +492,7 @@ Willkommen Carla</code></pre>
 </section>
 <section id="in-eine-datei-schreiben" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="in-eine-datei-schreiben"><span class="header-section-number">6.4</span> In eine Datei schreiben</h2>
-<div id="821ced4f" class="cell" data-execution_count="4">
+<div id="3d4a4c29" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"ausgabe.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> datei:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    datei.write(<span class="st">"Das ist eine neue Zeile.</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    datei.write(<span class="st">"Und noch eine."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -476,16 +504,31 @@ Willkommen Carla</code></pre>
 </section>
 <section id="zeilenweise-schreiben-mit-schleife" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="zeilenweise-schreiben-mit-schleife"><span class="header-section-number">6.5</span> Zeilenweise schreiben mit Schleife</h2>
-<div id="5d4c764f" class="cell" data-execution_count="5">
+<div id="ee546236" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>daten <span class="op">=</span> [<span class="st">"Apfel"</span>, <span class="st">"Banane"</span>, <span class="st">"Kirsche"</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"obst.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> eintrag <span class="kw">in</span> daten:</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        f.write(eintrag <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>💡 Jede Zeile endet mit <code>\n</code> für einen Zeilenumbruch.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Jede Zeile endet mit <code>\n</code> für einen Zeilenumbruch.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -494,7 +537,7 @@ Aufgabe: Liste in Datei schreiben
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Gegeben ist eine Liste von Städten:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>staedte <span class="op">=</span> [<span class="st">"Berlin"</span>, <span class="st">"Hamburg"</span>, <span class="st">"München"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -502,7 +545,7 @@ Aufgabe: Liste in Datei schreiben
 <li>Schreiben Sie ein Programm, das jede Stadt in eine neue Zeile einer Datei <code>staedte.txt</code> schreibt.</li>
 </ul>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -511,9 +554,9 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="a94e693a" class="cell" data-execution_count="6">
+<div id="0fead407" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>staedte <span class="op">=</span> [<span class="st">"Berlin"</span>, <span class="st">"Hamburg"</span>, <span class="st">"München"</span>]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"staedte.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
@@ -523,6 +566,69 @@ Lösung
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<section id="alle-zeilen-auf-einmal-lesen-mit-readlines" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="alle-zeilen-auf-einmal-lesen-mit-readlines"><span class="header-section-number">6.6</span> Alle Zeilen auf einmal lesen mit <code>readlines()</code></h2>
+<p>Statt über eine Datei zu iterieren, können Sie alle Zeilen auf einmal als Liste einlesen:</p>
+<div id="4259a7b3" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"01-daten/beispiel.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    zeilen <span class="op">=</span> f.readlines()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(zeilen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Dies ist eine Beispieldatei.\n', 'Sie enthält mehrere Zeilen Text.\n', 'Zum Üben des Dateilesens in Python.\n']</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Jede Zeile endet mit <code>\n</code>, deshalb kann eine Nachbearbeitung mit <code>.strip()</code> sinnvoll sein:</p>
+<div id="05dc832d" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zeile <span class="kw">in</span> zeilen:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(zeile.strip())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dies ist eine Beispieldatei.
+Sie enthält mehrere Zeilen Text.
+Zum Üben des Dateilesens in Python.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="dateien-manuell-schließen-mit-close" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="dateien-manuell-schließen-mit-close"><span class="header-section-number">6.7</span> Dateien manuell schließen mit <code>close()</code></h2>
+<p>Wenn Sie <strong>keinen <code>with</code>-Block</strong> verwenden, müssen Sie die Datei selbst schließen – sonst bleibt sie geöffnet:</p>
+<div id="7ead4b98" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>datei <span class="op">=</span> <span class="bu">open</span>(<span class="st">"01-daten/beispiel.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>datei.write(<span class="st">"Dies ist ein Test."</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>datei.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><code>close()</code> ist wichtig, damit Änderungen gespeichert werden und die Datei nicht gesperrt bleibt.</p>
+<p><strong>Empfehlung</strong>: Nutzen Sie immer <code>with open(...)</code>, da Python die Datei dann automatisch schließt – auch bei Fehlern.</p>
 </div>
 </div>
 </div>

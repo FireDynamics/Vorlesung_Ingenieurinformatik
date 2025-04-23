@@ -428,7 +428,18 @@
     "href": "books/w-python/skript/lesen_schreiben.html",
     "title": "6  Arbeiten mit Dateien",
     "section": "",
-    "text": "6.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - Dateien mit open() öffnen, - Inhalte aus Textdateien einlesen, - Texte in Dateien schreiben, - mit with-Blöcken sicher und einfach arbeiten.",
+    "text": "6.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/lesen_schreiben.html#lernziele-dieses-kapitels",
+    "href": "books/w-python/skript/lesen_schreiben.html#lernziele-dieses-kapitels",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "",
+    "text": "Dateien mit open() öffnen,\nInhalte aus Textdateien einlesen,\nTexte in Dateien schreiben,\nmit with-Blöcken sicher und einfach arbeiten.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
@@ -450,7 +461,7 @@
     "href": "books/w-python/skript/lesen_schreiben.html#zeilenweise-lesen",
     "title": "6  Arbeiten mit Dateien",
     "section": "6.3 Zeilenweise lesen",
-    "text": "6.3 Zeilenweise lesen\n\nwith open(\"01-daten/beispiel.txt\", \"r\") as datei:\n    for zeile in datei:\n        print(\"Zeile:\", zeile.strip())\n\nZeile: Dies ist eine Beispieldatei.\nZeile: Sie enthält mehrere Zeilen Text.\nZeile: Zum Üben des Dateilesens in Python.\n\n\n💡 .strip() entfernt Leerzeichen und Zeilenumbrüche am Anfang und Ende.\n\n\n\n\n\n\nAufgabe: Datei lesen\n\n\n\n\n\nAngenommen, es gibt eine Datei gruesse.txt mit folgendem Inhalt:\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla\nSchreiben Sie ein Programm, das jede Zeile einzeln einliest und mit print(...) wiedergibt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nwith open(\"01-daten/gruesse.txt\", \"r\") as f:\n    for zeile in f:\n        print(zeile.strip())\n\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla",
+    "text": "6.3 Zeilenweise lesen\n\nwith open(\"01-daten/beispiel.txt\", \"r\") as datei:\n    for zeile in datei:\n        print(\"Zeile:\", zeile.strip())\n\nZeile: Dies ist eine Beispieldatei.\nZeile: Sie enthält mehrere Zeilen Text.\nZeile: Zum Üben des Dateilesens in Python.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n.strip() entfernt Leerzeichen und Zeilenumbrüche am Anfang und Ende.\n\n\n\n\n\n\n\n\n\nAufgabe: Datei lesen\n\n\n\n\n\nAngenommen, es gibt eine Datei gruesse.txt mit folgendem Inhalt:\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla\nSchreiben Sie ein Programm, das jede Zeile einzeln einliest und mit print(...) wiedergibt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nwith open(\"01-daten/gruesse.txt\", \"r\") as f:\n    for zeile in f:\n        print(zeile.strip())\n\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
@@ -472,7 +483,29 @@
     "href": "books/w-python/skript/lesen_schreiben.html#zeilenweise-schreiben-mit-schleife",
     "title": "6  Arbeiten mit Dateien",
     "section": "6.5 Zeilenweise schreiben mit Schleife",
-    "text": "6.5 Zeilenweise schreiben mit Schleife\n\ndaten = [\"Apfel\", \"Banane\", \"Kirsche\"]\n\nwith open(\"obst.txt\", \"w\") as f:\n    for eintrag in daten:\n        f.write(eintrag + \"\\n\")\n\n💡 Jede Zeile endet mit \\n für einen Zeilenumbruch.\n\n\n\n\n\n\nAufgabe: Liste in Datei schreiben\n\n\n\n\n\nGegeben ist eine Liste von Städten:\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nSchreiben Sie ein Programm, das jede Stadt in eine neue Zeile einer Datei staedte.txt schreibt.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nwith open(\"staedte.txt\", \"w\") as f:\n    for stadt in staedte:\n        f.write(stadt + \"\\n\")",
+    "text": "6.5 Zeilenweise schreiben mit Schleife\n\ndaten = [\"Apfel\", \"Banane\", \"Kirsche\"]\n\nwith open(\"obst.txt\", \"w\") as f:\n    for eintrag in daten:\n        f.write(eintrag + \"\\n\")\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nJede Zeile endet mit \\n für einen Zeilenumbruch.\n\n\n\n\n\n\n\n\n\nAufgabe: Liste in Datei schreiben\n\n\n\n\n\nGegeben ist eine Liste von Städten:\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nSchreiben Sie ein Programm, das jede Stadt in eine neue Zeile einer Datei staedte.txt schreibt.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nwith open(\"staedte.txt\", \"w\") as f:\n    for stadt in staedte:\n        f.write(stadt + \"\\n\")",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/lesen_schreiben.html#alle-zeilen-auf-einmal-lesen-mit-readlines",
+    "href": "books/w-python/skript/lesen_schreiben.html#alle-zeilen-auf-einmal-lesen-mit-readlines",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.6 Alle Zeilen auf einmal lesen mit readlines()",
+    "text": "6.6 Alle Zeilen auf einmal lesen mit readlines()\nStatt über eine Datei zu iterieren, können Sie alle Zeilen auf einmal als Liste einlesen:\n\nwith open(\"01-daten/beispiel.txt\", \"r\") as f:\n    zeilen = f.readlines()\n    print(zeilen)\n\n['Dies ist eine Beispieldatei.\\n', 'Sie enthält mehrere Zeilen Text.\\n', 'Zum Üben des Dateilesens in Python.\\n']\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nJede Zeile endet mit \\n, deshalb kann eine Nachbearbeitung mit .strip() sinnvoll sein:\n\nfor zeile in zeilen:\n    print(zeile.strip())\n\nDies ist eine Beispieldatei.\nSie enthält mehrere Zeilen Text.\nZum Üben des Dateilesens in Python.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/lesen_schreiben.html#dateien-manuell-schließen-mit-close",
+    "href": "books/w-python/skript/lesen_schreiben.html#dateien-manuell-schließen-mit-close",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.7 Dateien manuell schließen mit close()",
+    "text": "6.7 Dateien manuell schließen mit close()\nWenn Sie keinen with-Block verwenden, müssen Sie die Datei selbst schließen – sonst bleibt sie geöffnet:\n\ndatei = open(\"01-daten/beispiel.txt\", \"w\")\ndatei.write(\"Dies ist ein Test.\")\ndatei.close()\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nclose() ist wichtig, damit Änderungen gespeichert werden und die Datei nicht gesperrt bleibt.\nEmpfehlung: Nutzen Sie immer with open(...), da Python die Datei dann automatisch schließt – auch bei Fehlern.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
