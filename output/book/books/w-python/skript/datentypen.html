@@ -354,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#was-sind-booleans-bool" id="toc-was-sind-booleans-bool" class="nav-link" data-scroll-target="#was-sind-booleans-bool"><span class="header-section-number">2.5</span> Was sind Booleans (<code>bool</code>)?</a></li>
   <li><a href="#rechnen-mit-zahlen" id="toc-rechnen-mit-zahlen" class="nav-link" data-scroll-target="#rechnen-mit-zahlen"><span class="header-section-number">2.6</span> Rechnen mit Zahlen</a></li>
   <li><a href="#arbeiten-mit-text" id="toc-arbeiten-mit-text" class="nav-link" data-scroll-target="#arbeiten-mit-text"><span class="header-section-number">2.7</span> Arbeiten mit Text</a></li>
-  <li><a href="#umwandlung-von-datentypen-typecasting" id="toc-umwandlung-von-datentypen-typecasting" class="nav-link" data-scroll-target="#umwandlung-von-datentypen-typecasting"><span class="header-section-number">2.8</span> 🔁 Umwandlung von Datentypen (Typecasting)</a></li>
+  <li><a href="#umwandlung-von-datentypen-typecasting" id="toc-umwandlung-von-datentypen-typecasting" class="nav-link" data-scroll-target="#umwandlung-von-datentypen-typecasting"><span class="header-section-number">2.8</span> Umwandlung von Datentypen (Typecasting)</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python/skript/datentypen.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -428,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Sie können den Typ einer Variable mit der Funktion <code>type()</code> herausfinden:</p>
-<div id="e334bc73" class="cell" data-execution_count="1">
+<div id="6df3958a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wert <span class="op">=</span> <span class="dv">42</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(wert))  <span class="co"># Ausgabe: &lt;class 'int'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -443,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>int</code> steht für „integer“ – also ganze Zahlen wie <code>1</code>, <code>0</code>, <code>-10</code></li>
 <li><code>float</code> steht für „floating point number“ – also Zahlen mit Dezimalstellen wie <code>3.14</code>, <code>0.5</code>, <code>-2.0</code></li>
 </ul>
-<div id="986b763e" class="cell" data-execution_count="2">
+<div id="d0a3cfb2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>       <span class="co"># int</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">2.5</span>      <span class="co"># float</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -454,7 +454,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 b: 2.5 | Typ: &lt;class 'float'&gt;</code></pre>
 </div>
 </div>
-<p>💡 Die Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Die Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="was-sind-booleans-bool" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="was-sind-booleans-bool"><span class="header-section-number">2.5</span> Was sind Booleans (<code>bool</code>)?</h2>
@@ -469,7 +484,7 @@ b: 2.5 | Typ: &lt;class 'float'&gt;</code></pre>
 <li>Hat die Datei einen bestimmten Namen?</li>
 <li>Ist die Liste leer?</li>
 </ul>
-<div id="f7f3a218" class="cell" data-execution_count="3">
+<div id="0d7a61c7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ist_sonnig <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>hat_regenschirm <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -513,7 +528,7 @@ Typ von 'ist_sonnig': &lt;class 'bool'&gt;</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="bf1a81b6" class="cell" data-execution_count="4">
+<div id="c2b90ea0" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -534,12 +549,14 @@ Ganzzahlige Division: 3
 Division mit Rest: 1</code></pre>
 </div>
 </div>
-<p>💡 <code>//</code> bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch <code>%</code>. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.</p>
+<div class="callout-hint" data-icon="false" data-collapse="false">
+<p><code>//</code> bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch <code>%</code>. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.</p>
+</div>
 </section>
 <section id="arbeiten-mit-text" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="arbeiten-mit-text"><span class="header-section-number">2.7</span> Arbeiten mit Text</h2>
 <p>Texte (Strings) können miteinander kombiniert werden:</p>
-<div id="4c9399b8" class="cell" data-execution_count="5">
+<div id="51fb1fe6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>vorname <span class="op">=</span> <span class="st">"Anna"</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nachname <span class="op">=</span> <span class="st">"Beispiel"</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Willkommen, "</span> <span class="op">+</span> vorname <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> nachname <span class="op">+</span> <span class="st">"!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -548,7 +565,7 @@ Division mit Rest: 1</code></pre>
 </div>
 </div>
 <p>Wenn Sie Text und Zahlen kombinieren wollen, müssen Sie die Zahl in einen String umwandeln:</p>
-<div id="bd2792ee" class="cell" data-execution_count="6">
+<div id="27158ffa" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>punkte <span class="op">=</span> <span class="dv">95</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sie haben "</span> <span class="op">+</span> <span class="bu">str</span>(punkte) <span class="op">+</span> <span class="st">" Punkte erreicht."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -557,7 +574,7 @@ Division mit Rest: 1</code></pre>
 </div>
 </section>
 <section id="umwandlung-von-datentypen-typecasting" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="umwandlung-von-datentypen-typecasting"><span class="header-section-number">2.8</span> 🔁 Umwandlung von Datentypen (Typecasting)</h2>
+<h2 data-number="2.8" class="anchored" data-anchor-id="umwandlung-von-datentypen-typecasting"><span class="header-section-number">2.8</span> Umwandlung von Datentypen (Typecasting)</h2>
 <p>Manchmal müssen Sie einen Wert von einem Datentyp in einen anderen umwandeln – z. B. eine Zahl in einen Text (String), damit sie ausgegeben werden kann.</p>
 <p>Das nennt man <strong>Typecasting</strong>. Hier sind die wichtigsten Funktionen dafür:</p>
 <table class="caption-top table">
@@ -586,7 +603,7 @@ Division mit Rest: 1</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="51969112" class="cell" data-execution_count="7">
+<div id="6c50e220" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel: Zahl als Text anzeigen</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>punkte <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sie haben "</span> <span class="op">+</span> <span class="bu">str</span>(punkte) <span class="op">+</span> <span class="st">" Punkte."</span>)</span>
@@ -602,19 +619,19 @@ Doppelt so viel: 7.0</code></pre>
 </div>
 <p>Achten Sie beim Umwandeln darauf, dass der Inhalt auch wirklich passt – <code>int("abc")</code> führt zu einem Fehler.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✏️ Aufgabe: Alter in Tagen
+Aufgabe: Alter in Tagen
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Berechnen Sie, wie alt eine Person in Tagen ist.</p>
-<div id="56f39133" class="cell" data-execution_count="8">
+<div id="5cec8a28" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>alter_jahre <span class="op">=</span> <span class="dv">32</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tage <span class="op">=</span> alter_jahre <span class="op">*</span> <span class="dv">365</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sie sind ungefähr "</span> <span class="op">+</span> <span class="bu">str</span>(tage) <span class="op">+</span> <span class="st">" Tage alt."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -624,7 +641,7 @@ Doppelt so viel: 7.0</code></pre>
 </div>
 <p>Tipp: Denken Sie an die Umwandlung in einen String, wenn Sie die Zahl ausgeben möchten.</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -633,9 +650,9 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="ade7cf43" class="cell" data-execution_count="9">
+<div id="f8dfdc77" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>alter <span class="op">=</span> <span class="dv">32</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>tage <span class="op">=</span> alter <span class="op">*</span> <span class="dv">365</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sie sind ungefähr "</span> <span class="op">+</span> <span class="bu">str</span>(tage) <span class="op">+</span> <span class="st">" Tage alt."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
