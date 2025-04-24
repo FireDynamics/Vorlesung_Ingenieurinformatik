@@ -120,7 +120,18 @@
     "href": "books/w-python/skript/datentypen.html",
     "title": "2  Datentypen verstehen",
     "section": "",
-    "text": "2.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - die wichtigsten Datentypen unterscheiden, - mit Zahlen und Texten rechnen bzw. arbeiten, - einfache Berechnungen und Ausgaben erstellen.",
+    "text": "2.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/datentypen.html#lernziele-dieses-kapitels",
+    "href": "books/w-python/skript/datentypen.html#lernziele-dieses-kapitels",
+    "title": "2  Datentypen verstehen",
+    "section": "",
+    "text": "die wichtigsten Datentypen unterscheiden,\nmit Zahlen und Texten rechnen bzw. arbeiten,\neinfache Berechnungen und Ausgaben erstellen.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
@@ -208,7 +219,18 @@
     "href": "books/w-python/skript/flusskontrolle.html",
     "title": "3  Entscheidungen und Wiederholungen",
     "section": "",
-    "text": "3.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - Bedingungen formulieren und mit if, elif, else nutzen, - Vergleichsoperatoren verwenden (==, &lt;, !=, …), - Wiederholungen mit while und for umsetzen.",
+    "text": "3.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/flusskontrolle.html#lernziele-dieses-kapitels",
+    "href": "books/w-python/skript/flusskontrolle.html#lernziele-dieses-kapitels",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "",
+    "text": "Bedingungen formulieren und mit if, elif, else nutzen,\nVergleichsoperatoren verwenden (==, &lt;, !=, …),\nWiederholungen mit while und for umsetzen.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
@@ -362,7 +384,18 @@
     "href": "books/w-python/skript/funktionen.html",
     "title": "5  Wiederverwendbarer Code mit Funktionen",
     "section": "",
-    "text": "5.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie: - eigene Funktionen mit def erstellen, - Parameter übergeben und Rückgabewerte nutzen, - Funktionen sinnvoll in Programmen einsetzen.",
+    "text": "5.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python/skript/funktionen.html#lernziele-dieses-kapitels",
+    "href": "books/w-python/skript/funktionen.html#lernziele-dieses-kapitels",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "",
+    "text": "eigene Funktionen mit def erstellen,\nParameter übergeben und Rückgabewerte nutzen,\nFunktionen sinnvoll in Programmen einsetzen.",
     "crumbs": [
       "Grundlagen Python",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
