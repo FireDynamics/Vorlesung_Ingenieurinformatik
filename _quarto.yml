@@ -24,13 +24,21 @@ book:
     - index.qmd
     - part: "Grundlagen Python"
       chapters:
-        - books/w-python/index.qmd
-        - books/w-python/skript/einleitung.qmd
-        - books/w-python/skript/datentypen.qmd
-        - books/w-python/skript/flusskontrolle.qmd
-        - books/w-python/skript/listen_iterationen.qmd 
-        - books/w-python/skript/funktionen.qmd
-        - books/w-python/skript/lesen_schreiben.qmd
+        - books/w-python-minimal/index.qmd
+        - books/w-python-minimal/skript/einleitung.qmd
+        - books/w-python-minimal/skript/datentypen.qmd
+        - books/w-python-minimal/skript/flusskontrolle.qmd
+        - books/w-python-minimal/skript/listen_iterationen.qmd 
+        - books/w-python-minimal/skript/funktionen.qmd
+        - books/w-python-minimal/skript/lesen_schreiben.qmd
+    - part: "Matplotlib"
+      chapters:
+        - books/w-python-matplotlib/index.qmd
+        - books/w-python-matplotlib/skript/introduction.qmd
+        - books/w-python-matplotlib/skript/basic_plot_types.qmd
+        - books/w-python-matplotlib/skript/adapting_plots.qmd
+        - books/w-python-matplotlib/skript/advanced_techniques.qmd
+        - books/w-python-matplotlib/skript/scientific_plotting.qmd
     - part: "NumPy"
       chapters:
         - books/w-python-numpy-grundlagen/index.qmd
@@ -44,15 +52,7 @@ book:
         - books/w-python-numpy-grundlagen/skript/array_images.qmd
         - books/w-python-numpy-grundlagen/skript/assessment.qmd
         - books/w-python-numpy-grundlagen/uebungen/uebung.qmd
-        - books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.qmd
-    - part: "Matplotlib"
-      chapters:
-        - books/w-python-matplotlib/index.qmd
-        - books/w-python-matplotlib/skript/introduction.qmd
-        - books/w-python-matplotlib/skript/basic_plot_types.qmd
-        - books/w-python-matplotlib/skript/adapting_plots.qmd
-        - books/w-python-matplotlib/skript/advanced_techniques.qmd
-        - books/w-python-matplotlib/skript/scientific_plotting.qmd
+
 format:
   html:
     toc: true

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Rechnen mit Arrays – Vorlesung Ingenieurinformatik</title>
+<title>15&nbsp; Rechnen mit Arrays – Vorlesung Ingenieurinformatik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/index.html">NumPy</a></li><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/index.html">NumPy</a></li><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,43 +165,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Werkzeugbaustein Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/einleitung.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/datentypen.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/datentypen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Datentypen verstehen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/flusskontrolle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Entscheidungen und Wiederholungen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/listen_iterationen.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/listen_iterationen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mehrere Werte speichern</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/funktionen.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/funktionen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederverwendbarer Code mit Funktionen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python/skript/lesen_schreiben.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../books/w-python-minimal/skript/lesen_schreiben.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Arbeiten mit Dateien</span></span></a>
   </div>
 </li>
@@ -210,95 +210,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">NumPy</span></a>
+ <span class="menu-text">Matplotlib</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preamble</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_info.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_manipulation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_read_n_write.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/array_images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/skript/assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/uebungen/uebung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../books/w-python-numpy-grundlagen/klausurfragen/klausurfragen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Klausurfragen</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Matplotlib</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/index.html" class="sidebar-item-text sidebar-link">
@@ -308,31 +225,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Einführung in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Einführung in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/basic_plot_types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Diagrammtypen in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Diagrammtypen in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/adapting_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Anpassung und Gestaltung von Plots in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Anpassung und Gestaltung von Plots in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/advanced_techniques.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Erweiterte Techniken in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Erweiterte Techniken in Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../books/w-python-matplotlib/skript/scientific_plotting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Best Practices in Matplotlib: Fehler und Verbesserungen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Best Practices in Matplotlib: Fehler und Verbesserungen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">NumPy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preamble</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Einführung NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_info.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_slicing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_manipulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Array Manipulation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_read_n_write.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesen und Schreiben von Dateien</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/array_images.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Arbeiten mit Bildern</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/skript/assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lernzielkontrolle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/w-python-numpy-grundlagen/uebungen/uebung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
   </div>
 </li>
       </ul>
@@ -347,18 +341,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#arithmetische-funktionen" id="toc-arithmetische-funktionen" class="nav-link active" data-scroll-target="#arithmetische-funktionen"><span class="header-section-number">10.1</span> Arithmetische Funktionen</a></li>
-  <li><a href="#vergleiche" id="toc-vergleiche" class="nav-link" data-scroll-target="#vergleiche"><span class="header-section-number">10.2</span> Vergleiche</a></li>
-  <li><a href="#aggregatfunktionen" id="toc-aggregatfunktionen" class="nav-link" data-scroll-target="#aggregatfunktionen"><span class="header-section-number">10.3</span> Aggregatfunktionen</a></li>
+  <li><a href="#arithmetische-funktionen" id="toc-arithmetische-funktionen" class="nav-link active" data-scroll-target="#arithmetische-funktionen"><span class="header-section-number">15.1</span> Arithmetische Funktionen</a></li>
+  <li><a href="#vergleiche" id="toc-vergleiche" class="nav-link" data-scroll-target="#vergleiche"><span class="header-section-number">15.2</span> Vergleiche</a></li>
+  <li><a href="#aggregatfunktionen" id="toc-aggregatfunktionen" class="nav-link" data-scroll-target="#aggregatfunktionen"><span class="header-section-number">15.3</span> Aggregatfunktionen</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/w-python-numpy-grundlagen/skript/array_calculation.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/index.html">NumPy</a></li><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/index.html">NumPy</a></li><li class="breadcrumb-item"><a href="../../../books/w-python-numpy-grundlagen/skript/array_calculation.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Rechnen mit Arrays</span></h1>
 </div>
 
 
@@ -375,8 +369,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="arithmetische-funktionen" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="arithmetische-funktionen"><span class="header-section-number">10.1</span> Arithmetische Funktionen</h2>
+<section id="arithmetische-funktionen" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="arithmetische-funktionen"><span class="header-section-number">15.1</span> Arithmetische Funktionen</h2>
 <p>Ein großer Vorteil an NumPy ist das Rechnen mit Arrays. Ohne NumPy müsste man entweder eine <code>Schleife</code> oder aber <code>List comprehension</code> benutzen, um mit sämtlichen Werten in der Liste zu rechnen. In NumPy fällt diese Unannehmlichkeit weg.</p>
 <div id="b9c45e21" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -434,8 +428,8 @@ Arbeiten mit Winkelfunktionen
 </div>
 </div>
 </section>
-<section id="vergleiche" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="vergleiche"><span class="header-section-number">10.2</span> Vergleiche</h2>
+<section id="vergleiche" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="vergleiche"><span class="header-section-number">15.2</span> Vergleiche</h2>
 <p>NumPy-Arrays lassen sich auch miteinander vergleichen. Betrachten wir die folgenden zwei Arrays:</p>
 <div id="c23b26e3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -499,8 +493,8 @@ Warum ist 0.1 + 0.2 nicht gleich 0.3?
 </div>
 </div>
 </section>
-<section id="aggregatfunktionen" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="aggregatfunktionen"><span class="header-section-number">10.3</span> Aggregatfunktionen</h2>
+<section id="aggregatfunktionen" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="aggregatfunktionen"><span class="header-section-number">15.3</span> Aggregatfunktionen</h2>
 <p>Für verschiedene Auswertungen benötigen wir Funktionen, wie etwa die Summen oder die Mittelwert-Funktion. Starten wir mit einem Beispiel Array a:</p>
 <div id="8302601a" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">8</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1022,12 +1016,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../../books/w-python-numpy-grundlagen/skript/array_info.html" class="pagination-link" aria-label="Größe, Struktur und Typ">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Größe, Struktur und Typ</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../../books/w-python-numpy-grundlagen/skript/array_slicing.html" class="pagination-link" aria-label="Slicing">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Slicing</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Slicing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -10,3 +10,6 @@
 [submodule "books/shared-media"]
 	path = books/shared-media
 	url = https://github.com/bausteine-der-datenanalyse/shared-media
+[submodule "books/w-python-minimal"]
+	path = books/w-python-minimal
+	url = https://github.com/bausteine-der-datenanalyse/w-python-minimal
