@@ -1,0 +1,57 @@
+# Anwendungsbeispiele
+
+## Anwendung: Ballonfahrt-Daten analysieren
+
+```{python}
+ballon = np.genfromtxt("messdaten_ballonfahrt.txt", delimiter=",", skip_header=1)
+zeit = ballon[:, 0]
+hoehe = ballon[:, 1]
+
+plt.plot(zeit, hoehe)
+plt.title("Ballonfahrt – Höhe über Zeit")
+plt.xlabel("Zeit (s)")
+plt.ylabel("Höhe (m)")
+plt.grid(True)
+plt.show()
+
+geschwindigkeit = np.gradient(hoehe, zeit)
+plt.plot(zeit, geschwindigkeit, color="orange")
+plt.title("Geschwindigkeit")
+plt.grid(True)
+plt.show()
+```
+
+## Anwendung: Balkenverformung im Bauingenieurwesen
+
+Ein Träger wird in der Mitte belastet. Die Durchbiegung wird an 50 Punkten gemessen:
+
+```{python}
+balken = np.genfromtxt("balken_durchbiegung.csv", delimiter=",", skip_header=1)
+x = balken[:, 0]
+y = balken[:, 1]
+
+window = 7
+weights = np.ones(window) / window
+y_smooth = np.convolve(y, weights, mode='valid')
+
+plt.plot(x, y, label="Messung", alpha=0.5)
+plt.plot(x[(window-1)//2:-(window//2)], y_smooth, label="Geglättet", color='red')
+plt.title("Durchbiegung eines Trägers")
+plt.xlabel("Position (m)")
+plt.ylabel("Durchbiegung (mm)")
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+
+## Zusammenfassung
+
+In dieser Einheit haben Sie gelernt:
+
+- wie Daten eingelesen und bereinigt werden,
+- wie man sie analysiert und visualisiert,
+- wie Interpolation und Glättung funktionieren,
+- wie reale Datensätze aus Technik und Naturwissenschaft ausgewertet werden können.
+
+Diese Fähigkeiten sind grundlegend für jede datengetriebene Analyse im Ingenieurbereich.

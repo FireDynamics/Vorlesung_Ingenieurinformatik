@@ -52,7 +52,13 @@ book:
         - books/w-python-numpy-grundlagen/skript/array_images.qmd
         - books/w-python-numpy-grundlagen/skript/assessment.qmd
         - books/w-python-numpy-grundlagen/uebungen/uebung.qmd
-
+    - part: "Working with data"
+      chapters:
+        - books/dataanalysis/introduction.qmd
+        - books/dataanalysis/interpolation.qmd
+        - books/dataanalysis/fitting.qmd
+        - books/dataanalysis/splines.qmd
+        - books/dataanalysis/anwendungsbeispiel.qmd
 format:
   html:
     toc: true
