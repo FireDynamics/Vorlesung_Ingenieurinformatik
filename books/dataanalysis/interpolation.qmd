@@ -4,6 +4,7 @@
 #| echo: false
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy
 ```
 
 Was tun, wenn Werte fehlen? In vielen Datensätzen gibt es Lücken – zum Beispiel, 
@@ -22,14 +23,14 @@ exakt abbildet.
 Die Modellierung von Daten hat das Ziel eine Menge von Daten durch einen funktionalen Zusammenhang abzubilden. Beispielhaft können Daten aus Experimenten oder Simulationen stark verrauscht und so für eine Weiterverarbeitung nicht geeignet sein. Eine mittelnde Funktion kann den Datensatz stark vereinfachen. Oder es existieren nur wenige Datenpunkte und die Zwischenstellen müssen durch eine Funktion bestimmt werden.   
 
 Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden:
-1. Gegeben sind $ n$ Messpunktpaare $ (x_i, y_i)$ mit $ x_i, y_i \in \mathbb{R}$
-2. Gesucht ist eine Modellfunktion $ y(x)$, welche die Messpunktpaare approximiert
+1. Gegeben sind $n$ Messpunktpaare $(x_i, y_i)$ mit $x_i, y_i \in \mathbb{R}$
+2. Gesucht ist eine Modellfunktion $y(x)$, welche die Messpunktpaare approximiert
 
-Ein möglicher Ansatz ist die Darstellung der Modellfunktion als Summe von $ m$ Basisfunktionen $ \phi_i(x)$ mit den Koeffizienten $ \beta_i$. 
+Ein möglicher Ansatz ist die Darstellung der Modellfunktion als Summe von $m$ Basisfunktionen $\phi_i(x)$ mit den Koeffizienten $\beta_i$. 
 
 $$  y(x) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x) = \beta_1\cdot \phi_1(x) + \cdots + \beta_m\cdot \phi_m(x) $$
 
-Die Koeffizienten $ \beta_i$ müssen dabei so bestimmt werden, dass $ y(x)$ so gut wie möglich – oder gar exakt – die Messpunkte approximieren. 
+Die Koeffizienten $\beta_i$ müssen dabei so bestimmt werden, dass $y(x)$ so gut wie möglich – oder gar exakt – die Messpunkte approximieren. 
 
 Als Abstandmaß zwischen einer Modellfunktion und den Messpunkten kann die [L2-Norm](https://de.wikipedia.org/wiki/Folgenraum#lp) verwendet werden. Diese ist definiert als
 
@@ -52,20 +53,20 @@ $$ \phi_1(x)=1,\quad \phi_2(x)=x,\quad \phi_3(x)=x^2,\quad \cdots,\quad \phi_m =
 
 ## Polynome
 
-Polynome $ P(x)$ sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten ($ x^i, i \in \mathbb{N}$) mit den entsprechenden Koeffzienten $ a_i$:
+Polynome $P(x)$ sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten ($ x^i, i \in \mathbb{N}$) mit den entsprechenden Koeffzienten $a_i$:
 
 $$ P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} $$ 
 
 * Als Grad eines Polynoms wird der Term mit dem höchsten Exponenten und nichtverschwindenden Koeffizienten (der sogenannte Leitkoeffizient) bezeichnet.
-* Ein Polynom mit Grad $ n$ hat $ n$, teilweise [komplexe](https://de.wikipedia.org/wiki/Komplexe_Zahl), Nullstellen.
+* Ein Polynom mit Grad $n$ hat $n$, teilweise [komplexe](https://de.wikipedia.org/wiki/Komplexe_Zahl), Nullstellen.
 
-In Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad $ n$ durch folgendes Array dargestellt
+In Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad $n$ durch folgendes Array dargestellt
 
 ```python
 [an, ..., a2, a1, a0]
 ```
 
-So z.B. für $ P(x) = x^3 + 5x^2 - 2x + 3$:
+So z.B. für $P(x) = x^3 + 5x^2 - 2x + 3$:
 
 ```{python}
 P = np.array([1, 5, -2, 3])
@@ -86,7 +87,7 @@ y = np.polyval(P, x)
 print(f"P(x={x}) = {y}")
 ```
 
-Für die graphische Darstellung im Bereich $ x \in [-6, 2]$ können die bekannten numpy und matplotlib Funktionen verwendet werden.
+Für die graphische Darstellung im Bereich $x \in [-6, 2]$ können die bekannten numpy und matplotlib Funktionen verwendet werden.
 
 ```{python}
 x = np.linspace(-6, 2, 50)
@@ -118,11 +119,11 @@ for i, z in enumerate(nstellen):
         print(f"  x_{i+1} = {z.real:.2} {z.imag:+.2}i")
 ```
 
-In diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl $ z$ wird in Python als Summe des Realteils ($ Re$) und Imaginärteils ($ Im$). Letzterer wird durch ein nachfolgendes `j`, die imaginäre Einheit, gekennzeichnet.
+In diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl $z$ wird in Python als Summe des Realteils ($ Re$) und Imaginärteils ($ Im$). Letzterer wird durch ein nachfolgendes `j`, die imaginäre Einheit, gekennzeichnet.
 
 $$ z = Re(z) + Im(z)j$$
 
-Die Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind $ x_i$ die $ n$ Nullstellen, so ist das Polynom $ n$-ten Grades durch folgendes Produkt beschrieben:
+Die Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind $x_i$ die $n$ Nullstellen, so ist das Polynom $n$-ten Grades durch folgendes Produkt beschrieben:
 
 $$ P(x) = \prod_{i=1}^n \left(x - x_i\right) = (x - x_1)\cdot (x - x_2) \cdot \cdots \cdot (x - x_n) $$ 
 
@@ -146,7 +147,7 @@ Das Modul numpy stellt viele praktische Funktionen zum Umgang mit Polynomen zur 
 
 Interpolation ist eine Methode, um Datenpunkte zwischen gegebenen Messpunkten zu konstruieren. Dazu wird eine Funktion gesucht, die alle Messpunkte exakt abbildet, was gleichbedeutend damit ist, dass die L2-Norm zwischen Funktion und Punkten Null ist.
 
-Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare $(x_1, y_1)$ und $(x_2, y_2)$ mit $ x_1\neq x_2$ existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion
+Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare $(x_1, y_1)$ und $(x_2, y_2)$ mit $x_1\neq x_2$ existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion
 
 $$y(x) = \beta_1 x + \beta_0$$
 
@@ -210,7 +211,7 @@ plt.legend()
 plt.grid()
 ```
 
-Dies kann verallgemeinert werden: $ n$ Messpunkte können exakt mit einem Polynom ($ n-1$)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom $ P(x)$ gilt:
+Dies kann verallgemeinert werden: $n$ Messpunkte können exakt mit einem Polynom ($ n-1$)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom $P(x)$ gilt:
 
 $$  P(x_i) = y_i \quad i \in 1, \dots, n $$
 
@@ -219,7 +220,7 @@ Die Existenz und Eindeutigkeit eines solchen Polynoms kann gezeigt werden. Das g
 $$  P(x) = \sum_{i=1}^n y_i I_i(x) $$
 $$  \text{mit}\quad I_i(x) = \prod_{j=1, i\neq j}^n \frac{x-x_j}{x_i - x_j} $$
 
-Alternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis $ \phi_i(x)$ gegeben ist, gelöst werden. Für die $ n$ Punktepaare gilt jeweils:
+Alternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis $\phi_i(x)$ gegeben ist, gelöst werden. Für die $n$ Punktepaare gilt jeweils:
 
 $$  y(x_i) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x_i) = \beta_1\cdot \phi_1(x_i) + \cdots + \beta_m\cdot \phi_m(x_i) = y_i $$
 
@@ -239,11 +240,11 @@ und mit der Polynomialbasis
 
 $$ \underbrace{\left( \begin{matrix} 1 & x_1 & \cdots & x_1^{n-1} \\ 1 & x_2 & \cdots & x_2^{n-1} \\ \vdots &\vdots & \ddots & \vdots \\ 1 & x_n & \cdots & x_n^{n-1} \\ \end{matrix}\right)}_{V}. \left(  \begin{matrix} \beta_1 \\  \beta_2 \\   \vdots \\   \beta_m \\ \end{matrix} \right) = \left(  \begin{matrix} y_1 \\  y_2 \\   \vdots \\   y_n \\ \end{matrix} \right)$$
 
-Die Matrix $ V$ heisst [Vandermonde-Matrix](https://de.wikipedia.org/wiki/Vandermonde-Matrix) und kann exakt gelöst werden, für $ m=n$ und wenn für alle $ i, j, i\neq j$ gilt $ x_i \neq x_j$. 
+Die Matrix $V$ heisst [Vandermonde-Matrix](https://de.wikipedia.org/wiki/Vandermonde-Matrix) und kann exakt gelöst werden, für $m=n$ und wenn für alle $i, j, i\neq j$ gilt $x_i \neq x_j$. 
 
 In Python kann das Interpolationsproblem mit der [Funktion `np.polyfit`](https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html) gelöst werden. Das folgende Beispiel demonstriert deren Anwendung.
 
-Die Messtellen folgen in dem Beispiel der Funktion $ f(x)$, welche nur zur Generierung der Datenpunkte verwendet wird. 
+Die Messtellen folgen in dem Beispiel der Funktion $f(x)$, welche nur zur Generierung der Datenpunkte verwendet wird. 
 
 $$ f(x) = \frac{1}{2} + \frac{1}{1+x^2}$$
 
@@ -297,7 +298,7 @@ plt.legend()
 plt.grid()
 ```
 
-Die Interpolation erfüllt immer die geforderte Bedingung $ y(x_i) = y_i$. Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.   
+Die Interpolation erfüllt immer die geforderte Bedingung $y(x_i) = y_i$. Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.   
 
 
 
