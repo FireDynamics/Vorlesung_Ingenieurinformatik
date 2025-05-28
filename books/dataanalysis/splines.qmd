@@ -10,47 +10,47 @@ Polynominterpolation versucht eine globale Modellfunktion zu finden. Jedoch eign
 
 ## Definition
 
-Für $\sf n+1$ Messpunkte $\sf (x_i, y_i)$ kann eine Splinefunktion $\sf s_k$, hier ein Polynomspline, wie folgt definiert werden.
+Für $ n+1$ Messpunkte $ (x_i, y_i)$ kann eine Splinefunktion $ s_k$, hier ein Polynomspline, wie folgt definiert werden.
 
-* Vorausgesetzt ist, dass die Messpunkte sortiert sind, d.h. $\sf x_0 < x_1 < \cdots < x_n$
-* für jedes $\sf i = 0\dots n − 1$ ist $\sf s_k$ ein Polynom vom Grad $\sf k$ auf dem Intervall $\sf \left[x_i , x_{i+1}\right]$
-* $\sf s_k$ ist auf $\sf \left[x_0 , x_n \right]$ $\sf (k − 1)$-mal stetig differenzierbar
+* Vorausgesetzt ist, dass die Messpunkte sortiert sind, d.h. $ x_0 < x_1 < \cdots < x_n$
+* für jedes $ i = 0\dots n − 1$ ist $ s_k$ ein Polynom vom Grad $ k$ auf dem Intervall $ \left[x_i , x_{i+1}\right]$
+* $ s_k$ ist auf $ \left[x_0 , x_n \right]$ $ (k − 1)$-mal stetig differenzierbar
 
 Beispiele:
-* $\sf k = 1$: Polygonzug
-* $\sf k = 3$: kubische Polynomsplines (B-Splines)
+* $ k = 1$: Polygonzug
+* $ k = 3$: kubische Polynomsplines (B-Splines)
 
 ## Kubische Splines
 
-Die in der Praxis häufig eingesetzten kubischen Polynomsplines $\sf s_3$ ($\sf k= 3$) haben folgende Eigenschaften:
-* $\sf s_3|\left[x_i,x_{i+1}\right] = \beta_0 +\beta_1 x + \beta_2 x^2 + \beta_3 x^3$
-* $\sf s_3$ ist zweimal stetig differenzierbar auf $\sf \left[x_0,x_n\right]$, also insbesondere an den
-Stützpunkten $\sf x_i$ der Messpunkte 
+Die in der Praxis häufig eingesetzten kubischen Polynomsplines $ s_3$ ($ k= 3$) haben folgende Eigenschaften:
+* $ s_3|\left[x_i,x_{i+1}\right] = \beta_0 +\beta_1 x + \beta_2 x^2 + \beta_3 x^3$
+* $ s_3$ ist zweimal stetig differenzierbar auf $ \left[x_0,x_n\right]$, also insbesondere an den
+Stützpunkten $ x_i$ der Messpunkte 
 
-Die Koeffizienten $\sf \beta_i$ werden wie folgt bestimmt
-* aus den $\sf n + 1$ Messpunkten ergeben sich $\sf n$ Intervalle, d.h. mit jeweils vier Koeffizienten sind es insgesamt $\sf 4n$ Koeffizienten
-* Exakte Darstellung der Messpunkte ($\sf n + 1$ Gleichungen), d.h.: $\sf s_3(x_i) = y_i$
-* Glattheitsbedingungen an den inneren Messpunkten ($\sf i=1\dots n-1$), mit jeweils ($\sf n − 1$ Gleichungen):
-$$\sf s_3'(x_i)_- =s_3'(x_i)_+$$
-$$\sf s_3''(x_i)_- =s_3''(x_i)_+$$
-$$\sf s_3'''(x_i)_- =s_3'''(x_i)_+$$
+Die Koeffizienten $ \beta_i$ werden wie folgt bestimmt
+* aus den $ n + 1$ Messpunkten ergeben sich $ n$ Intervalle, d.h. mit jeweils vier Koeffizienten sind es insgesamt $ 4n$ Koeffizienten
+* Exakte Darstellung der Messpunkte ($ n + 1$ Gleichungen), d.h.: $ s_3(x_i) = y_i$
+* Glattheitsbedingungen an den inneren Messpunkten ($ i=1\dots n-1$), mit jeweils ($ n − 1$ Gleichungen):
+$$ s_3'(x_i)_- =s_3'(x_i)_+$$
+$$ s_3''(x_i)_- =s_3''(x_i)_+$$
+$$ s_3'''(x_i)_- =s_3'''(x_i)_+$$
 
-* Damit sind es $\sf 4n − 2$ Gleichungen für $\sf 4n$ Koeffizienten
+* Damit sind es $ 4n − 2$ Gleichungen für $ 4n$ Koeffizienten
 
 Um die beiden fehlenden Gleichungen zu finden bzw. zu bestimmen werden Randbedingungen oder Abschlussbedingungen benötigt.
 Die gängigsten Bedingungen sind:
 * natürliche Splines: die Krümung am Rand verschwindet, d.h.:
-$$\sf s_3''(x_0) = s_3''(x_n) = 0 $$
+$$ s_3''(x_0) = s_3''(x_n) = 0 $$
 * periodische Splines: die Steigung und Krümung ist an beiden Rändern gleich
-$$\sf s_3'(x_0) = s_3'(x_n)$$ 
-$$\sf s_3''(x_0) = s_3''(x_n)$$
-* Hermite Splines: die Steigungen am Rand werden explizit vorgegeben (hier durch $\sf u$ und $\sf v$)
-$$\sf s_3'(x_0) = u $$
-$$\sf s_3'(x_n) = v $$
+$$ s_3'(x_0) = s_3'(x_n)$$ 
+$$ s_3''(x_0) = s_3''(x_n)$$
+* Hermite Splines: die Steigungen am Rand werden explizit vorgegeben (hier durch $ u$ und $ v$)
+$$ s_3'(x_0) = u $$
+$$ s_3'(x_n) = v $$
 
 ## Anwendung
 
-Im Folgenden werden zwei Beispiele, $\sf s_1$ und $\sf s_3$, für die Erstellung von Splines mit Python vorgestellt. 
+Im Folgenden werden zwei Beispiele, $ s_1$ und $ s_3$, für die Erstellung von Splines mit Python vorgestellt. 
 
 ```{python}
 # Erzeugung von Messpunkten
@@ -59,7 +59,7 @@ xi = np.linspace(0, np.pi, n)
 yi = np.sin(xi)
 ```
 
-Für die $\sf s_1$ Splines, kann die Funktion `np.interp` verwendet werden. Sie führt eine lineare Interpolation zwischen gegebenen Wertepaaren durch.
+Für die $ s_1$ Splines, kann die Funktion `np.interp` verwendet werden. Sie führt eine lineare Interpolation zwischen gegebenen Wertepaaren durch.
 
 ```{python}
 # Wertebereich für die Visualisierung der Interpolation
@@ -84,7 +84,7 @@ plt.ylabel('y')
 plt.legend();
 ```
 
-Die $\sf s_3$ Splines können mit Funktionen aus dem scipy-Modul berechnet werden. Dazu werden zunächst die Koeffizienten bestimmt (`scipy.interpolate.splrep`) und diese ermöglichen die gewünschte Auswertung, welche mit der Funktion `scipy.interpolate.splev` vorgenommen werden kann. 
+Die $ s_3$ Splines können mit Funktionen aus dem scipy-Modul berechnet werden. Dazu werden zunächst die Koeffizienten bestimmt (`scipy.interpolate.splrep`) und diese ermöglichen die gewünschte Auswertung, welche mit der Funktion `scipy.interpolate.splev` vorgenommen werden kann. 
 
 ```{python}
 import scipy.interpolate as si

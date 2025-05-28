@@ -1,0 +1,12 @@
+{
+  "hash": "0dade0e3502bfee6483201544ce3d147",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "# Anwendungsbeispiele\n\n\n\n## Anwendung: Ballonfahrt-Daten analysieren\n\n::: {#8ec6a086 .cell execution_count=2}\n``` {.python .cell-code}\nballon = np.genfromtxt(\"messdaten_ballonfahrt.txt\", delimiter=\",\", skip_header=1)\nzeit = ballon[:, 0]\nhoehe = ballon[:, 1]\n\nplt.plot(zeit, hoehe)\nplt.title(\"Ballonfahrt – Höhe über Zeit\")\nplt.xlabel(\"Zeit (s)\")\nplt.ylabel(\"Höhe (m)\")\nplt.grid(True)\nplt.show()\n\ngeschwindigkeit = np.gradient(hoehe, zeit)\nplt.plot(zeit, geschwindigkeit, color=\"orange\")\nplt.title(\"Geschwindigkeit\")\nplt.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](anwendungsbeispiel_files/figure-html/cell-3-output-1.png){width=585 height=449}\n:::\n\n::: {.cell-output .cell-output-display}\n![](anwendungsbeispiel_files/figure-html/cell-3-output-2.png){width=582 height=431}\n:::\n:::\n\n\n## Anwendung: Balkenverformung im Bauingenieurwesen\n\nEin Träger wird in der Mitte belastet. Die Durchbiegung wird an 50 Punkten gemessen:\n\n::: {#0252fb64 .cell execution_count=3}\n``` {.python .cell-code}\nbalken = np.genfromtxt(\"balken_durchbiegung.csv\", delimiter=\",\", skip_header=1)\nx = balken[:, 0]\ny = balken[:, 1]\n\nwindow = 7\nweights = np.ones(window) / window\ny_smooth = np.convolve(y, weights, mode='valid')\n\nplt.plot(x, y, label=\"Messung\", alpha=0.5)\nplt.plot(x[(window-1)//2:-(window//2)], y_smooth, label=\"Geglättet\", color='red')\nplt.title(\"Durchbiegung eines Trägers\")\nplt.xlabel(\"Position (m)\")\nplt.ylabel(\"Durchbiegung (mm)\")\nplt.legend()\nplt.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](anwendungsbeispiel_files/figure-html/cell-4-output-1.png){width=600 height=449}\n:::\n:::\n\n\n## Zusammenfassung\n\nIn dieser Einheit haben Sie gelernt:\n\n- wie Daten eingelesen und bereinigt werden,\n- wie man sie analysiert und visualisiert,\n- wie Interpolation und Glättung funktionieren,\n- wie reale Datensätze aus Technik und Naturwissenschaft ausgewertet werden können.\n\nDiese Fähigkeiten sind grundlegend für jede datengetriebene Analyse im Ingenieurbereich.\n\n",
+    "supporting": [
+      "anwendungsbeispiel_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

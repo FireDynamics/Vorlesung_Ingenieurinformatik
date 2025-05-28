@@ -1,5 +1,11 @@
 # Anwendungsbeispiele
 
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
 ## Anwendung: Ballonfahrt-Daten analysieren
 
 ```{python}

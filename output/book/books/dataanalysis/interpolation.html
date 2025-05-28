@@ -395,8 +395,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../books/dataanalysis/glaetten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Trendglättung – Rauschen reduzieren</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/anwendungsbeispiel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Anwendungsbeispiele</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Anwendungsbeispiele</span></span></a>
   </div>
 </li>
       </ul>
@@ -455,12 +461,12 @@ Theorie - Modellierung
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Die Modellierung von Daten hat das Ziel eine Menge von Daten durch einen funktionalen Zusammenhang abzubilden. Beispielhaft können Daten aus Experimenten oder Simulationen stark verrauscht und so für eine Weiterverarbeitung nicht geeignet sein. Eine mittelnde Funktion kann den Datensatz stark vereinfachen. Oder es existieren nur wenige Datenpunkte und die Zwischenstellen müssen durch eine Funktion bestimmt werden.</p>
-<p>Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden: 1. Gegeben sind <span class="math inline">\(\sf n\)</span> Messpunktpaare <span class="math inline">\(\sf (x_i, y_i)\)</span> mit <span class="math inline">\(\sf x_i, y_i \in \mathbb{R}\)</span> 2. Gesucht ist eine Modellfunktion <span class="math inline">\(\sf y(x)\)</span>, welche die Messpunktpaare approximiert</p>
-<p>Ein möglicher Ansatz ist die Darstellung der Modellfunktion als Summe von <span class="math inline">\(\sf m\)</span> Basisfunktionen <span class="math inline">\(\sf \phi_i(x)\)</span> mit den Koeffizienten <span class="math inline">\(\sf \beta_i\)</span>.</p>
-<p><span class="math display">\[ \sf y(x) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x) = \beta_1\cdot \phi_1(x) + \cdots + \beta_m\cdot \phi_m(x) \]</span></p>
-<p>Die Koeffizienten <span class="math inline">\(\sf \beta_i\)</span> müssen dabei so bestimmt werden, dass <span class="math inline">\(\sf y(x)\)</span> so gut wie möglich – oder gar exakt – die Messpunkte approximieren.</p>
+<p>Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden: 1. Gegeben sind $ n$ Messpunktpaare $ (x_i, y_i)$ mit $ x_i, y_i $ 2. Gesucht ist eine Modellfunktion $ y(x)$, welche die Messpunktpaare approximiert</p>
+<p>Ein möglicher Ansatz ist die Darstellung der Modellfunktion als Summe von $ m$ Basisfunktionen $ _i(x)$ mit den Koeffizienten $ _i$.</p>
+<p><span class="math display">\[  y(x) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x) = \beta_1\cdot \phi_1(x) + \cdots + \beta_m\cdot \phi_m(x) \]</span></p>
+<p>Die Koeffizienten $ _i$ müssen dabei so bestimmt werden, dass $ y(x)$ so gut wie möglich – oder gar exakt – die Messpunkte approximieren.</p>
 <p>Als Abstandmaß zwischen einer Modellfunktion und den Messpunkten kann die <a href="https://de.wikipedia.org/wiki/Folgenraum#lp">L2-Norm</a> verwendet werden. Diese ist definiert als</p>
-<p><span class="math display">\[ \sf || y(x) - (x_i, y_i) ||_2 = \sum_{i=1}^n \left(y(x_i) - y_i\right)^2 \quad .\]</span></p>
+<p><span class="math display">\[  || y(x) - (x_i, y_i) ||_2 = \sum_{i=1}^n \left(y(x_i) - y_i\right)^2 \quad .\]</span></p>
 <p>Eine solche Norm gibt ein Maß für die Qualität einer Approximation: je kleiner der Abstand, desto besser die Qualität. Dies ermöglicht das Finden optimaler Koeffizienten und wird beispielsweise in der Methode der kleinsten Quadrate genutzt, in der ein Satz an Koeffizienten gesucht wird, der die L2-Norm minimiert.</p>
 </div>
 </div>
@@ -474,20 +480,20 @@ Theorie - Modellierung
 <li>Auswertung ist sehr einfach und dadurch schnell, d.h. sie benötigt nur wenige schnelle arithmetische Operationen (Addition und Multiplikation)</li>
 </ul>
 <p>Ein Beispiel für eine Basis aus Polynomen:</p>
-<p><span class="math display">\[\sf \phi_1(x)=1,\quad \phi_2(x)=x,\quad \phi_3(x)=x^2,\quad \cdots,\quad \phi_m =x^{m-1} \]</span></p>
+<p><span class="math display">\[ \phi_1(x)=1,\quad \phi_2(x)=x,\quad \phi_3(x)=x^2,\quad \cdots,\quad \phi_m =x^{m-1} \]</span></p>
 </section>
 <section id="polynome" class="level2" data-number="23.2">
 <h2 data-number="23.2" class="anchored" data-anchor-id="polynome"><span class="header-section-number">23.2</span> Polynome</h2>
-<p>Polynome <span class="math inline">\(\sf P(x)\)</span> sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten (<span class="math inline">\(\sf x^i, i \in \mathbb{N}\)</span>) mit den entsprechenden Koeffzienten <span class="math inline">\(\sf a_i\)</span>:</p>
-<p><span class="math display">\[\sf P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} \]</span></p>
+<p>Polynome $ P(x)$ sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten ($ x^i, i $) mit den entsprechenden Koeffzienten $ a_i$:</p>
+<p><span class="math display">\[ P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} \]</span></p>
 <ul>
 <li>Als Grad eines Polynoms wird der Term mit dem höchsten Exponenten und nichtverschwindenden Koeffizienten (der sogenannte Leitkoeffizient) bezeichnet.</li>
-<li>Ein Polynom mit Grad <span class="math inline">\(\sf n\)</span> hat <span class="math inline">\(\sf n\)</span>, teilweise <a href="https://de.wikipedia.org/wiki/Komplexe_Zahl">komplexe</a>, Nullstellen.</li>
+<li>Ein Polynom mit Grad $ n$ hat $ n$, teilweise <a href="https://de.wikipedia.org/wiki/Komplexe_Zahl">komplexe</a>, Nullstellen.</li>
 </ul>
-<p>In Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad <span class="math inline">\(\sf n\)</span> durch folgendes Array dargestellt</p>
+<p>In Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad $ n$ durch folgendes Array dargestellt</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[an, ..., a2, a1, a0]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>So z.B. für <span class="math inline">\(\sf P(x) = x^3 + 5x^2 - 2x + 3\)</span>:</p>
-<div id="47157ae5" class="cell" data-execution_count="2">
+<p>So z.B. für $ P(x) = x^3 + 5x^2 - 2x + 3$:</p>
+<div id="fe9e383f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -495,7 +501,7 @@ Theorie - Modellierung
 </div>
 </div>
 <p>Die Auswertung des Polynoms an einem Punkt oder einem Array erfolgt mit der <code>np.polyval</code>-Funktion.</p>
-<div id="6461632b" class="cell" data-execution_count="3">
+<div id="57a59808" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(x=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">) = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -503,7 +509,7 @@ Theorie - Modellierung
 <pre><code>P(x=1) = 7</code></pre>
 </div>
 </div>
-<div id="9eb6a8f6" class="cell" data-execution_count="4">
+<div id="63f91c3e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(x=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">) = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -511,8 +517,8 @@ Theorie - Modellierung
 <pre><code>P(x=[-1  0  1]) = [9 3 7]</code></pre>
 </div>
 </div>
-<p>Für die graphische Darstellung im Bereich <span class="math inline">\(\sf x \in [-6, 2]\)</span> können die bekannten numpy und matplotlib Funktionen verwendet werden.</p>
-<div id="fd651f38" class="cell" data-execution_count="5">
+<p>Für die graphische Darstellung im Bereich $ x $ können die bekannten numpy und matplotlib Funktionen verwendet werden.</p>
+<div id="038962d0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">50</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -529,7 +535,7 @@ Theorie - Modellierung
 </div>
 </div>
 <p>Um die Nullstellen eines Polynoms zu finden, kann die numpy-Funktion <code>np.roots</code> genutzt werden. Für das obige Polynom können folgende Nullstellen bestimmt werden.</p>
-<div id="49952f64" class="cell" data-execution_count="6">
+<div id="e58a59b8" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>nstellen <span class="op">=</span> np.roots(P)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># direkte Ausgabe des Arrays</span></span>
@@ -540,7 +546,7 @@ Theorie - Modellierung
 [-5.46628038+0.j        0.23314019+0.703182j  0.23314019-0.703182j]</code></pre>
 </div>
 </div>
-<div id="baace698" class="cell" data-execution_count="7">
+<div id="4debb407" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Nullstellen: "</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># schönere Ausgabe des Arrays</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, z <span class="kw">in</span> <span class="bu">enumerate</span>(nstellen):</span>
@@ -555,14 +561,14 @@ Theorie - Modellierung
   x_3 = 0.23 -0.7i</code></pre>
 </div>
 </div>
-<p>In diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl <span class="math inline">\(\sf z\)</span> wird in Python als Summe des Realteils (<span class="math inline">\(\sf Re\)</span>) und Imaginärteils (<span class="math inline">\(\sf Im\)</span>). Letzterer wird durch ein nachfolgendes <code>j</code>, die imaginäre Einheit, gekennzeichnet.</p>
-<p><span class="math display">\[\sf z = Re(z) + Im(z)j\]</span></p>
-<p>Die Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind <span class="math inline">\(\sf x_i\)</span> die <span class="math inline">\(\sf n\)</span> Nullstellen, so ist das Polynom <span class="math inline">\(\sf n\)</span>-ten Grades durch folgendes Produkt beschrieben:</p>
-<p><span class="math display">\[\sf P(x) = \prod_{i=1}^n \left(x - x_i\right) = (x - x_1)\cdot (x - x_2) \cdot \cdots \cdot (x - x_n) \]</span></p>
+<p>In diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl $ z$ wird in Python als Summe des Realteils ($ Re<span class="math inline">\() und Imaginärteils (\)</span> Im$). Letzterer wird durch ein nachfolgendes <code>j</code>, die imaginäre Einheit, gekennzeichnet.</p>
+<p><span class="math display">\[ z = Re(z) + Im(z)j\]</span></p>
+<p>Die Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind $ x_i$ die $ n$ Nullstellen, so ist das Polynom $ n$-ten Grades durch folgendes Produkt beschrieben:</p>
+<p><span class="math display">\[ P(x) = \prod_{i=1}^n \left(x - x_i\right) = (x - x_1)\cdot (x - x_2) \cdot \cdots \cdot (x - x_n) \]</span></p>
 <p>Seien beispielsweise 1 und 2 die Nullstellen eines Polynoms, so lautet dieses:</p>
-<p><span class="math display">\[ \sf P(x) = (x - 1)(x - 2) = x^2 - 3x +2 \]</span></p>
+<p><span class="math display">\[  P(x) = (x - 1)(x - 2) = x^2 - 3x +2 \]</span></p>
 <p>Die numpy-Funktion <code>np.poly</code> kann aus den Nullstellen die Polynomkoeffizienten bestimmen. Anhand des obigen Beispiels lautet der Funktionsaufruf:</p>
-<div id="b9e86e12" class="cell" data-execution_count="8">
+<div id="70e7c36e" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nstellen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>koeffizienten <span class="op">=</span> np.poly(nstellen)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -578,10 +584,10 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 <section id="interpolation" class="level2" data-number="23.3">
 <h2 data-number="23.3" class="anchored" data-anchor-id="interpolation"><span class="header-section-number">23.3</span> Interpolation</h2>
 <p>Interpolation ist eine Methode, um Datenpunkte zwischen gegebenen Messpunkten zu konstruieren. Dazu wird eine Funktion gesucht, die alle Messpunkte exakt abbildet, was gleichbedeutend damit ist, dass die L2-Norm zwischen Funktion und Punkten Null ist.</p>
-<p>Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare <span class="math inline">\(\sf(x_1, y_1)\)</span> und <span class="math inline">\(\sf(x_2, y_2)\)</span> mit <span class="math inline">\(\sf x_1\neq x_2\)</span> existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion</p>
+<p>Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare <span class="math inline">\((x_1, y_1)\)</span> und <span class="math inline">\((x_2, y_2)\)</span> mit $ x_1x_2$ existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion</p>
 <p><span class="math display">\[y(x) = \beta_1 x + \beta_0\]</span></p>
 <p>verschwindet.</p>
-<div id="aca61856" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
+<div id="5147ddf8" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispieldaten aus y(x) = -x + 2</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">50</span></span>
@@ -615,7 +621,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 <p>Für drei Messpunkte muss ein Polynom zweiten Grades verwendet werden, um die Punkte exakt zu erfassen.</p>
 <p><span class="math display">\[y(x) = \beta_2 x^2 + \beta_1 x + \beta_0\]</span></p>
-<div id="388e0a0e" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="10">
+<div id="fbeace6c" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispieldaten aus y(x) = 3x^2 -4x - 1</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">50</span></span>
@@ -647,14 +653,14 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 </div>
 </div>
-<p>Dies kann verallgemeinert werden: <span class="math inline">\(\sf n\)</span> Messpunkte können exakt mit einem Polynom (<span class="math inline">\(\sf n-1\)</span>)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom <span class="math inline">\(\sf P(x)\)</span> gilt:</p>
-<p><span class="math display">\[ \sf P(x_i) = y_i \quad i \in 1, \dots, n \]</span></p>
+<p>Dies kann verallgemeinert werden: $ n$ Messpunkte können exakt mit einem Polynom ($ n-1$)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom $ P(x)$ gilt:</p>
+<p><span class="math display">\[  P(x_i) = y_i \quad i \in 1, \dots, n \]</span></p>
 <p>Die Existenz und Eindeutigkeit eines solchen Polynoms kann gezeigt werden. Das gesuchte Polynom lautet:</p>
-<p><span class="math display">\[ \sf P(x) = \sum_{i=1}^n y_i I_i(x) \]</span> <span class="math display">\[ \sf \text{mit}\quad I_i(x) = \prod_{j=1, i\neq j}^n \frac{x-x_j}{x_i - x_j} \]</span></p>
-<p>Alternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis <span class="math inline">\(\sf \phi_i(x)\)</span> gegeben ist, gelöst werden. Für die <span class="math inline">\(\sf n\)</span> Punktepaare gilt jeweils:</p>
-<p><span class="math display">\[ \sf y(x_i) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x_i) = \beta_1\cdot \phi_1(x_i) + \cdots + \beta_m\cdot \phi_m(x_i) = y_i \]</span></p>
+<p><span class="math display">\[  P(x) = \sum_{i=1}^n y_i I_i(x) \]</span> <span class="math display">\[  \text{mit}\quad I_i(x) = \prod_{j=1, i\neq j}^n \frac{x-x_j}{x_i - x_j} \]</span></p>
+<p>Alternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis $ _i(x)$ gegeben ist, gelöst werden. Für die $ n$ Punktepaare gilt jeweils:</p>
+<p><span class="math display">\[  y(x_i) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x_i) = \beta_1\cdot \phi_1(x_i) + \cdots + \beta_m\cdot \phi_m(x_i) = y_i \]</span></p>
 <p>Das allgemeine Geleichungssystem lautet</p>
-<p><span class="math display">\[ \sf \left( \begin{matrix} \phi_1(x_1) &amp; \phi_2(x_1) &amp; \cdots &amp; \phi_m(x_1) \\
+<p><span class="math display">\[  \left( \begin{matrix} \phi_1(x_1) &amp; \phi_2(x_1) &amp; \cdots &amp; \phi_m(x_1) \\
              \phi_1(x_2) &amp; \phi_2(x_2) &amp; \cdots &amp; \phi_m(x_2) \\
              \vdots &amp;\vdots &amp; \ddots &amp; \vdots \\
              \phi_1(x_n) &amp; \phi_2(x_n) &amp; \cdots &amp; \phi_m(x_n) \\
@@ -665,28 +671,28 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 = \left(  \begin{matrix} y_1 \\  y_2 \\   \vdots \\   y_n \\ \end{matrix} \right) \]</span></p>
 <p>und mit der Polynomialbasis</p>
 <p><span class="math display">\[ \underbrace{\left( \begin{matrix} 1 &amp; x_1 &amp; \cdots &amp; x_1^{n-1} \\ 1 &amp; x_2 &amp; \cdots &amp; x_2^{n-1} \\ \vdots &amp;\vdots &amp; \ddots &amp; \vdots \\ 1 &amp; x_n &amp; \cdots &amp; x_n^{n-1} \\ \end{matrix}\right)}_{V}. \left(  \begin{matrix} \beta_1 \\  \beta_2 \\   \vdots \\   \beta_m \\ \end{matrix} \right) = \left(  \begin{matrix} y_1 \\  y_2 \\   \vdots \\   y_n \\ \end{matrix} \right)\]</span></p>
-<p>Die Matrix <span class="math inline">\(\sf V\)</span> heisst <a href="https://de.wikipedia.org/wiki/Vandermonde-Matrix">Vandermonde-Matrix</a> und kann exakt gelöst werden, für <span class="math inline">\(\sf m=n\)</span> und wenn für alle <span class="math inline">\(\sf i, j, i\neq j\)</span> gilt <span class="math inline">\(\sf x_i \neq x_j\)</span>.</p>
+<p>Die Matrix $ V$ heisst <a href="https://de.wikipedia.org/wiki/Vandermonde-Matrix">Vandermonde-Matrix</a> und kann exakt gelöst werden, für $ m=n$ und wenn für alle $ i, j, ij$ gilt $ x_i x_j$.</p>
 <p>In Python kann das Interpolationsproblem mit der <a href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html">Funktion <code>np.polyfit</code></a> gelöst werden. Das folgende Beispiel demonstriert deren Anwendung.</p>
-<p>Die Messtellen folgen in dem Beispiel der Funktion <span class="math inline">\(\sf f(x)\)</span>, welche nur zur Generierung der Datenpunkte verwendet wird.</p>
-<p><span class="math display">\[\sf f(x) = \frac{1}{2} + \frac{1}{1+x^2}\]</span></p>
+<p>Die Messtellen folgen in dem Beispiel der Funktion $ f(x)$, welche nur zur Generierung der Datenpunkte verwendet wird.</p>
+<p><span class="math display">\[ f(x) = \frac{1}{2} + \frac{1}{1+x^2}\]</span></p>
 <p>Zunächst werden die Messpunkte generiert.</p>
-<div id="18ea624a" class="cell" data-execution_count="11">
+<div id="88b03430" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fnk(x):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.5</span> <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>x<span class="op">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="60a768ed" class="cell" data-execution_count="12">
+<div id="80763e8d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>xmin <span class="op">=</span> <span class="op">-</span><span class="dv">5</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span>  <span class="dv">5</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(xmin, xmax, <span class="dv">100</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fnk(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="580c4352" class="cell" data-execution_count="13">
+<div id="bb8d1d20" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(xmin, xmax, n)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fnk(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nun folgt die Interpolation für 5 und 15 Messpunkte.</p>
-<div id="9cc266f9" class="cell" data-execution_count="14">
+<div id="3f135ccf" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.polyfit(xi, yi, n<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Interpolationskoeffizienten:"</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -696,7 +702,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
   1.50000000e+00]</code></pre>
 </div>
 </div>
-<div id="f973f1d1" class="cell" data-execution_count="15">
+<div id="6bf3fe38" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'C0'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span><span class="st">'generierende Funktion'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, np.polyval(P, x), color<span class="op">=</span><span class="st">'C2'</span>, label<span class="op">=</span><span class="st">'Interpolation'</span>)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, color<span class="op">=</span><span class="st">'C1'</span>, label<span class="op">=</span><span class="st">'Messpunkte'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
@@ -710,7 +716,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 </div>
 </div>
-<div id="7b6bf71d" class="cell" data-execution_count="16">
+<div id="b0fc7fc9" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(xmin, xmax, n)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fnk(xi)</span>
@@ -730,7 +736,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 </div>
 </div>
-<p>Die Interpolation erfüllt immer die geforderte Bedingung <span class="math inline">\(\sf y(x_i) = y_i\)</span>. Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.</p>
+<p>Die Interpolation erfüllt immer die geforderte Bedingung $ y(x_i) = y_i$. Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.</p>
 
 
 </section>
