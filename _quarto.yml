@@ -31,6 +31,8 @@ book:
         - books/w-python-minimal/skript/listen_iterationen.qmd 
         - books/w-python-minimal/skript/funktionen.qmd
         - books/w-python-minimal/skript/lesen_schreiben.qmd
+        - books/w-python-minimal/skript/assessment.qmd
+
     - part: "Matplotlib"
       chapters:
         - books/w-python-matplotlib/index.qmd
