@@ -37,11 +37,11 @@ Ein **Flussdiagramm** (engl. *flowchart*) ist eine grafische Methode zur Darstel
 **Beispiel:**
 Der Algorithmus zur Bestimmung, ob eine Zahl gerade ist:
 
-![FLussdiagramm](00-bilder/Zahl_gerade.svg)
+![Flussdiagramm](00-bilder/Zahl_gerade.svg)
 
 :::
 
-FLussdiagramme sind nicht der einzige Weg, um komplexere Algorithmen verständlicher aufzuschreiben. Eine weitere Möglichkeit bieter hier sogenannter Pseudocode:
+Flussdiagramme sind nicht der einzige Weg, um komplexere Algorithmen verständlicher aufzuschreiben. Eine weitere Möglichkeit bieter hier sogenannter Pseudocode:
 
 ::: {.callout-note collapse="false"}
 ## Pseudocode – Vom Gedanken zum Programm
@@ -78,7 +78,7 @@ Kommen wir nun zu dem "komplexeren Algorithmus zurück, der das Maximum in einer
     mache weiter mit dem nächsten Element in Schritt 3
 1. Nachdem alle Elemente aus $\mathsf A$ in Schritt 3 durchlaufen wurden, enthält $\mathsf m$ den maximalen Wert der Liste $\mathsf A$.
 
-Testen Sie einmal selbst, ob Sie das passende FLussdiagramm erstellen können. In der folgenden Box finden Sie die Musterlösung. Sie brauchen hierfür auch die Verzweigung für Schleifen:
+Testen Sie einmal selbst, ob Sie das passende Flussdiagramm erstellen können. In der folgenden Box finden Sie die Musterlösung. Sie brauchen hierfür auch die Verzweigung für Schleifen:
 **Verzweigung** (blau): Abfrage einer Bedingung, welche entscheidet welche folgenden Elemente ausgeführt werden, hier wird geprüft ob $\mathsf a > m$
 
 ::: {.callout-caution icon="true" collapse="true"}
