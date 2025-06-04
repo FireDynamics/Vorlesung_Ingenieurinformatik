@@ -53,7 +53,6 @@ Flussdiagramme sind nicht der einzige Weg, um komplexere Algorithmen verständli
 - Verwendung von **Kontrollstrukturen** wie `wenn`, `solange`, `wiederhole`
 - Keine konkrete Syntax einer Programmiersprache
 
-
 **Beispiel:**
 ```pseudocode
 BEGIN
