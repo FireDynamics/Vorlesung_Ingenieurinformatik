@@ -1442,7 +1442,7 @@
     "section": "",
     "text": "23.1 Einleitung\nIn dieser Einheit lernen Sie, wie man reale Messdaten – etwa aus Experimenten oder Ingenieurprojekten – mit NumPy und Matplotlib verarbeitet und analysiert. Der Fokus liegt dabei auf einem praxisnahen Umgang mit Daten im CSV-Format.",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1453,7 +1453,7 @@
     "section": "23.2 Lernziele dieses Kapitels",
     "text": "23.2 Lernziele dieses Kapitels\nSie lernen in dieser Einheit:\n\nwie Sie strukturierte CSV-Daten in NumPy-Arrays überführen,\nwie Sie fehlende Werte erkennen und ersetzen,\nwie Sie typische statistische Kennzahlen berechnen,\nwie Sie Daten mit Matplotlib visualisieren,\nwie Sie Daten interpolieren und Trends glätten,\nund wie Sie reale Anwendungen – z. B. aus dem Bauwesen – analysieren.",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1464,7 +1464,7 @@
     "section": "23.3 CSV-Dateien: Ein typisches Format für Messdaten",
     "text": "23.3 CSV-Dateien: Ein typisches Format für Messdaten\nCSV-Dateien („Comma Separated Values“) sind weit verbreitet – etwa für:\n\nTemperaturverläufe,\nMessreihen aus Experimenten,\nLogdaten von Sensoren.\n\nZu Beginn wird ein Beispiel betrachtet: Temperatur, Luftfeuchtigkeit und CO₂-Werte. Diese Datei enthält auch einige fehlende Werte, wie sie in realen Daten oft vorkommen.\n\nimport numpy as np\ndata = np.genfromtxt(\"beispiel.csv\", delimiter=\",\", skip_header=1)\nprint(data)\n\n[[ 21.1  45.  400. ]\n [ 22.5   nan 420. ]\n [  nan  50.  410. ]\n [ 20.   48.    nan]\n [ 23.3  47.  430. ]]",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1475,7 +1475,7 @@
     "section": "23.4 Fehlende Werte erkennen und bereinigen",
     "text": "23.4 Fehlende Werte erkennen und bereinigen\nFehlende Werte werden beim Einlesen als np.nan (Not a Number) codiert. Zunächst wird gezählt, wie viele Werte fehlen:\n\nprint(np.isnan(data).sum(axis=0))\n\n[1 1 1]\n\n\nUm die Analyse nicht zu verfälschen, werden sie ersetzt – z. B. durch den Mittelwert der Spalte:\n\nfor i in range(data.shape[1]):\n    mean = np.nanmean(data[:, i])\n    data[:, i] = np.where(np.isnan(data[:, i]), mean, data[:, i])",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1486,7 +1486,7 @@
     "section": "23.5 Statistische Kennzahlen berechnen",
     "text": "23.5 Statistische Kennzahlen berechnen\nTypische Kennwerte zur Beschreibung von Daten:\n\nMittelwert: Durchschnitt\nStandardabweichung: Streuung\nMinimum und Maximum\n\n\nprint(\"Mittelwerte:\", np.mean(data, axis=0))\nprint(\"Standardabweichung:\", np.std(data, axis=0))\n\nMittelwerte: [ 21.725  47.5   415.   ]\nStandardabweichung: [ 1.13556154  1.61245155 10.        ]",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1497,7 +1497,7 @@
     "section": "23.6 Daten visualisieren",
     "text": "23.6 Daten visualisieren\nMit Matplotlib lassen sich Daten übersichtlich darstellen. Es werden z. B. Linien- und Histogrammplots genutzt.\n\nimport matplotlib.pyplot as plt\n\nlabels = [\"Temperatur (°C)\", \"Luftfeuchtigkeit (%)\", \"CO₂ (ppm)\"]\n\nfor i in range(data.shape[1]):\n    plt.plot(data[:, i], label=labels[i])\nplt.legend()\nplt.title(\"Messwerte im Verlauf\")\nplt.grid(True)\nplt.show()",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
     ]
   },
@@ -1508,7 +1508,7 @@
     "section": "",
     "text": "24.1 Übersicht\nIn vielen praktischen Anwendungen werden Polynome als Basisfunktionen der Modellfunktion angenommen. Vorteile von Polynomen:\nEin Beispiel für eine Basis aus Polynomen:\n\\[ \\phi_1(x)=1,\\quad \\phi_2(x)=x,\\quad \\phi_3(x)=x^2,\\quad \\cdots,\\quad \\phi_m =x^{m-1} \\]",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
     ]
   },
@@ -1519,7 +1519,7 @@
     "section": "",
     "text": "Polynome sind leicht zu differenzieren und integrieren\nAnnäherung von beliebigen Funktionen durch Polynome möglich, siehe Taylor-Entwicklung\nAuswertung ist sehr einfach und dadurch schnell, d.h. sie benötigt nur wenige schnelle arithmetische Operationen (Addition und Multiplikation)",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
     ]
   },
@@ -1530,7 +1530,7 @@
     "section": "24.2 Polynome",
     "text": "24.2 Polynome\nPolynome \\(P(x)\\) sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten \\(( x^i, i \\in \\mathbb{N})\\) mit den entsprechenden Koeffzienten \\(a_i\\):\n\\[ P(x) = \\sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_2 x^2 + a_1 x + a_0, \\quad i, n \\in \\mathbb{N}, a_i \\in \\mathbb{R} \\]\n\nAls Grad eines Polynoms wird der Term mit dem höchsten Exponenten und nichtverschwindenden Koeffizienten (der sogenannte Leitkoeffizient) bezeichnet.\nEin Polynom mit Grad \\(n\\) hat \\(n\\), teilweise komplexe, Nullstellen.\n\nIn Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad \\(n\\) durch folgendes Array dargestellt\n[an, ..., a2, a1, a0]\nSo z.B. für \\(P(x) = x^3 + 5x^2 - 2x + 3\\):\n\nP = np.array([1, 5, -2, 3])\nprint(P)\n\n[ 1  5 -2  3]\n\n\nDie Auswertung des Polynoms an einem Punkt oder einem Array erfolgt mit der np.polyval-Funktion.\n\nx = 1\ny = np.polyval(P, x)\nprint(f\"P(x={x}) = {y}\")\n\nP(x=1) = 7\n\n\n\nx = np.array([-1, 0, 1])\ny = np.polyval(P, x)\nprint(f\"P(x={x}) = {y}\")\n\nP(x=[-1  0  1]) = [9 3 7]\n\n\nFür die graphische Darstellung im Bereich \\(x \\in [-6, 2]\\) können die bekannten numpy und matplotlib Funktionen verwendet werden.\n\nx = np.linspace(-6, 2, 50)\ny = np.polyval(P, x)\n\nplt.plot(x, y)\nplt.xlabel('x')\nplt.ylabel('y(x)')\nplt.grid()\n\n\n\n\n\n\n\n\nUm die Nullstellen eines Polynoms zu finden, kann die numpy-Funktion np.roots genutzt werden. Für das obige Polynom können folgende Nullstellen bestimmt werden.\n\nnstellen = np.roots(P)\n\n# direkte Ausgabe des Arrays\nprint(\"Nullstellen: \")\nprint(nstellen)\n\nNullstellen: \n[-5.46628038+0.j        0.23314019+0.703182j  0.23314019-0.703182j]\n\n\n\nprint(\"Nullstellen: \")\n# schönere Ausgabe des Arrays\nfor i, z in enumerate(nstellen):\n    if z.imag == 0:\n        print(f\"  x_{i+1} = {z.real:.2}\")\n    else:\n        print(f\"  x_{i+1} = {z.real:.2} {z.imag:+.2}i\")\n\nNullstellen: \n  x_1 = -5.5\n  x_2 = 0.23 +0.7i\n  x_3 = 0.23 -0.7i\n\n\nIn diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl \\(z\\) wird in Python als Summe des Realteils ($ Re\\() und Imaginärteils (\\) Im$). Letzterer wird durch ein nachfolgendes j, die imaginäre Einheit, gekennzeichnet.\n\\[ z = Re(z) + Im(z)j\\]\nDie Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind \\(x_i\\) die \\(n\\) Nullstellen, so ist das Polynom \\(n\\)-ten Grades durch folgendes Produkt beschrieben:\n\\[ P(x) = \\prod_{i=1}^n \\left(x - x_i\\right) = (x - x_1)\\cdot (x - x_2) \\cdot \\cdots \\cdot (x - x_n) \\]\nSeien beispielsweise 1 und 2 die Nullstellen eines Polynoms, so lautet dieses:\n\\[  P(x) = (x - 1)(x - 2) = x^2 - 3x +2 \\]\nDie numpy-Funktion np.poly kann aus den Nullstellen die Polynomkoeffizienten bestimmen. Anhand des obigen Beispiels lautet der Funktionsaufruf:\n\nnstellen = [1, 2]\nkoeffizienten = np.poly(nstellen)\n\nprint(\"Nullstellen:\", nstellen)\nprint(\"Koeffizienten:\", koeffizienten)\n\nNullstellen: [1, 2]\nKoeffizienten: [ 1. -3.  2.]\n\n\nDas Modul numpy stellt viele praktische Funktionen zum Umgang mit Polynomen zur Verfügung. So existieren Funktionen um Polynome auszuwerten, die Nullstellen zu finden, zu addieren, zu multiplizieren, abzuleiten oder zu integrieren. Eine Übersicht ist in der numpy-Dokumentation gegeben.",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
     ]
   },
@@ -1541,7 +1541,7 @@
     "section": "24.3 Interpolation",
     "text": "24.3 Interpolation\nInterpolation ist eine Methode, um Datenpunkte zwischen gegebenen Messpunkten zu konstruieren. Dazu wird eine Funktion gesucht, die alle Messpunkte exakt abbildet, was gleichbedeutend damit ist, dass die L2-Norm zwischen Funktion und Punkten Null ist.\nZwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare \\((x_1, y_1)\\) und \\((x_2, y_2)\\) mit \\(x_1\\neq x_2\\) existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion\n\\[y(x) = \\beta_1 x + \\beta_0\\]\nverschwindet.\n\n# Beispieldaten aus y(x) = -x + 2\n\nN = 50\ndx = 0.25\n\ndef fnk(x):\n    return -x + 2\n\nx = np.array([1, 2])\ny = fnk(x)\n\nplt.scatter(x, y, color='C1', label=\"Messpunkte\", zorder=3)\n\nx_modell = np.linspace(np.min(x), np.max(x), N)\nplt.plot(x_modell, fnk(x_modell), color='C0', label=\"Modellfunktion\")\n\nx_linie = np.linspace(np.min(x)-dx, np.max(x)+dx, N)\nplt.plot(x_linie, fnk(x_linie), '--', alpha=0.3, color='C0')\n\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nFür drei Messpunkte muss ein Polynom zweiten Grades verwendet werden, um die Punkte exakt zu erfassen.\n\\[y(x) = \\beta_2 x^2 + \\beta_1 x + \\beta_0\\]\n\n# Beispieldaten aus y(x) = 3x^2 -4x - 1\n\nN = 50\ndx = 0.25\n\ndef fnk(x):\n    return 3*x**2-4*x - 1\n\nx = np.array([-1, 2, 3])\ny = fnk(x)\n\nplt.scatter(x, y, color='C1', label=\"Messpunkte\", zorder=3)\n\nx_modell = np.linspace(np.min(x), np.max(x), N)\nplt.plot(x_modell, fnk(x_modell), color='C0', label=\"Modellfunktion\")\n\nx_linie = np.linspace(np.min(x)-dx, np.max(x)+dx, N)\nplt.plot(x_linie, fnk(x_linie), '--', alpha=0.3, color='C0')\n\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nDies kann verallgemeinert werden: \\(n\\) Messpunkte können exakt mit einem Polynom ($ n-1$)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom \\(P(x)\\) gilt:\n\\[  P(x_i) = y_i \\quad i \\in 1, \\dots, n \\]\nDie Existenz und Eindeutigkeit eines solchen Polynoms kann gezeigt werden. Das gesuchte Polynom lautet:\n\\[  P(x) = \\sum_{i=1}^n y_i I_i(x) \\] \\[  \\text{mit}\\quad I_i(x) = \\prod_{j=1, i\\neq j}^n \\frac{x-x_j}{x_i - x_j} \\]\nAlternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis \\(\\phi_i(x)\\) gegeben ist, gelöst werden. Für die \\(n\\) Punktepaare gilt jeweils:\n\\[  y(x_i) = \\sum_{i=1}^{m}\\beta_i \\cdot \\phi_i(x_i) = \\beta_1\\cdot \\phi_1(x_i) + \\cdots + \\beta_m\\cdot \\phi_m(x_i) = y_i \\]\nDas allgemeine Geleichungssystem lautet\n\\[  \\left( \\begin{matrix} \\phi_1(x_1) & \\phi_2(x_1) & \\cdots & \\phi_m(x_1) \\\\\n             \\phi_1(x_2) & \\phi_2(x_2) & \\cdots & \\phi_m(x_2) \\\\\n             \\vdots &\\vdots & \\ddots & \\vdots \\\\\n             \\phi_1(x_n) & \\phi_2(x_n) & \\cdots & \\phi_m(x_n) \\\\\n             \\end{matrix}\\right).\n\\left(  \\begin{matrix} \\beta_1 \\\\  \n      \\beta_2 \\\\   \\vdots \\\\   \\beta_m \\\\\n      \\end{matrix} \\right)\n= \\left(  \\begin{matrix} y_1 \\\\  y_2 \\\\   \\vdots \\\\   y_n \\\\ \\end{matrix} \\right) \\]\nund mit der Polynomialbasis\n\\[ \\underbrace{\\left( \\begin{matrix} 1 & x_1 & \\cdots & x_1^{n-1} \\\\ 1 & x_2 & \\cdots & x_2^{n-1} \\\\ \\vdots &\\vdots & \\ddots & \\vdots \\\\ 1 & x_n & \\cdots & x_n^{n-1} \\\\ \\end{matrix}\\right)}_{V}. \\left(  \\begin{matrix} \\beta_1 \\\\  \\beta_2 \\\\   \\vdots \\\\   \\beta_m \\\\ \\end{matrix} \\right) = \\left(  \\begin{matrix} y_1 \\\\  y_2 \\\\   \\vdots \\\\   y_n \\\\ \\end{matrix} \\right)\\]\nDie Matrix \\(V\\) heisst Vandermonde-Matrix und kann exakt gelöst werden, für \\(m=n\\) und wenn für alle \\(i, j, i\\neq j\\) gilt \\(x_i \\neq x_j\\).\nIn Python kann das Interpolationsproblem mit der Funktion np.polyfit gelöst werden. Das folgende Beispiel demonstriert deren Anwendung.\nDie Messtellen folgen in dem Beispiel der Funktion \\(f(x)\\), welche nur zur Generierung der Datenpunkte verwendet wird.\n\\[ f(x) = \\frac{1}{2} + \\frac{1}{1+x^2}\\]\nZunächst werden die Messpunkte generiert.\n\ndef fnk(x):\n    return 0.5 + 1/(1+x**2)\n\n\nxmin = -5\nxmax =  5\nx = np.linspace(xmin, xmax, 100)\ny = fnk(x)\n\n\nn = 5\nxi = np.linspace(xmin, xmax, n)\nyi = fnk(xi)\n\nNun folgt die Interpolation für 5 und 15 Messpunkte.\n\nP = np.polyfit(xi, yi, n-1)\nprint(\"Interpolationskoeffizienten:\")\nprint(P)\n\nInterpolationskoeffizienten:\n[ 5.30503979e-03  4.23767299e-17 -1.71087533e-01  7.45353051e-16\n  1.50000000e+00]\n\n\n\nplt.plot(x, y, color='C0', alpha=0.5, label='generierende Funktion')\nplt.plot(x, np.polyval(P, x), color='C2', label='Interpolation')\nplt.scatter(xi, yi, color='C1', label='Messpunkte', zorder=3)\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\n\nn = 15\nxi = np.linspace(xmin, xmax, n)\nyi = fnk(xi)\n\nP = np.polyfit(xi, yi, n-1)\n\nplt.plot(x, y, color='C0', alpha=0.5, label='generierende Funktion')\nplt.plot(x, np.polyval(P, x), color='C2', label='Interpolation')\nplt.scatter(xi, yi, color='C1', label='Messpunkte', zorder=3)\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nDie Interpolation erfüllt immer die geforderte Bedingung \\(y(x_i) = y_i\\). Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
     ]
   },
@@ -1552,7 +1552,7 @@
     "section": "",
     "text": "Beim Fitting wird eine Modellfunktion gesucht, weche die Messdaten nicht unbedingt exakt abbildet. Wird ein Polynom verwendet, so hat es eine Grad, welcher deutlich kleiner ist, als die Anzahl der Messpunkte. Lineare Regression ist ein Beispiel für ein Fitting durch ein Polynom mit dem Grad Eins.\nZum Fitten durch ein Polynom kann die Funktion np.polyfit verwendet werden, genauso wie bei der Polynominterpolation. Diesmal jedoch mit einem kleineren Polynomgrad.\nIm folgenden Beispiel werden zunächst Modelldaten generiert und dann mit entsprechenden Polynomen gefittet.\n\nxmin = 0\nxmax = 5\nx = np.linspace(xmin, xmax, 100)\n\nni = 25\n\n# x-Werte mit leichtem Rauschen\nxi = np.linspace(xmin, xmax, ni) + 0.2*(2 * np.random.random(ni) -1)\n\n# y(x) = 2x+0.5 mit leichtem Rauschen\nyi = 2*xi + 0.5 + 2*(2 * np.random.random(ni) -1)\n\nplt.scatter(xi, yi, color='C1')\nplt.grid()\n\n\n\n\n\n\n\n\n\nP1 = np.polyfit(xi, yi, 1)\n\nplt.scatter(xi, yi, color='C1', zorder=3, label='Messpunkte')\nplt.plot(x, np.polyval(P1, x), color='C0', label=\"Modellfunktion\")\nplt.grid()\nplt.legend()\n\n\n\n\n\n\n\n\n\n# x-Werte mit leichtem Rauschen\nxi = np.linspace(xmin, xmax, ni) + 0.2*(2 * np.random.random(ni) -1)\n\n# y(x) = 2x+0.5 mit leichtem Rauschen\nyi = (xi - 2)**2 -2*xi + 2.5 + 2*(2 * np.random.random(ni) -1)\n\n\nP1 = np.polyfit(xi, yi, 1)\nP2 = np.polyfit(xi, yi, 2)\n\nplt.scatter(xi, yi, color='C1', zorder=3, label='Messpunkte')\nplt.plot(x, np.polyval(P1, x), color='C0', label=\"Modellfunktion, Grad 1\")\nplt.plot(x, np.polyval(P2, x), color='C2', label=\"Modellfunktion, Grad 2\")\nplt.grid()\nplt.legend()\nplt.show()",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Fitting</span>"
     ]
   },
@@ -1563,7 +1563,7 @@
     "section": "",
     "text": "26.1 Definition\nFür \\(n+1\\) Messpunkte \\((x_i, y_i)\\) kann eine Splinefunktion \\(s_k\\), hier ein Polynomspline, wie folgt definiert werden.\nBeispiele: * \\(k = 1\\): Polygonzug * \\(k = 3\\): kubische Polynomsplines (B-Splines)",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
     ]
   },
@@ -1574,7 +1574,7 @@
     "section": "",
     "text": "Vorausgesetzt ist, dass die Messpunkte sortiert sind, d.h. \\(x_0 &lt; x_1 &lt; \\cdots &lt; x_n\\)\nfür jedes \\(i = 0\\dots n − 1\\) ist \\(s_k\\) ein Polynom vom Grad \\(k\\) auf dem Intervall \\(\\left[x_i , x_{i+1}\\right]\\)\n\\(s_k\\) ist auf \\(\\left[x_0 , x_n \\right]\\) \\((k − 1)\\)-mal stetig differenzierbar",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
     ]
   },
@@ -1585,7 +1585,7 @@
     "section": "26.2 Kubische Splines",
     "text": "26.2 Kubische Splines\nDie in der Praxis häufig eingesetzten kubischen Polynomsplines \\(s_3\\) ($ k= 3$) haben folgende Eigenschaften: * \\(s_3|\\left[x_i,x_{i+1}\\right] = \\beta_0 +\\beta_1 x + \\beta_2 x^2 + \\beta_3 x^3\\) * \\(s_3\\) ist zweimal stetig differenzierbar auf \\(\\left[x_0,x_n\\right]\\), also insbesondere an den Stützpunkten \\(x_i\\) der Messpunkte\nDie Koeffizienten \\(\\beta_i\\) werden wie folgt bestimmt * aus den \\(n + 1\\) Messpunkten ergeben sich \\(n\\) Intervalle, d.h. mit jeweils vier Koeffizienten sind es insgesamt \\(4n\\) Koeffizienten * Exakte Darstellung der Messpunkte ($ n + 1$ Gleichungen), d.h.: \\(s_3(x_i) = y_i\\) * Glattheitsbedingungen an den inneren Messpunkten ($ i=1n-1\\(), mit jeweils (\\) n − 1$ Gleichungen): \\[ s_3'(x_i)_- =s_3'(x_i)_+\\] \\[ s_3''(x_i)_- =s_3''(x_i)_+\\] \\[ s_3'''(x_i)_- =s_3'''(x_i)_+\\]\n\nDamit sind es \\(4n − 2\\) Gleichungen für \\(4n\\) Koeffizienten\n\nUm die beiden fehlenden Gleichungen zu finden bzw. zu bestimmen werden Randbedingungen oder Abschlussbedingungen benötigt. Die gängigsten Bedingungen sind: * natürliche Splines: die Krümung am Rand verschwindet, d.h.: \\[ s_3''(x_0) = s_3''(x_n) = 0 \\] * periodische Splines: die Steigung und Krümung ist an beiden Rändern gleich \\[ s_3'(x_0) = s_3'(x_n)\\] \\[ s_3''(x_0) = s_3''(x_n)\\] * Hermite Splines: die Steigungen am Rand werden explizit vorgegeben (hier durch \\(u\\) und \\(v\\)) \\[ s_3'(x_0) = u \\] \\[ s_3'(x_n) = v \\]",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
     ]
   },
@@ -1596,7 +1596,7 @@
     "section": "26.3 Anwendung",
     "text": "26.3 Anwendung\nIm Folgenden werden zwei Beispiele, \\(s_1\\) und \\(s_3\\), für die Erstellung von Splines mit Python vorgestellt.\n\n# Erzeugung von Messpunkten\nn = 7\nxi = np.linspace(0, np.pi, n)\nyi = np.sin(xi)\n\nFür die \\(s_1\\) Splines, kann die Funktion np.interp verwendet werden. Sie führt eine lineare Interpolation zwischen gegebenen Wertepaaren durch.\n\n# Wertebereich für die Visualisierung der Interpolation\nx = np.linspace(0, np.pi, n*6)\ny = np.sin(x)\n\n\n# Interpolation\ny_s1 = np.interp(x, xi, yi)\n\n\nplt.plot(x,y, alpha=0.3, color='C2', lw=5, \n         label='Generierende Funktion')\nplt.plot(x, y_s1, color='C0', label='Interpolation')\nplt.scatter(x, y_s1, s=3, zorder=3, color='C0')\nplt.scatter(xi, yi, color='C1', label='Messpunkte')\n\nplt.xlabel('x')\nplt.ylabel('y')\nplt.legend();\n\n\n\n\n\n\n\n\nDie \\(s_3\\) Splines können mit Funktionen aus dem scipy-Modul berechnet werden. Dazu werden zunächst die Koeffizienten bestimmt (scipy.interpolate.splrep) und diese ermöglichen die gewünschte Auswertung, welche mit der Funktion scipy.interpolate.splev vorgenommen werden kann.\n\nimport scipy.interpolate as si\n\n\ns3 = si.splrep(xi, yi)\ny_s3 = si.splev(x, s3)\n\n\nplt.plot(x,y, alpha=0.3, color='C2', lw=5, \n         label='Generierende Funktion')\nplt.plot(x, y_s3, color='C0', label='Interpolation')\nplt.scatter(x, y_s3, s=3, zorder=3, color='C0')\nplt.scatter(xi, yi, color='C1', label='Messpunkte')\n\nplt.xlabel('x')\nplt.ylabel('y')\nplt.legend();",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
     ]
   },
@@ -1607,7 +1607,7 @@
     "section": "",
     "text": "Verrauschte Daten? Ein gleitender Mittelwert glättet Kurven:\n\ndata = np.genfromtxt(\"trenddaten_mit_rauschen.csv\", delimiter=\",\", skip_header=1)\nx = data[:, 0]\ny = data[:, 1]\n\nwindow = 5\nweights = np.ones(window) / window\ny_smooth = np.convolve(y, weights, mode='valid')\n\nplt.plot(x, y, label=\"Original\", alpha=0.5)\nplt.plot(x[(window-1)//2:-(window//2)], y_smooth, label=\"Geglättet\", color='red')\nplt.legend()\nplt.grid(True)\nplt.title(\"Trendglättung\")\nplt.show()",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Trendglättung – Rauschen reduzieren</span>"
     ]
   },
@@ -1618,7 +1618,7 @@
     "section": "",
     "text": "28.1 Anwendung: Ballonfahrt-Daten analysieren\nballon = np.genfromtxt(\"messdaten_ballonfahrt.txt\", delimiter=\",\", skip_header=1)\nzeit = ballon[:, 0]\nhoehe = ballon[:, 1]\n\nplt.plot(zeit, hoehe)\nplt.title(\"Ballonfahrt – Höhe über Zeit\")\nplt.xlabel(\"Zeit (s)\")\nplt.ylabel(\"Höhe (m)\")\nplt.grid(True)\nplt.show()\n\ngeschwindigkeit = np.gradient(hoehe, zeit)\nplt.plot(zeit, geschwindigkeit, color=\"orange\")\nplt.title(\"Geschwindigkeit\")\nplt.grid(True)\nplt.show()",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
     ]
   },
@@ -1629,7 +1629,7 @@
     "section": "28.2 Anwendung: Balkenverformung im Bauingenieurwesen",
     "text": "28.2 Anwendung: Balkenverformung im Bauingenieurwesen\nEin Träger wird in der Mitte belastet. Die Durchbiegung wird an 50 Punkten gemessen:\n\nbalken = np.genfromtxt(\"balken_durchbiegung.csv\", delimiter=\",\", skip_header=1)\nx = balken[:, 0]\ny = balken[:, 1]\n\nwindow = 7\nweights = np.ones(window) / window\ny_smooth = np.convolve(y, weights, mode='valid')\n\nplt.plot(x, y, label=\"Messung\", alpha=0.5)\nplt.plot(x[(window-1)//2:-(window//2)], y_smooth, label=\"Geglättet\", color='red')\nplt.title(\"Durchbiegung eines Trägers\")\nplt.xlabel(\"Position (m)\")\nplt.ylabel(\"Durchbiegung (mm)\")\nplt.legend()\nplt.grid(True)\nplt.show()",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
     ]
   },
@@ -1640,41 +1640,41 @@
     "section": "28.3 Zusammenfassung",
     "text": "28.3 Zusammenfassung\nIn dieser Einheit haben Sie gelernt:\n\nwie Daten eingelesen und bereinigt werden,\nwie man sie analysiert und visualisiert,\nwie Interpolation und Glättung funktionieren,\nwie reale Datensätze aus Technik und Naturwissenschaft ausgewertet werden können.\n\nDiese Fähigkeiten sind grundlegend für jede datengetriebene Analyse im Ingenieurbereich.",
     "crumbs": [
-      "Working with data",
+      "Arbeiten mit Daten",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
     ]
   },
   {
     "objectID": "books/a-algorithmen/skript/introduction.html",
     "href": "books/a-algorithmen/skript/introduction.html",
-    "title": "29  ALgorithmen",
+    "title": "29  Einführung",
     "section": "",
     "text": "29.1 Definition\nEin Algorithmus ist eine formale Vorschrift darüber, wie die Lösung einer Fragestellung gefunden werden kann. Dabei handelt es sich meist um eine Folge von einfachen Anweisungen, welche zur Lösung komplexer Probleme führen kann.\nAlgorithmen sollten so formuliert sein, dass sie nicht nur für einzelne explizite Fragestellungen, sondern auch im Allgemeinen anwendbar sind. Das wird am Beispiel des schriftliche Dividierens oder anhand eines Kuchenrezepts deutlich. Beide bestehen aus einfachen Anweisungen und lösen ein komplexeres Problem. Allerdings kann die Rechenvorschrift für beliebige Divisionsaufgaben eingesetzt werden, während das Kuchenrezept nur zur Herstellung eines speziellen Kuchens führt.\nDie obigen Beispiele für einen Algorithmus sind zwei von vielen, welche von Menschen eingesetzt werden (können):\nViele Algorithmen aus unserem Alltag sind aus sehr elementaren Anweisungen aufgebaut. Trotz der Einfachheit der Anweisungen, können sie von Menschen nicht eingesetzt werden, da die erforderliche Anzahl von Operationen sehr hoch sein kann. An dieser Stelle kommen Computer zum Einsatz. Wie in diesem Kapitel gezeigt wird, können mit den Grundrechenarten und Logischen Verknüpfungen komplexe Probleme gelöst werden.",
     "crumbs": [
       "Algorithmen",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>ALgorithmen</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
     "objectID": "books/a-algorithmen/skript/introduction.html#definition",
     "href": "books/a-algorithmen/skript/introduction.html#definition",
-    "title": "29  ALgorithmen",
+    "title": "29  Einführung",
     "section": "",
     "text": "Algorithmus\n\n\n\n\n\nSchriftliches Rechnen\nLösen von linearen Gleichungssystemen\nBestimmung des Durchschnitts\nLösen eines Zauberwürfels",
     "crumbs": [
       "Algorithmen",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>ALgorithmen</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
     "objectID": "books/a-algorithmen/skript/introduction.html#beispiele",
     "href": "books/a-algorithmen/skript/introduction.html#beispiele",
-    "title": "29  ALgorithmen",
+    "title": "29  Einführung",
     "section": "29.2 Beispiele",
     "text": "29.2 Beispiele\nBeispiele für Algorithmen aus dem Alltag bzw. Ingenieurwesen, welche auf Computer zurückgreifen:\n\nNumerische Lösung von Differentialgleichungen (z.B. Strukturmechanik, Wärmetransport)\nSuchmaschinen im Internet\nVorschläge beim online Einkaufen oder Medienkonsum\nAutonavigation",
     "crumbs": [
       "Algorithmen",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>ALgorithmen</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
     ]
   },
   {
