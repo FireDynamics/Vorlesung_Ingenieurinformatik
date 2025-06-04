@@ -54,7 +54,7 @@ book:
         - books/w-python-numpy-grundlagen/skript/array_images.qmd
         - books/w-python-numpy-grundlagen/skript/assessment.qmd
         - books/w-python-numpy-grundlagen/uebungen/uebung.qmd
-    - part: "Working with data"
+    - part: "Arbeiten mit Daten"
       chapters:
         - books/dataanalysis/introduction.qmd
         - books/dataanalysis/interpolation.qmd

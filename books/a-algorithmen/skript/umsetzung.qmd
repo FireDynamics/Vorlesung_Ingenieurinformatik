@@ -1,4 +1,4 @@
-## Von der Idee zum Code
+# Von der Idee zum Code
 
 Ein einfacher Algorithmus zur Bestimmung des maximalen Werts einer beliebig großen Menge von Zahlen ist wie folgt definiert: 
 
@@ -12,7 +12,7 @@ Ein einfacher Algorithmus zur Bestimmung des maximalen Werts einer beliebig gro�
     mache weiter mit dem nächsten Element in Schritt 3
 1. Nachdem alle Elemente aus $\mathsf A$ in Schritt 3 durchlaufen wurden, enthält $\mathsf m$ den maximalen Wert der Liste $\mathsf A$.
 
-Dieser Algorthmus mag Ihnen auf den ersten Blick kompliziert. Gehen wir nochmal einen Schritt zurück und schauen uns einen Algorithmus an den wir bereits kennengelernt haben: Prüfen ob eine Zahl gerade ist.
+Dieser Algorithmus mag Ihnen auf den ersten Blick kompliziert. Gehen wir nochmal einen Schritt zurück und schauen uns einen Algorithmus an den wir bereits kennengelernt haben: Prüfen ob eine Zahl gerade ist.
 
 1. Eingabe: Eine Zahl X
 1. Berechne $X\text{ mod }2$
