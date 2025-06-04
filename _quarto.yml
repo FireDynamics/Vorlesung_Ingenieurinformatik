@@ -62,12 +62,19 @@ book:
         - books/dataanalysis/splines.qmd
         - books/dataanalysis/glaetten.qmd        
         - books/dataanalysis/anwendungsbeispiel.qmd
+    - part: "Algorithmen"
+      chapters:
+        - books/a-algorithmen/skript/introduction.qmd
+        - books/a-algorithmen/skript/umsetzung.qmd
 format:
   html:
     toc: true
     toc-depth: 2
   pdf:
     number-sections: true
+    include-in-header:
+      - text: |
+          \usepackage{mathtools}
 
 execute:
   freeze: auto

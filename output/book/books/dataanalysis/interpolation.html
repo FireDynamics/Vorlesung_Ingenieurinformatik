@@ -413,6 +413,29 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Algorithmen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../books/a-algorithmen/skript/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">ALgorithmen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../books/a-algorithmen/skript/umsetzung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Von der Idee zum Code</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -467,7 +490,11 @@ Theorie - Modellierung
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Die Modellierung von Daten hat das Ziel eine Menge von Daten durch einen funktionalen Zusammenhang abzubilden. Beispielhaft können Daten aus Experimenten oder Simulationen stark verrauscht und so für eine Weiterverarbeitung nicht geeignet sein. Eine mittelnde Funktion kann den Datensatz stark vereinfachen. Oder es existieren nur wenige Datenpunkte und die Zwischenstellen müssen durch eine Funktion bestimmt werden.</p>
-<p>Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden: 1. Gegeben sind <span class="math inline">\(n\)</span> Messpunktpaare <span class="math inline">\((x_i, y_i)\)</span> mit <span class="math inline">\(x_i, y_i \in \mathbb{R}\)</span> 2. Gesucht ist eine Modellfunktion <span class="math inline">\(y(x)\)</span>, welche die Messpunktpaare approximiert</p>
+<p>Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden:</p>
+<ol type="1">
+<li>Gegeben sind <span class="math inline">\(n\)</span> Messpunktpaare <span class="math inline">\((x_i, y_i)\)</span> mit <span class="math inline">\(x_i, y_i \in \mathbb{R}\)</span></li>
+<li>Gesucht ist eine Modellfunktion <span class="math inline">\(y(x)\)</span>, welche die Messpunktpaare approximiert</li>
+</ol>
 <p>Ein möglicher Ansatz ist die Darstellung der Modellfunktion als Summe von <span class="math inline">\(m\)</span> Basisfunktionen <span class="math inline">\(\phi_i(x)\)</span> mit den Koeffizienten <span class="math inline">\(\beta_i\)</span>.</p>
 <p><span class="math display">\[  y(x) = \sum_{i=1}^{m}\beta_i \cdot \phi_i(x) = \beta_1\cdot \phi_1(x) + \cdots + \beta_m\cdot \phi_m(x) \]</span></p>
 <p>Die Koeffizienten <span class="math inline">\(\beta_i\)</span> müssen dabei so bestimmt werden, dass <span class="math inline">\(y(x)\)</span> so gut wie möglich – oder gar exakt – die Messpunkte approximieren.</p>
@@ -490,7 +517,7 @@ Theorie - Modellierung
 </section>
 <section id="polynome" class="level2" data-number="24.2">
 <h2 data-number="24.2" class="anchored" data-anchor-id="polynome"><span class="header-section-number">24.2</span> Polynome</h2>
-<p>Polynome <span class="math inline">\(P(x)\)</span> sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten ($ x^i, i $) mit den entsprechenden Koeffzienten <span class="math inline">\(a_i\)</span>:</p>
+<p>Polynome <span class="math inline">\(P(x)\)</span> sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten <span class="math inline">\(( x^i, i \in \mathbb{N})\)</span> mit den entsprechenden Koeffzienten <span class="math inline">\(a_i\)</span>:</p>
 <p><span class="math display">\[ P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} \]</span></p>
 <ul>
 <li>Als Grad eines Polynoms wird der Term mit dem höchsten Exponenten und nichtverschwindenden Koeffizienten (der sogenannte Leitkoeffizient) bezeichnet.</li>
@@ -499,7 +526,7 @@ Theorie - Modellierung
 <p>In Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad <span class="math inline">\(n\)</span> durch folgendes Array dargestellt</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[an, ..., a2, a1, a0]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>So z.B. für <span class="math inline">\(P(x) = x^3 + 5x^2 - 2x + 3\)</span>:</p>
-<div id="71fa4f6d" class="cell" data-execution_count="2">
+<div id="762403a2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -507,7 +534,7 @@ Theorie - Modellierung
 </div>
 </div>
 <p>Die Auswertung des Polynoms an einem Punkt oder einem Array erfolgt mit der <code>np.polyval</code>-Funktion.</p>
-<div id="49d53fa5" class="cell" data-execution_count="3">
+<div id="cd5b4e40" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(x=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">) = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -515,7 +542,7 @@ Theorie - Modellierung
 <pre><code>P(x=1) = 7</code></pre>
 </div>
 </div>
-<div id="5eea02d0" class="cell" data-execution_count="4">
+<div id="fec42e61" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(x=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">) = </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -524,7 +551,7 @@ Theorie - Modellierung
 </div>
 </div>
 <p>Für die graphische Darstellung im Bereich <span class="math inline">\(x \in [-6, 2]\)</span> können die bekannten numpy und matplotlib Funktionen verwendet werden.</p>
-<div id="867deef7" class="cell" data-execution_count="5">
+<div id="36faeb71" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">50</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.polyval(P, x)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -541,7 +568,7 @@ Theorie - Modellierung
 </div>
 </div>
 <p>Um die Nullstellen eines Polynoms zu finden, kann die numpy-Funktion <code>np.roots</code> genutzt werden. Für das obige Polynom können folgende Nullstellen bestimmt werden.</p>
-<div id="dbab1bc4" class="cell" data-execution_count="6">
+<div id="0560274b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>nstellen <span class="op">=</span> np.roots(P)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># direkte Ausgabe des Arrays</span></span>
@@ -552,7 +579,7 @@ Theorie - Modellierung
 [-5.46628038+0.j        0.23314019+0.703182j  0.23314019-0.703182j]</code></pre>
 </div>
 </div>
-<div id="04ac985e" class="cell" data-execution_count="7">
+<div id="6d64d2ce" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Nullstellen: "</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># schönere Ausgabe des Arrays</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, z <span class="kw">in</span> <span class="bu">enumerate</span>(nstellen):</span>
@@ -574,7 +601,7 @@ Theorie - Modellierung
 <p>Seien beispielsweise 1 und 2 die Nullstellen eines Polynoms, so lautet dieses:</p>
 <p><span class="math display">\[  P(x) = (x - 1)(x - 2) = x^2 - 3x +2 \]</span></p>
 <p>Die numpy-Funktion <code>np.poly</code> kann aus den Nullstellen die Polynomkoeffizienten bestimmen. Anhand des obigen Beispiels lautet der Funktionsaufruf:</p>
-<div id="b184ec5b" class="cell" data-execution_count="8">
+<div id="4dafc5e1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nstellen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>koeffizienten <span class="op">=</span> np.poly(nstellen)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -593,7 +620,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 <p>Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare <span class="math inline">\((x_1, y_1)\)</span> und <span class="math inline">\((x_2, y_2)\)</span> mit <span class="math inline">\(x_1\neq x_2\)</span> existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion</p>
 <p><span class="math display">\[y(x) = \beta_1 x + \beta_0\]</span></p>
 <p>verschwindet.</p>
-<div id="18ad51a1" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
+<div id="231d9166" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispieldaten aus y(x) = -x + 2</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">50</span></span>
@@ -627,7 +654,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 <p>Für drei Messpunkte muss ein Polynom zweiten Grades verwendet werden, um die Punkte exakt zu erfassen.</p>
 <p><span class="math display">\[y(x) = \beta_2 x^2 + \beta_1 x + \beta_0\]</span></p>
-<div id="043f57d6" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="10">
+<div id="4f3dc614" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispieldaten aus y(x) = 3x^2 -4x - 1</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">50</span></span>
@@ -682,23 +709,23 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 <p>Die Messtellen folgen in dem Beispiel der Funktion <span class="math inline">\(f(x)\)</span>, welche nur zur Generierung der Datenpunkte verwendet wird.</p>
 <p><span class="math display">\[ f(x) = \frac{1}{2} + \frac{1}{1+x^2}\]</span></p>
 <p>Zunächst werden die Messpunkte generiert.</p>
-<div id="a29cde4f" class="cell" data-execution_count="11">
+<div id="eba47e2d" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fnk(x):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.5</span> <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>x<span class="op">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="82bd940f" class="cell" data-execution_count="12">
+<div id="5d4b5533" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>xmin <span class="op">=</span> <span class="op">-</span><span class="dv">5</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span>  <span class="dv">5</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(xmin, xmax, <span class="dv">100</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fnk(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="943419f1" class="cell" data-execution_count="13">
+<div id="7d0b4e9c" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(xmin, xmax, n)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fnk(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nun folgt die Interpolation für 5 und 15 Messpunkte.</p>
-<div id="a1d27d47" class="cell" data-execution_count="14">
+<div id="db23b679" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.polyfit(xi, yi, n<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Interpolationskoeffizienten:"</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -708,7 +735,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
   1.50000000e+00]</code></pre>
 </div>
 </div>
-<div id="50ede800" class="cell" data-execution_count="15">
+<div id="a4f42364" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'C0'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span><span class="st">'generierende Funktion'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, np.polyval(P, x), color<span class="op">=</span><span class="st">'C2'</span>, label<span class="op">=</span><span class="st">'Interpolation'</span>)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, color<span class="op">=</span><span class="st">'C1'</span>, label<span class="op">=</span><span class="st">'Messpunkte'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
@@ -722,7 +749,7 @@ Koeffizienten: [ 1. -3.  2.]</code></pre>
 </div>
 </div>
 </div>
-<div id="d428d0b0" class="cell" data-execution_count="16">
+<div id="da221a60" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(xmin, xmax, n)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fnk(xi)</span>

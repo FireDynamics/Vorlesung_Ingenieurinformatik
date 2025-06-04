@@ -23,6 +23,7 @@ exakt abbildet.
 Die Modellierung von Daten hat das Ziel eine Menge von Daten durch einen funktionalen Zusammenhang abzubilden. Beispielhaft können Daten aus Experimenten oder Simulationen stark verrauscht und so für eine Weiterverarbeitung nicht geeignet sein. Eine mittelnde Funktion kann den Datensatz stark vereinfachen. Oder es existieren nur wenige Datenpunkte und die Zwischenstellen müssen durch eine Funktion bestimmt werden.   
 
 Generell kann die Modellierung von Daten auf folgendes Problem verallgemeinert werden:
+
 1. Gegeben sind $n$ Messpunktpaare $(x_i, y_i)$ mit $x_i, y_i \in \mathbb{R}$
 2. Gesucht ist eine Modellfunktion $y(x)$, welche die Messpunktpaare approximiert
 
@@ -53,7 +54,7 @@ $$ \phi_1(x)=1,\quad \phi_2(x)=x,\quad \phi_3(x)=x^2,\quad \cdots,\quad \phi_m =
 
 ## Polynome
 
-Polynome $P(x)$ sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten ($ x^i, i \in \mathbb{N}$) mit den entsprechenden Koeffzienten $a_i$:
+Polynome $P(x)$ sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten $( x^i, i \in \mathbb{N})$ mit den entsprechenden Koeffzienten $a_i$:
 
 $$ P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} $$ 
 

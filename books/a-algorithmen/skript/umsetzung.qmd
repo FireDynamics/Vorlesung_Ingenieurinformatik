@@ -1,0 +1,157 @@
+## Von der Idee zum Code
+
+Ein einfacher Algorithmus zur Bestimmung des maximalen Werts einer beliebig großen Menge von Zahlen ist wie folgt definiert: 
+
+1. Eingabe: Menge $\mathsf A$ von $\mathsf n$ Zahlen, hier durchnumerierte Werteliste $\mathsf A=A_0, \dots, A_{n-1}$.
+1. Setzte Hilfswert (Variable) $\mathsf m$ auf das erste Element der Liste, d.h. $\mathsf m = A_0$.
+1. Gehe alle Elemente von $\mathsf A$ durch, wobei das aktuelle Element als $\mathsf a$ bezeichnet wird:
+  1. Falls das aktuelle Element $\mathsf a$ größer ist als $\mathsf m$:
+    * setzte $\mathsf m = a$
+    *, dann mache weiter mit dem nächsten Element in Schritt 3
+  1. Falls nicht:
+    mache weiter mit dem nächsten Element in Schritt 3
+1. Nachdem alle Elemente aus $\mathsf A$ in Schritt 3 durchlaufen wurden, enthält $\mathsf m$ den maximalen Wert der Liste $\mathsf A$.
+
+Dieser Algorthmus mag Ihnen auf den ersten Blick kompliziert. Gehen wir nochmal einen Schritt zurück und schauen uns einen Algorithmus an den wir bereits kennengelernt haben: Prüfen ob eine Zahl gerade ist.
+
+1. Eingabe: Eine Zahl X
+1. Berechne $X\text{ mod }2$
+1. Prüfe ob das Ergebnis gleich Null ist
+  1. Falls ja ist die Zahl gerade und wir geben den Text "die Zahl ist gerade" aus.
+  1. Falls nein ist die Zahl ungerade und wir geben den Text "die Zahl ist ungerade" aus.
+
+Diesen Auflistung können wir uns besser visualisieren. Dazu benutzen wir sogenannte Flussdiagramme.
+
+::: {.callout-note collapse="false"}
+## Flussdiagramme - Visuelle Darstellung von Abläufen
+
+Ein **Flussdiagramm** (engl. *flowchart*) ist eine grafische Methode zur Darstellung von Algorithmen. Es zeigt den Ablauf eines Programms oder Prozesses durch standardisierte Symbole und Pfeile. So lassen sich komplexe Abläufe leicht nachvollziehen und logisch überprüfen.
+
+**Typische Symbole:**
+
+- **Prozess (Anweisung)**: Rechteck – z. B. „Berechne Fläche“
+- **Entscheidung**: Raute – z. B. "Ist x > 0?"
+- **Start/Ende**: Ellipse – z. B. "für alle a in A"
+- **Pfeile**: Zeigen den Ablauf von einem Schritt zum nächsten
+
+**Beispiel:**
+Der Algorithmus zur Bestimmung, ob eine Zahl gerade ist:
+
+![FLussdiagramm](00-bilder/Zahl_gerade.svg)
+
+:::
+
+FLussdiagramme sind nicht der einzige Weg, um komplexere Algorithmen verständlicher aufzuschreiben. Eine weitere Möglichkeit bieter hier sogenannter Pseudocode:
+
+::: {.callout-note collapse="false"}
+## Pseudocode – Vom Gedanken zum Programm
+
+**Pseudocode** ist eine formalisierte Beschreibung eines Algorithmus in einfacher, strukturierter Sprache – eine Mischung aus natürlicher Sprache und Programmierlogik. Er ist **sprachunabhängig** und dient zur Planung, nicht zur direkten Ausführung.
+
+**Typische Merkmale:**
+- Klare **Schritt-für-Schritt-Struktur**
+- Verwendung von **Kontrollstrukturen** wie `wenn`, `solange`, `wiederhole`
+- Keine konkrete Syntax einer Programmiersprache
+
+
+**Beispiel:**
+```pseudocode
+BEGIN
+  Lese Zahl x ein
+  WENN x mod 2 = 0 DANN
+    Gib "x ist gerade" aus
+  SONST
+    Gib "x ist ungerade" aus
+ENDE
+```
+:::
+
+Kommen wir nun zu dem "komplexeren Algorithmus zurück, der das Maximum in einer Liste von Zahlen finden soll:
+
+1. Eingabe: Menge $\mathsf A$ von $\mathsf n$ Zahlen, hier durchnumerierte Werteliste $\mathsf A=A_0, \dots, A_{n-1}$.
+1. Setzte Hilfswert (Variable) $\mathsf m$ auf das erste Element der Liste, d.h. $\mathsf m = A_0$.
+1. Gehe alle Elemente von $\mathsf A$ durch, wobei das aktuelle Element als $\mathsf a$ bezeichnet wird:
+  1. Falls das aktuelle Element $\mathsf a$ größer ist als $\mathsf m$:
+    * setzte $\mathsf m = a$
+    *, dann mache weiter mit dem nächsten Element in Schritt 3
+  1. Falls nicht:
+    mache weiter mit dem nächsten Element in Schritt 3
+1. Nachdem alle Elemente aus $\mathsf A$ in Schritt 3 durchlaufen wurden, enthält $\mathsf m$ den maximalen Wert der Liste $\mathsf A$.
+
+Testen Sie einmal selbst, ob Sie das passende FLussdiagramm erstellen können. In der folgenden Box finden Sie die Musterlösung. Sie brauchen hierfür auch die Verzweigung für Schleifen:
+**Verzweigung** (blau): Abfrage einer Bedingung, welche entscheidet welche folgenden Elemente ausgeführt werden, hier wird geprüft ob $\mathsf a > m$
+
+::: {.callout-caution icon="true" collapse="true"}
+
+## Flussdiagramm: Maximumsuche
+![Algorithmus zur Bestimmung des Maximums einer Zahlenliste](00-bilder/alg_findmax.svg)
+
+:::
+
+
+Wie oben beschrieben, können wir aber nicht nur Flussdiagramme zur Darstellung von Algorithmen nutzen, sondern auch sogenannten Pseudocode. Versuchen Sie einmal selbst den ALgorithmus zur Maximumsuche in Pseudocode zu formulieren.
+
+::: {.callout-caution icon="true" collapse="true"}
+
+## Pseudocode: Maximumsuche
+```{bash}
+Eingabe: Liste von Zahlen L (z. B. L = [5, 8, 2, 9, 3])
+
+1. Setze max_wert := L[0]        // Initialisiere Hilfswert mit dem ersten Element der Liste
+
+2. Für jedes Element x in L:
+    a. Falls x > max_wert:
+        i. Setze max_wert := x
+    b. Andernfalls:
+        i. Tue nichts (fortfahren)
+
+3. Ausgabe: max_wert             // max_wert enthält nun den größten Wert der Liste
+```
+:::
+
+
+
+Ein Beispiel für den Ablauf des Algoritmus für eine Liste von 20 Zahlen ist:
+
+```{python}
+#| tags: [remove_input]
+import numpy as np
+np.set_printoptions(linewidth=50)
+# A = np.random.randint(0, high=1000, size=20)
+A = np.array([203, 433, 504, 602, 567, 762, 183, 482, 471, 741, 854, 486, 350, 550, 885, 395, 203, 288, 909, 644])
+
+print('Schritt 1:')
+print('==========')
+print('A =', np.array2string(A, separator=', '))
+
+print()
+print('Schritt 2:')
+print('==========')
+m = A[0]
+print('m = A[0] =', m)
+
+print()
+print('Schritt 3:')
+print('==========')
+for a in A:
+    print('a = {:3d}, m = {:3d}'.format(a, m), end='')
+    if a > m:
+        m = a
+        print(', da a > m ist, setzte m auf m=', m)
+    else:
+        print()
+
+print()
+print('Schritt 4:')
+print('==========')
+print('Maximaler Wert in A: m =', m)
+```
+## Kapitelübersicht 
+
+In diesem Kapitel werden folgende Themen behandelt:
+
+* Sortieralgorithmen
+* Eigenschaften von Algorithmen
+* Numerische Algorithmen
+
+
