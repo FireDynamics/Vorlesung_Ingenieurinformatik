@@ -1,0 +1,109 @@
+# Sortieralgorithmen
+
+Sortieralgoritmen werden genutzt um Listen von Werten der Größe nach zu sortieren. Anwendung finden diese Algorithmen bei Datenbanken oder Suchvorgängen. Insbesondere bei langen Listen mit Millionen oder Milliarden Einträgen ist es wichtig, dass der Algorithmus mit möglichst wenigen Operationen pro Element auskommt. Diese, als Komplexität bezeichnete Eigenschaft, wird im nächsten Kapitel genauer erläutert. 
+
+Zunächst werden zwei einfache Sortieralgorithmen 
+
+* [Selectionsort](https://de.wikipedia.org/wiki/Selectionsort)
+* [Bubblesort](https://de.wikipedia.org/wiki/Bubblesort)
+
+vorgestellt. Diese werden in der Praxis kaum noch eingesetzt, da es eine Vielzahl anderer [Sortierverfahren](https://de.wikipedia.org/wiki/Sortierverfahren) gibt, welche effektiver arbeiten. Jedoch eignen sich diese beiden besonders gut, um die Grundideen zu verdeutlichen. 
+
+## Selectionsort
+
+Folgende Grundidee liegt dem Selectionsort zugrunde: Es wird der minimale Wert der Liste gesucht, dann der zweit-kleinste und so weiter bis die ganze Liste sortiert ist. Dies kann als Abfolge dieser Schritte für eine Liste mit $\mathsf n$ Elementen formalisiert werden.
+
+1. Wiederhole die Schritte 2 bis 4 $\mathsf n$ Mal. Setzte die Hilfsvariable $i$ initial auf Null.
+1. Suche den minimalen Wert der Liste ab dem $\mathsf i$-ten Element.
+1. Tausche dieses Element mit dem $\mathsf i$-ten Element.
+1. Erhöhe den Wert von $\mathsf i$ um Eins.
+1. Die Vertauschungen der Elemente haben zu einer sortierten Liste geführt.
+
+Der Selectionsort kann auch als folgendes Flussdiagramm dargestellt werden.
+
+![Flussdiagramm des Selectionsort](00-bilder/alg_selsort.svg)
+
+Als Zahlenbeispiel wird die Liste mit den Elementen 42, 6, 22, 11, 54, 12, 31 mit dem Selectionsort sortiert.
+
+```{python}
+#| jupyter: {source_hidden: true}
+#| tags: [remove_input, full-width]
+A = [42, 6, 22, 11, 54, 12, 31]
+
+print('Zu sortierende Werteliste ', A)
+print()
+
+n = len(A)
+for i in range(n):
+    mv = A[i]
+    mi = i
+    for j in range(i, n):
+        if A[j] < mv:
+            mv = A[j]
+            mi = j
+
+    print("Iteration {:2d}: ".format(i+1))
+    print("   Minimum von ", A[i:n], "ist", mv)
+    A[mi] = A[i]
+    A[i] = mv
+    print("   Sortiert / Unsortiert: ", A[:i+1], "/", A[i+1:])
+    print()
+    
+
+    
+```
+
+## Bubblesort
+
+Im Gegensatz zum Selectionsort beruht die Idee des Bubblesort auf rein lokalen Operationen. D.h. hier wird nicht nach den maximalen Werten gesucht, sondern durch Vertauschungen eine Sortierung erzielt. Das Verfahren für eine Liste mit $\mathsf n$ Elementen ist durch folgende Vorschrift gegeben.
+
+1. Die Schritte 2 bis 4 werden $\mathsf n$ Mal durchgeführt. Die Hilfsvariable $\mathsf i$ wird initial auf Null gesetzt.
+1. Starte beim $\mathsf i$-ten Element und iteriere bis zum Ende der Liste. Falls das aktuell betrachtete Element größer ist als das Folgende, tausche beide Elemente.
+1. Falls in Schritt 2 keine Vertauschungen durchgeführt wurden, gehe zu Schritt 5.
+1. Addiere Eins zum Wert der Variable $\mathsf i$.
+1. Die Liste ist sortiert und der Algorithmus ist fertig.
+
+Das nachfolgende Flussdiagramm verdeutlicht den Ablauf des Bubblesort Algorithmus. 
+Bevor Sie sich das Diagram anschauen, versuchen Sie es einmal selbst zu erstellen.
+
+::: {.callout-caution icon="true" collapse="true"}
+
+## Flussdiagramm: Bubblesort
+![Flussdiagramm des Bubblesort](00-bilder/alg_bubblesort.svg)
+
+:::
+
+Der Ablauf des Bubblesort wird beispielhaft für die Liste 42, 6, 22, 11, 54, 12, 31 (gleich der im obigen Beispiel) vorgeführt.
+
+```{python}
+#| jupyter: {source_hidden: true}
+#| tags: [remove_input]
+A = [42, 6, 22, 11, 54, 12, 31]
+
+print('Zu sortierende Werteliste ', A)
+print()
+
+n = len(A)
+swapped = True
+i = 0
+while swapped:
+    swapped = False
+    print("Iteration {:2d}: ".format(len(A) - n + 1))
+    print("   Liste zu Beginn der Iteration: ", A)
+    for j in range(n-1):
+        if A[j+1] < A[j]:
+            print("   Tausche: ", A[j], "und", A[j+1])
+            mv = A[j]
+            A[j] = A[j+1]
+            A[j+1] = mv
+            print("   Liste nach Tausch: ", A)
+            swapped = True
+        else:
+            print("   Elemente ", A[j], "und", A[j+1], " müssen nicht getauscht werden")
+    n -= 1
+    if not swapped:
+        print("   kein Tausch mehr notwendig, Liste ist nun sortiert")
+    print()
+
+```
+
