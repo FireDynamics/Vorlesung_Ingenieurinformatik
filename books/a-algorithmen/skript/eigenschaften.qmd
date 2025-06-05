@@ -282,6 +282,3 @@ plot_sorting(res3, 'sort_bubble_p095', title='95\% vorsortiert')
 ```
 
 ![Abschätzung der Koplexität des Bubblesort-Algorithmus mit einer 95%-igen Vorsortierung](00-bilder/sort_bubble_p095.svg)
-
-
-

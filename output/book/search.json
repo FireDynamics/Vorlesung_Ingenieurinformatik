@@ -1,0 +1,1790 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vorlesung Ingenieurinformatik",
+    "section": "",
+    "text": "Übersicht",
+    "crumbs": [
+      "Übersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#allgemeine-infos",
+    "href": "index.html#allgemeine-infos",
+    "title": "Vorlesung Ingenieurinformatik",
+    "section": "Allgemeine Infos",
+    "text": "Allgemeine Infos\nDie Vorlesung Ingenieurinformatik an der Bergischen Universität Wuppertal wurde vom im Jahr 2019 gebildeten Lehrstuhl Computational Civil Engineering (CCE) übernommen. Der CCE-Lehrstuhl beschäftigt sich hauptsächlich mit der Erforschung und Entwicklung neuer computergestützter Modelle. Im Zentrum der Anwendung steht die numerische Simulation der Brand- und Rauchausbreitung in Gebäuden.\nDa sich das Skript in der Entwicklung befinden freuen wir uns über konstruktive Anregungen und Ihr Feedback. So können Sie Ihre Nachfolger unterstützen.\nAlle organisatorischen Informationen zum Ablauf finden Sie auf der CCE-Webseite zur Ingenieurinformatik.",
+    "crumbs": [
+      "Übersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#kontakt",
+    "href": "index.html#kontakt",
+    "title": "Vorlesung Ingenieurinformatik",
+    "section": "Kontakt",
+    "text": "Kontakt\nSo erreichen Sie uns: * Als Teilnehmer der Vorlesung: am besten über den zugehörigen Moodle-Kurs an der Bergischen Universität Wuppertal * Externe Interessenten benutzten am besten unsere Emailliste * Kontaktmöglichkeiten zu einzelnen Personen finden Sie auf der Mitarbeiterwebseite",
+    "crumbs": [
+      "Übersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#abschlussarbeiten",
+    "href": "index.html#abschlussarbeiten",
+    "title": "Vorlesung Ingenieurinformatik",
+    "section": "Abschlussarbeiten",
+    "text": "Abschlussarbeiten\nWir bieten Abschlussarbeiten (BA, MA, PhD) zu vielen verschiedenen Themen an * eine Themenübersicht und bereits betreuter Arbeiten finden Sie auf der Webseite der Abschlussarbeiten * Bei der Themenfindung kann auch die Übersicht unserer Publikationen helfen * Bei Interesse kontaktieren Sie bitte Lukas Arnold",
+    "crumbs": [
+      "Übersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#english-version",
+    "href": "index.html#english-version",
+    "title": "Vorlesung Ingenieurinformatik",
+    "section": "English Version",
+    "text": "English Version\nIs an english version planned? Not yet, please contact Lukas Arnold.",
+    "crumbs": [
+      "Übersicht"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/index.html",
+    "href": "books/w-python-minimal/index.html",
+    "title": "Werkzeugbaustein Python",
+    "section": "",
+    "text": "Voraussetzungen\nKeine Voraussetzungen",
+    "crumbs": [
+      "Grundlagen Python",
+      "Werkzeugbaustein Python"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/index.html#lernziele",
+    "href": "books/w-python-minimal/index.html#lernziele",
+    "title": "Werkzeugbaustein Python",
+    "section": "Lernziele",
+    "text": "Lernziele\nIn diesem Bausteine werden die Grundzüge der Programmierung mit Python vermittelt. In diesem Baustein lernen Sie …\n\nGrundlagen des Programmierens\nAusgaben in Python, Grundlegende Datentypen, FLusskontrolle\ndie Dokumentation zu lesen und zu verwenden\nModule und Pakete laden",
+    "crumbs": [
+      "Grundlagen Python",
+      "Werkzeugbaustein Python"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/einleitung.html",
+    "href": "books/w-python-minimal/skript/einleitung.html",
+    "title": "1  Einführung",
+    "section": "",
+    "text": "2 Willkommen bei Python!\nPython ist eine moderne Programmiersprache, die sich besonders gut für Einsteigerinnen und Einsteiger eignet. Sie ist leicht verständlich und wird in vielen Bereichen eingesetzt – von der Datenanalyse bis hin zur Webentwicklung.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/einleitung.html#lernziele-dieses-kapitels",
+    "href": "books/w-python-minimal/skript/einleitung.html#lernziele-dieses-kapitels",
+    "title": "1  Einführung",
+    "section": "2.1 Lernziele dieses Kapitels",
+    "text": "2.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:\n\neinfache Python-Programme schreiben,\nText auf dem Bildschirm ausgeben,\nerste Variablen definieren und verwenden.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/einleitung.html#ihr-erstes-programm",
+    "href": "books/w-python-minimal/skript/einleitung.html#ihr-erstes-programm",
+    "title": "1  Einführung",
+    "section": "2.2 Ihr erstes Programm",
+    "text": "2.2 Ihr erstes Programm\nDie ersten Schritte in einer neuen Programmiersprache sind immer die gleichen. WIr lassen uns die Worte ‘Hello World’ ausgeben. Dazu nutzen wir den print-Befehl print():\n\nprint(\"Hallo Welt!\")\n\nHallo Welt!\n\n\nWas passiert hier? - print() ist eine sogenannte Funktion, die etwas auf dem Bildschirm ausgibt. - Der Text \"Hello World!\" wird angezeigt. - Texte (auch „Strings“ genannt) stehen immer in Anführungszeichen.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/einleitung.html#variablen-namen-für-werte",
+    "href": "books/w-python-minimal/skript/einleitung.html#variablen-namen-für-werte",
+    "title": "1  Einführung",
+    "section": "2.3 Variablen – Namen für Werte",
+    "text": "2.3 Variablen – Namen für Werte\nVariablen sind wie beschriftete Schubladen: Sie speichern Informationen unter einem Namen.\n\nname = \"Frau Müller\"\nalter = 32\n\nSie können diese Variablen verwenden, um dynamische Ausgaben zu erzeugen:\n\nprint(name + \" ist \" + str(alter) + \" Jahre alt.\")\n\nFrau Müller ist 32 Jahre alt.\n\n\nZu beachten ist hier, dass sie versuchen sowohl eine Zahl, als auch Text auszugeben. Daher müssen wir mit der Funktion ‘str()’ die Zahl in Text umwandeln.\n\n\n\n\n\n\n✏️ Aufgabe: Begrüßung mit Alter\n\n\n\n\n\nSchreiben Sie ein Programm, das Sie mit Ihrem Namen begrüßt:\nHallo Frau Müller!\nTipp: In Python können Sie Texte mit + zusammenfügen. Denken Sie daran, dass Strings in Anführungszeichen stehen müssen.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmein_name = \"Ihr Name hier\"\nprint(\"Hallo \" + mein_name + \"!\")\n\nHallo Ihr Name hier!\n\n\n\n\n\nErweitern Sie Ihr Programm so, dass es eine Begrüßung inklusive Alter ausgibt:\nHallo Frau Müller!\nSie sind 32 Jahre alt.\nTipp: Verwenden Sie print() mehrmals oder fügen Sie Texte zusammen.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nname = \"Frau Müller\"\nalter = 32\n\nprint(\"Hallo \" + name + \"!\")\nprint(\"Sie sind \" + str(alter) + \" Jahre alt.\")\n\nHallo Frau Müller!\nSie sind 32 Jahre alt.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html",
+    "href": "books/w-python-minimal/skript/datentypen.html",
+    "title": "2  Datentypen verstehen",
+    "section": "",
+    "text": "2.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#lernziele-dieses-kapitels",
+    "href": "books/w-python-minimal/skript/datentypen.html#lernziele-dieses-kapitels",
+    "title": "2  Datentypen verstehen",
+    "section": "",
+    "text": "die wichtigsten Datentypen unterscheiden,\nmit Zahlen und Texten rechnen bzw. arbeiten,\neinfache Berechnungen und Ausgaben erstellen.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#einleitung",
+    "href": "books/w-python-minimal/skript/datentypen.html#einleitung",
+    "title": "2  Datentypen verstehen",
+    "section": "2.2 Einleitung",
+    "text": "2.2 Einleitung\nIn Python gibt es verschiedene Datentypen. Diese beschreiben, welche Art von Daten Sie in Variablen speichern. Das ist wichtig, weil viele Operationen – wie zum Beispiel + – je nach Datentyp etwas anderes bedeuten:\n\n+ bei Zahlen bedeutet Addition,\n+ bei Text bedeutet Zusammenfügen (Konkatenation).\n\nBevor wir also mit komplexeren Programmen arbeiten, sollten wir verstehen, welche Datentypen es gibt und wie man mit ihnen umgeht.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#die-wichtigsten-datentypen",
+    "href": "books/w-python-minimal/skript/datentypen.html#die-wichtigsten-datentypen",
+    "title": "2  Datentypen verstehen",
+    "section": "2.3 Die wichtigsten Datentypen",
+    "text": "2.3 Die wichtigsten Datentypen\nHier sind die grundlegenden Datentypen in Python:\n\n\n\nTyp\nBeispiel\nBedeutung\n\n\n\n\nint\n10\nGanze Zahl\n\n\nfloat\n3.14\nKommazahl\n\n\nstr\n\"Hallo\"\nText (String)\n\n\nbool\nTrue, False\nWahrheitswert (Ja/Nein)\n\n\n\nSie können den Typ einer Variable mit der Funktion type() herausfinden:\n\nwert = 42\nprint(type(wert))  # Ausgabe: &lt;class 'int'&gt;\n\n&lt;class 'int'&gt;",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#unterschiede-zwischen-int-und-float",
+    "href": "books/w-python-minimal/skript/datentypen.html#unterschiede-zwischen-int-und-float",
+    "title": "2  Datentypen verstehen",
+    "section": "2.4 Unterschiede zwischen int und float",
+    "text": "2.4 Unterschiede zwischen int und float\nIn Python unterscheidet man zwischen ganzen Zahlen (int) und Kommazahlen (float):\n\nint steht für „integer“ – also ganze Zahlen wie 1, 0, -10\nfloat steht für „floating point number“ – also Zahlen mit Dezimalstellen wie 3.14, 0.5, -2.0\n\n\na = 10       # int\nb = 2.5      # float\n\nprint(\"a:\", a, \"| Typ:\", type(a))\nprint(\"b:\", b, \"| Typ:\", type(b))\n\na: 10 | Typ: &lt;class 'int'&gt;\nb: 2.5 | Typ: &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nDie Unterscheidung ist wichtig: Manche Rechenoperationen verhalten sich je nach Datentyp leicht unterschiedlich.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#was-sind-booleans-bool",
+    "href": "books/w-python-minimal/skript/datentypen.html#was-sind-booleans-bool",
+    "title": "2  Datentypen verstehen",
+    "section": "2.5 Was sind Booleans (bool)?",
+    "text": "2.5 Was sind Booleans (bool)?\nEin Boolean ist ein Wahrheitswert: Er kann nur zwei Zustände annehmen:\n\nTrue (wahr)\nFalse (falsch)\n\nSolche Werte begegnen uns zum Beispiel bei Fragen wie:\n\nIst die Temperatur über 30 °C?\nHat die Datei einen bestimmten Namen?\nIst die Liste leer?\n\n\nist_sonnig = True\nhat_regenschirm = False\n\nprint(\"Sonnig:\", ist_sonnig)\nprint(\"Regenschirm dabei?\", hat_regenschirm)\nprint(\"Typ von 'ist_sonnig':\", type(ist_sonnig))\n\nSonnig: True\nRegenschirm dabei? False\nTyp von 'ist_sonnig': &lt;class 'bool'&gt;\n\n\nBooleans werden besonders in Bedingungen und Vergleichen verwendet, was Sie in Kapitel 4 genauer kennenlernen.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#rechnen-mit-zahlen",
+    "href": "books/w-python-minimal/skript/datentypen.html#rechnen-mit-zahlen",
+    "title": "2  Datentypen verstehen",
+    "section": "2.6 Rechnen mit Zahlen",
+    "text": "2.6 Rechnen mit Zahlen\nPython kann wie ein Taschenrechner verwendet werden:\n\n\n\nOperator\nBeschreibung\n\n\n\n\n+, -\nAddition / Subtraktion\n\n\n*, /\nMultiplikation / Division\n\n\n//, %\nGanzzahlige Division / Rest\n\n\n**\nPotenzieren\n\n\n\n\na = 10\nb = 3\n\nprint(\"Addition:\", a + b)\nprint(\"Subtraktion:\", a - b)\nprint(\"Multiplikation:\", a * b)\nprint(\"Potenzieren\", a**b)\nprint(\"Division:\", a / b)\nprint(\"Ganzzahlige Division:\", a // b)\nprint(\"Division mit Rest:\", a % b)\n\nAddition: 13\nSubtraktion: 7\nMultiplikation: 30\nPotenzieren 1000\nDivision: 3.3333333333333335\nGanzzahlige Division: 3\nDivision mit Rest: 1\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n// bedeutet: Ganzzahldivision, das Ergebnis wird abgerundet. Alternativ gibt es auch %. Hier wird eine Ganzzahldivision durchgeführt und der Rest ausgegeben.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#arbeiten-mit-text",
+    "href": "books/w-python-minimal/skript/datentypen.html#arbeiten-mit-text",
+    "title": "2  Datentypen verstehen",
+    "section": "2.7 Arbeiten mit Text",
+    "text": "2.7 Arbeiten mit Text\nTexte (Strings) können miteinander kombiniert werden:\n\nvorname = \"Anna\"\nnachname = \"Beispiel\"\nprint(\"Willkommen, \" + vorname + \" \" + nachname + \"!\")\n\nWillkommen, Anna Beispiel!\n\n\nWenn Sie Text und Zahlen kombinieren wollen, müssen Sie die Zahl in einen String umwandeln:\n\npunkte = 95\nprint(\"Sie haben \" + str(punkte) + \" Punkte erreicht.\")\n\nSie haben 95 Punkte erreicht.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/datentypen.html#umwandlung-von-datentypen-typecasting",
+    "href": "books/w-python-minimal/skript/datentypen.html#umwandlung-von-datentypen-typecasting",
+    "title": "2  Datentypen verstehen",
+    "section": "2.8 Umwandlung von Datentypen (Typecasting)",
+    "text": "2.8 Umwandlung von Datentypen (Typecasting)\nManchmal müssen Sie einen Wert von einem Datentyp in einen anderen umwandeln – z. B. eine Zahl in einen Text (String), damit sie ausgegeben werden kann.\nDas nennt man Typecasting. Hier sind die wichtigsten Funktionen dafür:\n\n\n\nFunktion\nBeschreibung\nBeispiel\n\n\n\n\nstr())\nZahl → Text\nstr(42) → \"42\"\n\n\nint()\nText/Zahl → ganze Zahl\nint(\"10\") → 10\n\n\nfloat()\nText/Zahl → Kommazahl\nfloat(\"3.14\") → 3.14\n\n\n\n\n# Beispiel: Zahl als Text anzeigen\npunkte = 100\nprint(\"Sie haben \" + str(punkte) + \" Punkte.\")\n\n# Beispiel: String in Zahl umwandeln und berechnen\neingabe = \"3.5\"\nwert = float(eingabe) * 2\nprint(\"Doppelt so viel:\", wert)\n\nSie haben 100 Punkte.\nDoppelt so viel: 7.0\n\n\nAchten Sie beim Umwandeln darauf, dass der Inhalt auch wirklich passt – int(\"abc\") führt zu einem Fehler.\n\n\n\n\n\n\nAufgabe: Alter in Tagen\n\n\n\n\n\nBerechnen Sie, wie alt eine Person in Tagen ist.\n\nalter_jahre = 32\ntage = alter_jahre * 365\nprint(\"Sie sind ungefähr \" + str(tage) + \" Tage alt.\")\n\nSie sind ungefähr 11680 Tage alt.\n\n\nTipp: Denken Sie an die Umwandlung in einen String, wenn Sie die Zahl ausgeben möchten.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nalter = 32\ntage = alter * 365\nprint(\"Sie sind ungefähr \" + str(tage) + \" Tage alt.\")\n\nSie sind ungefähr 11680 Tage alt.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datentypen verstehen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "",
+    "text": "3.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#lernziele-dieses-kapitels",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#lernziele-dieses-kapitels",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "",
+    "text": "Bedingungen formulieren und mit if, elif, else nutzen,\nVergleichsoperatoren verwenden (==, &lt;, !=, …),\nWiederholungen mit while und for umsetzen.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#bedingungen-mit-if-elif-else",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#bedingungen-mit-if-elif-else",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "3.2 Bedingungen mit if, elif, else",
+    "text": "3.2 Bedingungen mit if, elif, else\n\nalter = 17\n\nif alter &gt;= 18:\n    print(\"Sie sind volljährig.\")\nelse:\n    print(\"Sie sind minderjährig.\")\n\nSie sind minderjährig.\n\n\nMehrere Fälle unterscheiden:\n\nnote = 2.3\n\nif note &lt;= 1.5:\n    print(\"Sehr gut\")\nelif note &lt;= 2.5:\n    print(\"Gut\")\nelif note &lt;= 3.5:\n    print(\"Befriedigend\")\nelse:\n    print(\"Ausreichend oder schlechter\")\n\nGut",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#vergleichsoperatoren",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#vergleichsoperatoren",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "3.3 Vergleichsoperatoren",
+    "text": "3.3 Vergleichsoperatoren\n\n\n\nAusdruck\nBedeutung\n\n\n\n\na == b\ngleich\n\n\na != b\nungleich\n\n\na &lt; b\nkleiner als\n\n\na &gt; b\ngrößer als\n\n\na &lt;= b\nkleiner oder gleich\n\n\na &gt;= b\ngrößer oder gleich",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#wiederholungen-mit-while",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#wiederholungen-mit-while",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "3.4 Wiederholungen mit while",
+    "text": "3.4 Wiederholungen mit while\n\nzähler = 0\n\nwhile zähler &lt; 5:\n    print(\"Zähler ist:\", zähler)\n    zähler += 1\n\nZähler ist: 0\nZähler ist: 1\nZähler ist: 2\nZähler ist: 3\nZähler ist: 4\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nAchten Sie auf eine Abbruchbedingung – sonst läuft die Schleife endlos!",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#schleifen-mit-for-und-range",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#schleifen-mit-for-und-range",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "3.5 Schleifen mit for und range()",
+    "text": "3.5 Schleifen mit for und range()\nWenn Sie eine Schleife genau eine bestimmte Anzahl von Malen durchlaufen möchten, nutzen Sie for mit range():\n\nfor i in range(5):\n    print(\"Durchlauf:\", i)\n\nDurchlauf: 0\nDurchlauf: 1\nDurchlauf: 2\nDurchlauf: 3\nDurchlauf: 4\n\n\nStart- und Endwert festlegen:\n\nfor i in range(1, 6):\n    print(i)\n\n1\n2\n3\n4\n5",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/flusskontrolle.html#was-macht-range-genau",
+    "href": "books/w-python-minimal/skript/flusskontrolle.html#was-macht-range-genau",
+    "title": "3  Entscheidungen und Wiederholungen",
+    "section": "3.6 Was macht range() genau?",
+    "text": "3.6 Was macht range() genau?\nDie Funktion range() erzeugt eine Abfolge von Zahlen, über die Sie mit einer for-Schleife iterieren können.\n\n3.6.1 Varianten:\nrange(5)\n➡️ ergibt: 0, 1, 2, 3, 4 (startet bei 0, endet vor 5)\nrange(2, 6)\n➡️ ergibt: 2, 3, 4, 5 (startet bei 2, endet vor 6)\nrange(1, 10, 2)\n➡️ ergibt: 1, 3, 5, 7, 9 (Schrittweite = 2)\nrange() erzeugt keine echte Liste, sondern ein sogenanntes „range-Objekt“, das wie eine Liste verwendet werden kann.\n\n\n\n\n\n\n✏️ Aufgabe: Zähle von 1 bis 10\n\n\n\n\n\nNutzen Sie eine for-Schleife, um die Zahlen von 1 bis 10 auszugeben.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor i in range(1, 11):\n    print(i)\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAufgabe: Gerade Zahlen ausgeben\n\n\n\n\n\nGeben Sie alle geraden Zahlen von 0 bis 20 aus. Tipp: Eine Zahl ist gerade, wenn zahl % 2 == 0.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor zahl in range(0, 21):\n    if zahl % 2 == 0:\n        print(zahl)\n\n0\n2\n4\n6\n8\n10\n12\n14\n16\n18\n20",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Entscheidungen und Wiederholungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html",
+    "title": "4  Mehrere Werte speichern",
+    "section": "",
+    "text": "4.1 Was ist eine Liste?\nEine Liste ist eine geordnete Sammlung von Werten eines Datentyps.\nnamen = [\"Ali\", \"Bente\", \"Carlos\"]\nnoten = [1.7, 2.3, 1.3, 2.0]\nAuf Elemente greifen Sie mit eckigen Klammern zu:\nprint(namen[0])  # erstes Element\nprint(noten[-1]) # letztes Element\n\nAli\n2.0",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#teile-aus-listen-ausschneiden-slicing",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#teile-aus-listen-ausschneiden-slicing",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.2 Teile aus Listen ausschneiden – Slicing",
+    "text": "4.2 Teile aus Listen ausschneiden – Slicing\nMit dem sogenannten Slicing können Sie gezielt Ausschnitte aus einer Liste entnehmen. Dabei geben Sie an, wo der Ausschnitt beginnt und wo er endet (der Endwert wird nicht mehr mitgenommen):\n\nzahlen = [10, 20, 30, 40, 50, 60]\nprint(zahlen[1:4])  # Ausgabe: [20, 30, 40]\n\n[20, 30, 40]\n\n\n\n4.2.1 Syntax: liste[start:stop]\n\nstart: Index, bei dem das Slicing beginnt (inklusive)\nstop: Index, an dem es endet (exklusive)\nDer Startwert kann auch weggelassen werden: [:3] → erstes bis drittes Element\nEbenso der Endwert: [3:] → ab dem vierten Element bis zum Ende\nGanze Kopie: [:]\n\n\nprint(zahlen[:3])   # [10, 20, 30]\nprint(zahlen[3:])   # [40, 50, 60]\nprint(zahlen[:])    # vollständige Kopie\n\n[10, 20, 30]\n[40, 50, 60]\n[10, 20, 30, 40, 50, 60]\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nSie können auch mit negativen Indizes arbeiten (-1 ist das letzte Element):\n\nprint(zahlen[-3:])  # [40, 50, 60]\n\n[40, 50, 60]",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#über-listen-iterieren",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#über-listen-iterieren",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.3 Über Listen iterieren",
+    "text": "4.3 Über Listen iterieren\nMit einer for-Schleife können Sie über jedes Element in einer Liste iterieren:\n\nnamen = [\"Ali\", \"Bente\", \"Carlos\"]\n\nfor name in namen:\n    print(\"Hallo\", name + \"!\")\n\nHallo Ali!\nHallo Bente!\nHallo Carlos!",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#erweiterung-bedingte-ausgaben",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#erweiterung-bedingte-ausgaben",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.4 Erweiterung: Bedingte Ausgaben",
+    "text": "4.4 Erweiterung: Bedingte Ausgaben\nSie können in der Schleife mit if filtern:\n\ntemperaturen = [14.2, 17.5, 19.0, 21.3, 18.4]\n\nfor t in temperaturen:\n    if t &gt; 18:\n        print(t, \"ist ein warmer Tag\")\n\n19.0 ist ein warmer Tag\n21.3 ist ein warmer Tag\n18.4 ist ein warmer Tag",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#durchschnitt-berechnen",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#durchschnitt-berechnen",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.5 Durchschnitt berechnen",
+    "text": "4.5 Durchschnitt berechnen\nPython stellt nützliche Funktionen bereit, z. B. sum() und len():\n\nnoten = [1.7, 2.3, 1.3, 2.0]\n\ndurchschnitt = sum(noten) / len(noten)\nprint(\"Durchschnittsnote:\", round(durchschnitt, 2))\n\nDurchschnittsnote: 1.82",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#listen-erweitern-.append",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#listen-erweitern-.append",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.6 Listen erweitern: .append()",
+    "text": "4.6 Listen erweitern: .append()\nManchmal kennen Sie die Listenelemente nicht vorher – dann können Sie neue Werte nachträglich hinzufügen:\n\nnamen = []\n\nnamen.append(\"Ali\")\nnamen.append(\"Bente\")\n\nprint(namen)\n\n['Ali', 'Bente']\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nDie Methode .append()) hängt einen neuen Wert an das Ende der Liste.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#verschachtelte-schleifen",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#verschachtelte-schleifen",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.7 Verschachtelte Schleifen",
+    "text": "4.7 Verschachtelte Schleifen\nWenn Sie mit mehrdimensionalen Daten arbeiten – z. B. eine Tabelle mit mehreren Zeilen – können Sie Schleifen ineinander verschachteln:\n\nwochentage = [\"Mo\", \"Di\", \"Mi\"]\nstunden = [1, 2, 3]\n\nfor tag in wochentage:\n    for stunde in stunden:\n        print(f\"{tag}, Stunde {stunde}\")\n\nMo, Stunde 1\nMo, Stunde 2\nMo, Stunde 3\nDi, Stunde 1\nDi, Stunde 2\nDi, Stunde 3\nMi, Stunde 1\nMi, Stunde 2\nMi, Stunde 3\n\n\nDas ergibt:\nMo, Stunde 1\nMo, Stunde 2\nMo, Stunde 3\nDi, Stunde 1\n...",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/listen_iterationen.html#listen-sortieren",
+    "href": "books/w-python-minimal/skript/listen_iterationen.html#listen-sortieren",
+    "title": "4  Mehrere Werte speichern",
+    "section": "4.8 Listen sortieren",
+    "text": "4.8 Listen sortieren\nMit sorted() können Sie Listen alphabetisch oder numerisch sortieren:\n\nnamen = [\"Zoe\", \"Anna\", \"Ben\"]\nsortiert = sorted(namen)\n\nprint(sortiert)\n\n['Anna', 'Ben', 'Zoe']\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nDie Original-Liste bleibt unverändert.\nWenn Sie die Liste direkt verändern möchten, geht das mit:\n\nnamen.sort()",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mehrere Werte speichern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html",
+    "href": "books/w-python-minimal/skript/funktionen.html",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "",
+    "text": "5.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#lernziele-dieses-kapitels",
+    "href": "books/w-python-minimal/skript/funktionen.html#lernziele-dieses-kapitels",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "",
+    "text": "eigene Funktionen mit def erstellen,\nParameter übergeben und Rückgabewerte nutzen,\nFunktionen sinnvoll in Programmen einsetzen.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#eine-funktion-definieren",
+    "href": "books/w-python-minimal/skript/funktionen.html#eine-funktion-definieren",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "5.2 Eine Funktion definieren",
+    "text": "5.2 Eine Funktion definieren\nEine Funktion besteht aus folgenden Teilen:\n\nDefinition mit def\nFunktionsname\nParameter in Klammern (optional)\nEinrückung für den Funktionskörper\n(optional) return-Anweisung\n\nBeispiel:\n\ndef hallo(name=\"Gast\"):\n    begruessung = \"Hallo \" + name + \"!\"\n    return begruessung\n\nFangen wir mit dem ersten Stichwort an. Funktionen werden mit def definiert und können beliebig oft aufgerufen werden:\n\ndef begruessung():\n    print(\"Hallo und willkommen!\")\n\nSie wird erst ausgeführt, wenn Sie sie aufrufen:\n\nbegruessung()\n\nHallo und willkommen!",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#parameter-übergeben",
+    "href": "books/w-python-minimal/skript/funktionen.html#parameter-übergeben",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "5.3 Parameter übergeben",
+    "text": "5.3 Parameter übergeben\nFunktionen können Eingabewerte (Parameter) erhalten:\n\ndef begruessung(name):\n    print(\"Hallo\", name + \"!\")\n\nbegruessung(\"Alex\")\n\nHallo Alex!",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#rückgabewerte-mit-return",
+    "href": "books/w-python-minimal/skript/funktionen.html#rückgabewerte-mit-return",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "5.4 Rückgabewerte mit return",
+    "text": "5.4 Rückgabewerte mit return\nEine Funktion kann auch einen Wert zurückgeben:\n\ndef quadrat(zahl):\n    return zahl * zahl\n\nergebnis = quadrat(5)\nprint(ergebnis)\n\n25",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#beispiel-umrechnungen",
+    "href": "books/w-python-minimal/skript/funktionen.html#beispiel-umrechnungen",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "5.5 Beispiel: Umrechnungen",
+    "text": "5.5 Beispiel: Umrechnungen\n\n5.5.1 Euro zu US-Dollar\n\ndef euro_zu_usd(betrag_euro):\n    wechselkurs = 1.09\n    return betrag_euro * wechselkurs\n\nprint(\"20 € sind\", euro_zu_usd(20), \"US-Dollar.\")\n\n20 € sind 21.8 US-Dollar.\n\n\n\n\n\n\n\n\nAufgabe: Begrüßung mit Name\n\n\n\n\n\nErstellen Sie eine Funktion begruesse(name), die den Namen in einem Begrüßungstext verwendet:\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef begruesse(name):\n    print(\"Hallo\", name + \", schön dich zu sehen!\")\n\nbegruesse(\"Fatima\")\n\nHallo Fatima, schön dich zu sehen!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAufgabe: Temperaturumrechnung\n\n\n\n\n\nSchreiben Sie eine Funktion, die Celsius in Fahrenheit umrechnet:\nFormel: [ F = C + 32 ]\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndef celsius_zu_fahrenheit(c):\n    return c * 1.8 + 32\n\nprint(celsius_zu_fahrenheit(20))\n\n68.0",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/funktionen.html#parameter-mit-standardwerten",
+    "href": "books/w-python-minimal/skript/funktionen.html#parameter-mit-standardwerten",
+    "title": "5  Wiederverwendbarer Code mit Funktionen",
+    "section": "5.6 Parameter mit Standardwerten",
+    "text": "5.6 Parameter mit Standardwerten\nSie können Parametern Standardwerte zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:\n\ndef begruessung(name=\"Gast\"):\n    print(\"Hallo\", name + \"!\")\n\nbegruessung()         # Hallo Gast!\nbegruessung(\"Maria\")  # Hallo Maria!\n\nHallo Gast!\nHallo Maria!\n\n\n\n\n\n\n\n\nprint() vs. return\n\n\n\n\n\nDiese beiden Begriffe werden oft verwechselt:\n\n\n\nAusdruck\nBedeutung\n\n\n\n\nprint()\nzeigt einen Text auf dem Bildschirm\n\n\nreturn\ngibt einen Wert an den Aufrufer zurück\n\n\n\nBeispiel:\n\ndef verdoppeln(x):\n    return x * 2\n\n# Ausgabe sichtbar machen\nprint(verdoppeln(5))  # Ausgabe: 10\n\n10",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederverwendbarer Code mit Funktionen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "",
+    "text": "6.1 Lernziele dieses Kapitels\nAm Ende dieses Kapitels können Sie:",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#lernziele-dieses-kapitels",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#lernziele-dieses-kapitels",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "",
+    "text": "Dateien mit open() öffnen,\nInhalte aus Textdateien einlesen,\nTexte in Dateien schreiben,\nmit with-Blöcken sicher und einfach arbeiten.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#eine-datei-einlesen",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#eine-datei-einlesen",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.2 Eine Datei einlesen",
+    "text": "6.2 Eine Datei einlesen\n\n# Beispiel: Datei lesen\nwith open(\"01-daten/beispiel.txt\", \"r\") as datei:\n    inhalt = datei.read()\n    print(inhalt)\n\nDies ist ein Test.\n\n\n\n\"r\" steht für read (lesen).\nwith sorgt dafür, dass die Datei nach dem Lesen automatisch geschlossen wird.\nread() liest den gesamten Inhalt der Datei als String.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#zeilenweise-lesen",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#zeilenweise-lesen",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.3 Zeilenweise lesen",
+    "text": "6.3 Zeilenweise lesen\n\nwith open(\"01-daten/beispiel.txt\", \"r\") as datei:\n    for zeile in datei:\n        print(\"Zeile:\", zeile.strip())\n\nZeile: Dies ist ein Test.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n.strip() entfernt Leerzeichen und Zeilenumbrüche am Anfang und Ende.\n\n\n\n\n\n\n\n\n\nAufgabe: Datei lesen\n\n\n\n\n\nAngenommen, es gibt eine Datei gruesse.txt mit folgendem Inhalt:\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla\nSchreiben Sie ein Programm, das jede Zeile einzeln einliest und mit print(...) wiedergibt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nwith open(\"01-daten/gruesse.txt\", \"r\") as f:\n    for zeile in f:\n        print(zeile.strip())\n\nHallo Anna\nGuten Morgen Ben\nWillkommen Carla",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#alle-zeilen-auf-einmal-lesen-mit-readlines",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#alle-zeilen-auf-einmal-lesen-mit-readlines",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.4 Alle Zeilen auf einmal lesen mit readlines()",
+    "text": "6.4 Alle Zeilen auf einmal lesen mit readlines()\nStatt über eine Datei zu iterieren, können Sie alle Zeilen auf einmal als Liste einlesen:\n\nwith open(\"01-daten/beispiel.txt\", \"r\") as f:\n    zeilen = f.readlines()\n    print(zeilen)\n\n['Dies ist ein Test.']\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nOftmals bestehen die eingelesenen Zeilen aus Werten, die durch ein spezifisches Trennzeichen z.B. “,”. Um diese Zeilen dann in die einzelnen Werte zu trennen, benutzen wir die .split()-Funktion.\n\nzeile = \"319,12,14,190,342\"\nprint(zeile.split(\",\"))\n\n['319', '12', '14', '190', '342']\n\n\nJede Zeile endet mit \\n, deshalb kann eine Nachbearbeitung mit .strip() sinnvoll sein:\n\nfor zeile in zeilen:\n    print(zeile.strip())\n\nDies ist ein Test.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#in-eine-datei-schreiben",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#in-eine-datei-schreiben",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.5 In eine Datei schreiben",
+    "text": "6.5 In eine Datei schreiben\n\nwith open(\"ausgabe.txt\", \"w\") as datei:\n    datei.write(\"Das ist eine neue Zeile.\\n\")\n    datei.write(\"Und noch eine.\")\n\n\n\"w\" steht für write (schreiben).\nAchtung: Eine vorhandene Datei wird überschrieben!",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#zeilenweise-schreiben-mit-schleife",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#zeilenweise-schreiben-mit-schleife",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.6 Zeilenweise schreiben mit Schleife",
+    "text": "6.6 Zeilenweise schreiben mit Schleife\n\ndaten = [\"Apfel\", \"Banane\", \"Kirsche\"]\n\nwith open(\"obst.txt\", \"w\") as f:\n    for eintrag in daten:\n        f.write(eintrag + \"\\n\")\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nJede Zeile endet mit \\n für einen Zeilenumbruch.\n\n\n\n\n\n\n\n\n\nAufgabe: Liste in Datei schreiben\n\n\n\n\n\nGegeben ist eine Liste von Städten:\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nSchreiben Sie ein Programm, das jede Stadt in eine neue Zeile einer Datei staedte.txt schreibt.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nstaedte = [\"Berlin\", \"Hamburg\", \"München\"]\n\nwith open(\"staedte.txt\", \"w\") as f:\n    for stadt in staedte:\n        f.write(stadt + \"\\n\")",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/lesen_schreiben.html#dateien-manuell-schließen-mit-close",
+    "href": "books/w-python-minimal/skript/lesen_schreiben.html#dateien-manuell-schließen-mit-close",
+    "title": "6  Arbeiten mit Dateien",
+    "section": "6.7 Dateien manuell schließen mit close()",
+    "text": "6.7 Dateien manuell schließen mit close()\nWenn Sie keinen with-Block verwenden, müssen Sie die Datei selbst schließen – sonst bleibt sie geöffnet:\n\ndatei = open(\"01-daten/beispiel.txt\", \"w\")\ndatei.write(\"Dies ist ein Test.\")\ndatei.close()\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\nclose() ist wichtig, damit Änderungen gespeichert werden und die Datei nicht gesperrt bleibt.\nEmpfehlung: Nutzen Sie immer with open(...), da Python die Datei dann automatisch schließt – auch bei Fehlern.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arbeiten mit Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html",
+    "href": "books/w-python-minimal/skript/assessment.html",
+    "title": "7  Lernzielkontrolle",
+    "section": "",
+    "text": "7.1 Aufgabe 1: Datentypen und Typecasting\nGegeben sind folgende Werte:\nGib mit type() den Datentyp jedes Werts aus und wandle jeden in einen anderen sinnvollen Typ um. Gib die Ergebnisse aus.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-1-datentypen-und-typecasting",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-1-datentypen-und-typecasting",
+    "title": "7  Lernzielkontrolle",
+    "section": "",
+    "text": "wert1 = \"42\"\nwert2 = 3.5\nwert3 = True",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-2-altersprüfung-mit-bedingung",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-2-altersprüfung-mit-bedingung",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.2 Aufgabe 2: Altersprüfung mit Bedingung",
+    "text": "7.2 Aufgabe 2: Altersprüfung mit Bedingung\nGegeben sei alter = 16.\nGib abhängig vom Alter aus:\n\n„Volljährig“, wenn das Alter ≥ 18 ist\n„Minderjährig“, wenn das Alter &lt; 18 ist",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-3-zahlen-filtern-und-mitteln",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-3-zahlen-filtern-und-mitteln",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.3 Aufgabe 3: Zahlen filtern und mitteln",
+    "text": "7.3 Aufgabe 3: Zahlen filtern und mitteln\nGegeben sei die Liste:\nzahlen = [5, 8, 13, 20, 33, 40]\n\nGib alle Zahlen &gt; 10 aus.\nBerechne und gib den Durchschnitt dieser Zahlen aus.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-4-wochentage-slicing",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-4-wochentage-slicing",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.4 Aufgabe 4: Wochentage & Slicing",
+    "text": "7.4 Aufgabe 4: Wochentage & Slicing\nGegeben sei:\ntage = [\"Mo\", \"Di\", \"Mi\", \"Do\", \"Fr\", \"Sa\", \"So\"]\n\nGib alle Wochentage aus, die mit „S“ beginnen.\nGib nur die Arbeitstage (Mo–Fr) mit Slicing aus.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-5-funktion-mit-parameter-standardwert",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-5-funktion-mit-parameter-standardwert",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.5 Aufgabe 5: Funktion mit Parameter & Standardwert",
+    "text": "7.5 Aufgabe 5: Funktion mit Parameter & Standardwert\nErstelle eine Funktion begruesse(name, sprache=\"de\"), die je nach Sprache Folgendes ausgibt:\n\nDeutsch: „Hallo !“\nEnglisch: „Hello !“",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-6-hobbys-in-datei-schreiben",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-6-hobbys-in-datei-schreiben",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.6 Aufgabe 6: Hobbys in Datei schreiben",
+    "text": "7.6 Aufgabe 6: Hobbys in Datei schreiben\nGegeben sei eine Liste hobbys = [\"Lesen\", \"Kochen\", \"Sport\"].\nSchreibe jeden Eintrag in eine neue Zeile der Datei hobbys.txt.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-7-datei-lesen-.split-verwenden",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-7-datei-lesen-.split-verwenden",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.7 Aufgabe 7: Datei lesen & .split() verwenden",
+    "text": "7.7 Aufgabe 7: Datei lesen & .split() verwenden\nAngenommen, eine Datei enthält die Zeile:\nAli,Bente,Carlos,Dana\n\nZerlege die Zeichenkette mit .split(\",\").\nGib jeden Namen einzeln aus.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-8-namen-sortieren-und-speichern",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-8-namen-sortieren-und-speichern",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.8 Aufgabe 8: Namen sortieren und speichern",
+    "text": "7.8 Aufgabe 8: Namen sortieren und speichern\nGegeben sei:\nnamen = [\"Zoe\", \"Anna\", \"Lukas\", \"Ben\"]\n\nSortiere die Liste alphabetisch.\nSpeichere die sortierte Liste in eine Datei sortiert.txt, ein Name pro Zeile.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-9-zahlen-durch-3-ausgeben",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-9-zahlen-durch-3-ausgeben",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.9 Aufgabe 9: Zahlen durch 3 ausgeben",
+    "text": "7.9 Aufgabe 9: Zahlen durch 3 ausgeben\nErstelle mit einer Schleife eine Liste aller Zahlen zwischen 1 und 20, die durch 3 teilbar sind, und gib sie aus.",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-minimal/skript/assessment.html#aufgabe-10-verschachtelte-schleifen",
+    "href": "books/w-python-minimal/skript/assessment.html#aufgabe-10-verschachtelte-schleifen",
+    "title": "7  Lernzielkontrolle",
+    "section": "7.10 Aufgabe 10: Verschachtelte Schleifen",
+    "text": "7.10 Aufgabe 10: Verschachtelte Schleifen\nGegeben seien:\npersonen = [\"Ali\", \"Bente\"]\nhobbys = [\"Lesen\", \"Sport\"]\nErstelle eine Ausgabe wie:\nAli hat das Hobby: Lesen\nAli hat das Hobby: Sport\nBente hat das Hobby: Lesen\nBente hat das Hobby: Sport",
+    "crumbs": [
+      "Grundlagen Python",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/index.html",
+    "href": "books/w-python-matplotlib/index.html",
+    "title": "Preamble",
+    "section": "",
+    "text": "Intro",
+    "crumbs": [
+      "Matplotlib",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/index.html#voraussetzungen",
+    "href": "books/w-python-matplotlib/index.html#voraussetzungen",
+    "title": "Preamble",
+    "section": "Voraussetzungen",
+    "text": "Voraussetzungen\n\nGrundlagen Python\nEinbinden von zusätzlichen Paketen",
+    "crumbs": [
+      "Matplotlib",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/index.html#verwendete-pakete-und-datensätze",
+    "href": "books/w-python-matplotlib/index.html#verwendete-pakete-und-datensätze",
+    "title": "Preamble",
+    "section": "Verwendete Pakete und Datensätze",
+    "text": "Verwendete Pakete und Datensätze\n\nmatplotlib",
+    "crumbs": [
+      "Matplotlib",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/index.html#bearbeitungszeit",
+    "href": "books/w-python-matplotlib/index.html#bearbeitungszeit",
+    "title": "Preamble",
+    "section": "Bearbeitungszeit",
+    "text": "Bearbeitungszeit\nGeschätzte Bearbeitungszeit: 1h",
+    "crumbs": [
+      "Matplotlib",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/index.html#lernziele",
+    "href": "books/w-python-matplotlib/index.html#lernziele",
+    "title": "Preamble",
+    "section": "Lernziele",
+    "text": "Lernziele\n\nEinleitung: wie visualisiere ich Daten in Python\nAnpassen von Plots\nDo’s & Dont’s für wissenschaftliche Plots",
+    "crumbs": [
+      "Matplotlib",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/introduction.html",
+    "href": "books/w-python-matplotlib/skript/introduction.html",
+    "title": "8  Einführung in Matplotlib",
+    "section": "",
+    "text": "8.1 Warum Matplotlib?",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Einführung in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/introduction.html#warum-matplotlib",
+    "href": "books/w-python-matplotlib/skript/introduction.html#warum-matplotlib",
+    "title": "8  Einführung in Matplotlib",
+    "section": "",
+    "text": "Breite Unterstützung: Funktioniert mit NumPy, Pandas und SciPy.\nHohe Anpassbarkeit: Vollständige Kontrolle über Diagramme.\nIntegration in Jupyter Notebooks: Ideal für interaktive Datenanalyse.\nKompatibilität: Unterstützt verschiedene Ausgabeformate (PNG, SVG, PDF etc.).",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Einführung in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/introduction.html#alternativen-zu-matplotlib",
+    "href": "books/w-python-matplotlib/skript/introduction.html#alternativen-zu-matplotlib",
+    "title": "8  Einführung in Matplotlib",
+    "section": "8.2 Alternativen zu Matplotlib",
+    "text": "8.2 Alternativen zu Matplotlib\nWährend Matplotlib leistungsstark ist, gibt es Alternativen, die für bestimmte Zwecke besser geeignet sein können: - Seaborn: Basiert auf Matplotlib, erleichtert statistische Visualisierung. - Plotly: Erzeugt interaktive Plots, gut für Dashboards. - Bokeh: Ideal für Web-Anwendungen mit interaktiven Visualisierungen.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Einführung in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/introduction.html#erstes-beispiel-einfache-linie-plotten",
+    "href": "books/w-python-matplotlib/skript/introduction.html#erstes-beispiel-einfache-linie-plotten",
+    "title": "8  Einführung in Matplotlib",
+    "section": "8.3 Erstes Beispiel: Einfache Linie plotten",
+    "text": "8.3 Erstes Beispiel: Einfache Linie plotten\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Beispiel-Daten\nt = np.linspace(0, 10, 100)\ny = np.sin(t)\n\n# Erstellen des Plots\nplt.plot(t, y, label='sin(t)')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.title('Einfaches Linien-Diagramm')\nplt.legend()\nplt.show()\nDieses einfache Beispiel zeigt, wie man mit Matplotlib eine Sinuskurve visualisieren kann.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Einführung in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/introduction.html#nächste-schritte",
+    "href": "books/w-python-matplotlib/skript/introduction.html#nächste-schritte",
+    "title": "8  Einführung in Matplotlib",
+    "section": "8.4 Nächste Schritte",
+    "text": "8.4 Nächste Schritte\nIm nächsten Kapitel werden wir uns mit den verschiedenen Diagrammtypen beschäftigen, die Matplotlib bietet.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Einführung in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "",
+    "text": "9.1 1. Liniendiagramme (plt.plot())\nLiniendiagramme eignen sich hervorragend zur Darstellung von Trends über Zeit.\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nt = np.linspace(0, 10, 100)\ny = np.sin(t)\n\nplt.plot(t, y, label='sin(t)', color='b')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.title('Liniendiagramm')\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#streudiagramme-plt.scatter",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#streudiagramme-plt.scatter",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.2 2. Streudiagramme (plt.scatter())",
+    "text": "9.2 2. Streudiagramme (plt.scatter())\nStreudiagramme werden verwendet, um Zusammenhänge zwischen zwei Variablen darzustellen.\n\nx = np.random.rand(50)\ny = np.random.rand(50)\n\nplt.scatter(x, y, color='r', alpha=0.5)\nplt.xlabel('Variable X')\nplt.ylabel('Variable Y')\nplt.title('Streudiagramm')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#balkendiagramme-plt.bar",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#balkendiagramme-plt.bar",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.3 3. Balkendiagramme (plt.bar())",
+    "text": "9.3 3. Balkendiagramme (plt.bar())\nBalkendiagramme eignen sich zur Darstellung kategorialer Daten.\n\nkategorien = ['A', 'B', 'C', 'D']\nwerte = [3, 7, 1, 5]\n\nplt.bar(kategorien, werte, color='g')\nplt.xlabel('Kategorien')\nplt.ylabel('Wert')\nplt.title('Balkendiagramm')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#histogramme-plt.hist",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#histogramme-plt.hist",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.4 4. Histogramme (plt.hist())",
+    "text": "9.4 4. Histogramme (plt.hist())\nHistogramme zeigen die Verteilung numerischer Daten.\n\ndaten = np.random.randn(1000)\nplt.hist(daten, bins=30, color='purple', alpha=0.7)\nplt.xlabel('Wert')\nplt.ylabel('Häufigkeit')\nplt.title('Histogramm')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#boxplots-plt.boxplot",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#boxplots-plt.boxplot",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.5 5. Boxplots (plt.boxplot())",
+    "text": "9.5 5. Boxplots (plt.boxplot())\nBoxplots helfen, Ausreißer und die Verteilung von Daten zu visualisieren.\n\ndaten = [np.random.randn(100) for _ in range(4)]\nplt.boxplot(daten, labels=['A', 'B', 'C', 'D'])\nplt.ylabel('Wert')\nplt.title('Boxplot')\nplt.show()\n\n/tmp/ipykernel_4832/2728911591.py:2: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.\n  plt.boxplot(daten, labels=['A', 'B', 'C', 'D'])",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#heatmaps-plt.imshow",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#heatmaps-plt.imshow",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.6 6. Heatmaps (plt.imshow())",
+    "text": "9.6 6. Heatmaps (plt.imshow())\nHeatmaps eignen sich zur Darstellung von 2D-Daten.\n\ndaten = np.random.rand(10, 10)\nplt.imshow(daten, cmap='coolwarm', interpolation='nearest')\nplt.colorbar()\nplt.title('Heatmap')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/basic_plot_types.html#fazit",
+    "href": "books/w-python-matplotlib/skript/basic_plot_types.html#fazit",
+    "title": "9  Diagrammtypen in Matplotlib",
+    "section": "9.7 Fazit",
+    "text": "9.7 Fazit\nDie Wahl des richtigen Diagrammtyps hängt von der Art der Daten und der gewünschten Darstellung ab. Im nächsten Kapitel werden wir uns mit der Anpassung und Gestaltung von Plots beschäftigen.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Diagrammtypen in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "",
+    "text": "10.1 1. Achsentitel und Diagrammtitel\nKlare Achsen- und Diagrammtitel sind essenziell für die Verständlichkeit eines Plots.\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nt = np.linspace(0, 10, 100)\ny = np.sin(t)\n\nplt.plot(t, y, label='sin(t)', color='b')\nplt.xlabel('Zeit (s)', fontsize=12)\nplt.ylabel('Amplitude', fontsize=12)\nplt.title('Liniendiagramm mit Beschriftung', fontsize=14)\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html#anpassung-der-achsen",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html#anpassung-der-achsen",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "10.2 2. Anpassung der Achsen",
+    "text": "10.2 2. Anpassung der Achsen\nDie Skalierung der Achsen sollte sinnvoll gewählt werden, um die Daten bestmöglich darzustellen.\n\nplt.plot(t, y, label='sin(t)', color='b')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.xlim(0, 10)\nplt.ylim(-1.2, 1.2)\nplt.grid(True, linestyle='--', alpha=0.7)\nplt.title('Liniendiagramm mit angepassten Achsen')\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html#farben-und-linienstile",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html#farben-und-linienstile",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "10.3 3. Farben und Linienstile",
+    "text": "10.3 3. Farben und Linienstile\nFarben und Linienstile helfen dabei, wichtige Informationen im Plot hervorzuheben.\n\n10.3.1 Wichtige Farben (Standardfarben in Matplotlib)\n\n\n\nFarbe\nKürzel\nBeschreibung\n\n\n\n\nBlau\n‘b’\nblue\n\n\nGrün\n‘g’\ngreen\n\n\nRot\n‘r’\nred\n\n\nCyan\n‘c’\ncyan\n\n\nMagenta\n‘m’\nmagenta\n\n\nGelb\n‘y’\nyellow\n\n\nSchwarz\n‘k’\nblack\n\n\nWeiß\n‘w’\nwhite\n\n\n\n\n\n10.3.2 Wichtige Linienstile\n\n\n\nLinienstil\nKürzel\nBeschreibung\n\n\n\n\nDurchgezogen\n‘-’\nStandardlinie\n\n\nGestrichelt\n‘–’\nlange Striche\n\n\nGepunktet\n‘:’\nnur Punkte\n\n\nStrich-Punkt\n‘-.’\nabwechselnd Strich-Punkt\n\n\n\n\nplt.plot(t, np.sin(t), linestyle='-', color='r', label='sin(t)')\nplt.plot(t, np.cos(t), linestyle='--', color='g', label='cos(t)')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.title('Anpassung von Farben und Linienstilen')\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html#mehrere-plots-mit-subplots",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html#mehrere-plots-mit-subplots",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "10.4 4. Mehrere Plots mit Subplots",
+    "text": "10.4 4. Mehrere Plots mit Subplots\nManchmal ist es sinnvoll, mehrere Diagramme in einer Abbildung darzustellen.\n\nfig, axs = plt.subplots(2, 1, figsize=(6, 6))\naxs[0].plot(t, np.sin(t), color='b')\naxs[0].set_title('Sinusfunktion')\naxs[1].plot(t, np.cos(t), color='r')\naxs[1].set_title('Kosinusfunktion')\nplt.tight_layout()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html#speichern-von-plots",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html#speichern-von-plots",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "10.5 5. Speichern von Plots",
+    "text": "10.5 5. Speichern von Plots\nMan kann Diagramme in verschiedenen Formaten speichern.\n\nplt.plot(t, y, label='sin(t)', color='b')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.title('Speicherung eines Plots')\nplt.legend()\nplt.savefig('mein_plot.png', dpi=300)\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/adapting_plots.html#fazit",
+    "href": "books/w-python-matplotlib/skript/adapting_plots.html#fazit",
+    "title": "10  Anpassung und Gestaltung von Plots in Matplotlib",
+    "section": "10.6 Fazit",
+    "text": "10.6 Fazit\nDurch geschickte Anpassungen lassen sich wissenschaftliche Plots deutlich verbessern. Im nächsten Kapitel werden wir uns mit erweiterten Techniken wie logarithmischen Skalen und Annotationen beschäftigen.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Anpassung und Gestaltung von Plots in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/advanced_techniques.html",
+    "href": "books/w-python-matplotlib/skript/advanced_techniques.html",
+    "title": "11  Erweiterte Techniken in Matplotlib",
+    "section": "",
+    "text": "11.1 1. Logarithmische Skalen\nLogarithmische Skalen werden oft verwendet, wenn Werte große Größenordnungen umfassen.\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.logspace(0.1, 2, 100)\ny = np.log10(x)\n\nplt.plot(x, y, label='log10(x)', color='b')\nplt.xscale('log')\nplt.xlabel('X-Wert (log-Skala)')\nplt.ylabel('Y-Wert')\nplt.title('Logarithmische Skalierung')\nplt.legend()\nplt.grid(True, which='both', linestyle='--', alpha=0.7)\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Erweiterte Techniken in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/advanced_techniques.html#twin-achsen-für-verschiedene-skalierungen",
+    "href": "books/w-python-matplotlib/skript/advanced_techniques.html#twin-achsen-für-verschiedene-skalierungen",
+    "title": "11  Erweiterte Techniken in Matplotlib",
+    "section": "11.2 2. Twin-Achsen für verschiedene Skalierungen",
+    "text": "11.2 2. Twin-Achsen für verschiedene Skalierungen\nManchmal möchte man zwei verschiedene y-Achsen in einem Plot darstellen.\n\nx = np.linspace(0, 10, 100)\ny1 = np.sin(x)\ny2 = np.exp(x / 3)\n\nfig, ax1 = plt.subplots()\nax2 = ax1.twinx()\nax1.plot(x, y1, 'g-', label='sin(x)')\nax2.plot(x, y2, 'b--', label='exp(x/3)')\n\nax1.set_xlabel('X-Wert')\nax1.set_ylabel('Sinus', color='g')\nax2.set_ylabel('Exponentiell', color='b')\nax1.set_title('Twin-Achsen für unterschiedliche Skalierungen')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Erweiterte Techniken in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/advanced_techniques.html#annotationen-in-diagrammen",
+    "href": "books/w-python-matplotlib/skript/advanced_techniques.html#annotationen-in-diagrammen",
+    "title": "11  Erweiterte Techniken in Matplotlib",
+    "section": "11.3 3. Annotationen in Diagrammen",
+    "text": "11.3 3. Annotationen in Diagrammen\nWichtige Punkte oder Werte in einem Diagramm können mit Annotationen hervorgehoben werden.\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y, label='sin(x)')\nplt.xlabel('X-Wert')\nplt.ylabel('Amplitude')\nplt.title('Annotationen in Matplotlib')\nplt.annotate('Maximalwert', xy=(np.pi/2, 1), xytext=(2, 1.2),\n             arrowprops=dict(facecolor='red', shrink=0.05))\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Erweiterte Techniken in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/advanced_techniques.html#fazit",
+    "href": "books/w-python-matplotlib/skript/advanced_techniques.html#fazit",
+    "title": "11  Erweiterte Techniken in Matplotlib",
+    "section": "11.4 Fazit",
+    "text": "11.4 Fazit\nDiese erweiterten Funktionen helfen dabei, wissenschaftliche Plots noch informativer zu gestalten. Im nächsten Kapitel werden wir Best Practices und typische Fehler in der wissenschaftlichen Visualisierung betrachten.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Erweiterte Techniken in Matplotlib</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "",
+    "text": "12.1 1. Fehlende Beschriftungen",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html#fehlende-beschriftungen",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html#fehlende-beschriftungen",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "",
+    "text": "12.1.1 ❌ Schlechtes Beispiel\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n12.1.2 ✅ Besseres Beispiel\n\nplt.plot(x, y, label='sin(x)', color='b')\nplt.xlabel('Zeit (s)')\nplt.ylabel('Amplitude')\nplt.title('Sinuskurve')\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html#ungünstige-farbwahl",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html#ungünstige-farbwahl",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "12.2 2. Ungünstige Farbwahl",
+    "text": "12.2 2. Ungünstige Farbwahl\n\n12.2.1 ❌ Schlechtes Beispiel\n\nplt.plot(x, y, color='yellow')\nplt.show()\n\n\n\n\n\n\n\n\n\n\n12.2.2 ✅ Besseres Beispiel\n\nplt.plot(x, y, color='darkblue')\nplt.grid(True, linestyle='--', alpha=0.7)\nplt.title('Gute Kontraste für bessere Lesbarkeit')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html#keine-sinnvolle-achsenskalierung",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html#keine-sinnvolle-achsenskalierung",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "12.3 3. Keine sinnvolle Achsenskalierung",
+    "text": "12.3 3. Keine sinnvolle Achsenskalierung\n\n12.3.1 ❌ Schlechtes Beispiel\n\nplt.plot(x, y)\nplt.ylim(0.5, 1)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n12.3.2 ✅ Besseres Beispiel\n\nplt.plot(x, y)\nplt.ylim(-1.2, 1.2)\nplt.xlim(0, 10)\nplt.grid(True)\nplt.title('Sinnvolle Achsenskalierung')\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html#überladung-durch-zu-viele-linien",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html#überladung-durch-zu-viele-linien",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "12.4 4. Überladung durch zu viele Linien",
+    "text": "12.4 4. Überladung durch zu viele Linien\n\n12.4.1 ❌ Schlechtes Beispiel\n\nfor i in range(10):\n    plt.plot(x, np.sin(x + i * 0.2))\nplt.show()\n\n\n\n\n\n\n\n\n\n\n12.4.2 ✅ Besseres Beispiel\n\nplt.plot(x, np.sin(x), label='sin(x)')\nplt.plot(x, np.cos(x), label='cos(x)')\nplt.legend()\nplt.title('Weniger ist mehr: Reduzierte Informationsdichte')\nplt.grid(True)\nplt.show()",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-matplotlib/skript/scientific_plotting.html#fazit",
+    "href": "books/w-python-matplotlib/skript/scientific_plotting.html#fazit",
+    "title": "12  Best Practices in Matplotlib: Fehler und Verbesserungen",
+    "section": "12.5 Fazit",
+    "text": "12.5 Fazit\nGute Plots zeichnen sich durch klare Beschriftungen, gute Lesbarkeit und eine sinnvolle Informationsdichte aus.",
+    "crumbs": [
+      "Matplotlib",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Best Practices in Matplotlib: Fehler und Verbesserungen</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/index.html",
+    "href": "books/w-python-numpy-grundlagen/index.html",
+    "title": "Preamble",
+    "section": "",
+    "text": "Intro",
+    "crumbs": [
+      "NumPy",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/index.html#voraussetzungen",
+    "href": "books/w-python-numpy-grundlagen/index.html#voraussetzungen",
+    "title": "Preamble",
+    "section": "Voraussetzungen",
+    "text": "Voraussetzungen\n\nGrundlagen Python\nEinbinden von zusätzlichen Paketen\nPlotten mit Matplotlib",
+    "crumbs": [
+      "NumPy",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/index.html#verwendete-pakete-und-datensätze",
+    "href": "books/w-python-numpy-grundlagen/index.html#verwendete-pakete-und-datensätze",
+    "title": "Preamble",
+    "section": "Verwendete Pakete und Datensätze",
+    "text": "Verwendete Pakete und Datensätze\n\nPakete\n\nNumPy\nMatplotlib\n\n\n\nDatensätze\n\nTC01.csv\nBild: Mona Lisa\nBild: Campus",
+    "crumbs": [
+      "NumPy",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/index.html#bearbeitungszeit",
+    "href": "books/w-python-numpy-grundlagen/index.html#bearbeitungszeit",
+    "title": "Preamble",
+    "section": "Bearbeitungszeit",
+    "text": "Bearbeitungszeit\nGeschätzte Bearbeitungszeit: 2h",
+    "crumbs": [
+      "NumPy",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/index.html#lernziele",
+    "href": "books/w-python-numpy-grundlagen/index.html#lernziele",
+    "title": "Preamble",
+    "section": "Lernziele",
+    "text": "Lernziele\n\nEinleitung: was ist NumPy, Vor- und Nachteile\nNutzen des NumPy-Moduls\nErstellen von NumPy-Arrays\nSlicing\nLesen und schreiben von Dateien\nArbeiten mit Bildern",
+    "crumbs": [
+      "NumPy",
+      "Preamble"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/introduction.html",
+    "href": "books/w-python-numpy-grundlagen/skript/introduction.html",
+    "title": "13  Einführung NumPy",
+    "section": "",
+    "text": "13.1 Vorteile & Nachteile\nFast immer sind Operationen mit Numpy Datenstrukturen schneller. Im Gegensatz zu nativen Python Listen kann man dort aber nur einen Datentyp pro Liste speichern.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Einführung NumPy</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/introduction.html#vorteile-nachteile",
+    "href": "books/w-python-numpy-grundlagen/skript/introduction.html#vorteile-nachteile",
+    "title": "13  Einführung NumPy",
+    "section": "",
+    "text": "Warum ist numpy oftmals schneller?\n\n\n\n\n\nNumPy implementiert eine effizientere Speicherung von Listen im Speicher. Nativ speichert Python Listeninhalte aufgeteilt, wo gerade Platz ist.\n\n\n\n\n\n\nFigure 13.1: Speicherung von Daten in nativem Python\n\n\n\nDagegen werden NumPy Arrays und Matritzen zusammenhängend gespeichert, was einen effizienteren Datenaufruf ermöglicht.\n\n\n\n\n\n\nFigure 13.2: Speicherung von Daten bei Numpy\n\n\n\nDies bedeutet aber auch, dass es eine Erweiterung der Liste deutlich schneller ist als eine Erweiterung von Arrays oder Matrizen. Bei Listen kann jeder freie Platz genutzt werden, während Arrays und Matrizen an einen neuen Ort im Speicher kopiert werden müssen.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Einführung NumPy</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/introduction.html#einbinden-des-pakets",
+    "href": "books/w-python-numpy-grundlagen/skript/introduction.html#einbinden-des-pakets",
+    "title": "13  Einführung NumPy",
+    "section": "13.2 Einbinden des Pakets",
+    "text": "13.2 Einbinden des Pakets\nNumPy wird über folgende Zeile eingebunden. Dabei hat sich global der Standard entwickelt, als Alias np zu verwenden.\n\nimport numpy as np",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Einführung NumPy</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/introduction.html#referenzen",
+    "href": "books/w-python-numpy-grundlagen/skript/introduction.html#referenzen",
+    "title": "13  Einführung NumPy",
+    "section": "13.3 Referenzen",
+    "text": "13.3 Referenzen\nSämtliche hier vorgestellten Funktionen lassen sich in der (englischen) NumPy-Dokumentation nachschlagen: Dokumentation",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Einführung NumPy</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_creation.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_creation.html",
+    "title": "14  Erstellen von NumPy arrays",
+    "section": "",
+    "text": "Typischerweise werden in Python Vektoren durch Listen und Matrizen durch geschachtelte Listen ausgedrückt. Beispielsweise würde man den Vektor\n\n\n\n\n\n\n\\[\n(1, 2, 3, 4, 5, 6)\n\\]\n\n\nund die Matrix\n\n\n\\[\n\\begin{pmatrix}\n1 & 2 & 3\\\\\n4 & 5 & 6\n\\end{pmatrix}\n\\]\n\n\n\nnativ in Python so erstellen:\n\nliste = [1, 2, 3, 4, 5, 6]\n\nmatrix = [[1, 2, 3], [4, 5, 6]]\n\nprint(liste)\nprint(matrix)\n\n[1, 2, 3, 4, 5, 6]\n[[1, 2, 3], [4, 5, 6]]\n\n\nMöchte man jetzt NumPy Arrays verwenden benutzt man den Befehl np.array().\n\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n\nprint(liste)\nprint(matrix)\n\n[1 2 3 4 5 6]\n[[1 2 3]\n [4 5 6]]\n\n\nBetrachtet man die Ausgaben der print() Befehle fallen zwei Sachen auf. Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend ausgegeben.\nEs gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird eine drei-dimensionale Matrix erstellt.\n\nmatrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])\n\nEs gilt als “good practice” Arrays immer zu initialisieren. Dafür bietet NumPy drei Funktionen um vorinitialisierte Arrays zu erzeugen. Alternativ können Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder die Funktion np.zeros()verwendet werden die alle Werte auf 0 setzt, oder aber np.ones()welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im Format [Reihen,Spalten] übergeben. Möchte man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl np.full() benutzen.\n\nnp.zeros([2,3])\n\narray([[0., 0., 0.],\n       [0., 0., 0.]])\n\n\n\nnp.ones([2,3])\n\narray([[1., 1., 1.],\n       [1., 1., 1.]])\n\n\n\nnp.full([2,3],7)\n\narray([[7, 7, 7],\n       [7, 7, 7]])\n\n\n\n\n\n\n\n\nWie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?\n\n\n\n\n\nDer Trick beseht hierbei ein Array mit np.ones() zu initialisiere und dieses Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist x = 5\n\nnp.ones([2,3]) * 5\n\narray([[5., 5., 5.],\n       [5., 5., 5.]])\n\n\n\n\n\nMöchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei Möglichkeiten. Mit den Befehlen np.linspace(Start,Stop,#Anzahl Werte) und np.arrange(Start,Stop,Abstand zwischen Werten) können solche Arrays erstellt werden.\n\nnp.linspace(0,1,11)\n\narray([0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ])\n\n\n\nnp.arange(0,10,2)\n\narray([0, 2, 4, 6, 8])\n\n\n\n\n\n\n\n\nZwischenübung: Array Erstellung\n\n\n\n\n\nErstellen Sie jeweils ein NumPy-Array, mit dem folgenden Inhalt:\n\nmit den Werten 1, 7, 42, 99\nzehn mal die Zahl 5\nmit den Zahlen von 35 bis einschließlich 50\nmit allen geraden Zahlen von 20 bis einschließlich 40\neine Matrix mit 5 Spalten und 4 Reihen mit dem Wert 4 an jeder Stelle\nmit 10 Werten die gleichmäßig zwischen 22 und einschlieslich 40 verteilt sind\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1. \nprint(np.array([1, 7, 42, 99]))\n\n[ 1  7 42 99]\n\n\n\n# 2. \nprint(np.full(10,5))\n\n[5 5 5 5 5 5 5 5 5 5]\n\n\n\n# 3. \nprint(np.arange(35, 51))\n\n[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50]\n\n\n\n# 4. \nprint(np.arange(20, 41, 2))\n\n[20 22 24 26 28 30 32 34 36 38 40]\n\n\n\n# 5. \nprint(np.full([4,5],4))\n\n[[4 4 4 4 4]\n [4 4 4 4 4]\n [4 4 4 4 4]\n [4 4 4 4 4]]\n\n\n\n# 6. \nprint(np.linspace(22, 40, 10))\n\n[22. 24. 26. 28. 30. 32. 34. 36. 38. 40.]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Erstellen von NumPy arrays</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_info.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_info.html",
+    "title": "15  Größe, Struktur und Typ",
+    "section": "",
+    "text": "Wenn man sich nicht mehr sicher ist, welche Struktur oder Form ein Array hat oder oder diese Größen zum Beispiel für Schleifen nutzen möchte, bietet NumPy folgende Funktionen für das Auslesen dieser Größen an.\n\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n\nnp.shape() gibt die Längen der einzelnen Dimension in Form einer Liste zurück.\n\nnp.shape(matrix)\n\n(2, 3)\n\n\nDie native Python Funktion len() gibt dagegen nur die Länge der ersten Dimension, also die Anzahl der Elemente in den äußeren Klammern wieder. Im obrigen Beispiel würde len() also die beiden Listen [1, 2, 3] und [4, 5, 6] sehen.\n\nlen(matrix)\n\n2\n\n\nDie Funktion np.ndym() gibt im Gegensatz zu np.shape() nur die Anzahl der Dimensionen zurück.\n\nnp.ndim(matrix)\n\n2\n\n\n\n\n\n\n\n\nDie Ausgabe von np.ndim() kann mit np.shape()und einer nativen Python Funktion erreicht werden. Wie?\n\n\n\n\n\nnp.ndim() gibt die Länge der Liste von np.shape() aus\n\nlen(np.shape(matrix))\n\n2\n\n\n\n\n\nMöchte man die Anzahl aller Elemente in einem Array ausgeben kann man die Funktion np.size() benutzen.\n\nnp.size(matrix)\n\n6\n\n\nNumPy Arrays können verschiedene Datentypen beinhalten. Im folgenden haben wir drei verschiedene Arrays mit einem jeweils anderen Datentyp.\n\ntyp_a = np.array([1, 2, 3, 4, 5])\ntyp_b = np.array([0.1, 0.2, 0.3, 0.4, 0.5])\ntyp_c = np.array([\"Montag\", \"Dienstag\", \"Mittwoch\"])\n\nMit der Methode np.dtype können wir den Datentyp von Arrays ausgeben lassen. Meist wird dabei der Typ plus eine Zahl ausgegeben, welche die zum Speichern benötigte Bytezahl angibt. Das Array typ_a beinhaltet den Datentyp int64, also ganze Zahlen.\n\nprint(typ_a.dtype)\n\nint64\n\n\nDas Array typ_b beinhaltet den Datentyp float64, wobei float für Gleitkommazahlen steht.\n\nprint(typ_b.dtype)\n\nfloat64\n\n\nDas Array typ_c beinhaltet den Datentyp U8, wobei das U für Unicode steht. Hier wird als Unicodetext gespeichert.\n\nprint(typ_c.dtype)\n\n&lt;U8\n\n\nIm folgenden finden Sie eine Tabelle mit den typischen Datentypen, die sie häufig antreffen.\n\n\n\nTable 15.1: Typische Datentypen in NumPy\n\n\n\n\n\nDatentyp\nNumpy Name\nBeispiele\n\n\n\n\nWahrheitswert\nbool\n[True, False, True]\n\n\nGanze Zahl\nint\n[-2, 5, -6, 7, 3]\n\n\npositive Ganze Zahlen\nuint\n[1, 2, 3, 4, 5]\n\n\nKommazahlen\nfloat\n[1.3, 7.4, 3.5, 5.5]\n\n\nkomplexe zahlen\ncomplex\n[-1 + 9j, 2-77j, 72 + 11j]\n\n\nTextzeichen\nU\n[“montag”, “dienstag”]\n\n\n\n\n\n\n\n\n\n\n\n\nZwischenübung: Arrayinformationen auslesen\n\n\n\n\n\nGegeben sei folgende Matrix:\n\nmatrix = np.array([[[ 0,  1,  2,  3],\n                 [ 4,  5,  6,  7],\n                 [ 8,  9, 10, 11]],\n\n                [[12, 13, 14, 15],\n                 [16, 17, 18, 19],\n                 [20, 21, 22, 23]],\n\n                [[24, 25, 26, 27],\n                 [28, 29, 30, 31],\n                 [32, 33, 34, 35]]])\n\nBestimmen Sie durch anschauen die Anzahl an Dimensionen und die Länge jeder Dimension. Von welchem Typ ist der Inhalt dieser Matrix?\nÜberprüfen Sie daraufhin Ihre Ergebnisse in dem Sie die passenden NumPy-Funktionen anwenden.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmatrix = np.array([[[ 0,  1,  2,  3],\n                 [ 4,  5,  6,  7],\n                 [ 8,  9, 10, 11]],\n\n                [[12, 13, 14, 15],\n                 [16, 17, 18, 19],\n                 [20, 21, 22, 23]],\n\n                [[24, 25, 26, 27],\n                 [28, 29, 30, 31],\n                 [32, 33, 34, 35]]])\n\nanzahl_dimensionen = np.ndim(matrix)\n\nprint(\"Anzahl unterschiedlicher Dimensionen: \", anzahl_dimensionen)\n\nlaenge_dimensionen = np.shape(matrix)\n\nprint(\"Länge der einzelnen DImensionen: \", laenge_dimensionen)\n\nprint(matrix.dtype)\n\nAnzahl unterschiedlicher Dimensionen:  3\nLänge der einzelnen DImensionen:  (3, 3, 4)\nint64",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Größe, Struktur und Typ</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_calculation.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_calculation.html",
+    "title": "16  Rechnen mit Arrays",
+    "section": "",
+    "text": "16.1 Arithmetische Funktionen\nEin großer Vorteil an NumPy ist das Rechnen mit Arrays. Ohne NumPy müsste man entweder eine Schleife oder aber List comprehension benutzen, um mit sämtlichen Werten in der Liste zu rechnen. In NumPy fällt diese Unannehmlichkeit weg.\na = np.array([1, 2, 3, 4, 5])\n\nb = np.array([9, 8, 7, 6, 5])\nNormale mathematische Operationen, wie die Addition, lassen sich auf zwei Arten ausdrücken. Entweder über die np.add() Funktion oder aber simpel über das + Zeichen.\nnp.add(a,b)\n\narray([10, 10, 10, 10, 10])\na + b\n\narray([10, 10, 10, 10, 10])\nOhne NumPy würde die Operation folgendermaßen aussehen:\nergebnis = np.ones(5)\nfor i in range(len(a)):\n    ergebnis[i] = a[i] + b[i]\n\nprint(ergebnis)\n\n[10. 10. 10. 10. 10.]\nFür die anderen Rechenarten existieren auch Funktionen: np.subtract(), np.multiply() und np.divide().\nAuch für die anderen höheren Rechenoperationen gibt es ebenfalls Funktionen:",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_calculation.html#arithmetische-funktionen",
+    "href": "books/w-python-numpy-grundlagen/skript/array_calculation.html#arithmetische-funktionen",
+    "title": "16  Rechnen mit Arrays",
+    "section": "",
+    "text": "np.exp(a)\nnp.sqrt(a)\nnp.power(a, 3)\nnp.sin(a)\nnp.cos(a)\nnp.tan(a)\nnp.log(a)\na.dot(b)\n\n\n\n\n\n\n\nArbeiten mit Winkelfunktionen\n\n\n\nWie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen (sin, cos, …) die Fehlerquelle, dass man nicht mit Radian-Werten, sondern mit Grad-Werten arbeitet. Die Winkelfunktionen in numpy erwarten jedoch Radian-Werte.\nFür eine einfache Umrechnung bietet NumPy die Funktionen np.grad2rad()und np.rad2grad().",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_calculation.html#vergleiche",
+    "href": "books/w-python-numpy-grundlagen/skript/array_calculation.html#vergleiche",
+    "title": "16  Rechnen mit Arrays",
+    "section": "16.2 Vergleiche",
+    "text": "16.2 Vergleiche\nNumPy-Arrays lassen sich auch miteinander vergleichen. Betrachten wir die folgenden zwei Arrays:\n\na = np.array([1, 2, 3, 4, 5])\n\nb = np.array([9, 2, 7, 4, 5])\n\nMöchten wir feststellen, ob diese zwei Arrays identisch sind, können wir den ==-Komparator benutzen. Dieser vergleicht die Arrays elementweise.\n\na == b\n\narray([False,  True, False,  True,  True])\n\n\nEs ist außerdem möglich Arrays mit den &gt;- und &lt;-Operatoren zu vergleichen:\n\na &lt; b\n\narray([ True, False,  True, False, False])\n\n\nMöchte man Arrays mit Gleitkommazahlen vergleichen, ist es oftmals nötig, eine gewisse Toleranz zu benutzen, da bei Rechenoperationen minimale Rundungsfehler entstehen können.\n\na = np.array(0.1 + 0.2)\nb = np.array(0.3)\na == b\n\nnp.False_\n\n\nFür diesen Fall gibt es eine Vergleichsfunktion np.isclose(a,b,atol), wobei atol für die absolute Toleranz steht. Im folgenden Beispiel wird eine absolute Toleranz von 0,001 verwendet.\n\na = np.array(0.1 + 0.2)\nb = np.array(0.3)\nprint(np.isclose(a, b, atol=0.001))\n\nTrue\n\n\n\n\n\n\n\n\nWarum ist 0.1 + 0.2 nicht gleich 0.3?\n\n\n\n\n\nZahlen werden intern als Binärzahlen dargestellt. So wie 1/3 nicht mit einer endlichen Anzahl an Ziffern korrekt dargestellt werden kann müssen Zahlen ggf. gerundet werden, um im Binärsystem dargestellt zu werden.\n\na = 0.1\nb = 0.2\nprint(a + b)\n\n0.30000000000000004",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_calculation.html#aggregatfunktionen",
+    "href": "books/w-python-numpy-grundlagen/skript/array_calculation.html#aggregatfunktionen",
+    "title": "16  Rechnen mit Arrays",
+    "section": "16.3 Aggregatfunktionen",
+    "text": "16.3 Aggregatfunktionen\nFür verschiedene Auswertungen benötigen wir Funktionen, wie etwa die Summen oder die Mittelwert-Funktion. Starten wir mit einem Beispiel Array a:\n\na = np.array([1, 2, 3, 4, 8])\n\nDie Summer wird über die Funktion np.sum() berechnet.\n\nnp.sum(a)\n\nnp.int64(18)\n\n\nNatürlich lassen sich auch der Minimalwert und der Maximalwert eines Arrays ermitteln. Die beiden Funktionen lauten np.min()und np.max().\n\nnp.min(a)\n\nnp.int64(1)\n\n\nMöchte man nicht das Maximum selbst, sondern die Position des Maximums bestimmen, wird statt np.max die Funktion np.argmaxverwendet.\nFür statistische Auswertungen werden häufig die Funktion für den Mittelwert np.mean(), die Funktion für den Median np.median()und die Funktion für die Standardabweichung np.std()verwendet.\n\nnp.mean(a)\n\nnp.float64(3.6)\n\n\n\nnp.median(a)\n\nnp.float64(3.0)\n\n\n\nnp.std(a)\n\nnp.float64(2.4166091947189146)\n\n\n\n\n\n\n\n\nZwischenübung: Rechnen mit Arrays\n\n\n\n\n\nGegeben sind zwei eindimensionale Arrays a und b:\na = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100]) und b = np.array([5, 15, 25, 35, 45, 55, 65, 75, 85, 95])\n\nErstellen Sie ein neues Array, das die Sinuswerte der addierten Arrays a und b enthält.\nBerechnen Sie die Summe, den Mittelwert und die Standardabweichung der Elemente in a.\nFinden Sie den größten und den kleinsten Wert in a und b.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\na = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])\nb = np.array([5, 15, 25, 35, 45, 55, 65, 75, 85, 95])\n\n# 1.\nsin_ab = np.sin(a + b)\n\n# 2.\nsum_a = np.sum(a)\nmean_a = np.mean(a)\nstd_a = np.std(a)\n\n# 3.\nmax_a = np.max(a)\nmin_a = np.min(a)\nmax_b = np.max(b)\nmin_b = np.min(b)",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_slicing.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_slicing.html",
+    "title": "17  Slicing",
+    "section": "",
+    "text": "17.1 Normales Slicing mit Zahlenwerten\nMöchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der Form:\nliste = np.array([1, 2, 3, 4, 5, 6])\n# Auswählen des ersten Elements\nliste[0]\n\nnp.int64(1)\n# Auswählen des letzen Elements\nliste[-1]\n\nnp.int64(6)\n# Auswählen einer Reihe von Elementen\nliste[1:4]\n\narray([2, 3, 4])\nFür zwei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer zweiten Zahl die zweite Dimension aus.\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n# Auswählen einer Elements\nmatrix[1,1]\n\nnp.int64(5)\nFür drei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer weiteren Zahl die dritte Dimension aus. Dabei wird dieses jedoch an die erste Stelle gesetzt.\nmatrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])\nprint(matrix_3d)\n\n[[[ 1  2  3]\n  [ 4  5  6]]\n\n [[ 7  8  9]\n  [10 11 12]]]\n# Auswählen eines Elements\nmatrix_3d[1,0,2]\n\nnp.int64(9)",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Slicing</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_slicing.html#normales-slicing-mit-zahlenwerten",
+    "href": "books/w-python-numpy-grundlagen/skript/array_slicing.html#normales-slicing-mit-zahlenwerten",
+    "title": "17  Slicing",
+    "section": "",
+    "text": "Figure 17.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel\n\n\n\n\n\n[a] wobei ein einzelner Wert an Position a ausgegeben wird\n[a:b] wobei alle Werte von Position a bis Position b-1 ausgegeben werden\n[a:b:c] wobei die Werte von Position a bis Position b-1 mit einer Schrittweite von c ausgegeben werden",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Slicing</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_slicing.html#slicing-mit-logischen-werten-boolesche-masken",
+    "href": "books/w-python-numpy-grundlagen/skript/array_slicing.html#slicing-mit-logischen-werten-boolesche-masken",
+    "title": "17  Slicing",
+    "section": "17.2 Slicing mit logischen Werten (Boolesche Masken)",
+    "text": "17.2 Slicing mit logischen Werten (Boolesche Masken)\nBeim logischen Slicing wird eine boolesche Maske verwendet, um bestimmte Elemente eines Arrays auszuwählen. Die Maske ist ein Array gleicher Länge wie das Original, das aus True oder False Werten besteht.\n\n# Erstellen wir ein Beispiel Array\na = np.array([1, 2, 3, 4, 5, 6])\n\n# Erstellen der Maske\nmaske = a &gt; 3\n\nprint(maske)\n\n[False False False  True  True  True]\n\n\nWir erhalten also ein Array mit boolschen Werten. Verwenden wir diese Maske nun zum slicen, erhalten wir alle Werte an den Stellen, an denen die Maske den Wert True besitzt.\n\n# Anwenden der Maske\nprint(a[maske])\n\n[4 5 6]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDas Verwenden von booleschen Arrays ist nur im numpy-Modul möglich. Es ist nicht Möglich dieses Vorgehen auf native Python Listen anzuwenden. Hier muss durch die Liste iterriert werden.\n\na = [1, 2, 3, 4, 5, 6]\nergebniss = [x for x in a if x &gt; 3]\nprint(ergebniss) \n\n[4, 5, 6]\n\n\n\n\n\n\n\n\n\n\nZwischenübung: Array-Slicing\n\n\n\n\n\nWählen Sie die farblich markierten Bereiche aus dem Array “matrix” mit den eben gelernten Möglichkeiten des Array-Slicing aus.\n\n\nmatrix = np.array([\n    [2, 11, 18, 47, 33, 48, 9, 31, 8, 41],\n    [55, 1, 8, 3, 91, 56, 17, 54, 23, 12],\n    [19, 99, 56, 72, 6, 13, 34, 16, 77, 56],\n    [37, 75, 67, 5, 46, 98, 57, 19, 14, 7],\n    [4, 57, 32, 78, 56, 12, 43, 61, 3, 88],\n    [96, 16, 92, 18, 50, 90, 35, 15, 36, 97],\n    [75, 4, 38, 53, 1, 79, 56, 73, 45, 56],\n    [15, 76, 11, 93, 87, 8, 2, 58, 86, 94],\n    [51, 14, 60, 57, 74, 42, 59, 71, 88, 52],\n    [49, 6, 43, 39, 17, 18, 95, 6, 44, 75]\n])\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nRot: matrix[1,3]\nGrün: matrix[4:6,2:6]\nPink: matrix[:,7]\nOrange: matrix[7,:5]\nBlau: matrix[-1,-1]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Slicing</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_manipulation.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_manipulation.html",
+    "title": "18  Array Manipulation",
+    "section": "",
+    "text": "18.1 Ändern der Form\nDurch verschiedene Funktionen lassen sich die Form und die Einträge der Arrays verändern.\nEine der wichtigsten Array Operationen ist das Transponieren. Dabei werden Reihen in Spalten und Spalten in Reihe umgewandelt.\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\nprint(matrix)\n\n[[1 2 3]\n [4 5 6]]\nTransponieren wir dieses Array nun erhalten wir:\nprint(np.transpose(matrix))\n\n[[1 4]\n [2 5]\n [3 6]]\nHaben wir ein nun diese Matrix und wollen daraus einen Vektor erstellen so können wir die Funktion np.flatten() benutzen:\nvector = matrix.flatten()\nprint(vector)\n\n[1 2 3 4 5 6]\nUm wieder eine zweidimensionale Datenstruktur zu erhalten, benutzen wir die Funktion np.reshape(Ziel, Form)\nprint(np.reshape(matrix, [3, 2]))\n\n[[1 2]\n [3 4]\n [5 6]]\nMöchten wir den Inhalt eines bereits bestehenden Arrays erweitern, verkleinern oder ändern bietet NumPy ebenfalls die passenden Funktionen.\nHaben wir ein leeres Array oder wollen wir ein schon volles Array erweitern benutzen wir die Funktion np.append(). Dabei hängen wir einen Wert an das bereits bestehende Array an.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.append(liste, 7)\nprint(neue_liste)\n\n[1 2 3 4 5 6 7]\nGegebenenfalls ist es nötig einen Wert nicht am Ende, sondern an einer beliebigen Position im Array einzufügen. Das passende Werkzeug ist hier die Funktion np.insert(Array, Position, Einschub). Im folgenden Beispiel wird an der dritten Stelle die Zahl 7 eingesetzt.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.insert(liste, 3, 7)\nprint(neue_liste)\n\n[1 2 3 7 4 5 6]\nWenn sich neue Elemente einfügen lassen, können natürlich auch Elemente gelöscht werden. Hierfür wird die Funktion np.delete(Array , Position) benutzt, die ein Array und die Position der zu löschenden Funktion übergeben bekommt.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.delete(liste, 3)\nprint(neue_liste)\n\n[1 2 3 5 6]\nZuletzt wollen wir uns noch die Verbindung zweier Arrays anschauen. Im folgenden Beispiel wird dabei das Array b an das Array a mithilfe der Funktion np.concatenate((Array a, Array b))angehängt.\na = np.array([1, 2, 3, 4, 5, 6])\nb = np.array([7, 8, 9, 10])\n\nneue_liste = np.concatenate((a, b))\nprint(neue_liste)\n\n[ 1  2  3  4  5  6  7  8  9 10]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Array Manipulation</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_manipulation.html#sortieren-von-arrays",
+    "href": "books/w-python-numpy-grundlagen/skript/array_manipulation.html#sortieren-von-arrays",
+    "title": "18  Array Manipulation",
+    "section": "18.2 Sortieren von Arrays",
+    "text": "18.2 Sortieren von Arrays\nNumPy bietet auch die Möglichkeit, Arrays zu sortieren. Im folgenden Beispiel starten wir mit einem unsortierten Array. Mit der Funktion np.sort() erhalten wir ein sortiertes Array.\n\nimport numpy as np\nunsortiert = np.array([4, 2, 1, 6, 3, 5])\n\nsortiert = np.sort(unsortiert)\n\nprint(sortiert)\n\n[1 2 3 4 5 6]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Array Manipulation</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
+    "href": "books/w-python-numpy-grundlagen/skript/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
+    "title": "18  Array Manipulation",
+    "section": "18.3 Unterlisten mit einzigartigen Werten",
+    "text": "18.3 Unterlisten mit einzigartigen Werten\nArbeitet man mit Daten bei denen zum Beispiel Projekte Personalnummern zugeordnet werden hat man Daten mit einer endlichen Anzahl an Personalnummern, die jedoch mehrfach vorkommen können wenn diese an mehr als einem Projekt gleichzeitig arbeiten.\nMöchte man nun eine Liste die jede Nummer nur einmal enthält, kann die Funtkion np.unique verwendet werden.\n\nimport numpy as np\nliste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])\n\neinzigartige_werte = np.unique(liste_mit_dopplungen)\n\nprint(einzigartige_werte)\n\n[1 3 4 6 7]\n\n\nSetzt man dann noch die Option return_counts=True kann in einer zweiten Variable gespeichert werden, wie oft jeder Wert vorkommt.\n\nimport numpy as np\nliste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])\n\neinzigartige_werte, anzahl = np.unique(liste_mit_dopplungen, return_counts=True)\n\nprint(anzahl)\n\n[2 3 2 1 1]\n\n\n\n\n\n\n\n\nZwischenübung: Arraymanipulation\n\n\n\n\n\nGegeben ist das folgende zweidimensionale Array matrix:\n\nmatrix = np.array([\n    [4, 7, 2, 8],\n    [1, 5, 3, 6],\n    [9, 2, 4, 7]\n])\n\n\nÄndern Sie die Form des Arrays matrix in ein eindimensionales Array.\nSortieren Sie das eindimensionale Array in aufsteigender Reihenfolge.\nÄndern Sie die Form des sortierten Arrays in ein zweidimensionales Array mit 2 Zeilen und 6 Spalten.\nBestimmen Sie die eindeutigen Elemente im ursprünglichen Array matrix und geben Sie diese aus.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmatrix = np.array([\n    [4, 7, 2, 8],\n    [1, 5, 3, 6],\n    [9, 2, 4, 7]\n])\n\n# 1. Ändern der Form in ein eindimensionales Array\nflat_array = matrix.flatten()\n\n# 2. Sortieren des eindimensionalen Arrays in aufsteigender Reihenfolge\nsorted_array = np.sort(flat_array)\n\n# 3. Ändern der Form des sortierten Arrays in ein 2x6-Array\nreshaped_array = sorted_array.reshape(2, 6)\n\n# 4. Bestimmen der eindeutigen Elemente im ursprünglichen Array\nunique_elements_original = np.unique(matrix)",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Array Manipulation</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_read_n_write.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_read_n_write.html",
+    "title": "19  Lesen und Schreiben von Dateien",
+    "section": "",
+    "text": "19.1 Lesen von Dateien\nZum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated values), kann die np.loadtxt()-Funktion verwendet werden. Diese bekommt als Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.\nIm folgenden Beispiel wird die Datei TC01.csv eingelesen und deren Inhalt graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.\ndateiname = '01-daten/TC01.csv'\ndaten = np.loadtxt(dateiname)\nprint(\"Daten:\", daten)\nprint(\"Form:\", daten.shape)\n\nDaten: [20.1 20.1 20.1 ... 24.3 24.2 24.2]\nForm: (1513,)\nplt.plot(daten)\nplt.xlabel('Datenindex')\nplt.ylabel('Temperatur in °C');\nStandardmäßig erwartet die np.loadtxt()-Funktion Komma separierte Werte. Werden die Daten durch ein anderes Trennzeichen getrennt, kann mit der Option delimiter = \"\" ein anderes Trenzeichen ausgewählt werden. Beispielsweise würde der Funktionsaufruf bei einem Semikolon folgendermaßen aussehen: np.loadtxt(data.txt, delimiter = \";\")\nBeginnt die Datei mit den Daten mit Zeilen bezüglich zusätzlichen Informationen wie Einheiten oder Experimentdaten, können diese mit der Option skiprows= #Reihenübersprungen werden.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Lesen und Schreiben von Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_read_n_write.html#schreiben-von-dateien",
+    "href": "books/w-python-numpy-grundlagen/skript/array_read_n_write.html#schreiben-von-dateien",
+    "title": "19  Lesen und Schreiben von Dateien",
+    "section": "19.2 Schreiben von Dateien",
+    "text": "19.2 Schreiben von Dateien\nZum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion np.savetxt() verwendet werden. Dieser müssen mindestens die zu schreibenden Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche Formatierungs- bzw. Strukturierungsoptionen möglich.\nFolgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (header-Argument) am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem fmt-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, welche bei den formatierten Zeichenketten vorgestellt wurde.\n\nwertebereich = np.max(daten) - np.min(daten)\ndaten_skaliert = ( daten - np.min(daten) ) / wertebereich\ndaten_skaliert = daten_skaliert[::10]\n\n\nplt.plot(daten_skaliert)\nplt.xlabel('Datenindex')\nplt.ylabel('Skalierte Temperatur');\n\n\n\n\n\n\n\n\nBeim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des Zeilenumbruchzeichens \\n definiert. Die Ausgabe der Gleitkommazahlen wird mit %5.2f formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen entspricht.\n\n# Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der \n# schmalen Darstellung im Skript\nkommentar = f'Daten aus {dateiname} skaliert auf den Bereich ' + \\\n             '0 bis 1 \\noriginales Min / Max:' + \\\n            f'{np.min(daten)}/{np.max(daten)}'\nneu_dateiname = '01-daten/TC01_skaliert.csv'\n\nnp.savetxt(neu_dateiname, daten_skaliert, \n           header=kommentar, fmt='%5.2f')\n\nZum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.\n\n# Einlesen der ersten Zeilen der neu erstellten Datei\ndatei = open(neu_dateiname, 'r')\nfor i in range(10):\n    print( datei.readline() , end='')\ndatei.close()\n\n# Daten aus 01-daten/TC01.csv skaliert auf den Bereich 0 bis 1 \n# originales Min / Max:20.1/31.1\n 0.00\n 0.00\n 0.00\n 0.01\n 0.01\n 0.01\n 0.01\n 0.01",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Lesen und Schreiben von Dateien</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/array_images.html",
+    "href": "books/w-python-numpy-grundlagen/skript/array_images.html",
+    "title": "20  Arbeiten mit Bildern",
+    "section": "",
+    "text": "Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) werden dann alle gewünschten Farben zusammengestellt.\n\n\n\n\n\n\nFigure 20.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.\n\n\n\nAufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem Link zu finden.\nImportieren wir dieses Bild nun mit der Funktion imread()aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.\n\nimport matplotlib.pyplot as plt\n\ndata = plt.imread(\"00-bilder/mona_lisa.jpg\")\nprint(\"Form:\", data.shape)\n\nForm: (1024, 677, 3)\n\n\nSchauen wir uns einmal mit der print()-Funktion einen Ausschnitt dieser Daten an.\n\nprint(data)\n\n[[[ 68  62  38]\n  [ 88  82  56]\n  [ 92  87  55]\n  ...\n  [ 54  97  44]\n  [ 68 110  60]\n  [ 69 111  63]]\n\n [[ 65  59  33]\n  [ 68  63  34]\n  [ 83  78  46]\n  ...\n  [ 66 103  51]\n  [ 66 103  52]\n  [ 66 102  56]]\n\n [[ 97  90  62]\n  [ 87  80  51]\n  [ 78  72  38]\n  ...\n  [ 79 106  53]\n  [ 62  89  38]\n  [ 62  88  41]]\n\n ...\n\n [[ 25  14  18]\n  [ 21  10  14]\n  [ 20   9  13]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 23  12  16]\n  [ 23  12  16]\n  [ 21  10  14]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 22  11  15]\n  [ 26  15  19]\n  [ 24  13  17]\n  ...\n  [ 11   5   9]\n  [ 10   4   8]\n  [  9   3   7]]]\n\n\nMit der Funktion plt.imshow kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.\n\nplt.imshow(data)\n\n\n\n\n\n\n\n\nNatürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten. Hier betrachten wir nur den reten Anteil des Bildes. Stellen wir ein einfaches Array dar, werden die Daten in schwarz-weiß ausgegeben. Mit Hilfe der Option cmap='Reds' können wir die Farbskala anpassen.\n\n# Als Farbskale wird die Rotskala \n# verwendet 'Reds'\nplt.imshow( data[:,:,0], cmap='Reds' )\nplt.colorbar()\nplt.show()\n\n\n\n\n\n\n\n\nDa die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.\n\nbereich = np.array(data[450:500, 550:600,0], dtype=float)\nplt.imshow( bereich, cmap=\"Greys\" )\nplt.colorbar()\n\n\n\n\n\n\n\n\nBetrachten wir nun eine komplexere Operation an Bilddaten, den Laplace-Operator. Er kann genutzt werden um Ränder von Objekten zu identifizieren. Dazu wird für jeden Bildpunkt \\(B_{i,j}\\) – außer an den Rändern – folgender Wert \\(\\phi_{i, j}\\) berechnet:\n\\[ \\phi_{i, j} = \\left|B_{i-1, j} + B_{i, j-1} - 4\\cdot B_{i, j} + B_{i+1, j} + B_{i, j+1}\\right| \\]\nFolgende Funktion implementiert diese Operation. Darüber hinaus werden alle Werte von \\(\\phi\\) unterhalb eines Schwellwerts auf Null und oberhalb auf 255 gesetzt.\n\ndef img_lap(data, schwellwert=25):\n    \n    # Erstellung einer Kopie der Daten, nun jedoch als\n    # Array mit Gleitkommazahlen\n    bereich = np.array(data, dtype=float)\n    \n    # Aufteilung der obigen Gleichung in zwei Teile\n    lapx = bereich[2:, :] - 2*bereich[1:-1, :] + bereich[:-2, :]\n    lapy = bereich[:, 2:] - 2*bereich[:, 1:-1] + bereich[:, :-2]\n    \n    # Zusammenführung der Teile und Bildung des Betrags\n    lap = np.abs(lapx[:,1:-1] + lapy[1:-1, :])\n    \n    # Schwellwertanalyse\n    lap[lap &gt; schwellwert] = 255\n    lap[lap &lt; schwellwert] = 0\n    \n    return lap\n\nBetrachten wir ein Bild vom Haspel Campus in Wuppertal ein: Bild. Die Anwendung des Laplace-Operators auf den oberen Bildausschnitt ergibt folgende Ausgabe:\n\ndata = plt.imread('01-daten/campus_haspel.jpeg')\nbereich = np.array(data[1320:1620, 400:700, 1], dtype=float)\n\nlap = img_lap(bereich)\n\nplt.figure(figsize=(9, 3))\n\nax = plt.subplot(1, 3, 1)\nax.imshow(data, cmap=\"Greys_r\")\n\nax = plt.subplot(1, 3, 2)\nax.imshow(bereich, cmap=\"Greys_r\");\n\nax = plt.subplot(1, 3, 3)\nax.imshow(lap, cmap=\"Greys\");\n\n\n\n\n\n\n\n\nWir können damit ganz klar die Formen des Fensters erkennen.\nWollen wir zum Beispiel eine Farbkomponente bearbeiten und dann das Bild wieder zusammensetzen, benötigen wir die Funktion np.dstack((rot, grün, blau)).astype('uint8'), wobei rot, grünund blau die jeweiligen 2D-Arrays sind. Versuchen wir nun die grüne Farbe aus dem Baum links zu entfernen.\nWichtig ist, dass die Daten nach dem Zusammensetzen im Format uint8 vorliegen, deswegen die Methode .astype('uint8').\n\ndata = plt.imread('01-daten/campus_haspel.jpeg')\n\n# Speichern der einzelnen Farben in Arrays\nrot = np.array(data[:, :, 0], dtype=float)\ngruen = np.array(data[:, :, 1], dtype=float)\nblau = np.array(data[:, :, 2], dtype=float)\n\n# Setzen wir den Bereich des linken Baumes im Array auf 0\ngruen_neu = gruen.copy()\ngruen_neu[800:2000, 700:1700] = 0\n\nzusammengesetzt = np.dstack((rot, gruen_neu, blau)).astype('uint8')\n\nplt.figure(figsize=(8, 5))\n\nax = plt.subplot(1, 2, 1)\nax.imshow(data, cmap=\"Greys_r\")\n\nax = plt.subplot(1, 2, 2)\nax.imshow(zusammengesetzt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nZwischenübung: Bilder bearbeiten\n\n\n\n\n\nLesen Sie folgendes Bild vom Haspel Campus in Wuppertal ein: Bild\nExtrahieren Sie den blauen Anteil und lassen Sie sich die Zeile in der Mitte des Bildes ausgeben, so wie einen beliebigen Bildauschnitt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndata = plt.imread('01-daten/campus_haspel.jpeg')\n\nform =  data.shape\nprint( \"Form:\", data.shape )\n\nblau =  data[:,:,2]\nplt.imshow(blau, cmap='Blues')\n\nzeile =  data[int(form[0]/2),:,2]\nprint(zeile)\n\nausschnitt =  data[10:50,10:50,:]\nplt.imshow(ausschnitt)\n\nForm: (3024, 4032, 3)\n[221 220 220 ...  28  28  28]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Arbeiten mit Bildern</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html",
+    "title": "21  Lernzielkontrolle",
+    "section": "",
+    "text": "Aufgabe 1\nWie wird das NumPy-Paket typischerweise eingebunden?",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-2",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-2",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 2",
+    "text": "Aufgabe 2\nErstellen Sie mit Hilfe von NumPy die folgenden Arrays:\n\nErstellen sie aus der Liste [1, 2, 3] ein numPy Array\nEin eindimensionales Array, das die Zahlen von 0 bis 9 enthält.\nEin zweidimensionales Array der Form 3×33×3, das nur aus Einsen besteht.\nEin eindimensionales Array, das die Zahlen von 10 bis 50 (einschließlich) in Schritten von 5 enthält.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-3",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-3",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 3",
+    "text": "Aufgabe 3\nWas ist der Unterschied zwischenden den Funktionen np.ndim, np.shape und np.size",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-4",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-4",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 4",
+    "text": "Aufgabe 4\nWelchen Datentyp besitzt folgendes Array? Mit welcher Funktion kann ich den Datentypen eines Arrays auslesen?\n\nvector = np.array([ 4.8,  8.2, 15.6, 16.6, 23.2, 42.8 ])",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-5",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-5",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 5",
+    "text": "Aufgabe 5\nFühren Sie mit den folgenden zwei Arrays diese mathematischen Operationen durch:\na = [5, 1, 3, 6, 4] und b = [6, 5, 2, 6, 9]\n\nAddieren Sie beide Arrays\nBerechnen Sie das elementweise Produkt von a und b\nAddieren Sie zu jedem Eintrag von a 3 dazu",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-6",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-6",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 6",
+    "text": "Aufgabe 6\na = [9, 2, 3, 1, 3]\n\nBestimmen Sie Mittelwert und Standardabweichung für das Array a\nBestimmen Sie Minimum und Maximum der Liste",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-7",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-7",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 7",
+    "text": "Aufgabe 7\n\nmatrix = np.array([\n    [ 1,  2,  3,  4,  5],\n    [ 6,  7,  8,  9, 10],\n    [11, 12, 13, 14, 15],\n    [16, 17, 18, 19, 20],\n    [21, 22, 23, 24, 25]\n])\n\n\nExtrahieren Sie die erste Zeile.\nExtrahieren Sie die letzte Spalte.\nExtrahieren Sie die Untermatrix, die aus den Zeilen 2 bis 4 und den Spalten 1 bis 3 besteht.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-8",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-8",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 8",
+    "text": "Aufgabe 8\n\narray = np.arange(1, 21)\n\n\nÄndern Sie die Form des Arrays in eine zweidimensionale Matrix der Form 4×5.\nÄndern Sie die Form des Arrays in eine zweidimensionale Matrix der Form 5×4.\nÄndern Sie die Form des Arrays in eine dreidimensionale Matrix der Form 2×2×5.\nFlachen Sie das dreidimensionale Array aus Aufgabe 3 wieder zu einem eindimensionalen Array ab.\nTransponieren Sie die 4×54×5-Matrix aus Aufgabe 1.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-9",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-9",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 9",
+    "text": "Aufgabe 9\nMit welchen zwei Funktionen können Daten aus einer Datei gelesen und in einer Datei gespeichert werden?",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-10",
+    "href": "books/w-python-numpy-grundlagen/skript/assessment.html#aufgabe-10",
+    "title": "21  Lernzielkontrolle",
+    "section": "Aufgabe 10",
+    "text": "Aufgabe 10\nSie möchten aus einem Bild die Bilddaten einer Farkomponente isolieren. Was müssen Sie dafür tun?\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nAufgabe 1\n\nimport numpy as np\n\n\n\nAufgabe 2\n\n# 1.\nnp.array([1, 2, 3])\n\n# 2. \nprint(np.arange(10))\n\n# 3. \nprint(np.ones((3, 3)))\n\n# 4. \nprint(np.arange(10, 51, 5))\n\n[0 1 2 3 4 5 6 7 8 9]\n[[1. 1. 1.]\n [1. 1. 1.]\n [1. 1. 1.]]\n[10 15 20 25 30 35 40 45 50]\n\n\n\n\nAufgabe 3\nnp.ndim: Gibt die Anzahl der Dimensionen zurück np.shape: Gibt die Längen der einzelnen Dimensionen wieder np.size: Gibt die Anzahl aller Elemente aus\n\n\nAufgabe 4\nDa es sich hier um Gleitkommazahlen handelt, ist der Datentyp float.64.\n\nvector = np.array([ 4.8,  8.2, 15.6, 16.6, 23.2, 42.8 ])\nprint(vector.dtype)\n\nfloat64\n\n\n\n\nAufgabe 5\n\na = np.array([5, 1, 3, 6, 4])\nb = np.array([6, 5, 2, 6, 9])\n\n# 1.\nergebnis = a + b\nprint(\"Die Summe beider Vektoren ergibt: \", ergebnis) \n\n# 2.\nergebnis = a * b\nprint(\"Das Produkt beider Vektoren ergibt: \", ergebnis) \n\n# 3.\nergebnis = a + 3\nprint(\"Die Summe von a und 3 ergibt: \", ergebnis) \n\nDie Summe beider Vektoren ergibt:  [11  6  5 12 13]\nDas Produkt beider Vektoren ergibt:  [30  5  6 36 36]\nDie Summe von a und 3 ergibt:  [8 4 6 9 7]\n\n\n\n\nAufgabe 6\n\na = np.array([9, 2, 3, 1, 3])\n\n# 1.\nmittelwert = np.mean(a)\nprint(\"Der Mittelwert ist: \", mittelwert)\n\nstandardabweichung = np.std(a)\nprint(\"Die Standardabweichung von a beträgt: \", standardabweichung) \n\n# 2.\nminimum = np.min(a)\nprint(\"Das Minimum beträgt: \", minimum)\n\nmaximum = np.max(a)\nprint(\"Das Maximum beträgt: \", maximum)\n\nDer Mittelwert ist:  3.6\nDie Standardabweichung von a beträgt:  2.8000000000000003\nDas Minimum beträgt:  1\nDas Maximum beträgt:  9\n\n\n\n\nAufgabe 7\n\nmatrix = np.array([\n    [ 1,  2,  3,  4,  5],\n    [ 6,  7,  8,  9, 10],\n    [11, 12, 13, 14, 15],\n    [16, 17, 18, 19, 20],\n    [21, 22, 23, 24, 25]\n])\n\n# 1. Erste Zeile\nprint(matrix[0,:])\n\n# 2.\nprint(matrix[:,-1])\n\n# 3.\nprint(matrix[1:4,0:3])\n\n[1 2 3 4 5]\n[ 5 10 15 20 25]\n[[ 6  7  8]\n [11 12 13]\n [16 17 18]]\n\n\n\n\nAufgabe 8\n\narray = np.arange(1, 21)\n\n# 1. Ändern der Form in eine 4x5-Matrix\nmatrix_4x5 = array.reshape(4, 5)\n\n# 2. Ändern der Form in eine 5x4-Matrix\nmatrix_5x4 = array.reshape(5, 4)\n\n# 3. Ändern der Form in eine 2x2x5-Matrix\nmatrix_2x2x5 = array.reshape(2, 2, 5)\n\n# 4. Abflachen der 2x2x5-Matrix zu einem eindimensionalen Array\nflattened_array = matrix_2x2x5.flatten()\n\n# 5. Transponieren der 4x5-Matrix\ntransposed_matrix = matrix_4x5.T\n\n# Ausgabe der Ergebnisse (optional)\nprint(\"Originales Array:\", array)\nprint(\"4x5-Matrix:\\n\", matrix_4x5)\nprint(\"5x4-Matrix:\\n\", matrix_5x4)\nprint(\"2x2x5-Matrix:\\n\", matrix_2x2x5)\nprint(\"Abgeflachtes Array:\", flattened_array)\nprint(\"Transponierte 4x5-Matrix:\\n\", transposed_matrix)\n\nOriginales Array: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\n4x5-Matrix:\n [[ 1  2  3  4  5]\n [ 6  7  8  9 10]\n [11 12 13 14 15]\n [16 17 18 19 20]]\n5x4-Matrix:\n [[ 1  2  3  4]\n [ 5  6  7  8]\n [ 9 10 11 12]\n [13 14 15 16]\n [17 18 19 20]]\n2x2x5-Matrix:\n [[[ 1  2  3  4  5]\n  [ 6  7  8  9 10]]\n\n [[11 12 13 14 15]\n  [16 17 18 19 20]]]\nAbgeflachtes Array: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\nTransponierte 4x5-Matrix:\n [[ 1  6 11 16]\n [ 2  7 12 17]\n [ 3  8 13 18]\n [ 4  9 14 19]\n [ 5 10 15 20]]\n\n\n\n\nAufgabe 9\nDie passenden Funktionen sind np.loadtxt() und np.savetxt().\n\n\nAufgabe 10\nTypischerweise sind Bilddaten große Matrizen wobei die Farben in drei unterschieldichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft “Rot”, “Grün” und “Blau”. Dementsprechen müssen wir wenn wie Daten in der Matrix data gespeichert sind mit Slicing eine Dimension auswählen: data[:,:,0], wobei die Zahl 0-2 für die jeweilige Farbe steht.",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lernzielkontrolle</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/uebungen/uebung.html",
+    "href": "books/w-python-numpy-grundlagen/uebungen/uebung.html",
+    "title": "22  Übung",
+    "section": "",
+    "text": "22.1 Aufgabe 1 Filmdatenbank\nIn der ersten Aufgabe wollen wir fiktive Daten für Filmbewertungen untersuchen. Das Datenset ist dabei vereinfacht und beinhaltet folgende Spalten:\nHier ist das Datenset:\nimport numpy as np\n\nbewertungen = np.array([\n    [1, 101, 4.5],\n    [1, 102, 3.0],\n    [2, 101, 2.5],\n    [2, 103, 4.0],\n    [3, 101, 5.0],\n    [3, 104, 3.5],\n    [3, 105, 4.0]\n])",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/uebungen/uebung.html#aufgabe-1-filmdatenbank",
+    "href": "books/w-python-numpy-grundlagen/uebungen/uebung.html#aufgabe-1-filmdatenbank",
+    "title": "22  Übung",
+    "section": "",
+    "text": "Film ID\nBenutzer ID\nBewertung\n\n\n\n\n\n\n\n\n\na) Bestimmen Sie die jemals niedrigste und höchste Bewertung, die je gegeben wurde\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nniedrigste_bewertung = np.min(bewertungen[:,2])\n\nprint(\"Die niedrigste jemals gegebene Bertung ist:\", niedrigste_bewertung)\n\nhoechste_bewertung = np.max(bewertungen[:,2])\n\nprint(\"Die hoechste jemals gegebene Bertung ist:\", hoechste_bewertung)\n\nDie niedrigste jemals gegebene Bertung ist: 2.5\nDie hoechste jemals gegebene Bertung ist: 5.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nb) Nennen Sie alle Bewertungen für Film 1\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen_film_1 = bewertungen[np.where(bewertungen[:,0]==1)]\n\nprint(\"Bewertungen für Film 1:\\n\", bewertungen_film_1)\n\nBewertungen für Film 1:\n [[  1.  101.    4.5]\n [  1.  102.    3. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nc) Nennen Sie alle Bewertungen von Person 101\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen_101 = bewertungen[np.where(bewertungen[:,1]==101)]\n\nprint(\"Bewertungen von Person 101:\\n\", bewertungen_101)\n\nBewertungen von Person 101:\n [[  1.  101.    4.5]\n [  2.  101.    2.5]\n [  3.  101.    5. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nd) Berechnen Sie die mittlere Bewertung für jeden Film und geben Sie diese nacheinander aus\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor ID in [1, 2, 3]:\n\n    mittelwert = np.mean(bewertungen[np.where(bewertungen[:,0]==ID),2])\n\n    print(\"Die Mittlere Bewertung für Film\", ID, \"beträgt:\", mittelwert) \n\nDie Mittlere Bewertung für Film 1 beträgt: 3.75\nDie Mittlere Bewertung für Film 2 beträgt: 3.25\nDie Mittlere Bewertung für Film 3 beträgt: 4.166666666666667\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ne) Finden SIe den Film mit der höchsten Bewertung\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nindex_hoechste_bewertung = np.argmax(bewertungen[:,2])\n\nprint(bewertungen[index_hoechste_bewertung,:])\n\n[  3. 101.   5.]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nf) Finden Sie die Person mit den meisten Bewertungen\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\neinzigartige_person, anzahl = np.unique(bewertungen[:, 1],return_counts=True)\n\nmeist_aktiver_person = einzigartige_person[np.argmax(anzahl)]\n\nprint(\"Personen mit den meisten Bewertungen:\", meist_aktiver_person)\n\nPersonen mit den meisten Bewertungen: 101.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ng) Nennen Sie alle Filme mit einer Wertung von 4 oder besser.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nindex_bewertung_besser_vier = bewertungen[:,2] &gt;= 4\n\nprint(\"Filme mit einer Wertung von 4 oder besser:\")\n\nprint(bewertungen[index_bewertung_besser_vier,:])\n\nFilme mit einer Wertung von 4 oder besser:\n[[  1.  101.    4.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  105.    4. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nh) Film Nr. 4 ist erschienen. Der Film wurde von Person 102 mit einer Note von 3.5 bewertet. Fügen Sie diesen zur Datenbank hinzu.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_bewertung = np.array([4, 102, 3.5])\n\nbewertungen = np.append(bewertungen, [neue_bewertung], axis=0)\n\nprint(bewertungen)\n\n[[  1.  101.    4.5]\n [  1.  102.    3. ]\n [  2.  101.    2.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  104.    3.5]\n [  3.  105.    4. ]\n [  4.  102.    3.5]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ni) Person 102 hat sich Film Nr. 1 nochmal angesehen und hat das Ende jetzt doch verstanden. Dementsprechend soll die Berwertung jetzt auf 5.0 geändert werden.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen[(bewertungen[:, 0] == 1) & \n            (bewertungen[:, 1] == 102), 2] = 5.0\n\nprint(\"Aktualisieren der Bewertung:\\n\", bewertungen)\n\nAktualisieren der Bewertung:\n [[  1.  101.    4.5]\n [  1.  102.    5. ]\n [  2.  101.    2.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  104.    3.5]\n [  3.  105.    4. ]\n [  4.  102.    3.5]]",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung</span>"
+    ]
+  },
+  {
+    "objectID": "books/w-python-numpy-grundlagen/uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
+    "href": "books/w-python-numpy-grundlagen/uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
+    "title": "22  Übung",
+    "section": "22.2 Aufgabe 2 - Kryptographie - Caesar-Chiffre",
+    "text": "22.2 Aufgabe 2 - Kryptographie - Caesar-Chiffre\nIn dieser Aufgabe wollen wir Text sowohl ver- als auch entschlüsseln.\nJedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet.\n\n\n\nTable 22.1: Ascii-Tabelle\n\n\n\n\n\nBuchstabe\nASCII Code\nBuchstabe\nASCII Code\n\n\n\n\na\n97\nn\n110\n\n\nb\n98\no\n111\n\n\nc\n99\np\n112\n\n\nd\n100\nq\n113\n\n\ne\n101\nr\n114\n\n\nf\n102\ns\n115\n\n\ng\n103\nt\n116\n\n\nh\n104\nu\n117\n\n\ni\n105\nv\n118\n\n\nj\n106\nw\n119\n\n\nk\n107\nx\n120\n\n\nl\n108\ny\n121\n\n\nm\n109\nz\n122\n\n\n\n\n\n\nDer Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken wir uns auf Texte mit kleinen Buchstaben.\nIhre Aufgabe ist nun die Zahlenwerte zu verändern.\nZunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der Verschlüsselungswert “1” wird aus einem A ein B, einem M, ein N. Ist der Wert “4” wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt bei einer Verschiebung von 1 wird aus einem Z ein A.\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return np.array([ord(c)])\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\n\n\n\n\n\n\n1. Überlegen Sie sich zunächst wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\\[ \\textrm{ASCII}_{\\textrm{verschoben}} = (\\textrm{ASCII} - 97 + \\textrm{Versatz}) \\textrm{ mod } 26 + 97\\]\n\n\n\n\n\n\n\n\n\n\n\n\n2. Schreiben Sie Code der mit einer Schleife alle Zeichen umwandelt.\n\n\n\n\n\nZunächst sollen alle Zeichen in Ascii Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten schleife wieder alle Werte in Buchstaben übersetzt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\nklartext = \"abrakadabra\"\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nverschluesselter_text= []\n\n\n\nfor buchstabe in klartext:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\n\nfor zahl in umgewandelter_text:    \n    verschluesselt = (zahl - 97 + versatz) % 26 + 97\n    verschluesselte_zahl.append(verschluesselt)\nprint(verschluesselte_zahl)\n\n\nfor zahl in verschluesselte_zahl:    \n    verschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(verschluesselter_text)\n\n[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]\n[100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]\n['d', 'e', 'u', 'd', 'n', 'd', 'g', 'd', 'e', 'u', 'd']\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Ersetzen Sie die Schleife, indem Sie die Rechenoperation mit einem NumPy-Array durchführen\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\nklartext = \"abrakadabra\"\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nverschluesselter_text= []\n\n\n\nfor buchstabe in klartext:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\numgewandelter_text = np.array(umgewandelter_text)\nverschluesselte_zahl = (umgewandelter_text - 97 + versatz) % 26 + 97\nprint(verschluesselte_zahl)\n\nfor zahl in verschluesselte_zahl:    \n    verschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(verschluesselter_text)\n\n[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]\n[100 101 117 100 110 100 103 100 101 117 100]\n['d', 'e', 'u', 'd', 'n', 'd', 'g', 'd', 'e', 'u', 'd']\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. Schreiben sie den Code so um, dass der verschlüsselte Text entschlüsselt wird.\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\n\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nentschluesselter_text= []\n\n\n\nfor buchstabe in verschluesselter_text:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\numgewandelter_text = np.array(umgewandelter_text)\nverschluesselte_zahl = (umgewandelter_text - 97 - versatz) % 26 + 97\nprint(verschluesselte_zahl)\n\nfor zahl in verschluesselte_zahl:    \n    entschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(entschluesselter_text)\n\n[100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]\n[ 97  98 114  97 107  97 100  97  98 114  97]\n['a', 'b', 'r', 'a', 'k', 'a', 'd', 'a', 'b', 'r', 'a']",
+    "crumbs": [
+      "NumPy",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html",
+    "href": "books/dataanalysis/introduction.html",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "",
+    "text": "23.1 Einleitung\nIn dieser Einheit lernen Sie, wie man reale Messdaten – etwa aus Experimenten oder Ingenieurprojekten – mit NumPy und Matplotlib verarbeitet und analysiert. Der Fokus liegt dabei auf einem praxisnahen Umgang mit Daten im CSV-Format.",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html#lernziele-dieses-kapitels",
+    "href": "books/dataanalysis/introduction.html#lernziele-dieses-kapitels",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "23.2 Lernziele dieses Kapitels",
+    "text": "23.2 Lernziele dieses Kapitels\nSie lernen in dieser Einheit:\n\nwie Sie strukturierte CSV-Daten in NumPy-Arrays überführen,\nwie Sie fehlende Werte erkennen und ersetzen,\nwie Sie typische statistische Kennzahlen berechnen,\nwie Sie Daten mit Matplotlib visualisieren,\nwie Sie Daten interpolieren und Trends glätten,\nund wie Sie reale Anwendungen – z. B. aus dem Bauwesen – analysieren.",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html#csv-dateien-ein-typisches-format-für-messdaten",
+    "href": "books/dataanalysis/introduction.html#csv-dateien-ein-typisches-format-für-messdaten",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "23.3 CSV-Dateien: Ein typisches Format für Messdaten",
+    "text": "23.3 CSV-Dateien: Ein typisches Format für Messdaten\nCSV-Dateien („Comma Separated Values“) sind weit verbreitet – etwa für:\n\nTemperaturverläufe,\nMessreihen aus Experimenten,\nLogdaten von Sensoren.\n\nZu Beginn wird ein Beispiel betrachtet: Temperatur, Luftfeuchtigkeit und CO₂-Werte. Diese Datei enthält auch einige fehlende Werte, wie sie in realen Daten oft vorkommen.\n\nimport numpy as np\ndata = np.genfromtxt(\"beispiel.csv\", delimiter=\",\", skip_header=1)\nprint(data)\n\n[[ 21.1  45.  400. ]\n [ 22.5   nan 420. ]\n [  nan  50.  410. ]\n [ 20.   48.    nan]\n [ 23.3  47.  430. ]]",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html#fehlende-werte-erkennen-und-bereinigen",
+    "href": "books/dataanalysis/introduction.html#fehlende-werte-erkennen-und-bereinigen",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "23.4 Fehlende Werte erkennen und bereinigen",
+    "text": "23.4 Fehlende Werte erkennen und bereinigen\nFehlende Werte werden beim Einlesen als np.nan (Not a Number) codiert. Zunächst wird gezählt, wie viele Werte fehlen:\n\nprint(np.isnan(data).sum(axis=0))\n\n[1 1 1]\n\n\nUm die Analyse nicht zu verfälschen, werden sie ersetzt – z. B. durch den Mittelwert der Spalte:\n\nfor i in range(data.shape[1]):\n    mean = np.nanmean(data[:, i])\n    data[:, i] = np.where(np.isnan(data[:, i]), mean, data[:, i])",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html#statistische-kennzahlen-berechnen",
+    "href": "books/dataanalysis/introduction.html#statistische-kennzahlen-berechnen",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "23.5 Statistische Kennzahlen berechnen",
+    "text": "23.5 Statistische Kennzahlen berechnen\nTypische Kennwerte zur Beschreibung von Daten:\n\nMittelwert: Durchschnitt\nStandardabweichung: Streuung\nMinimum und Maximum\n\n\nprint(\"Mittelwerte:\", np.mean(data, axis=0))\nprint(\"Standardabweichung:\", np.std(data, axis=0))\n\nMittelwerte: [ 21.725  47.5   415.   ]\nStandardabweichung: [ 1.13556154  1.61245155 10.        ]",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/introduction.html#daten-visualisieren",
+    "href": "books/dataanalysis/introduction.html#daten-visualisieren",
+    "title": "23  Datenanalyse und Modellierung",
+    "section": "23.6 Daten visualisieren",
+    "text": "23.6 Daten visualisieren\nMit Matplotlib lassen sich Daten übersichtlich darstellen. Es werden z. B. Linien- und Histogrammplots genutzt.\n\nimport matplotlib.pyplot as plt\n\nlabels = [\"Temperatur (°C)\", \"Luftfeuchtigkeit (%)\", \"CO₂ (ppm)\"]\n\nfor i in range(data.shape[1]):\n    plt.plot(data[:, i], label=labels[i])\nplt.legend()\nplt.title(\"Messwerte im Verlauf\")\nplt.grid(True)\nplt.show()",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Datenanalyse und Modellierung</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/interpolation.html",
+    "href": "books/dataanalysis/interpolation.html",
+    "title": "24  Interpolation – Lücken schließen",
+    "section": "",
+    "text": "24.1 Übersicht\nIn vielen praktischen Anwendungen werden Polynome als Basisfunktionen der Modellfunktion angenommen. Vorteile von Polynomen:\nEin Beispiel für eine Basis aus Polynomen:\n\\[ \\phi_1(x)=1,\\quad \\phi_2(x)=x,\\quad \\phi_3(x)=x^2,\\quad \\cdots,\\quad \\phi_m =x^{m-1} \\]",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/interpolation.html#übersicht",
+    "href": "books/dataanalysis/interpolation.html#übersicht",
+    "title": "24  Interpolation – Lücken schließen",
+    "section": "",
+    "text": "Polynome sind leicht zu differenzieren und integrieren\nAnnäherung von beliebigen Funktionen durch Polynome möglich, siehe Taylor-Entwicklung\nAuswertung ist sehr einfach und dadurch schnell, d.h. sie benötigt nur wenige schnelle arithmetische Operationen (Addition und Multiplikation)",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/interpolation.html#polynome",
+    "href": "books/dataanalysis/interpolation.html#polynome",
+    "title": "24  Interpolation – Lücken schließen",
+    "section": "24.2 Polynome",
+    "text": "24.2 Polynome\nPolynome \\(P(x)\\) sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten \\(( x^i, i \\in \\mathbb{N})\\) mit den entsprechenden Koeffzienten \\(a_i\\):\n\\[ P(x) = \\sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_2 x^2 + a_1 x + a_0, \\quad i, n \\in \\mathbb{N}, a_i \\in \\mathbb{R} \\]\n\nAls Grad eines Polynoms wird der Term mit dem höchsten Exponenten und nichtverschwindenden Koeffizienten (der sogenannte Leitkoeffizient) bezeichnet.\nEin Polynom mit Grad \\(n\\) hat \\(n\\), teilweise komplexe, Nullstellen.\n\nIn Python, d.h. im numpy-Modul, werden Polynome durch ihre Koeffizienten representiert. Im Allgemeinen wird ein Polynom mit dem Grad \\(n\\) durch folgendes Array dargestellt\n[an, ..., a2, a1, a0]\nSo z.B. für \\(P(x) = x^3 + 5x^2 - 2x + 3\\):\n\nP = np.array([1, 5, -2, 3])\nprint(P)\n\n[ 1  5 -2  3]\n\n\nDie Auswertung des Polynoms an einem Punkt oder einem Array erfolgt mit der np.polyval-Funktion.\n\nx = 1\ny = np.polyval(P, x)\nprint(f\"P(x={x}) = {y}\")\n\nP(x=1) = 7\n\n\n\nx = np.array([-1, 0, 1])\ny = np.polyval(P, x)\nprint(f\"P(x={x}) = {y}\")\n\nP(x=[-1  0  1]) = [9 3 7]\n\n\nFür die graphische Darstellung im Bereich \\(x \\in [-6, 2]\\) können die bekannten numpy und matplotlib Funktionen verwendet werden.\n\nx = np.linspace(-6, 2, 50)\ny = np.polyval(P, x)\n\nplt.plot(x, y)\nplt.xlabel('x')\nplt.ylabel('y(x)')\nplt.grid()\n\n\n\n\n\n\n\n\nUm die Nullstellen eines Polynoms zu finden, kann die numpy-Funktion np.roots genutzt werden. Für das obige Polynom können folgende Nullstellen bestimmt werden.\n\nnstellen = np.roots(P)\n\n# direkte Ausgabe des Arrays\nprint(\"Nullstellen: \")\nprint(nstellen)\n\nNullstellen: \n[-5.46628038+0.j        0.23314019+0.703182j  0.23314019-0.703182j]\n\n\n\nprint(\"Nullstellen: \")\n# schönere Ausgabe des Arrays\nfor i, z in enumerate(nstellen):\n    if z.imag == 0:\n        print(f\"  x_{i+1} = {z.real:.2}\")\n    else:\n        print(f\"  x_{i+1} = {z.real:.2} {z.imag:+.2}i\")\n\nNullstellen: \n  x_1 = -5.5\n  x_2 = 0.23 +0.7i\n  x_3 = 0.23 -0.7i\n\n\nIn diesem Beispiel sind zwei der Nullstellen komplex. Eine komplexe Zahl \\(z\\) wird in Python als Summe des Realteils ($ Re\\() und Imaginärteils (\\) Im$). Letzterer wird durch ein nachfolgendes j, die imaginäre Einheit, gekennzeichnet.\n\\[ z = Re(z) + Im(z)j\\]\nDie Nullstellen können auch zur alternativen Darstellung des Polynoms verwendet werden. Sind \\(x_i\\) die \\(n\\) Nullstellen, so ist das Polynom \\(n\\)-ten Grades durch folgendes Produkt beschrieben:\n\\[ P(x) = \\prod_{i=1}^n \\left(x - x_i\\right) = (x - x_1)\\cdot (x - x_2) \\cdot \\cdots \\cdot (x - x_n) \\]\nSeien beispielsweise 1 und 2 die Nullstellen eines Polynoms, so lautet dieses:\n\\[  P(x) = (x - 1)(x - 2) = x^2 - 3x +2 \\]\nDie numpy-Funktion np.poly kann aus den Nullstellen die Polynomkoeffizienten bestimmen. Anhand des obigen Beispiels lautet der Funktionsaufruf:\n\nnstellen = [1, 2]\nkoeffizienten = np.poly(nstellen)\n\nprint(\"Nullstellen:\", nstellen)\nprint(\"Koeffizienten:\", koeffizienten)\n\nNullstellen: [1, 2]\nKoeffizienten: [ 1. -3.  2.]\n\n\nDas Modul numpy stellt viele praktische Funktionen zum Umgang mit Polynomen zur Verfügung. So existieren Funktionen um Polynome auszuwerten, die Nullstellen zu finden, zu addieren, zu multiplizieren, abzuleiten oder zu integrieren. Eine Übersicht ist in der numpy-Dokumentation gegeben.",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/interpolation.html#interpolation",
+    "href": "books/dataanalysis/interpolation.html#interpolation",
+    "title": "24  Interpolation – Lücken schließen",
+    "section": "24.3 Interpolation",
+    "text": "24.3 Interpolation\nInterpolation ist eine Methode, um Datenpunkte zwischen gegebenen Messpunkten zu konstruieren. Dazu wird eine Funktion gesucht, die alle Messpunkte exakt abbildet, was gleichbedeutend damit ist, dass die L2-Norm zwischen Funktion und Punkten Null ist.\nZwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare \\((x_1, y_1)\\) und \\((x_2, y_2)\\) mit \\(x_1\\neq x_2\\) existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion\n\\[y(x) = \\beta_1 x + \\beta_0\\]\nverschwindet.\n\n# Beispieldaten aus y(x) = -x + 2\n\nN = 50\ndx = 0.25\n\ndef fnk(x):\n    return -x + 2\n\nx = np.array([1, 2])\ny = fnk(x)\n\nplt.scatter(x, y, color='C1', label=\"Messpunkte\", zorder=3)\n\nx_modell = np.linspace(np.min(x), np.max(x), N)\nplt.plot(x_modell, fnk(x_modell), color='C0', label=\"Modellfunktion\")\n\nx_linie = np.linspace(np.min(x)-dx, np.max(x)+dx, N)\nplt.plot(x_linie, fnk(x_linie), '--', alpha=0.3, color='C0')\n\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nFür drei Messpunkte muss ein Polynom zweiten Grades verwendet werden, um die Punkte exakt zu erfassen.\n\\[y(x) = \\beta_2 x^2 + \\beta_1 x + \\beta_0\\]\n\n# Beispieldaten aus y(x) = 3x^2 -4x - 1\n\nN = 50\ndx = 0.25\n\ndef fnk(x):\n    return 3*x**2-4*x - 1\n\nx = np.array([-1, 2, 3])\ny = fnk(x)\n\nplt.scatter(x, y, color='C1', label=\"Messpunkte\", zorder=3)\n\nx_modell = np.linspace(np.min(x), np.max(x), N)\nplt.plot(x_modell, fnk(x_modell), color='C0', label=\"Modellfunktion\")\n\nx_linie = np.linspace(np.min(x)-dx, np.max(x)+dx, N)\nplt.plot(x_linie, fnk(x_linie), '--', alpha=0.3, color='C0')\n\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nDies kann verallgemeinert werden: \\(n\\) Messpunkte können exakt mit einem Polynom ($ n-1$)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom \\(P(x)\\) gilt:\n\\[  P(x_i) = y_i \\quad i \\in 1, \\dots, n \\]\nDie Existenz und Eindeutigkeit eines solchen Polynoms kann gezeigt werden. Das gesuchte Polynom lautet:\n\\[  P(x) = \\sum_{i=1}^n y_i I_i(x) \\] \\[  \\text{mit}\\quad I_i(x) = \\prod_{j=1, i\\neq j}^n \\frac{x-x_j}{x_i - x_j} \\]\nAlternativ kann auch ein Gleichungssystem, welches durch die Polynomialbasis \\(\\phi_i(x)\\) gegeben ist, gelöst werden. Für die \\(n\\) Punktepaare gilt jeweils:\n\\[  y(x_i) = \\sum_{i=1}^{m}\\beta_i \\cdot \\phi_i(x_i) = \\beta_1\\cdot \\phi_1(x_i) + \\cdots + \\beta_m\\cdot \\phi_m(x_i) = y_i \\]\nDas allgemeine Geleichungssystem lautet\n\\[  \\left( \\begin{matrix} \\phi_1(x_1) & \\phi_2(x_1) & \\cdots & \\phi_m(x_1) \\\\\n             \\phi_1(x_2) & \\phi_2(x_2) & \\cdots & \\phi_m(x_2) \\\\\n             \\vdots &\\vdots & \\ddots & \\vdots \\\\\n             \\phi_1(x_n) & \\phi_2(x_n) & \\cdots & \\phi_m(x_n) \\\\\n             \\end{matrix}\\right).\n\\left(  \\begin{matrix} \\beta_1 \\\\  \n      \\beta_2 \\\\   \\vdots \\\\   \\beta_m \\\\\n      \\end{matrix} \\right)\n= \\left(  \\begin{matrix} y_1 \\\\  y_2 \\\\   \\vdots \\\\   y_n \\\\ \\end{matrix} \\right) \\]\nund mit der Polynomialbasis\n\\[ \\underbrace{\\left( \\begin{matrix} 1 & x_1 & \\cdots & x_1^{n-1} \\\\ 1 & x_2 & \\cdots & x_2^{n-1} \\\\ \\vdots &\\vdots & \\ddots & \\vdots \\\\ 1 & x_n & \\cdots & x_n^{n-1} \\\\ \\end{matrix}\\right)}_{V}. \\left(  \\begin{matrix} \\beta_1 \\\\  \\beta_2 \\\\   \\vdots \\\\   \\beta_m \\\\ \\end{matrix} \\right) = \\left(  \\begin{matrix} y_1 \\\\  y_2 \\\\   \\vdots \\\\   y_n \\\\ \\end{matrix} \\right)\\]\nDie Matrix \\(V\\) heisst Vandermonde-Matrix und kann exakt gelöst werden, für \\(m=n\\) und wenn für alle \\(i, j, i\\neq j\\) gilt \\(x_i \\neq x_j\\).\nIn Python kann das Interpolationsproblem mit der Funktion np.polyfit gelöst werden. Das folgende Beispiel demonstriert deren Anwendung.\nDie Messtellen folgen in dem Beispiel der Funktion \\(f(x)\\), welche nur zur Generierung der Datenpunkte verwendet wird.\n\\[ f(x) = \\frac{1}{2} + \\frac{1}{1+x^2}\\]\nZunächst werden die Messpunkte generiert.\n\ndef fnk(x):\n    return 0.5 + 1/(1+x**2)\n\n\nxmin = -5\nxmax =  5\nx = np.linspace(xmin, xmax, 100)\ny = fnk(x)\n\n\nn = 5\nxi = np.linspace(xmin, xmax, n)\nyi = fnk(xi)\n\nNun folgt die Interpolation für 5 und 15 Messpunkte.\n\nP = np.polyfit(xi, yi, n-1)\nprint(\"Interpolationskoeffizienten:\")\nprint(P)\n\nInterpolationskoeffizienten:\n[ 5.30503979e-03  4.23767299e-17 -1.71087533e-01  7.45353051e-16\n  1.50000000e+00]\n\n\n\nplt.plot(x, y, color='C0', alpha=0.5, label='generierende Funktion')\nplt.plot(x, np.polyval(P, x), color='C2', label='Interpolation')\nplt.scatter(xi, yi, color='C1', label='Messpunkte', zorder=3)\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\n\nn = 15\nxi = np.linspace(xmin, xmax, n)\nyi = fnk(xi)\n\nP = np.polyfit(xi, yi, n-1)\n\nplt.plot(x, y, color='C0', alpha=0.5, label='generierende Funktion')\nplt.plot(x, np.polyval(P, x), color='C2', label='Interpolation')\nplt.scatter(xi, yi, color='C1', label='Messpunkte', zorder=3)\nplt.legend()\nplt.grid()\n\n\n\n\n\n\n\n\nDie Interpolation erfüllt immer die geforderte Bedingung \\(y(x_i) = y_i\\). Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Interpolation – Lücken schließen</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/fitting.html",
+    "href": "books/dataanalysis/fitting.html",
+    "title": "25  Fitting",
+    "section": "",
+    "text": "Beim Fitting wird eine Modellfunktion gesucht, weche die Messdaten nicht unbedingt exakt abbildet. Wird ein Polynom verwendet, so hat es eine Grad, welcher deutlich kleiner ist, als die Anzahl der Messpunkte. Lineare Regression ist ein Beispiel für ein Fitting durch ein Polynom mit dem Grad Eins.\nZum Fitten durch ein Polynom kann die Funktion np.polyfit verwendet werden, genauso wie bei der Polynominterpolation. Diesmal jedoch mit einem kleineren Polynomgrad.\nIm folgenden Beispiel werden zunächst Modelldaten generiert und dann mit entsprechenden Polynomen gefittet.\n\nxmin = 0\nxmax = 5\nx = np.linspace(xmin, xmax, 100)\n\nni = 25\n\n# x-Werte mit leichtem Rauschen\nxi = np.linspace(xmin, xmax, ni) + 0.2*(2 * np.random.random(ni) -1)\n\n# y(x) = 2x+0.5 mit leichtem Rauschen\nyi = 2*xi + 0.5 + 2*(2 * np.random.random(ni) -1)\n\nplt.scatter(xi, yi, color='C1')\nplt.grid()\n\n\n\n\n\n\n\n\n\nP1 = np.polyfit(xi, yi, 1)\n\nplt.scatter(xi, yi, color='C1', zorder=3, label='Messpunkte')\nplt.plot(x, np.polyval(P1, x), color='C0', label=\"Modellfunktion\")\nplt.grid()\nplt.legend()\n\n\n\n\n\n\n\n\n\n# x-Werte mit leichtem Rauschen\nxi = np.linspace(xmin, xmax, ni) + 0.2*(2 * np.random.random(ni) -1)\n\n# y(x) = 2x+0.5 mit leichtem Rauschen\nyi = (xi - 2)**2 -2*xi + 2.5 + 2*(2 * np.random.random(ni) -1)\n\n\nP1 = np.polyfit(xi, yi, 1)\nP2 = np.polyfit(xi, yi, 2)\n\nplt.scatter(xi, yi, color='C1', zorder=3, label='Messpunkte')\nplt.plot(x, np.polyval(P1, x), color='C0', label=\"Modellfunktion, Grad 1\")\nplt.plot(x, np.polyval(P2, x), color='C2', label=\"Modellfunktion, Grad 2\")\nplt.grid()\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Fitting</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/splines.html",
+    "href": "books/dataanalysis/splines.html",
+    "title": "26  Splines",
+    "section": "",
+    "text": "26.1 Definition\nFür \\(n+1\\) Messpunkte \\((x_i, y_i)\\) kann eine Splinefunktion \\(s_k\\), hier ein Polynomspline, wie folgt definiert werden.\nBeispiele: * \\(k = 1\\): Polygonzug * \\(k = 3\\): kubische Polynomsplines (B-Splines)",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/splines.html#definition",
+    "href": "books/dataanalysis/splines.html#definition",
+    "title": "26  Splines",
+    "section": "",
+    "text": "Vorausgesetzt ist, dass die Messpunkte sortiert sind, d.h. \\(x_0 &lt; x_1 &lt; \\cdots &lt; x_n\\)\nfür jedes \\(i = 0\\dots n − 1\\) ist \\(s_k\\) ein Polynom vom Grad \\(k\\) auf dem Intervall \\(\\left[x_i , x_{i+1}\\right]\\)\n\\(s_k\\) ist auf \\(\\left[x_0 , x_n \\right]\\) \\((k − 1)\\)-mal stetig differenzierbar",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/splines.html#kubische-splines",
+    "href": "books/dataanalysis/splines.html#kubische-splines",
+    "title": "26  Splines",
+    "section": "26.2 Kubische Splines",
+    "text": "26.2 Kubische Splines\nDie in der Praxis häufig eingesetzten kubischen Polynomsplines \\(s_3\\) ($ k= 3$) haben folgende Eigenschaften: * \\(s_3|\\left[x_i,x_{i+1}\\right] = \\beta_0 +\\beta_1 x + \\beta_2 x^2 + \\beta_3 x^3\\) * \\(s_3\\) ist zweimal stetig differenzierbar auf \\(\\left[x_0,x_n\\right]\\), also insbesondere an den Stützpunkten \\(x_i\\) der Messpunkte\nDie Koeffizienten \\(\\beta_i\\) werden wie folgt bestimmt * aus den \\(n + 1\\) Messpunkten ergeben sich \\(n\\) Intervalle, d.h. mit jeweils vier Koeffizienten sind es insgesamt \\(4n\\) Koeffizienten * Exakte Darstellung der Messpunkte ($ n + 1$ Gleichungen), d.h.: \\(s_3(x_i) = y_i\\) * Glattheitsbedingungen an den inneren Messpunkten ($ i=1n-1\\(), mit jeweils (\\) n − 1$ Gleichungen): \\[ s_3'(x_i)_- =s_3'(x_i)_+\\] \\[ s_3''(x_i)_- =s_3''(x_i)_+\\] \\[ s_3'''(x_i)_- =s_3'''(x_i)_+\\]\n\nDamit sind es \\(4n − 2\\) Gleichungen für \\(4n\\) Koeffizienten\n\nUm die beiden fehlenden Gleichungen zu finden bzw. zu bestimmen werden Randbedingungen oder Abschlussbedingungen benötigt. Die gängigsten Bedingungen sind: * natürliche Splines: die Krümung am Rand verschwindet, d.h.: \\[ s_3''(x_0) = s_3''(x_n) = 0 \\] * periodische Splines: die Steigung und Krümung ist an beiden Rändern gleich \\[ s_3'(x_0) = s_3'(x_n)\\] \\[ s_3''(x_0) = s_3''(x_n)\\] * Hermite Splines: die Steigungen am Rand werden explizit vorgegeben (hier durch \\(u\\) und \\(v\\)) \\[ s_3'(x_0) = u \\] \\[ s_3'(x_n) = v \\]",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/splines.html#anwendung",
+    "href": "books/dataanalysis/splines.html#anwendung",
+    "title": "26  Splines",
+    "section": "26.3 Anwendung",
+    "text": "26.3 Anwendung\nIm Folgenden werden zwei Beispiele, \\(s_1\\) und \\(s_3\\), für die Erstellung von Splines mit Python vorgestellt.\n\n# Erzeugung von Messpunkten\nn = 7\nxi = np.linspace(0, np.pi, n)\nyi = np.sin(xi)\n\nFür die \\(s_1\\) Splines, kann die Funktion np.interp verwendet werden. Sie führt eine lineare Interpolation zwischen gegebenen Wertepaaren durch.\n\n# Wertebereich für die Visualisierung der Interpolation\nx = np.linspace(0, np.pi, n*6)\ny = np.sin(x)\n\n\n# Interpolation\ny_s1 = np.interp(x, xi, yi)\n\n\nplt.plot(x,y, alpha=0.3, color='C2', lw=5, \n         label='Generierende Funktion')\nplt.plot(x, y_s1, color='C0', label='Interpolation')\nplt.scatter(x, y_s1, s=3, zorder=3, color='C0')\nplt.scatter(xi, yi, color='C1', label='Messpunkte')\n\nplt.xlabel('x')\nplt.ylabel('y')\nplt.legend();\n\n\n\n\n\n\n\n\nDie \\(s_3\\) Splines können mit Funktionen aus dem scipy-Modul berechnet werden. Dazu werden zunächst die Koeffizienten bestimmt (scipy.interpolate.splrep) und diese ermöglichen die gewünschte Auswertung, welche mit der Funktion scipy.interpolate.splev vorgenommen werden kann.\n\nimport scipy.interpolate as si\n\n\ns3 = si.splrep(xi, yi)\ny_s3 = si.splev(x, s3)\n\n\nplt.plot(x,y, alpha=0.3, color='C2', lw=5, \n         label='Generierende Funktion')\nplt.plot(x, y_s3, color='C0', label='Interpolation')\nplt.scatter(x, y_s3, s=3, zorder=3, color='C0')\nplt.scatter(xi, yi, color='C1', label='Messpunkte')\n\nplt.xlabel('x')\nplt.ylabel('y')\nplt.legend();",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Splines</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/glaetten.html",
+    "href": "books/dataanalysis/glaetten.html",
+    "title": "27  Trendglättung – Rauschen reduzieren",
+    "section": "",
+    "text": "Verrauschte Daten? Ein gleitender Mittelwert glättet Kurven:\n\ndata = np.genfromtxt(\"trenddaten_mit_rauschen.csv\", delimiter=\",\", skip_header=1)\nx = data[:, 0]\ny = data[:, 1]\n\nwindow = 5\nweights = np.ones(window) / window\ny_smooth = np.convolve(y, weights, mode='valid')\n\nplt.plot(x, y, label=\"Original\", alpha=0.5)\nplt.plot(x[(window-1)//2:-(window//2)], y_smooth, label=\"Geglättet\", color='red')\nplt.legend()\nplt.grid(True)\nplt.title(\"Trendglättung\")\nplt.show()",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Trendglättung – Rauschen reduzieren</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/anwendungsbeispiel.html",
+    "href": "books/dataanalysis/anwendungsbeispiel.html",
+    "title": "28  Anwendungsbeispiele",
+    "section": "",
+    "text": "28.1 Anwendung: Ballonfahrt-Daten analysieren\nballon = np.genfromtxt(\"messdaten_ballonfahrt.txt\", delimiter=\",\", skip_header=1)\nzeit = ballon[:, 0]\nhoehe = ballon[:, 1]\n\nplt.plot(zeit, hoehe)\nplt.title(\"Ballonfahrt – Höhe über Zeit\")\nplt.xlabel(\"Zeit (s)\")\nplt.ylabel(\"Höhe (m)\")\nplt.grid(True)\nplt.show()\n\ngeschwindigkeit = np.gradient(hoehe, zeit)\nplt.plot(zeit, geschwindigkeit, color=\"orange\")\nplt.title(\"Geschwindigkeit\")\nplt.grid(True)\nplt.show()",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/anwendungsbeispiel.html#anwendung-balkenverformung-im-bauingenieurwesen",
+    "href": "books/dataanalysis/anwendungsbeispiel.html#anwendung-balkenverformung-im-bauingenieurwesen",
+    "title": "28  Anwendungsbeispiele",
+    "section": "28.2 Anwendung: Balkenverformung im Bauingenieurwesen",
+    "text": "28.2 Anwendung: Balkenverformung im Bauingenieurwesen\nEin Träger wird in der Mitte belastet. Die Durchbiegung wird an 50 Punkten gemessen:\n\nbalken = np.genfromtxt(\"balken_durchbiegung.csv\", delimiter=\",\", skip_header=1)\nx = balken[:, 0]\ny = balken[:, 1]\n\nwindow = 7\nweights = np.ones(window) / window\ny_smooth = np.convolve(y, weights, mode='valid')\n\nplt.plot(x, y, label=\"Messung\", alpha=0.5)\nplt.plot(x[(window-1)//2:-(window//2)], y_smooth, label=\"Geglättet\", color='red')\nplt.title(\"Durchbiegung eines Trägers\")\nplt.xlabel(\"Position (m)\")\nplt.ylabel(\"Durchbiegung (mm)\")\nplt.legend()\nplt.grid(True)\nplt.show()",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
+    ]
+  },
+  {
+    "objectID": "books/dataanalysis/anwendungsbeispiel.html#zusammenfassung",
+    "href": "books/dataanalysis/anwendungsbeispiel.html#zusammenfassung",
+    "title": "28  Anwendungsbeispiele",
+    "section": "28.3 Zusammenfassung",
+    "text": "28.3 Zusammenfassung\nIn dieser Einheit haben Sie gelernt:\n\nwie Daten eingelesen und bereinigt werden,\nwie man sie analysiert und visualisiert,\nwie Interpolation und Glättung funktionieren,\nwie reale Datensätze aus Technik und Naturwissenschaft ausgewertet werden können.\n\nDiese Fähigkeiten sind grundlegend für jede datengetriebene Analyse im Ingenieurbereich.",
+    "crumbs": [
+      "Arbeiten mit Daten",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Anwendungsbeispiele</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/introduction.html",
+    "href": "books/a-algorithmen/skript/introduction.html",
+    "title": "29  Einführung",
+    "section": "",
+    "text": "29.1 Definition\nEin Algorithmus ist eine formale Vorschrift darüber, wie die Lösung einer Fragestellung gefunden werden kann. Dabei handelt es sich meist um eine Folge von einfachen Anweisungen, welche zur Lösung komplexer Probleme führen kann.\nAlgorithmen sollten so formuliert sein, dass sie nicht nur für einzelne explizite Fragestellungen, sondern auch im Allgemeinen anwendbar sind. Das wird am Beispiel des schriftliche Dividierens oder anhand eines Kuchenrezepts deutlich. Beide bestehen aus einfachen Anweisungen und lösen ein komplexeres Problem. Allerdings kann die Rechenvorschrift für beliebige Divisionsaufgaben eingesetzt werden, während das Kuchenrezept nur zur Herstellung eines speziellen Kuchens führt.\nDie obigen Beispiele für einen Algorithmus sind zwei von vielen, welche von Menschen eingesetzt werden (können):\nViele Algorithmen aus unserem Alltag sind aus sehr elementaren Anweisungen aufgebaut. Trotz der Einfachheit der Anweisungen, können sie von Menschen nicht eingesetzt werden, da die erforderliche Anzahl von Operationen sehr hoch sein kann. An dieser Stelle kommen Computer zum Einsatz. Wie in diesem Kapitel gezeigt wird, können mit den Grundrechenarten und Logischen Verknüpfungen komplexe Probleme gelöst werden.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/introduction.html#definition",
+    "href": "books/a-algorithmen/skript/introduction.html#definition",
+    "title": "29  Einführung",
+    "section": "",
+    "text": "Algorithmus\n\n\n\n\n\nSchriftliches Rechnen\nLösen von linearen Gleichungssystemen\nBestimmung des Durchschnitts\nLösen eines Zauberwürfels",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/introduction.html#beispiele",
+    "href": "books/a-algorithmen/skript/introduction.html#beispiele",
+    "title": "29  Einführung",
+    "section": "29.2 Beispiele",
+    "text": "29.2 Beispiele\nBeispiele für Algorithmen aus dem Alltag bzw. Ingenieurwesen, welche auf Computer zurückgreifen:\n\nNumerische Lösung von Differentialgleichungen (z.B. Strukturmechanik, Wärmetransport)\nSuchmaschinen im Internet\nVorschläge beim online Einkaufen oder Medienkonsum\nAutonavigation",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umsetzung.html",
+    "href": "books/a-algorithmen/skript/umsetzung.html",
+    "title": "30  Von der Idee zum Code",
+    "section": "",
+    "text": "30.1 Kapitelübersicht\nIn diesem Kapitel werden folgende Themen behandelt:",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Von der Idee zum Code</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umsetzung.html#kapitelübersicht",
+    "href": "books/a-algorithmen/skript/umsetzung.html#kapitelübersicht",
+    "title": "30  Von der Idee zum Code",
+    "section": "",
+    "text": "Sortieralgorithmen\nEigenschaften von Algorithmen\nNumerische Algorithmen",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Von der Idee zum Code</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/sortieralgorithmen.html",
+    "href": "books/a-algorithmen/skript/sortieralgorithmen.html",
+    "title": "31  Sortieralgorithmen",
+    "section": "",
+    "text": "31.1 Selectionsort\nFolgende Grundidee liegt dem Selectionsort zugrunde: Es wird der minimale Wert der Liste gesucht, dann der zweit-kleinste und so weiter bis die ganze Liste sortiert ist. Dies kann als Abfolge dieser Schritte für eine Liste mit \\(\\mathsf n\\) Elementen formalisiert werden.\nDer Selectionsort kann auch als folgendes Flussdiagramm dargestellt werden.\nAls Zahlenbeispiel wird die Liste mit den Elementen 42, 6, 22, 11, 54, 12, 31 mit dem Selectionsort sortiert.\nA = [42, 6, 22, 11, 54, 12, 31]\n\nprint('Zu sortierende Werteliste ', A)\nprint()\n\nn = len(A)\nfor i in range(n):\n    mv = A[i]\n    mi = i\n    for j in range(i, n):\n        if A[j] &lt; mv:\n            mv = A[j]\n            mi = j\n\n    print(\"Iteration {:2d}: \".format(i+1))\n    print(\"   Minimum von \", A[i:n], \"ist\", mv)\n    A[mi] = A[i]\n    A[i] = mv\n    print(\"   Sortiert / Unsortiert: \", A[:i+1], \"/\", A[i+1:])\n    print()\n\nZu sortierende Werteliste  [42, 6, 22, 11, 54, 12, 31]\n\nIteration  1: \n   Minimum von  [42, 6, 22, 11, 54, 12, 31] ist 6\n   Sortiert / Unsortiert:  [6] / [42, 22, 11, 54, 12, 31]\n\nIteration  2: \n   Minimum von  [42, 22, 11, 54, 12, 31] ist 11\n   Sortiert / Unsortiert:  [6, 11] / [22, 42, 54, 12, 31]\n\nIteration  3: \n   Minimum von  [22, 42, 54, 12, 31] ist 12\n   Sortiert / Unsortiert:  [6, 11, 12] / [42, 54, 22, 31]\n\nIteration  4: \n   Minimum von  [42, 54, 22, 31] ist 22\n   Sortiert / Unsortiert:  [6, 11, 12, 22] / [54, 42, 31]\n\nIteration  5: \n   Minimum von  [54, 42, 31] ist 31\n   Sortiert / Unsortiert:  [6, 11, 12, 22, 31] / [42, 54]\n\nIteration  6: \n   Minimum von  [42, 54] ist 42\n   Sortiert / Unsortiert:  [6, 11, 12, 22, 31, 42] / [54]\n\nIteration  7: \n   Minimum von  [54] ist 54\n   Sortiert / Unsortiert:  [6, 11, 12, 22, 31, 42, 54] / []",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Sortieralgorithmen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/sortieralgorithmen.html#selectionsort",
+    "href": "books/a-algorithmen/skript/sortieralgorithmen.html#selectionsort",
+    "title": "31  Sortieralgorithmen",
+    "section": "",
+    "text": "Wiederhole die Schritte 2 bis 4 \\(\\mathsf n\\) Mal. Setzte die Hilfsvariable \\(i\\) initial auf Null.\nSuche den minimalen Wert der Liste ab dem \\(\\mathsf i\\)-ten Element.\nTausche dieses Element mit dem \\(\\mathsf i\\)-ten Element.\nErhöhe den Wert von \\(\\mathsf i\\) um Eins.\nDie Vertauschungen der Elemente haben zu einer sortierten Liste geführt.\n\n\n\n\n\nFlussdiagramm des Selectionsort",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Sortieralgorithmen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/sortieralgorithmen.html#bubblesort",
+    "href": "books/a-algorithmen/skript/sortieralgorithmen.html#bubblesort",
+    "title": "31  Sortieralgorithmen",
+    "section": "31.2 Bubblesort",
+    "text": "31.2 Bubblesort\nIm Gegensatz zum Selectionsort beruht die Idee des Bubblesort auf rein lokalen Operationen. D.h. hier wird nicht nach den maximalen Werten gesucht, sondern durch Vertauschungen eine Sortierung erzielt. Das Verfahren für eine Liste mit \\(\\mathsf n\\) Elementen ist durch folgende Vorschrift gegeben.\n\nDie Schritte 2 bis 4 werden \\(\\mathsf n\\) Mal durchgeführt. Die Hilfsvariable \\(\\mathsf i\\) wird initial auf Null gesetzt.\nStarte beim \\(\\mathsf i\\)-ten Element und iteriere bis zum Ende der Liste. Falls das aktuell betrachtete Element größer ist als das Folgende, tausche beide Elemente.\nFalls in Schritt 2 keine Vertauschungen durchgeführt wurden, gehe zu Schritt 5.\nAddiere Eins zum Wert der Variable \\(\\mathsf i\\).\nDie Liste ist sortiert und der Algorithmus ist fertig.\n\nDas nachfolgende Flussdiagramm verdeutlicht den Ablauf des Bubblesort Algorithmus. Bevor Sie sich das Diagram anschauen, versuchen Sie es einmal selbst zu erstellen.\n\n\n\n\n\n\nFlussdiagramm: Bubblesort\n\n\n\n\n\n\n\n\nFlussdiagramm des Bubblesort\n\n\n\n\n\nDer Ablauf des Bubblesort wird beispielhaft für die Liste 42, 6, 22, 11, 54, 12, 31 (gleich der im obigen Beispiel) vorgeführt.\n\nA = [42, 6, 22, 11, 54, 12, 31]\n\nprint('Zu sortierende Werteliste ', A)\nprint()\n\nn = len(A)\nswapped = True\ni = 0\nwhile swapped:\n    swapped = False\n    print(\"Iteration {:2d}: \".format(len(A) - n + 1))\n    print(\"   Liste zu Beginn der Iteration: \", A)\n    for j in range(n-1):\n        if A[j+1] &lt; A[j]:\n            print(\"   Tausche: \", A[j], \"und\", A[j+1])\n            mv = A[j]\n            A[j] = A[j+1]\n            A[j+1] = mv\n            print(\"   Liste nach Tausch: \", A)\n            swapped = True\n        else:\n            print(\"   Elemente \", A[j], \"und\", A[j+1], \" müssen nicht getauscht werden\")\n    n -= 1\n    if not swapped:\n        print(\"   kein Tausch mehr notwendig, Liste ist nun sortiert\")\n    print()\n\nZu sortierende Werteliste  [42, 6, 22, 11, 54, 12, 31]\n\nIteration  1: \n   Liste zu Beginn der Iteration:  [42, 6, 22, 11, 54, 12, 31]\n   Tausche:  42 und 6\n   Liste nach Tausch:  [6, 42, 22, 11, 54, 12, 31]\n   Tausche:  42 und 22\n   Liste nach Tausch:  [6, 22, 42, 11, 54, 12, 31]\n   Tausche:  42 und 11\n   Liste nach Tausch:  [6, 22, 11, 42, 54, 12, 31]\n   Elemente  42 und 54  müssen nicht getauscht werden\n   Tausche:  54 und 12\n   Liste nach Tausch:  [6, 22, 11, 42, 12, 54, 31]\n   Tausche:  54 und 31\n   Liste nach Tausch:  [6, 22, 11, 42, 12, 31, 54]\n\nIteration  2: \n   Liste zu Beginn der Iteration:  [6, 22, 11, 42, 12, 31, 54]\n   Elemente  6 und 22  müssen nicht getauscht werden\n   Tausche:  22 und 11\n   Liste nach Tausch:  [6, 11, 22, 42, 12, 31, 54]\n   Elemente  22 und 42  müssen nicht getauscht werden\n   Tausche:  42 und 12\n   Liste nach Tausch:  [6, 11, 22, 12, 42, 31, 54]\n   Tausche:  42 und 31\n   Liste nach Tausch:  [6, 11, 22, 12, 31, 42, 54]\n\nIteration  3: \n   Liste zu Beginn der Iteration:  [6, 11, 22, 12, 31, 42, 54]\n   Elemente  6 und 11  müssen nicht getauscht werden\n   Elemente  11 und 22  müssen nicht getauscht werden\n   Tausche:  22 und 12\n   Liste nach Tausch:  [6, 11, 12, 22, 31, 42, 54]\n   Elemente  22 und 31  müssen nicht getauscht werden\n\nIteration  4: \n   Liste zu Beginn der Iteration:  [6, 11, 12, 22, 31, 42, 54]\n   Elemente  6 und 11  müssen nicht getauscht werden\n   Elemente  11 und 12  müssen nicht getauscht werden\n   Elemente  12 und 22  müssen nicht getauscht werden\n   kein Tausch mehr notwendig, Liste ist nun sortiert",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Sortieralgorithmen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/eigenschaften.html",
+    "href": "books/a-algorithmen/skript/eigenschaften.html",
+    "title": "32  Eigenschaften",
+    "section": "",
+    "text": "32.1 Terminiertheit\nTerminiertheit bedeutet, dass ein Algorithmus nach endlich vielen Schritten anhält, oder er bricht kontrolliert ab. Einfache Beispiele:\nAllerdings kann die Terminiertheit nicht für alle Algerithmen gezeigt werden. Das Halteproblem besagt, dass es gibt keinen Verfahren gibt, welches immer zutreffend sagen kann, ob der Algorithmus für die Eingabe terminiert. Hierzu kann das Collatz-Problem als Beispiel herangezogen werden.\nDie Zahlenfolge wird wie folgt konstruiert:\nCollatz-Vermutung: Jede so konstruierte Zahlenfolge mündet in den Zyklus 4, 2, 1, egal, mit welcher natürlichen Zahl man beginnt. Bisher unbewiesen.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Eigenschaften</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/eigenschaften.html#terminiertheit",
+    "href": "books/a-algorithmen/skript/eigenschaften.html#terminiertheit",
+    "title": "32  Eigenschaften",
+    "section": "",
+    "text": "Addition zweier Dezimalzahlen\nSumme der ersten N natürlichen Zahlen\n\n\n\n\nbeginne mit irgendeiner natürlichen Zahl \\(\\mathsf n_0 &gt; 0\\)\nist \\(\\mathsf n_i\\) gerade so ist \\(\\mathsf n_{i+1} = n_i/2\\)\nist \\(\\mathsf n_i\\) ungerade so ist \\(\\mathsf n_{i+1} = 3n_i + 1\\)\nendet bei \\(\\mathsf n_i = 1\\)",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Eigenschaften</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/eigenschaften.html#determiniertheit",
+    "href": "books/a-algorithmen/skript/eigenschaften.html#determiniertheit",
+    "title": "32  Eigenschaften",
+    "section": "32.2 Determiniertheit",
+    "text": "32.2 Determiniertheit\nEin deterministischer Algorithmus ist ein Algorithmus, bei dem nur definierte und reproduzierbare Zustände auftreten. Die Ergebnisse des Algorithmus sind somit immer reproduzierbar. Beispiele hierfür:\n\nAddition ganzer Zahlen\nSelectionsort\nCollatz-Sequenz",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Eigenschaften</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/eigenschaften.html#effizienz",
+    "href": "books/a-algorithmen/skript/eigenschaften.html#effizienz",
+    "title": "32  Eigenschaften",
+    "section": "32.3 Effizienz",
+    "text": "32.3 Effizienz\nDie Effizienz eines Algorithmus ist nicht strikt definiert und kann folgende Aspekte umfassen:\n\nLaufzeit\nSpeicheraufwand\nEnergieverbrauch\n\nBei bestimmten Anwendungen sind entsprechende Eigenschaften notwendig:\n\nSpeicheraufwand bei Big Data, also riesige Datenmengen, z.B. in der Bioinformatik\nLaufzeit bei Echtzeitanwendung, z.B. Flugzeugsteuerung, Fußgängerdynamik",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Eigenschaften</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/eigenschaften.html#komplexität",
+    "href": "books/a-algorithmen/skript/eigenschaften.html#komplexität",
+    "title": "32  Eigenschaften",
+    "section": "32.4 Komplexität",
+    "text": "32.4 Komplexität\nBei der Analyse von Algorithmen, gilt es die Komplexiät zu bestimmen, welche ein Maß für den Aufwand darstellt. Dabei wird nach einer Aufwandfunktion \\(\\mathsf f(n)\\) gesucht, welche von der Problemgröße \\(\\mathsf n\\) abhängt. Beispiel für eine Problemgröße:\n\nAnzahl der Summanden bei einer Summe\nAnzahl der zu sortierenden Zahlen\n\nMeist wird dabei die Bestimmung auf eine asymptotische Analyse, d.h. eine einfache Vergleichsfunktion \\(\\mathsf g(n)\\) mit \\(\\mathsf n \\rightarrow \\infty\\), reduziert. Dabei beschränkt \\(\\mathsf g(n)\\) das Wachstum von \\(\\mathsf f(n)\\).\nDie Funktion \\(\\mathsf g(n)\\) wird oft durch ein \\(\\mathcal{O}\\) gekennzeichnet und gibt so eine möglichst einfache Vergleichsfunktion an. Beispiele:\n\n\\(\\mathsf f_1(n) = n^4 + 5n^2 - 10 \\approx \\mathcal{O}(n^4) = g_1(n)\\)\n\\(\\mathsf f_2(n) = 2^{n+1} \\approx \\mathcal{O}(2^n) = g_2(n)\\)\n\n\n\n\nKomplexität eines Algorithmus durch Vergleich einer Aufwandfunktion mit einer Vergleichsfunktion\n\n\nUm sich ein besseres Bild zu den Auswirkungen hoher Kompexitäten zu machen, sei folgendes Beispiel gegeben.\n\nein Berechnungsschritt (unabhängig von der Problemgröße \\(\\mathsf n\\)) sei z.B. 1 s lang\ndas \\(\\mathsf n\\) sei beispielsweise 1000\n\nDamit ergeben sich folgende (asymptotische) Abschätzungen der Laufzeit:\n\n\\(\\mathcal{O}(n)\\): 103 s ≈ 1 h\n\\(\\mathcal{O}(n^2)\\): 106 s ≈ 11 d\n\\(\\mathcal{O}(n^3)\\): 109 s ≈ 31 a\n\\(\\mathcal{O}(2^n)\\): 21000 s ≈ …\n\n\n32.4.1 Komplexität Selectionsort\nDie Kompexität dieses Verfahrens kann leicht abgeschätzt werden. Bei jedem Durchlauf wir das Minimum / Maximum gesucht, was anfangs \\(\\mathsf n\\) Operationen benötigt. Beim nächsten Durchlauf sind es nur noch \\(\\mathsf n − 1\\) Operationen und so weiter. In der Summe sind es also\n\\[ \\mathsf f(n) = \\sum_{i=0}^n i = \\frac{n(n-1)}{2} \\approx \\mathcal{O}(n^2) \\]\nDamit hat der Selectionsort eine Komplexität von \\(\\mathcal{O}(n^2)\\). Die folgende Abbildung verdeutlicht dies nochmals.\n\n\n10 42.039\n20 180.595\n30 418.626\n40 756.194\n50 1192.848\n60 1729.937\n70 2366.187\n80 3104.538\n90 3941.895\n100 4875.17\n\n\n\n\n\nAbschätzung der Koplexität des Selectionsort-Algorithmus\n\n\n\n\n32.4.2 Komplexität Bubblesort\nDie Komplexität des Bubblesort muss unterschieden werden in den günstigsten Fall (best case), den ungünstigsten Fall (worst case) und einem durchschnittlichen Fall (average case):\n\nbest case: \\(\\mathcal{O} (n)\\)\nworst case: \\(\\mathcal{O} (n^2)\\)\naverage case: \\(\\mathcal{O} (n^2)\\)\n\nDer best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes \\(\\mathsf n\\) jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.\n\n\n10 41.9546\n20 181.0454\n30 419.1131\n40 756.6019\n50 1194.7992\n60 1732.2145\n70 2369.3094\n80 3106.1092\n90 3943.0151\n100 4879.5779\n\n\n\n\n\nAbschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung\n\n\n\n\n10 30.0805\n20 126.6143\n30 304.8045\n40 544.497\n50 903.6953\n60 1312.1336\n70 1865.3356\n80 2434.0872\n90 3191.8639\n100 3942.4583\n\n\n\n\n\nAbschätzung der Koplexität des Bubblesort-Algorithmus mit einer 95%-igen Vorsortierung",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Eigenschaften</span>"
+    ]
+  }
+]

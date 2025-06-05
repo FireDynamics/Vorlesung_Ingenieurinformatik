@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -534,26 +500,11 @@ window.Quarto = {
 <li>Anzahl der zu sortierenden Zahlen</li>
 </ul>
 <p>Meist wird dabei die Bestimmung auf eine asymptotische Analyse, d.h. eine einfache Vergleichsfunktion <span class="math inline">\(\mathsf g(n)\)</span> mit <span class="math inline">\(\mathsf n \rightarrow \infty\)</span>, reduziert. Dabei beschränkt <span class="math inline">\(\mathsf g(n)\)</span> das Wachstum von <span class="math inline">\(\mathsf f(n)\)</span>.</p>
-<p>Die Funktion <span class="math inline">\(\mathsf g(n)\)</span> wird oft durch ein <span class="math inline">\(\mathsf \mathcal{O}\)</span> gekennzeichnet und gibt so eine möglichst einfache Vergleichsfunktion an. Beispiele:</p>
+<p>Die Funktion <span class="math inline">\(\mathsf g(n)\)</span> wird oft durch ein <span class="math inline">\(\mathcal{O}\)</span> gekennzeichnet und gibt so eine möglichst einfache Vergleichsfunktion an. Beispiele:</p>
 <ul>
 <li><span class="math inline">\(\mathsf f_1(n) = n^4 + 5n^2 - 10 \approx \mathcal{O}(n^4) = g_1(n)\)</span></li>
 <li><span class="math inline">\(\mathsf f_2(n) = 2^{n+1} \approx \mathcal{O}(2^n) = g_2(n)\)</span></li>
 </ul>
-<div id="c3f30961" class="cell" data-tags="[&quot;remove_input&quot;]" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">1</span>,<span class="dv">100</span>,<span class="dv">500</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> x<span class="op">**</span><span class="dv">4</span> <span class="op">-</span> <span class="dv">60</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1000</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> x<span class="op">**</span><span class="dv">4</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x,f, label<span class="op">=</span><span class="st">"$f_1(n)$"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x,g, label<span class="op">=</span><span class="st">'$g_1(n)$'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'n'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.xscale(<span class="st">'log'</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'00-bilder/komplexitaet.svg'</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="00-bilder/komplexitaet.svg" class="img-fluid figure-img"></p>
@@ -567,151 +518,29 @@ window.Quarto = {
 </ul>
 <p>Damit ergeben sich folgende (asymptotische) Abschätzungen der Laufzeit:</p>
 <ul>
-<li><span class="math inline">\(\mathsf \mathcal{O}(n)\)</span>: 10<sup>3</sup> s ≈ 1 h</li>
-<li><span class="math inline">\(\mathsf \mathcal{O}(n^2)\)</span>: 10<sup>6</sup> s ≈ 11 d</li>
-<li><span class="math inline">\(\mathsf \mathcal{O}(n^3)\)</span>: 10<sup>9</sup> s ≈ 31 a</li>
-<li><span class="math inline">\(\mathsf \mathcal{O}(2^n)\)</span>: 2<sup>1000</sup> s ≈ …</li>
+<li><span class="math inline">\(\mathcal{O}(n)\)</span>: 10<sup>3</sup> s ≈ 1 h</li>
+<li><span class="math inline">\(\mathcal{O}(n^2)\)</span>: 10<sup>6</sup> s ≈ 11 d</li>
+<li><span class="math inline">\(\mathcal{O}(n^3)\)</span>: 10<sup>9</sup> s ≈ 31 a</li>
+<li><span class="math inline">\(\mathcal{O}(2^n)\)</span>: 2<sup>1000</sup> s ≈ …</li>
 </ul>
 <section id="komplexität-selectionsort" class="level3" data-number="32.4.1">
 <h3 data-number="32.4.1" class="anchored" data-anchor-id="komplexität-selectionsort"><span class="header-section-number">32.4.1</span> Komplexität Selectionsort</h3>
 <p>Die Kompexität dieses Verfahrens kann leicht abgeschätzt werden. Bei jedem Durchlauf wir das Minimum / Maximum gesucht, was anfangs <span class="math inline">\(\mathsf n\)</span> Operationen benötigt. Beim nächsten Durchlauf sind es nur noch <span class="math inline">\(\mathsf n − 1\)</span> Operationen und so weiter. In der Summe sind es also</p>
 <p><span class="math display">\[ \mathsf f(n) = \sum_{i=0}^n i = \frac{n(n-1)}{2} \approx \mathcal{O}(n^2) \]</span></p>
-<p>Damit hat der Selectionsort eine Komplexität von <span class="math inline">\(\mathsf \mathcal{O}(n^2)\)</span>. Die folgende Abbildung verdeutlicht dies nochmals.</p>
-<div id="bf13b2e8" class="cell" data-jupyter="{&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_input&quot;,&quot;remove_cell&quot;]" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_sel(A):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    cnt <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(A)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        mv <span class="op">=</span> A[i]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        mi <span class="op">=</span> i</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i, n):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            cnt <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> A[j] <span class="op">&lt;</span> mv:</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                mv <span class="op">=</span> A[j]</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                mi <span class="op">=</span> j</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#                 cnt += 1</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        A[mi] <span class="op">=</span> A[i]</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        A[i] <span class="op">=</span> mv</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#         cnt += 1</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cnt</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_bubble(A):</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    cnt <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(A)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        swapped <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n<span class="op">-</span>i<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#             print(j, 0, n-i)</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            cnt <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> A[j<span class="op">+</span><span class="dv">1</span>] <span class="op">&lt;</span> A[j]:</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                mv <span class="op">=</span> A[j]</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                A[j] <span class="op">=</span> A[j<span class="op">+</span><span class="dv">1</span>]</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                A[j<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> mv</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                 cnt += 3</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                swapped <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> swapped <span class="op">==</span> <span class="va">False</span>:</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#             print('no swap', i)</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> cnt</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cnt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="846ccc8e" class="cell" data-jupyter="{&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyse_sorting(sort_fnk, non_rand_p <span class="op">=</span> <span class="fl">0.0</span>, reps <span class="op">=</span> <span class="dv">100</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    n_max <span class="op">=</span> <span class="dv">100001</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    rand_A <span class="op">=</span> np.random.randint(<span class="dv">0</span>, high<span class="op">=</span>n_max <span class="op">//</span> <span class="dv">2</span>, size<span class="op">=</span><span class="dv">10</span><span class="op">*</span>n_max)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> time_sorting(n):</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        i <span class="op">=</span> np.random.randint(<span class="dv">0</span>, n_max, size<span class="op">=</span><span class="dv">1</span>)[<span class="dv">0</span>]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        A <span class="op">=</span> np.copy(rand_A[i:i<span class="op">+</span>n])</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        non_rand_i <span class="op">=</span> np.linspace(<span class="dv">0</span>, n<span class="op">-</span><span class="dv">1</span>, <span class="bu">int</span>(n<span class="op">*</span>non_rand_p), dtype<span class="op">=</span>np.int32)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#         print(n, len(non_rand_i))</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        A[non_rand_i] <span class="op">=</span> np.linspace(<span class="dv">0</span>, n_max<span class="op">//</span><span class="dv">2</span>, <span class="bu">len</span>(non_rand_i), dtype<span class="op">=</span>np.int32)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#         print(A)</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> sort_fnk(A)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    res_min <span class="op">=</span> []</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    res_avg <span class="op">=</span> []</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    res_max <span class="op">=</span> []</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    ns <span class="op">=</span> []</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># for n in range(1, 10, 1):</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#     print(n)</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#     res = []</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#     for r in range(reps):</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#         res.append(time_sorting(n))</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     ns.append(n)</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     res_min.append(np.min(res))</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     res_max.append(np.max(res))</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#     res_avg.append(np.average(res))</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">101</span>, <span class="dv">10</span>):</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#         print(n)</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        res <span class="op">=</span> []</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(reps):</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>            res.append(time_sorting(n))</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        ns.append(n)</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        res_min.append(np.<span class="bu">min</span>(res))</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        res_max.append(np.<span class="bu">max</span>(res))</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        res_avg.append(np.average(res))</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(n, np.average(res))</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     for n in range(100, 1101, 100):</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         print(n)</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co">#         res = []</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co">#         for r in range(reps):</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co">#             res.append(time_sorting(n))</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="co">#         ns.append(n)</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co">#         res_min.append(np.min(res))</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co">#         res_max.append(np.max(res))</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co">#         res_avg.append(np.average(res))</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(ns), np.array(res_min), np.array(res_avg), np.array(res_max)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="428bb5b6" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_sorting(res, label, avg_only <span class="op">=</span> <span class="va">False</span>, title<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    ns, y1, y2, y3 <span class="op">=</span> res</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> avg_only:</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        plt.plot(ns, y1, color<span class="op">=</span><span class="st">'C0'</span>, lw<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        plt.plot(ns, y3, color<span class="op">=</span><span class="st">'C0'</span>, lw<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span><span class="st">'Min / Max'</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        plt.fill_between(ns, y1, y3, alpha<span class="op">=</span><span class="fl">0.3</span>, color<span class="op">=</span><span class="st">'C0'</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    plt.plot(ns, y2, color<span class="op">=</span><span class="st">'C1'</span>, label<span class="op">=</span><span class="st">'Mittelwert'</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    yi1 <span class="op">=</span> <span class="fl">1e0</span> <span class="op">*</span> ns</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    yi2 <span class="op">=</span> <span class="fl">1e0</span> <span class="op">*</span> ns<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    plt.plot(ns, yi1, ls<span class="op">=</span><span class="st">':'</span>, color<span class="op">=</span><span class="st">'C2'</span>, label<span class="op">=</span><span class="st">'Hilfslinien, $\mathcal</span><span class="sc">{O}</span><span class="st">(n)$, $\mathcal</span><span class="sc">{O}</span><span class="st">(n^2)$'</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    plt.plot(ns, yi2, ls<span class="op">=</span><span class="st">':'</span>, color<span class="op">=</span><span class="st">'C2'</span>)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    plt.xscale(<span class="st">'log'</span>)</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Länge der Werteliste'</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Durchgeführte Operationen'</span>)</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    plt.grid()</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> title:</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        plt.title(title)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    plt.savefig(<span class="st">'00-bilder/</span><span class="sc">{}</span><span class="st">.svg'</span>.<span class="bu">format</span>(label))</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="c96778bd" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>res1 <span class="op">=</span> analyse_sorting(sort_bubble, non_rand_p <span class="op">=</span> <span class="fl">0.0</span>, reps <span class="op">=</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Damit hat der Selectionsort eine Komplexität von <span class="math inline">\(\mathcal{O}(n^2)\)</span>. Die folgende Abbildung verdeutlicht dies nochmals.</p>
+<div id="b802db8f" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 42.146
-20 181.655
-30 419.084
-40 756.835
-50 1193.535
-60 1727.061
-70 2368.03
-80 3106.593
-90 3943.65
-100 4883.456</code></pre>
+<pre><code>10 42.039
+20 180.595
+30 418.626
+40 756.194
+50 1192.848
+60 1729.937
+70 2366.187
+80 3104.538
+90 3941.895
+100 4875.17</code></pre>
 </div>
-</div>
-<div id="2ec3baf1" class="cell" data-tags="[&quot;remove_input&quot;]" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plot_sorting(res1, <span class="st">'sort_selection'</span>, avg_only <span class="op">=</span> <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -724,28 +553,24 @@ window.Quarto = {
 <h3 data-number="32.4.2" class="anchored" data-anchor-id="komplexität-bubblesort"><span class="header-section-number">32.4.2</span> Komplexität Bubblesort</h3>
 <p>Die Komplexität des Bubblesort muss unterschieden werden in den günstigsten Fall (best case), den ungünstigsten Fall (worst case) und einem durchschnittlichen Fall (average case):</p>
 <ul>
-<li>best case: <span class="math inline">\(\mathsf \mathcal{O} (n)\)</span></li>
-<li>worst case: <span class="math inline">\(\mathsf \mathcal{O} (n^2)\)</span></li>
-<li>average case: <span class="math inline">\(\mathsf \mathcal{O} (n^2)\)</span></li>
+<li>best case: <span class="math inline">\(\mathcal{O} (n)\)</span></li>
+<li>worst case: <span class="math inline">\(\mathcal{O} (n^2)\)</span></li>
+<li>average case: <span class="math inline">\(\mathcal{O} (n^2)\)</span></li>
 </ul>
 <p>Der best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes <span class="math inline">\(\mathsf n\)</span> jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.</p>
-<div id="48a37a1c" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>res2 <span class="op">=</span> analyse_sorting(sort_bubble, non_rand_p <span class="op">=</span> <span class="fl">0.0</span>, reps <span class="op">=</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="328580a6" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 41.9902
-20 181.1026
-30 419.059
-40 757.3518
-50 1194.1962
-60 1731.793
-70 2368.5196
-80 3105.4371
-90 3941.4753
-100 4877.4439</code></pre>
+<pre><code>10 41.9546
+20 181.0454
+30 419.1131
+40 756.6019
+50 1194.7992
+60 1732.2145
+70 2369.3094
+80 3106.1092
+90 3943.0151
+100 4879.5779</code></pre>
 </div>
-</div>
-<div id="12f72122" class="cell" data-tags="[&quot;remove_input&quot;]" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plot_sorting(res2, <span class="st">'sort_bubble_p000'</span>, title<span class="op">=</span><span class="st">'0\% vorsortiert'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -753,23 +578,19 @@ window.Quarto = {
 <figcaption>Abschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung</figcaption>
 </figure>
 </div>
-<div id="9207edf0" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>res3 <span class="op">=</span> analyse_sorting(sort_bubble, non_rand_p <span class="op">=</span> <span class="fl">0.95</span>, reps <span class="op">=</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="72942b6b" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 30.0619
-20 126.6126
-30 306.5029
-40 545.3781
-50 907.0299
-60 1305.1662
-70 1860.7473
-80 2440.4905
-90 3193.3467
-100 3971.6761</code></pre>
+<pre><code>10 30.0805
+20 126.6143
+30 304.8045
+40 544.497
+50 903.6953
+60 1312.1336
+70 1865.3356
+80 2434.0872
+90 3191.8639
+100 3942.4583</code></pre>
 </div>
-</div>
-<div id="4c8d3242" class="cell" data-tags="[&quot;remove_input&quot;]" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plot_sorting(res3, <span class="st">'sort_bubble_p095'</span>, title<span class="op">=</span><span class="st">'95\% vorsortiert'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
