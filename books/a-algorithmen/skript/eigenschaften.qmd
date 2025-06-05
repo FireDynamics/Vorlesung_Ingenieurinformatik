@@ -56,13 +56,13 @@ Bei der Analyse von Algorithmen, gilt es die Komplexiät zu bestimmen, welche ei
 
 Meist wird dabei die Bestimmung auf eine asymptotische Analyse, d.h. eine einfache Vergleichsfunktion $\mathsf g(n)$ mit $\mathsf n \rightarrow \infty$, reduziert. Dabei beschränkt $\mathsf g(n)$ das Wachstum von $\mathsf f(n)$.
 
-Die Funktion $\mathsf g(n)$ wird oft durch ein $\mathsf \mathcal{O}$ gekennzeichnet und gibt so eine möglichst einfache Vergleichsfunktion an. Beispiele:
+Die Funktion $\mathsf g(n)$ wird oft durch ein $\mathcal{O}$ gekennzeichnet und gibt so eine möglichst einfache Vergleichsfunktion an. Beispiele:
 
 * $\mathsf f_1(n) = n^4 + 5n^2 - 10 \approx \mathcal{O}(n^4) = g_1(n)$ 
 * $\mathsf f_2(n) = 2^{n+1} \approx \mathcal{O}(2^n) = g_2(n)$ 
 
 ```{python}
-#| tags: [remove_input]
+#| echo: false
 x = np.linspace(1,100,500)
 f = x**4 - 60*x**2 + 1000
 g = x**4
@@ -87,10 +87,10 @@ Um sich ein besseres Bild zu den Auswirkungen hoher Kompexitäten zu machen, sei
 
 Damit ergeben sich folgende (asymptotische) Abschätzungen der Laufzeit:
 
-* $\mathsf \mathcal{O}(n)$: 10<sup>3</sup> s ≈ 1 h 
-* $\mathsf \mathcal{O}(n^2)$: 10<sup>6</sup> s ≈ 11 d 
-* $\mathsf \mathcal{O}(n^3)$: 10<sup>9</sup> s ≈ 31 a 
-* $\mathsf \mathcal{O}(2^n)$: 2<sup>1000</sup> s ≈ ...
+* $\mathcal{O}(n)$: 10<sup>3</sup> s ≈ 1 h 
+* $\mathcal{O}(n^2)$: 10<sup>6</sup> s ≈ 11 d 
+* $\mathcal{O}(n^3)$: 10<sup>9</sup> s ≈ 31 a 
+* $\mathcal{O}(2^n)$: 2<sup>1000</sup> s ≈ ...
 
 ### Komplexität Selectionsort
 
@@ -98,10 +98,11 @@ Die Kompexität dieses Verfahrens kann leicht abgeschätzt werden. Bei jedem Dur
 
 $$ \mathsf f(n) = \sum_{i=0}^n i = \frac{n(n-1)}{2} \approx \mathcal{O}(n^2) $$
 
-Damit hat der Selectionsort eine Komplexität von $\mathsf \mathcal{O}(n^2)$. Die folgende Abbildung verdeutlicht dies nochmals.
+Damit hat der Selectionsort eine Komplexität von $\mathcal{O}(n^2)$. Die folgende Abbildung verdeutlicht dies nochmals.
 
 ```{python}
 #| jupyter: {source_hidden: true}
+#| echo: false
 #| tags: [remove_input, remove_cell]
 def sort_sel(A):
     cnt = 0
@@ -141,6 +142,7 @@ def sort_bubble(A):
 ```
 
 ```{python}
+#| echo: false
 #| jupyter: {source_hidden: true}
 #| tags: [remove_cell]
 def analyse_sorting(sort_fnk, non_rand_p = 0.0, reps = 100):
@@ -196,6 +198,7 @@ def analyse_sorting(sort_fnk, non_rand_p = 0.0, reps = 100):
 ```
 
 ```{python}
+#| echo: false
 #| tags: [remove_cell]
 def plot_sorting(res, label, avg_only = False, title=None):
     
@@ -227,6 +230,7 @@ def plot_sorting(res, label, avg_only = False, title=None):
 ```
 
 ```{python}
+#| echo: false
 #| collapsed: true
 #| jupyter: {outputs_hidden: true, source_hidden: true}
 #| tags: [remove_cell]
@@ -234,6 +238,7 @@ res1 = analyse_sorting(sort_bubble, non_rand_p = 0.0, reps = 1000)
 ```
 
 ```{python}
+#| echo: false
 #| tags: [remove_input]
 plot_sorting(res1, 'sort_selection', avg_only = True)
 ```
@@ -244,18 +249,20 @@ plot_sorting(res1, 'sort_selection', avg_only = True)
 
 Die Komplexität des Bubblesort muss unterschieden werden in den günstigsten Fall (best case), den ungünstigsten Fall (worst case) und einem durchschnittlichen Fall (average case):
 
-* best case: $\mathsf \mathcal{O} (n)$
-* worst case: $\mathsf \mathcal{O} (n^2)$ 
-* average case: $\mathsf \mathcal{O} (n^2)$
+* best case: $\mathcal{O} (n)$
+* worst case: $\mathcal{O} (n^2)$ 
+* average case: $\mathcal{O} (n^2)$
 
 Der best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes $\mathsf n$ jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.
 
 ```{python}
+#| echo: false
 #| tags: [remove_cell]
 res2 = analyse_sorting(sort_bubble, non_rand_p = 0.0, reps = 10000)
 ```
 
 ```{python}
+#| echo: false
 #| tags: [remove_input]
 plot_sorting(res2, 'sort_bubble_p000', title='0\% vorsortiert')
 ```
@@ -263,11 +270,13 @@ plot_sorting(res2, 'sort_bubble_p000', title='0\% vorsortiert')
 ![Abschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung](00-bilder/sort_bubble_p000.svg)
 
 ```{python}
+#| echo: false
 #| tags: [remove_cell]
 res3 = analyse_sorting(sort_bubble, non_rand_p = 0.95, reps = 10000)
 ```
 
 ```{python}
+#| echo: false
 #| tags: [remove_input]
 plot_sorting(res3, 'sort_bubble_p095', title='95\% vorsortiert')
 ```
