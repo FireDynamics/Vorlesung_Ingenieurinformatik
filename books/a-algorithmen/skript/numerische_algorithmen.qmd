@@ -1,0 +1,379 @@
+# Numerische Algorithmen
+
+```{python}
+#| echo: false
+import copy
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+## Newton-Raphson-Verfahren
+
+Eines der einfachsten und auch ältesten Verfahren zur Suche von Nullstellen von 
+Funktionen ist das [Newton-Raphson-Verfahren](https://de.wikipedia.org/wiki/Newtonverfahren), 
+welches bereits im 17-ten Jahrhundert entwickelt und eingestetzt wurde.
+
+### Anwendungen
+Das Finden von Nullstellen ist die Grundlage für viele Verfahren, welche z.B. für 
+
+* das Lösen von nicht-linearen Gleichungen, 
+* das Finden von Extremwerten, oder
+* Optimierungsverfahren
+
+eingesetzt werden kann.
+ 
+
+### Grundidee 
+Die Grundidee beruht auf einer iterativen Suche der Nullstelle $\mathsf x_{ns}$ 
+einer stetig differenzierbaren Funktion $\mathsf f(x)$ mit Hilfe der ersten Ableitung 
+$\mathsf f'(x)$. Durch das Anlegen von Tangenten an die aktuelle Näherung der Nullstelle 
+$\mathsf x_i$ kann die nächste Näherung bestimmt werden. 
+
+Bei gegebenen Startwert, $\mathsf x_0$ für den ersten Iterationsschritt ($\mathsf i=0$), 
+können die folgenden Näherungen durch
+
+$$\mathsf x_{i+1} = x_i - \frac{f(x_i)}{f'(x_i)} $$
+
+berechnet werden. Dabei bestimmt die Wahl des Startwerts, welche der ggf. 
+mehreren Nullstellen gefunden wird. 
+
+### Beispiel 1
+
+Gegeben ist die Funktion $\mathsf f(x) = x^2 - 1$. Die Ableitung ist gegeben durch 
+$\mathsf f'(x) = 2x$ und die Nullstellen lauten $\mathsf x_{ns} = \{-1, 1\}$.
+
+Bei einem Startwert von $\mathsf x_0 = 0.3$ führt zu folgender Iteration:
+
+```{python}
+#| echo: false
+#| tags: [remove_input]
+def f(x):
+    return x**2 - 1
+def fp(x):
+    return 2*x
+
+x0 = 0.3
+
+print('Startwert x_0 = {:.4f}'.format(x0))
+print()
+
+n = 5
+xi = [x0]
+for i in range(1,n):
+    xp = xi[i-1]
+    xn = xp - (f(xp)/fp(xp))
+    
+    print('Iterationsschritt i = {:2d}, x_i = {:.4f}'.format(i, xp))
+    print('   f(x_i)  = {:.4f}'.format(f(xp)))
+    print('   fp(x_i) = {:.4f}'.format(fp(xp)))
+    print('   x_(i+1) = {:.4f}'.format(xn))
+    print()
+    
+    xi.append(xn)
+    
+print()
+print('Endergebnis nach {} Iterationen: x_(ns) = {:.4f}'.format(n, xi[-1]))
+```
+
+```{python}
+#| echo: false
+#| tags: [remove_cell]
+x_start = np.min(xi)
+x_end = np.max(xi)
+
+x_d = x_end - x_start
+
+x_start -= 0.1 * x_d
+x_end += 0.1 * x_d
+
+xarr = np.linspace(x_start, x_end, 100)
+yarr = f(xarr)
+y_d = np.max(yarr) - np.min(yarr)
+
+
+n_max = 4
+first = True
+for n in range(0, n_max+1):
+    plt.plot(xarr, f(xarr), label='f(x)')
+    plt.axhline(0, c='grey', zorder=0)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    for i in range(n):
+        x = xi[i]
+        xn = xi[i+1]
+        c = 'C3'
+        a = 1.0
+        if i != n-1:
+            c = 'gray'
+            a = 0.3
+        plt.scatter(x, 0, c=c, alpha=a, label='Iterationspunkte $x_i$' if first else None, zorder=3)
+        plt.vlines(x, 0, f(x), color='grey', ls=':', zorder=0, alpha=a)
+        if x > xn:
+            x_t1 = xn - 0.1*x_d
+            x_t2 = x + 0.1*x_d
+            y_t1 = - 0.1*x_d * fp(x)
+            y_t2 = f(x) + 0.1*x_d * fp(x)
+        else:
+            x_t2 = xn + 0.1*x_d
+            x_t1 = x - 0.1*x_d
+            y_t2 = 0.1*x_d * fp(x)
+            y_t1 = f(x) - 0.1*x_d * fp(x)
+
+    #     plt.plot([x, xn], [f(x), 0], c='C3')
+        plt.plot([x_t1, x_t2], [y_t1, y_t2], c=c, alpha=a, label='Tangenten' if first else None)
+        if i == n_max:
+            plt.scatter(xn, 0, c='C4', zorder=3)
+        first = False
+    plt.savefig('00-bilder/newton_bsp1_step_{:02d}.svg'.format(n))
+    plt.clf()
+```
+
+```{python}
+#| echo: false
+#| tags: [remove_input]
+n_max = 3
+first = True
+
+plt.plot(xarr, f(xarr), label='f(x)', c='C0')
+plt.axhline(0, c='grey', zorder=0)
+plt.xlabel('x')
+plt.ylabel('f(x)')
+
+for i in range(n_max):
+    x = xi[i]
+    xn = xi[i+1]
+    c = 'C1'
+    a = 1.0
+    plt.scatter(x, 0, c='C2', alpha=a, label='Iterationspunkte $x_i$' if first else None, zorder=3)
+    plt.vlines(x, 0, f(x), color='grey', ls=':', zorder=0, alpha=a)
+    if x > xn:
+        x_t1 = xn - 0.1*x_d
+        x_t2 = x + 0.1*x_d
+        y_t1 = - 0.1*x_d * fp(x)
+        y_t2 = f(x) + 0.1*x_d * fp(x)
+    else:
+        x_t2 = xn + 0.1*x_d
+        x_t1 = x - 0.1*x_d
+        y_t2 = 0.1*x_d * fp(x)
+        y_t1 = f(x) - 0.1*x_d * fp(x)
+
+    plt.plot([x_t1, x_t2], [y_t1, y_t2], c=c, alpha=0.75, label='Tangenten' if first else None)
+    if i == n_max:
+        plt.scatter(xn, 0, c='C4', zorder=3)
+    first = False    
+
+text_y = 0.035 * y_d
+plt.text(xi[0]+0.025*x_d, text_y, '$x_0$')
+plt.text(xi[1]+0.025*x_d, text_y, '$x_1$')
+plt.text(xi[2]+0.025*x_d, -1.5*text_y, '$x_2$')
+plt.text(xi[3]-2*0.025*x_d, text_y, '$x_3$')
+
+plt.scatter(xi[n_max], 0, c='C2', zorder=3)
+# plt.text(xi[n_max], 0.035 * y_d, 'x_{}'.format(n_max))
+plt.legend()
+plt.savefig('00-bilder/newton_bsp1.svg')
+# plt.show()
+plt.close()
+```
+
+![Newton-Verfahren, Beispiel 1](00-bilder/newton_bsp1.svg)
+
+::: {.panel-tabset}
+
+## Schritt 0
+![](00-bilder/newton_bsp1_step_00.svg)
+
+## Schritt 1
+![](00-bilder/newton_bsp1_step_01.svg)
+
+## Schritt 2
+![](00-bilder/newton_bsp1_step_02.svg)
+
+## Schritt 3
+![](00-bilder/newton_bsp1_step_03.svg)
+
+## Schritt 4
+![](00-bilder/newton_bsp1_step_04.svg)
+:::
+
+### Beispiel 2
+
+Gegeben ist die Funktion $\mathsf f(x) = \sin(x) - 0.5$ mit der Ableitung $\mathsf f'(x) = \cos(x)$.
+
+```{python}
+#| tags: [remove_input]
+def f(x):
+    return np.sin(x) -0.5
+def fp(x):
+    return np.cos(x)
+
+x0 = 1.3
+
+print('Startwert x_0 = {:.4f}'.format(x0))
+print()
+
+n = 5
+xi = [x0]
+for i in range(1,n):
+    xp = xi[i-1]
+    xn = xp - (f(xp)/fp(xp))
+    
+    print('Iterationsschritt i = {:2d}, x_i = {:.4f}'.format(i, xp))
+    print('   f(x_i)  = {:.4f}'.format(f(xp)))
+    print('   fp(x_i) = {:.4f}'.format(fp(xp)))
+    print('   x_(i+1) = {:.4f}'.format(xn))
+    print()
+    
+    xi.append(xn)
+    
+print()
+print('Endergebnis nach {} Iterationen: x_(ns) = {:.4f}'.format(n, xi[-1]))
+```
+
+```{python}
+#| echo: false
+#| tags: [remove_input, remove_cell]
+x_start = np.min(xi)
+x_end = np.max(xi)
+
+x_d = x_end - x_start
+
+x_start -= 0.1 * x_d
+x_end += 0.1 * x_d
+
+xarr = np.linspace(x_start, x_end, 100)
+yarr = f(xarr)
+y_d = np.max(yarr) - np.min(yarr)
+
+
+n_max = 4
+first = True
+for n in range(0, n_max+1):
+    plt.plot(xarr, f(xarr), label='f(x)')
+    plt.axhline(0, c='grey', zorder=0)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    for i in range(n):
+        x = xi[i]
+        xn = xi[i+1]
+        c = 'C3'
+        a = 1.0
+        if i != n-1:
+            c = 'gray'
+            a = 0.3
+        plt.scatter(x, 0, c=c, alpha=a, label='Iterationspunkte $x_i$' if first else None, zorder=3)
+        plt.vlines(x, 0, f(x), color='grey', ls=':', zorder=0, alpha=a)
+        if x > xn:
+            x_t1 = xn - 0.1*x_d
+            x_t2 = x + 0.1*x_d
+            y_t1 = - 0.1*x_d * fp(x)
+            y_t2 = f(x) + 0.1*x_d * fp(x)
+        else:
+            x_t2 = xn + 0.1*x_d
+            x_t1 = x - 0.1*x_d
+            y_t2 = 0.1*x_d * fp(x)
+            y_t1 = f(x) - 0.1*x_d * fp(x)
+
+    #     plt.plot([x, xn], [f(x), 0], c='C3')
+        plt.plot([x_t1, x_t2], [y_t1, y_t2], c=c, alpha=a, label='Tangenten' if first else None)
+        if i == n_max:
+            plt.scatter(xn, 0, c='C4', zorder=3)
+        first = False
+    plt.savefig('00-bilder/newton_bsp2_step_{:02d}.svg'.format(n))
+    plt.close()
+```
+
+```{python}
+#| echo: false
+#| tags: [remove_input]
+n_max = 3
+first = True
+
+plt.plot(xarr, f(xarr), label='f(x)', c='C0')
+plt.axhline(0, c='grey', zorder=0)
+plt.xlabel('x')
+plt.ylabel('f(x)')
+
+for i in range(n_max):
+    x = xi[i]
+    xn = xi[i+1]
+    c = 'C1'
+    a = 1.0
+    plt.scatter(x, 0, c='C2', alpha=a, label='Iterationspunkte $x_i$' if first else None, zorder=3)
+    plt.vlines(x, 0, f(x), color='grey', ls=':', zorder=0, alpha=a)
+    if x > xn:
+        x_t1 = xn - 0.1*x_d
+        x_t2 = x + 0.1*x_d
+        y_t1 = - 0.1*x_d * fp(x)
+        y_t2 = f(x) + 0.1*x_d * fp(x)
+    else:
+        x_t2 = xn + 0.1*x_d
+        x_t1 = x - 0.1*x_d
+        y_t2 = 0.1*x_d * fp(x)
+        y_t1 = f(x) - 0.1*x_d * fp(x)
+
+    plt.plot([x_t1, x_t2], [y_t1, y_t2], c=c, alpha=0.75, label='Tangenten' if first else None)
+    if i == n_max:
+        plt.scatter(xn, 0, c='C4', zorder=3)
+    first = False    
+
+text_y = 0.035 * y_d
+plt.text(xi[0]+0.025*x_d, text_y, '$x_0$')
+plt.text(xi[1]-2*0.025*x_d, text_y, '$x_1$')
+plt.text(xi[2]+0.025*x_d, -1.5*text_y, '$x_2$')
+plt.text(xi[3]-2*0.025*x_d, text_y, '$x_3$')
+
+plt.scatter(xi[n_max], 0, c='C2', zorder=3)
+# plt.text(xi[n_max], 0.035 * y_d, 'x_{}'.format(n_max))
+plt.legend()
+plt.savefig('00-bilder/newton_bsp2.svg')
+# plt.show()
+plt.close()
+```
+
+![Newton-Verfahren, Beispiel 2](00-bilder/newton_bsp2.svg)
+
+::: {.panel-tabset}
+
+## Schritt 0
+![](00-bilder/newton_bsp2_step_00.svg)
+
+## Schritt 1
+![](00-bilder/newton_bsp2_step_01.svg)
+
+## Schritt 2
+![](00-bilder/newton_bsp2_step_02.svg)
+
+## Schritt 3
+![](00-bilder/newton_bsp2_step_03.svg)
+
+## Schritt 4
+![](00-bilder/newton_bsp2_step_04.svg)
+:::
+
+## Euler-Verfahren
+
+Das explizite [Euler-Verfahren](https://de.wikipedia.org/wiki/Explizites_Euler-Verfahren) 
+ist ein einfacher Algorithmus zur Bestimmung von Näherungslösungen von gewöhnlichen 
+Differentialgleichungen, insbesondere Anfangswertprobleme. Das Verfahren wird hier 
+anhand einer linearen Differentialgleichung 1. Ordnung demonstiert, hier ist 
+$\mathsf y = y(t)$ eine Funktion der Zeit $\mathsf t$. Die Differentialgleichung lautet
+
+$$\dot y(t) + a(t)y(t) + b(t) = 0$$
+
+Mit einem vorgegebenen Anfangswert $\mathsf y_0 = y(t_0)$ kann die Näherungslösung 
+iterativ bis zur gewünschten Endzeit $\mathsf t_e$ bestimmt werden. Dazu muss das 
+betrachtete Zeitintervall $\mathsf[t_0, t_e]$ in $\mathsf n_t$ Teilintervalle aufgeteilt 
+werden. Die Länge eines Teilintervalls ist 
+
+$$\mathsf \Delta t = \frac{t_e - t_0}{n_t}\quad .$$ 
+
+Das iterative Verfahren beschreibt die Bestimmung der Lösung im nächsten 
+Zeitinterval $\mathsf t_{i+1}$
+
+$$\mathsf  y(t_{i+1}) = y(t_i) - \Delta t \big(a(t_i)y(t_i) + b(t_i)\big)\quad .$$
+
+### Beispiel 1
+
+Mit $\mathsf a(t) = 1$, $\mathsf b(t) = 0$ und einem Anfangswert von $\mathsf y_0 = 1$.
+

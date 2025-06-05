@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../books/a-algorithmen/skript/numerische_algorithmen.html" rel="next">
 <link href="../../../books/a-algorithmen/skript/sortieralgorithmen.html" rel="prev">
 <link href="../../../books/shared-media/logo/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
@@ -411,6 +412,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Eigenschaften</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../books/a-algorithmen/skript/numerische_algorithmen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Numerische Algorithmen</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -528,18 +535,18 @@ window.Quarto = {
 <p>Die Kompexität dieses Verfahrens kann leicht abgeschätzt werden. Bei jedem Durchlauf wir das Minimum / Maximum gesucht, was anfangs <span class="math inline">\(\mathsf n\)</span> Operationen benötigt. Beim nächsten Durchlauf sind es nur noch <span class="math inline">\(\mathsf n − 1\)</span> Operationen und so weiter. In der Summe sind es also</p>
 <p><span class="math display">\[ \mathsf f(n) = \sum_{i=0}^n i = \frac{n(n-1)}{2} \approx \mathcal{O}(n^2) \]</span></p>
 <p>Damit hat der Selectionsort eine Komplexität von <span class="math inline">\(\mathcal{O}(n^2)\)</span>. Die folgende Abbildung verdeutlicht dies nochmals.</p>
-<div id="b802db8f" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
+<div id="1f850a0f" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 42.039
-20 180.595
-30 418.626
-40 756.194
-50 1192.848
-60 1729.937
-70 2366.187
-80 3104.538
-90 3941.895
-100 4875.17</code></pre>
+<pre><code>10 41.853
+20 180.722
+30 418.776
+40 757.03
+50 1194.007
+60 1730.408
+70 2369.747
+80 3104.288
+90 3939.342
+100 4871.043</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -558,18 +565,18 @@ window.Quarto = {
 <li>average case: <span class="math inline">\(\mathcal{O} (n^2)\)</span></li>
 </ul>
 <p>Der best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes <span class="math inline">\(\mathsf n\)</span> jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.</p>
-<div id="328580a6" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
+<div id="1c1f59bf" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 41.9546
-20 181.0454
-30 419.1131
-40 756.6019
-50 1194.7992
-60 1732.2145
-70 2369.3094
-80 3106.1092
-90 3943.0151
-100 4879.5779</code></pre>
+<pre><code>10 42.0294
+20 180.8565
+30 419.1655
+40 757.015
+50 1194.4641
+60 1730.8322
+70 2367.9703
+80 3105.6329
+90 3941.6943
+100 4877.1267</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -578,18 +585,18 @@ window.Quarto = {
 <figcaption>Abschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung</figcaption>
 </figure>
 </div>
-<div id="72942b6b" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
+<div id="34421a98" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 30.0805
-20 126.6143
-30 304.8045
-40 544.497
-50 903.6953
-60 1312.1336
-70 1865.3356
-80 2434.0872
-90 3191.8639
-100 3942.4583</code></pre>
+<pre><code>10 29.949
+20 126.4037
+30 304.2435
+40 547.1489
+50 904.231
+60 1303.634
+70 1869.3742
+80 2445.0085
+90 3206.351
+100 3975.7806</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -1031,6 +1038,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../../books/a-algorithmen/skript/numerische_algorithmen.html" class="pagination-link" aria-label="Numerische Algorithmen">
+        <span class="nav-page-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Numerische Algorithmen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

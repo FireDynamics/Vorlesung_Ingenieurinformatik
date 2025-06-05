@@ -67,7 +67,8 @@ book:
         - books/a-algorithmen/skript/introduction.qmd
         - books/a-algorithmen/skript/umsetzung.qmd
         - books/a-algorithmen/skript/sortieralgorithmen.qmd
-        - books/a-algorithmen/skript/eigenschaften.qmd        
+        - books/a-algorithmen/skript/eigenschaften.qmd 
+        - books/a-algorithmen/skript/numerische_algorithmen.qmd       
 format:
   html:
     toc: true
