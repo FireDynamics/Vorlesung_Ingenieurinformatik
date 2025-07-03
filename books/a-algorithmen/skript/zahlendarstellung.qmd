@@ -218,19 +218,21 @@ z = \sum_{i=0}^{n} b_i \cdot 2^i
 $$
 
 Dabei ist:
-- \( b_i \in \{0, 1\} \) das i-te Bit (von rechts gezählt),
-- \( 2^i \) der Stellenwert der Position,
-- \( z \) die Dezimalzahl.
+- $b_i \in \{0, 1\}$ das i-te Bit (von rechts gezählt),
+- $2^i$ der Stellenwert der Position,
+- $z$ die Dezimalzahl.
 
 **Beispiel**:  
-Umwandlung von \( 1011_2 \) nach Dezimal:
+Umwandlung von  $1011_2$ nach Dezimal:
 
-\[
+$$
+
 \begin{align*}
 1011_2 &= 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 \\
        &= 8 + 0 + 2 + 1 = 11_{10}
 \end{align*}
-\]
+
+$$
 
 ### Von Dezimal nach Binär
 
