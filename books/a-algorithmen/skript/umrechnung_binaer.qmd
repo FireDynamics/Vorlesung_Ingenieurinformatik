@@ -1,0 +1,84 @@
+# Algorithmische Umrechnung von Zahlen: Dezimal ↔ Binär
+
+In diesem Kapitel betrachten wir die Umrechnung zwischen Dezimal- und Binärzahlen **algorithmisch**. Dabei analysieren wir den Ablauf der Rechenschritte, beschreiben sie als **Pseudocode**, visualisieren sie mit **Flussdiagrammen** und setzen sie anschließend **manuell in Python um**.
+
+## 1. Umrechnung: Dezimal → Binär
+
+### Grundidee
+
+Wir wiederholen die ganzzahlige Division durch 2 und merken uns den Rest. Die **Binärziffern** ergeben sich aus den **Resten** — von unten nach oben gelesen.
+
+### Flussdiagramm
+
+![Umrechnug von Dezimal zu Binär](00-bilder/dtb.svg)
+
+### Pseudocode
+
+```
+Eingabe: Dezimalzahl n
+Initialisiere leere Liste ziffern
+Solange n > 0:
+    rest ← n mod 2
+    ziffern an rest anhängen
+    n ← n ganzzahlig geteilt durch 2
+Ausgabe: ziffern in umgekehrter Reihenfolge
+```
+
+### Python-Implementierung
+
+```{python}
+def dezimal_zu_binaer(n):
+    ziffern = []
+    while n > 0:
+        ziffern.append(n % 2)
+        n //= 2
+    return ziffern[::-1]
+
+dezimal_zu_binaer(23)  # Beispiel: 23 → 10111
+```
+
+## 2. Umrechnung: Binär → Dezimal
+
+### Grundidee
+
+Jede Stelle repräsentiert eine Zweierpotenz. Wir addieren die Produkte der Ziffern mit ihrer Potenz.
+
+### Flussdiagramm
+
+![Umrechnug von  Binär zu Dezimal](00-bilder/btd.svg)
+
+### Pseudocode
+
+```
+Eingabe: Liste binärer Ziffern (z. B. [1, 0, 1, 1])
+Initialisiere dezimalwert ← 0
+Für jede Stelle i von rechts nach links:
+    dezimalwert ← dezimalwert + ziffer * 2^position
+Ausgabe: dezimalwert
+```
+
+### Python-Implementierung
+
+```{python}
+def binaer_zu_dezimal(ziffern):
+    dezimalwert = 0
+    for i in range(len(ziffern)):
+        potenz = len(ziffern) - i - 1
+        dezimalwert += ziffern[i] * (2 ** potenz)
+    return dezimalwert
+
+binaer_zu_dezimal([1, 0, 1, 1])  # Ergebnis: 11
+```
+
+## 3. Mathematische Komplexität
+
+Beide Algorithmen haben eine **logarithmische Laufzeit** bezogen auf die Eingabegröße $n$, denn:
+
+- Die Umrechnung Dezimal → Binär wiederholt die Division durch 2, bis $n = 0$. Das sind $\log_2(n)$ Schritte.
+- Die Umrechnung Binär → Dezimal summiert über $\log_2(n)$ Stellen.
+
+Daher gehören beide zur Klasse der **logarithmischen Algorithmen**.
+
+::: {.callout-note title="Hinweis"}
+Diese Verfahren sind nicht nur theoretisch interessant – genau so arbeiten Computer intern mit Bitfolgen!
+:::

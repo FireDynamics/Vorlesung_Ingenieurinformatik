@@ -1819,5 +1819,148 @@
       "Algorithmen",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Numerische Algorithmen</span>"
     ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "",
+    "text": "34.1 Analoge und digitale Signale\nIn der Technik unterscheidet man grundsätzlich zwischen analogen und digitalen Signalen, wenn Informationen dargestellt, verarbeitet oder übertragen werden.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#analoge-und-digitale-signale",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#analoge-und-digitale-signale",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "",
+    "text": "34.1.1 Analoge Signale\nEin analoges Signal ist kontinuierlich in Zeit und Ausprägung. Es kann unendlich viele Werte innerhalb eines Bereichs annehmen – wie z. B. die Spannung eines Mikrofonsignals, die mit der Lautstärke variiert, oder die Temperatur, die sich stetig verändert.\nAnaloge Signale sind gut geeignet, um natürliche Phänomene direkt abzubilden, sind aber anfällig für Störungen und schwer exakt zu speichern oder weiterzuverarbeiten.\n\n\n34.1.2 Digitale Signale\nEin digitales Signal besteht aus diskreten Werten – meist zwei: 0 und 1. Es wird also in einzelnen Schritten dargestellt und ist damit für Computer besonders gut geeignet. Die kontinuierlichen Werte der realen Welt müssen dafür zunächst in digitale Werte umgewandelt werden (Analog-Digital-Wandlung).\nDigitale Signale lassen sich fehlerfrei speichern, übertragen und beliebig oft kopieren, ohne dass die Information an Qualität verliert.\n\n\n34.1.3 Vergleich: Analoge vs. digitale Signale\n\n\n\n\n\n\n\n\nMerkmal\nAnaloge Signale\nDigitale Signale\n\n\n\n\nSignalverlauf\nStetig, kontinuierlich\nDiskret, stufenweise\n\n\nWertebereich\nUnendlich viele Werte innerhalb eines Bereichs\nEndliche Anzahl (z. B. 0 und 1)\n\n\nStöranfälligkeit\nHoch – kleine Störungen wirken sich direkt aus\nGering – durch Fehlerkorrektur ausgleichbar\n\n\nSpeicherung\nSchwierig, da kontinuierlich\nEinfach und verlustfrei möglich\n\n\nVerarbeitung\nAufwendig, da kontinuierlich\nEffizient durch digitale Logik\n\n\nBeispiel\nPlattenspieler, Thermometer mit Zeiger\nMP3-Datei, Digitalkamera\n\n\n\n\n\n34.1.4 Umwandlung analoger zu digitaler Signale\nUm aus analogen Werten, z.B. aus einem Experiment, digitale Werte für die Auswertung z u gewinnen, werden Analog-Digital-Wandler (ADC) genutzt. Einfach gesagt, tastet ein ADC ein Signal mit einer vorgegebenen (endlichen) Abtastrate ab. Dabei wird der Signalwert einem der (endlich vielen) vorgegebenen Werteintervalle zugeordnet. Folgende Abbildung zeigt ein Beispiel für die Umwandlung eines analogen Signals (blaue Kurve) in ein digitales (orangene Punkte). Hier ist das Abtastintervall im Zeit- und Wertbereich jeweils Eins, in der Abbildung durch das graue Gitter veranschaulicht. Damit kann die vom ADC ermittelte Folge von Werten nur Punkte auf dem Gitter enthalten.\n\n\n\n\n\n\n\n\nFigure 34.1: Umwandlung eines digitalen (blau) zu einem analogen Signal (orange)",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#digitale-zahlendarstellung",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#digitale-zahlendarstellung",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.2 Digitale Zahlendarstellung",
+    "text": "34.2 Digitale Zahlendarstellung\nIn den vorherigen Abschnitten haben wir gesehen, wie analoge Informationen in digitale Signale umgewandelt werden können. Damit ein Computer solche digitalen Informationen verarbeiten kann, müssen sie intern als Zahlen dargestellt werden - und zwar in einem für Computer verständlichen Format: dem Binärsystem.\nWir beschäftigen uns in diesem Abschnitt daher mit der Frage, wie Zahlen intern gespeichert und dargestellt werden. Dabei lernen wir unter anderem:\n\nWie Zahlen in verschiedenen Zahlensystemen dargestellt werden können (z. B. Binär, Dezimal, Hexadezimal),\nwie man zwischen diesen Systemen umrechnet,\nund wie man solche Umrechnungen auch algorithmisch beschreiben und in Code umsetzen kann.\n\n\n34.2.1 Dualsystem\nDa in der digitalen Elektronik nur mit zwei Zuständen gerechnet wird, bietet sich das Dualsystem, auch genannt Binärsystem, zur Zahlendarstellung an. Beispiele für Zahlendarstellungen zur Basis 2, wobei der Index die Basis angibt:\n\n510 = 1012\n10710 = 11010112\n263510 = 1010010010112\n\nDamit lassen sich Zahlen als eine Reihe bzw. Abfolge von 0/1-Zuständen darstellen.\n\n\n34.2.2 Hexadezimalsystem\nBei Zahlen zur Basis 16 müssen auch Stellen, welche größer als 9 sind, abgebildet werden. Hierzu werden Buchstaben eingesetzt, um die Ziffern ‘10’, dargestellt durch A, bis ‘15’ (F) abzubilden. Eine oft verwendete Schreibweise für Zahlen im Hexadezimalsystem ist das Vorstellen von 0x vor die Zahl, wie im folgenden Beispielen gezeigt:\n\n510 = 516 = 0x5\n10710 = 6B16 = 0x6B\n263510 = A4B16 = 0xA4B",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#binäre-maßeinheiten",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#binäre-maßeinheiten",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.3 Binäre Maßeinheiten",
+    "text": "34.3 Binäre Maßeinheiten\nDa sich in der digitalen Welt alles um Potenzen von 2 dreht, haben sich aus technischen Gründen folgende Einheiten ergeben:\n\n1 Bit = eine Ziffer im Binärsystem, Wertebereich: 0 und 1\n1 Byte = acht Ziffern im Binärsystem, Wertebereich: 0 bis 255\n\nUm größere Datenmengen praktischer anzugeben, werden folgende Einheiten genutzt:\n\n1 KB = 1 kiloByte = 103 Byte\n1 MB = 1 megaByte = 106 Byte\n1 GB = 1 gigaByte = 109 Byte\n1 TB = 1 teraByte = 1012 Byte\n1 PB = 1 petaByte = 1015 Byte",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#geschwindigkeit-der-datenübertragung",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#geschwindigkeit-der-datenübertragung",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.4 Geschwindigkeit der Datenübertragung",
+    "text": "34.4 Geschwindigkeit der Datenübertragung\nDie Geschwindigkeit mit der Daten übertragen werden können wird als Datenmenge pro Zeit angegeben. Hierbei wird die Zeit meist auf eine Sekunde bezogen. Beispielhaft sind hier einige Datenübertragungsraten beim Zugriff auf eine magnetische Festplatte (HDD) und auf ein Halbleiterlaufwerk (SSD) aufgeführt.\n\nLesen / Schreiben HDD: ~200 MB/s\nLesen / Schreiben SSD: ~500 MB/s\n\nAls weiteres Beispiel können maximale Übertragunsraten in verschiedenen Netzwerken genannt werden:\n\nüber das Mobilfunknetz, z.B. 3G: 384 kbit/s\nüber ein Netzwerkkabel, z.B. Fast Ethernet: ~100 Mbit/s",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#darstellung-ganzer-zahlen",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#darstellung-ganzer-zahlen",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.5 Darstellung ganzer Zahlen",
+    "text": "34.5 Darstellung ganzer Zahlen\nDie Grundidee bei der digitalen Darstellung von Zahlen, hier ganze Zahlen, ist die Verwendung einer festen Anzahl von Bits. Diese bilden dann eine entsprechende Anazahl von Stellen im Dualsystem ab. Dieser Idee folgend, kann eine ganze Zahl mit Vorzeichen wie folgt als 8-Bit-Zahl dargestellt werden:\n\n\n\nBitzuordnung bei der Darstellung einer ganzen Zahl mit 8 Bit.\n\n\nFür zwei Zahlen aus dem obigen Beispiel für die Zahldarstellung im Dualsystem könnte die Bitzuweisung wie folgt aussehen.\n\n\n\nBeispiel der Bitzuordnung für die Zahl 5 mit 8 Bit.\n\n\n\n\n\nBeispiel der Bitzuordnung für die Zahl 107 mit 8 Bit.\n\n\nDurch die fixe Vorgabe der Stellen im Dualsystem, also hier der Bits, ergibt sich der Zahlenbereich, welcher mit diesen Bits abgebildet werden kann. Für die Darstellung von ganzen Zahlen mit 8 Bit, also mit einem Byte, ergibt sich somit\n\nkleinste Zahl: 02 = 0\ngrößte Zahl: 111111112 = 28-1 = 255 .\n\nNatürlich können auch länger Bitfolgen für einen größeren Zahlenbereich genutzt werden. Zusätzlich kann eines der Bits auch genutzt werden, um das Vorzeichen darzustellen. Folgende Abbildung zeigt die Darstellung einer vorzeichenbehafteten ganzen Zahl mit 32 Bit.\n\n\n\nBitzuordnung bei der Darstellung einer ganzen Zahl samt Vorzeichen mit 32 Bit.\n\n\nDer Wertebereich ist in diesem Fall gegeben durch:\n\nkleinste Zahl = -231 = -2,147,483,648\ngrößte Zahl = 231 - 1 = 2,147,483,647 .\n\nIn der Informatik wird solch eine Darstellung von ganzen Zahlen als Integer Datentyp bezeichnet. Im Englischen wird dieser als integer bezeichnet.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#umrechnung-zwischen-dezimal--und-binärzahlen",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#umrechnung-zwischen-dezimal--und-binärzahlen",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.6 Umrechnung zwischen Dezimal- und Binärzahlen",
+    "text": "34.6 Umrechnung zwischen Dezimal- und Binärzahlen\nUm zwischen Dezimalzahlen (zur Basis 10) und Binärzahlen (zur Basis 2) umzuwandeln, gibt es jeweils einfache Verfahren. Diese lassen sich auch leicht als Algorithmus in Programmiersprachen umsetzen.\n\n34.6.1 Von Binär nach Dezimal\nEine Binärzahl besteht aus einzelnen Stellen (Bits), die jeweils eine Potenz von 2 repräsentieren. Zur Umrechnung summiert man die Produkte der Ziffern mit ihrer jeweiligen Stellenwertigkeit:\n\\[\nz = \\sum_{i=0}^{n} b_i \\cdot 2^i\n\\]\nDabei ist: - ( b_i {0, 1} ) das i-te Bit (von rechts gezählt), - ( 2^i ) der Stellenwert der Position, - ( z ) die Dezimalzahl.\nBeispiel:\nUmwandlung von ( 1011_2 ) nach Dezimal:\n[ \\[\\begin{align*}\n1011_2 &= 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 1 \\cdot 2^0 \\\\\n       &= 8 + 0 + 2 + 1 = 11_{10}\n\\end{align*}\\] ]\n\n\n34.6.2 Von Dezimal nach Binär\nZur Umwandlung einer Dezimalzahl in eine Binärzahl verwendet man die ganzzahlige Division durch 2. Der jeweilige Rest (0 oder 1) ergibt die Binärziffer. Man wiederholt diesen Vorgang so lange, bis der Quotient 0 ist, und liest die Reste von unten nach oben.\nBeispiel:\nUmwandlung von \\(11_{10}\\) nach Binär:\n\\[\n\\begin{array}{rcl}\n11 \\div 2 &= 5 &\\text{Rest } 1 \\\\\n5 \\div 2  &= 2 &\\text{Rest } 1 \\\\\n2 \\div 2  &= 1 &\\text{Rest } 0 \\\\\n1 \\div 2  &= 0 &\\text{Rest } 1 \\\\\n\\end{array}\n\\]\n→ Von unten gelesen ergibt das: \\(1011_2\\)\n\n\n\n\n\n\nMerke\n\n\n\nDie Umrechnung funktioniert immer, egal wie groß die Zahl ist – sie ist eine systematische Anwendung der Stellenwertsysteme. Computer arbeiten intern genau auf diese Weise, nur in Hardware.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#darstellung-reeller-zahlen",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#darstellung-reeller-zahlen",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.7 Darstellung reeller Zahlen",
+    "text": "34.7 Darstellung reeller Zahlen\nReelle Zahlen können nur angenährt als eine Gleitkommazahl digital dargestellt werden. Dazu wir die zur Verfügung stehende Menge an Bits auf folgende Zuordnungen aufgeteilt: Vorzeichen \\(\\mathsf s\\), Exponent \\(\\mathsf e\\) und Mantisse \\(\\mathsf m\\). Jedem dieser Bereiche wird eine feste Anzahl von Bits zugeordnet wodruch sich der Wertebereich und Genauigkeit der Darstellung ergibt. Im Allgemeinen kann somit eine Gleitkommazahl dargestellt werden als\n\\[ \\mathsf z = (-1)^s \\cdot m \\cdot 2^e .\\]\nEs existieren mehrere Ansätze für die Abbildung von Gleitkommazahlen. Insbesondere im IEEE754 Standard wird folgende Aufteilung definiert: Vorzeichen (1 bit), Exponent (11 bit) und Mantisse (52 bit):\n\n\n\nBitzuordnung bei der Darstellung einer reellen Zahl mit 64 bit.\n\n\nAus der obigen Festlegung der Bitzuweisung, ergeben sich die Größenordnung für den Wertebereich, welcher durch den Exponenten vorgegeben ist. Um auch Zahlen kleiner 1 darstellen zu können, kann der Exponent \\(\\mathsf e\\) auch negative Werte annehmen.\nFür den Exponenten \\(\\mathsf e\\) gilt\n\nkleinster Wert in Etwa: -(210 - 1) = -1023\ngrößter Wert in Etwa: ~ 210 - 1 = 1023 .\n\nOhne Beachtung der Mantisse und des Vorzeichens, ergibt sich mit den obigen Werten dieser Bereich für die Größenordnungen:\n\nkleinste Größenordnung: 2-1023 ~ 10-308\ngrößte Größenordnung: 21023 ~ 10308\n\nDie Genauigkeit, d.h. die kleinste darstellbare Differenz zwischen zwei Gleitkommazahlen, ergibt sich aus der Mantisse $ m$. Eine grobe Abschätzung der Genauigkeit kann wie folgt durchgeführt werden. Per Definition deckt die Mantisse einen Zahlenbereich von 0 bis etwa 10 ab. Dieser Bereich wird in obiger Festlegung mit 52 Bit dargestellt. Hieraus ergibt sich dann der kleinste Unterschied zu\n\nkleinster Unterschied zwischen zwei Gleitkommazahlen: 10 / 252 ~ 2·10-15\n\nBetrachtet man nun Dezimalzahlen, so entspricht das etwa der 15-ten Nachkommastelle.\nDer Datentyp, welcher für die Darstellung von Gleitkommazahlen verwendet wird, wird generell als float (engl. floating point number) bezeichnet. Im IEEE754 Standard werden viele verschiedene Darstellungen definiert.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/zahlendarstellung.html#zeichendarstellung",
+    "href": "books/a-algorithmen/skript/zahlendarstellung.html#zeichendarstellung",
+    "title": "34  Exkurs: Interne Darstellung von Zahlen und Zeichen",
+    "section": "34.8 Zeichendarstellung",
+    "text": "34.8 Zeichendarstellung\nNeben Zahlen können auch Zeichen, z.B. für die Darstellung von Text, abgebildet werden. Die Grundidee ist dabei, dass die Zeichen als vorzeichenlose ganze Zahlen gespeichert und dann anhand einer Tabelle interpretiert werden. Ein Beispiel für eine solche Tabelle, welche den Zahlenwerte Zeichen zuordnet, ist die ASCII Tabelle. In dieser werden 7-Bit-Zahlen, d.h. 128 Zeichen, kodiert. In der 1963 erstellten –  und bis heute genutzten – Tabelle, sind sowohl nicht-druckbare Zeichen (z.B. Zeilenvorschub, Tabulatorzeichen) als auf folgende druckbare Zeichen enthalten:\n !\"#$%&'()*+,-./0123456789:;&lt;=&gt;?\n@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\n`abcdefghijklmnopqrstuvwxyz{|}~\nWobei das erste Zeichen das Leerzeichen ist.",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exkurs: Interne Darstellung von Zahlen und Zeichen</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umrechnung_binaer.html",
+    "href": "books/a-algorithmen/skript/umrechnung_binaer.html",
+    "title": "35  Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär",
+    "section": "",
+    "text": "35.1 1. Umrechnung: Dezimal → Binär",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Algorithmische Umrechnung von Zahlen: Dezimal ↔ Binär</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umrechnung_binaer.html#umrechnung-dezimal-binär",
+    "href": "books/a-algorithmen/skript/umrechnung_binaer.html#umrechnung-dezimal-binär",
+    "title": "35  Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär",
+    "section": "",
+    "text": "35.1.1 Grundidee\nWir wiederholen die ganzzahlige Division durch 2 und merken uns den Rest. Die Binärziffern ergeben sich aus den Resten — von unten nach oben gelesen.\n\n\n35.1.2 Flussdiagramm\n\n\n\nUmrechnug von Dezimal zu Binär\n\n\n\n\n35.1.3 Pseudocode\nEingabe: Dezimalzahl n\nInitialisiere leere Liste ziffern\nSolange n &gt; 0:\n    rest ← n mod 2\n    ziffern an rest anhängen\n    n ← n ganzzahlig geteilt durch 2\nAusgabe: ziffern in umgekehrter Reihenfolge\n\n\n35.1.4 Python-Implementierung\n\ndef dezimal_zu_binaer(n):\n    ziffern = []\n    while n &gt; 0:\n        ziffern.append(n % 2)\n        n //= 2\n    return ziffern[::-1]\n\ndezimal_zu_binaer(23)  # Beispiel: 23 → 10111\n\n[1, 0, 1, 1, 1]",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Algorithmische Umrechnung von Zahlen: Dezimal ↔ Binär</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umrechnung_binaer.html#umrechnung-binär-dezimal",
+    "href": "books/a-algorithmen/skript/umrechnung_binaer.html#umrechnung-binär-dezimal",
+    "title": "35  Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär",
+    "section": "35.2 2. Umrechnung: Binär → Dezimal",
+    "text": "35.2 2. Umrechnung: Binär → Dezimal\n\n35.2.1 Grundidee\nJede Stelle repräsentiert eine Zweierpotenz. Wir addieren die Produkte der Ziffern mit ihrer Potenz.\n\n\n35.2.2 Flussdiagramm\n\n\n\nUmrechnug von Binär zu Dezimal\n\n\n\n\n35.2.3 Pseudocode\nEingabe: Liste binärer Ziffern (z. B. [1, 0, 1, 1])\nInitialisiere dezimalwert ← 0\nFür jede Stelle i von rechts nach links:\n    dezimalwert ← dezimalwert + ziffer * 2^position\nAusgabe: dezimalwert\n\n\n35.2.4 Python-Implementierung\n\ndef binaer_zu_dezimal(ziffern):\n    dezimalwert = 0\n    for i in range(len(ziffern)):\n        potenz = len(ziffern) - i - 1\n        dezimalwert += ziffern[i] * (2 ** potenz)\n    return dezimalwert\n\nbinaer_zu_dezimal([1, 0, 1, 1])  # Ergebnis: 11\n\n11",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Algorithmische Umrechnung von Zahlen: Dezimal ↔ Binär</span>"
+    ]
+  },
+  {
+    "objectID": "books/a-algorithmen/skript/umrechnung_binaer.html#mathematische-komplexität",
+    "href": "books/a-algorithmen/skript/umrechnung_binaer.html#mathematische-komplexität",
+    "title": "35  Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär",
+    "section": "35.3 3. Mathematische Komplexität",
+    "text": "35.3 3. Mathematische Komplexität\nBeide Algorithmen haben eine logarithmische Laufzeit bezogen auf die Eingabegröße \\(n\\), denn:\n\nDie Umrechnung Dezimal → Binär wiederholt die Division durch 2, bis \\(n = 0\\). Das sind \\(\\log_2(n)\\) Schritte.\nDie Umrechnung Binär → Dezimal summiert über \\(\\log_2(n)\\) Stellen.\n\nDaher gehören beide zur Klasse der logarithmischen Algorithmen.\n\n\n\n\n\n\nHinweis\n\n\n\nDiese Verfahren sind nicht nur theoretisch interessant – genau so arbeiten Computer intern mit Bitfolgen!",
+    "crumbs": [
+      "Algorithmen",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Algorithmische Umrechnung von Zahlen: Dezimal ↔ Binär</span>"
+    ]
   }
 ]
