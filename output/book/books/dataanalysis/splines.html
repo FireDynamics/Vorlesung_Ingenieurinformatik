@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>26&nbsp; Splines – Vorlesung Ingenieurinformatik</title>
+<title>25&nbsp; Splines – Vorlesung Ingenieurinformatik</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-231ef2f9d4ce3268f31ef752336c15d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c6401791a79187d57067e869b1585694.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -138,7 +138,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,7 +147,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../books/dataanalysis/introduction.html">Arbeiten mit Daten</a></li><li class="breadcrumb-item"><a href="../../books/dataanalysis/splines.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Splines</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../books/dataanalysis/introduction.html">Datenanalyse und Modellierung</a></li><li class="breadcrumb-item"><a href="../../books/dataanalysis/splines.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Splines</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
       <img src="../../books/shared-media/logo/logo_with_text.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -246,8 +246,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Matplotlib</span></a>
+            <a href="../../books/w-python-matplotlib/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preamble</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -255,14 +255,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../books/w-python-matplotlib/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preamble</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../books/w-python-matplotlib/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Einführung in Matplotlib</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Matplotlib</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,19 +287,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">NumPy</span></a>
+            <a href="../../books/w-python-numpy-grundlagen/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numpy</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../books/w-python-numpy-grundlagen/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preamble</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/w-python-numpy-grundlagen/skript/introduction.html" class="sidebar-item-text sidebar-link">
@@ -370,8 +358,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Arbeiten mit Daten</span></a>
+            <a href="../../books/dataanalysis/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenanalyse und Modellierung</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -379,45 +367,39 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../books/dataanalysis/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Datenanalyse und Modellierung</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/interpolation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Interpolation – Lücken schließen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Interpolation – Lücken schließen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/fitting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Fitting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Fitting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/splines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Splines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Splines</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/glaetten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Trendglättung – Rauschen reduzieren</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Trendglättung – Rauschen reduzieren</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/dataanalysis/anwendungsbeispiel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Anwendungsbeispiele</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Anwendungsbeispiele</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a href="../../books/a-algorithmen/skript/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Algorithmen</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -426,44 +408,38 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../books/a-algorithmen/skript/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/umsetzung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Von der Idee zum Code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Von der Idee zum Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/sortieralgorithmen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Sortieralgorithmen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Sortieralgorithmen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/eigenschaften.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Eigenschaften</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Eigenschaften</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/numerische_algorithmen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Numerische Algorithmen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Numerische Algorithmen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/zahlendarstellung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Exkurs: Interne Darstellung von Zahlen und Zeichen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Exkurs: Interne Darstellung von Zahlen und Zeichen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/a-algorithmen/skript/umrechnung_binaer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Algorithmische Umrechnung von Zahlen: Dezimal ↔︎ Binär</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,13 +456,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/numerik/skript/intro_integrale.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Integration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../books/numerik/skript/intro_ableitungen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -501,18 +477,18 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"><span class="header-section-number">26.1</span> Definition</a></li>
-  <li><a href="#kubische-splines" id="toc-kubische-splines" class="nav-link" data-scroll-target="#kubische-splines"><span class="header-section-number">26.2</span> Kubische Splines</a></li>
-  <li><a href="#anwendung" id="toc-anwendung" class="nav-link" data-scroll-target="#anwendung"><span class="header-section-number">26.3</span> Anwendung</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"><span class="header-section-number">25.1</span> Definition</a></li>
+  <li><a href="#kubische-splines" id="toc-kubische-splines" class="nav-link" data-scroll-target="#kubische-splines"><span class="header-section-number">25.2</span> Kubische Splines</a></li>
+  <li><a href="#anwendung" id="toc-anwendung" class="nav-link" data-scroll-target="#anwendung"><span class="header-section-number">25.3</span> Anwendung</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/FireDynamics/Vorlesung_Ingenieurinformatik/blob/main/books/dataanalysis/splines.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../books/dataanalysis/introduction.html">Arbeiten mit Daten</a></li><li class="breadcrumb-item"><a href="../../books/dataanalysis/splines.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Splines</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../books/dataanalysis/introduction.html">Datenanalyse und Modellierung</a></li><li class="breadcrumb-item"><a href="../../books/dataanalysis/splines.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Splines</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Splines</span></h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Splines</span></h1>
 </div>
 
 
@@ -530,8 +506,8 @@ window.Quarto = {
 
 
 <p>Polynominterpolation versucht eine globale Modellfunktion zu finden. Jedoch eignen sich Polynome mit hohen Graden im Allgemeinen nicht für eine Interpolation vieler Punkte. Einen anderen Ansatz verfolgen Splines. Diese sind Polynomzüge, welche die einzelnen Messpunkte verbinden und deren Grad klein – typischerweise zwischen eins und drei – ist.</p>
-<section id="definition" class="level2" data-number="26.1">
-<h2 data-number="26.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">26.1</span> Definition</h2>
+<section id="definition" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">25.1</span> Definition</h2>
 <p>Für <span class="math inline">\(n+1\)</span> Messpunkte <span class="math inline">\((x_i, y_i)\)</span> kann eine Splinefunktion <span class="math inline">\(s_k\)</span>, hier ein Polynomspline, wie folgt definiert werden.</p>
 <ul>
 <li>Vorausgesetzt ist, dass die Messpunkte sortiert sind, d.h. <span class="math inline">\(x_0 &lt; x_1 &lt; \cdots &lt; x_n\)</span></li>
@@ -540,8 +516,8 @@ window.Quarto = {
 </ul>
 <p>Beispiele: * <span class="math inline">\(k = 1\)</span>: Polygonzug * <span class="math inline">\(k = 3\)</span>: kubische Polynomsplines (B-Splines)</p>
 </section>
-<section id="kubische-splines" class="level2" data-number="26.2">
-<h2 data-number="26.2" class="anchored" data-anchor-id="kubische-splines"><span class="header-section-number">26.2</span> Kubische Splines</h2>
+<section id="kubische-splines" class="level2" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="kubische-splines"><span class="header-section-number">25.2</span> Kubische Splines</h2>
 <p>Die in der Praxis häufig eingesetzten kubischen Polynomsplines <span class="math inline">\(s_3\)</span> ($ k= 3$) haben folgende Eigenschaften: * <span class="math inline">\(s_3|\left[x_i,x_{i+1}\right] = \beta_0 +\beta_1 x + \beta_2 x^2 + \beta_3 x^3\)</span> * <span class="math inline">\(s_3\)</span> ist zweimal stetig differenzierbar auf <span class="math inline">\(\left[x_0,x_n\right]\)</span>, also insbesondere an den Stützpunkten <span class="math inline">\(x_i\)</span> der Messpunkte</p>
 <p>Die Koeffizienten <span class="math inline">\(\beta_i\)</span> werden wie folgt bestimmt * aus den <span class="math inline">\(n + 1\)</span> Messpunkten ergeben sich <span class="math inline">\(n\)</span> Intervalle, d.h. mit jeweils vier Koeffizienten sind es insgesamt <span class="math inline">\(4n\)</span> Koeffizienten * Exakte Darstellung der Messpunkte ($ n + 1$ Gleichungen), d.h.: <span class="math inline">\(s_3(x_i) = y_i\)</span> * Glattheitsbedingungen an den inneren Messpunkten ($ i=1n-1<span class="math inline">\(), mit jeweils (\)</span> n − 1$ Gleichungen): <span class="math display">\[ s_3'(x_i)_- =s_3'(x_i)_+\]</span> <span class="math display">\[ s_3''(x_i)_- =s_3''(x_i)_+\]</span> <span class="math display">\[ s_3'''(x_i)_- =s_3'''(x_i)_+\]</span></p>
 <ul>
@@ -549,8 +525,8 @@ window.Quarto = {
 </ul>
 <p>Um die beiden fehlenden Gleichungen zu finden bzw. zu bestimmen werden Randbedingungen oder Abschlussbedingungen benötigt. Die gängigsten Bedingungen sind: * natürliche Splines: die Krümung am Rand verschwindet, d.h.: <span class="math display">\[ s_3''(x_0) = s_3''(x_n) = 0 \]</span> * periodische Splines: die Steigung und Krümung ist an beiden Rändern gleich <span class="math display">\[ s_3'(x_0) = s_3'(x_n)\]</span> <span class="math display">\[ s_3''(x_0) = s_3''(x_n)\]</span> * Hermite Splines: die Steigungen am Rand werden explizit vorgegeben (hier durch <span class="math inline">\(u\)</span> und <span class="math inline">\(v\)</span>) <span class="math display">\[ s_3'(x_0) = u \]</span> <span class="math display">\[ s_3'(x_n) = v \]</span></p>
 </section>
-<section id="anwendung" class="level2" data-number="26.3">
-<h2 data-number="26.3" class="anchored" data-anchor-id="anwendung"><span class="header-section-number">26.3</span> Anwendung</h2>
+<section id="anwendung" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="anwendung"><span class="header-section-number">25.3</span> Anwendung</h2>
 <p>Im Folgenden werden zwei Beispiele, <span class="math inline">\(s_1\)</span> und <span class="math inline">\(s_3\)</span>, für die Erstellung von Splines mit Python vorgestellt.</p>
 <div id="6108b27a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Erzeugung von Messpunkten</span></span>
@@ -1019,12 +995,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../books/dataanalysis/fitting.html" class="pagination-link" aria-label="Fitting">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Fitting</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Fitting</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../books/dataanalysis/glaetten.html" class="pagination-link" aria-label="Trendglättung – Rauschen reduzieren">
-        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Trendglättung – Rauschen reduzieren</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Trendglättung – Rauschen reduzieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

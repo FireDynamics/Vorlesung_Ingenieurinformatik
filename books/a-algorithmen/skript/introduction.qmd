@@ -1,4 +1,6 @@
-# Einführung
+# Algorithmen
+
+## Einführung
 
 ## Definition
 
