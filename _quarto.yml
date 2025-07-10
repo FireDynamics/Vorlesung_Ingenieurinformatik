@@ -71,6 +71,14 @@ book:
         - books/a-algorithmen/skript/numerische_algorithmen.qmd       
         - books/a-algorithmen/skript/zahlendarstellung.qmd 
         - books/a-algorithmen/skript/umrechnung_binaer.qmd 
+    - part: books/numerik/skript/einleitung.qmd
+      chapters:
+        - books/numerik/skript/intro_integrale.qmd
+        - books/numerik/skript/intro_ableitungen.qmd
+
+
+
+
 format:
   html:
     toc: true
