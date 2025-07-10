@@ -20,6 +20,7 @@ book:
   sidebar:
     title: "Vorlesung Ingenieurinformatik"
     style: "docked"
+    collapse-level: 1
     logo: books/shared-media/logo/logo_with_text.svg
   chapters:
     - index.qmd
