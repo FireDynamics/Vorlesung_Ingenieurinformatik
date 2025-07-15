@@ -53,10 +53,10 @@ plt.grid()
 plt.legend();
 ```
 
-Die Integration selbst kann mittels der [Funktion `scipy.integrate.trapz`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapz.html#scipy.integrate.trapz) ausgeführt werden.
+Die Integration selbst kann mittels der [Funktion `scipy.integrate.trapezoid`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html#scipy.integrate.trapezoid) ausgeführt werden.
 
 ```{python}
-res = scipy.integrate.trapz(yi, xi)
+res = scipy.integrate.trapezoid(yi, xi)
 print(f"Integralwert mit {n} Stützstellen: {res:.4f}")
 ```
 
@@ -70,7 +70,7 @@ tr = np.zeros(len(ns))
 for i, n in enumerate(ns):
     xi = np.linspace(0, 2, n)
     yi = fkt(xi)
-    tr[i] = scipy.integrate.trapz(yi, xi)
+    tr[i] = scipy.integrate.trapezoid(yi, xi)
 ```
 
 ```{python}
@@ -138,7 +138,7 @@ plt.grid()
 plt.legend();
 ```
 
-Die Simpsonregel ist bereits in der [Funktion `scipy.integrate.simps`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simps.html#scipy.integrate.simps) implementiert. Im Folgenden wird nur die Differenz zur Trapezregel demonstriert.
+Die Simpsonregel ist bereits in der [Funktion `scipy.integrate.simpson`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html#scipy.integrate.simpson) implementiert. Im Folgenden wird nur die Differenz zur Trapezregel demonstriert.
 
 ```{python}
 n_max = 50
@@ -149,8 +149,8 @@ tr = np.zeros(len(ns))
 for i, n in enumerate(ns):
     xi = np.linspace(0, 2, n)
     yi = fkt(xi)
-    si[i] = scipy.integrate.simps(yi, xi)
-    tr[i] = scipy.integrate.trapz(yi, xi)
+    si[i] = scipy.integrate.simpson(yi, xi)
+    tr[i] = scipy.integrate.trapezoid(yi, xi)
 ```
 
 ```{python}
