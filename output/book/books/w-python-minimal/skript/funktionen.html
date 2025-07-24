@@ -506,18 +506,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>(optional) <strong><code>return</code>-Anweisung</strong></li>
 </ol>
 <p>Beispiel:</p>
-<div id="6bca1d49" class="cell" data-execution_count="1">
+<div id="b1731837" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hallo(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    begruessung <span class="op">=</span> <span class="st">"Hallo "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> begruessung</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Fangen wir mit dem ersten Stichwort an. Funktionen werden mit <code>def</code> definiert und können beliebig oft aufgerufen werden:</p>
-<div id="63a5693b" class="cell" data-execution_count="2">
+<div id="6732c5e2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung():</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo und willkommen!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Sie wird erst ausgeführt, wenn Sie sie aufrufen:</p>
-<div id="3cd64c21" class="cell" data-execution_count="3">
+<div id="034206be" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>begruessung()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hallo und willkommen!</code></pre>
@@ -527,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="parameter-übergeben" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="parameter-übergeben"><span class="header-section-number">5.3</span> Parameter übergeben</h2>
 <p>Funktionen können Eingabewerte (Parameter) erhalten:</p>
-<div id="84e04e64" class="cell" data-execution_count="4">
+<div id="5c484961" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -540,7 +540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="rückgabewerte-mit-return" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="rückgabewerte-mit-return"><span class="header-section-number">5.4</span> Rückgabewerte mit <code>return</code></h2>
 <p>Eine Funktion kann auch einen Wert <strong>zurückgeben</strong>:</p>
-<div id="e6804b75" class="cell" data-execution_count="5">
+<div id="0906f5b4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quadrat(zahl):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl <span class="op">*</span> zahl</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -555,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5.5" class="anchored" data-anchor-id="beispiel-umrechnungen"><span class="header-section-number">5.5</span> Beispiel: Umrechnungen</h2>
 <section id="euro-zu-us-dollar" class="level3" data-number="5.5.1">
 <h3 data-number="5.5.1" class="anchored" data-anchor-id="euro-zu-us-dollar"><span class="header-section-number">5.5.1</span> Euro zu US-Dollar</h3>
-<div id="2d45a9ec" class="cell" data-execution_count="6">
+<div id="4e2c5bd8" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> euro_zu_usd(betrag_euro):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    wechselkurs <span class="op">=</span> <span class="fl">1.09</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> betrag_euro <span class="op">*</span> wechselkurs</span>
@@ -591,7 +591,7 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="8abe019f" class="cell" data-execution_count="7">
+<div id="2311a76e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruesse(name):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">", schön dich zu sehen!"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -632,7 +632,7 @@ Lösung
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="354eb40b" class="cell" data-execution_count="8">
+<div id="53752f33" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> celsius_zu_fahrenheit(c):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -652,7 +652,7 @@ Lösung
 <section id="parameter-mit-standardwerten" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="parameter-mit-standardwerten"><span class="header-section-number">5.6</span> Parameter mit Standardwerten</h2>
 <p>Sie können Parametern <strong>Standardwerte</strong> zuweisen. So kann die Funktion auch ohne Angabe eines Werts aufgerufen werden:</p>
-<div id="a6734fb6" class="cell" data-execution_count="9">
+<div id="e1808006" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> begruessung(name<span class="op">=</span><span class="st">"Gast"</span>):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hallo"</span>, name <span class="op">+</span> <span class="st">"!"</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -695,7 +695,7 @@ Hallo Maria!</code></pre>
 </tbody>
 </table>
 <p>Beispiel:</p>
-<div id="482650a2" class="cell" data-execution_count="10">
+<div id="b41fc85f" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verdoppeln(x):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>

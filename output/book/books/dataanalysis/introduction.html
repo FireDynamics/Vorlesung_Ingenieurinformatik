@@ -504,7 +504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Logdaten von Sensoren.</li>
 </ul>
 <p>Zu Beginn wird ein Beispiel betrachtet: Temperatur, Luftfeuchtigkeit und CO₂-Werte. Diese Datei enthält auch einige <strong>fehlende Werte</strong>, wie sie in realen Daten oft vorkommen.</p>
-<div id="64b54334" class="cell" data-execution_count="1">
+<div id="0b8f1469" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.genfromtxt(<span class="st">"beispiel.csv"</span>, delimiter<span class="op">=</span><span class="st">","</span>, skip_header<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -520,14 +520,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="fehlende-werte-erkennen-und-bereinigen" class="level2">
 <h2 class="anchored" data-anchor-id="fehlende-werte-erkennen-und-bereinigen">Fehlende Werte erkennen und bereinigen</h2>
 <p>Fehlende Werte werden beim Einlesen als <code>np.nan</code> (Not a Number) codiert. Zunächst wird gezählt, wie viele Werte fehlen:</p>
-<div id="17b159f6" class="cell" data-execution_count="2">
+<div id="ffcb087e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.isnan(data).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1 1 1]</code></pre>
 </div>
 </div>
 <p>Um die Analyse nicht zu verfälschen, werden sie ersetzt – z. B. durch den Mittelwert der Spalte:</p>
-<div id="a61e2c04" class="cell" data-execution_count="3">
+<div id="a8314da8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(data.shape[<span class="dv">1</span>]):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> np.nanmean(data[:, i])</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    data[:, i] <span class="op">=</span> np.where(np.isnan(data[:, i]), mean, data[:, i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -541,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Standardabweichung</strong>: Streuung</li>
 <li><strong>Minimum und Maximum</strong></li>
 </ul>
-<div id="ca147a33" class="cell" data-execution_count="4">
+<div id="a7c486a6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mittelwerte:"</span>, np.mean(data, axis<span class="op">=</span><span class="dv">0</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Standardabweichung:"</span>, np.std(data, axis<span class="op">=</span><span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -553,7 +553,7 @@ Standardabweichung: [ 1.13556154  1.61245155 10.        ]</code></pre>
 <section id="daten-visualisieren" class="level2">
 <h2 class="anchored" data-anchor-id="daten-visualisieren">Daten visualisieren</h2>
 <p>Mit Matplotlib lassen sich Daten übersichtlich darstellen. Es werden z. B. Linien- und Histogrammplots genutzt.</p>
-<div id="21f27086" class="cell" data-execution_count="5">
+<div id="773f1628" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">"Temperatur (°C)"</span>, <span class="st">"Luftfeuchtigkeit (%)"</span>, <span class="st">"CO₂ (ppm)"</span>]</span>

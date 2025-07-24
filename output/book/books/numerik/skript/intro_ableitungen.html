@@ -518,7 +518,7 @@ window.Quarto = {
 <p>Eine graphische Darstellung der ersten Elemente der Reihe verdeutlichen nochmals die Grundidee. Das folgende Beispiel entwickelt die Funktion</p>
 <p><span class="math display">\[ \mathsf{f(x) = \sin(3x) + 2x} \]</span></p>
 <p>am Punkt <span class="math inline">\(\mathsf{x_0=0.85}\)</span>.</p>
-<div id="9bddf28b" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="2">
+<div id="6963dc1b" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x, p<span class="op">=</span><span class="dv">0</span>):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p<span class="op">==</span><span class="dv">0</span>:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
@@ -534,7 +534,7 @@ window.Quarto = {
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fkt(x, p<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e5291e86" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="3">
+<div id="4d1facf9" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fl">0.85</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Taylor-Elemente</span></span>
@@ -544,7 +544,7 @@ window.Quarto = {
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>te.append((x<span class="op">-</span>x0)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> fkt(x0, p<span class="op">=</span><span class="dv">2</span>) <span class="op">*</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>te.append((x<span class="op">-</span>x0)<span class="op">**</span><span class="dv">3</span> <span class="op">*</span> fkt(x0, p<span class="op">=</span><span class="dv">3</span>) <span class="op">*</span> <span class="dv">1</span><span class="op">/</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="97da7e69" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="4">
+<div id="367aec10" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'Grey'</span>, lw<span class="op">=</span><span class="dv">3</span>, label<span class="op">=</span><span class="st">"Funktion"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, te[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"$</span><span class="er">\</span><span class="st">mathsf{</span><span class="er">\</span><span class="st">mathcal</span><span class="sc">{O}</span><span class="st">(1)}$"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, te[<span class="dv">0</span>] <span class="op">+</span> te[<span class="dv">1</span>], label<span class="op">=</span><span class="st">"$</span><span class="er">\</span><span class="st">mathsf{</span><span class="er">\</span><span class="st">mathcal</span><span class="sc">{O}</span><span class="st">(h)}$"</span>)</span>
@@ -580,7 +580,7 @@ window.Quarto = {
 <p>Das folgende Beispiel demonstriert die Näherung anhand der Funktion</p>
 <p><span class="math display">\[ \mathsf{f(x) = \sin(3x) + 2x} \]</span></p>
 <p>Die Ableitung wird an der Stelle <span class="math inline">\(\mathsf{x_0 = 0.85}\)</span> angenähert.</p>
-<div id="44210353" class="cell" data-execution_count="6">
+<div id="519e58f2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -591,7 +591,7 @@ window.Quarto = {
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Exakte Lösung bei x=0.85</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>fp_exakt <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="fl">0.85</span>) <span class="op">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f04b289e" class="cell" data-execution_count="7">
+<div id="eb628e6d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Entwicklungspunkt und Schrittweite</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">0.25</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fl">0.85</span></span>
@@ -603,7 +603,7 @@ window.Quarto = {
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Ableitungsnäherung</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>fp <span class="op">=</span> (fh <span class="op">-</span> f0) <span class="op">/</span> h</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="936bd4e6" class="cell" data-execution_count="8">
+<div id="3f0cfa42" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Die numerische Näherung der Ableitung an der Stelle </span><span class="sc">{</span>x0<span class="sc">:.2f}</span><span class="ss">:"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Näherung mit Schrittweite </span><span class="sc">{</span>h<span class="sc">:.2f}</span><span class="ss">: </span><span class="sc">{</span>fp<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Exakter Wert: </span><span class="sc">{</span>fp_exakt<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -614,7 +614,7 @@ Exakter Wert: -0.49</code></pre>
 </div>
 </div>
 <p>Die Methode kann auch graphisch dargestellt werden. Die gesuchte Steigung ist die Steigung der eingezeichneten Geraden.</p>
-<div id="cde38dde" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
+<div id="e48cc1d9" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">"Funktion"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.scatter([x0], [f0], color<span class="op">=</span><span class="st">'C3'</span>, label<span class="op">=</span><span class="st">'Entwicklungspunkt'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.scatter([x0<span class="op">+</span>h], [fh], color<span class="op">=</span><span class="st">'C4'</span>, label<span class="op">=</span><span class="st">'Auswertepunkte'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
@@ -645,7 +645,7 @@ Exakter Wert: -0.49</code></pre>
 <p>Und die Umformung nach der gesuchten Ableitung an der Stelle <span class="math inline">\(\mathsf{x_0}\)</span> ergibt</p>
 <p><span class="math display">\[\mathsf{f'(x_0) = \frac{f(x_0+h) - f(x_0-h)}{2h} + \mathcal{O}(h^2)} \]</span></p>
 <p>Dies ist die zentrale Differenzenformel für die erste Ableitung zweiter Ordnung. Wie bei der vorwärtsgerichteten Formel muss hier die Funktion an zwei Stellen ausgewertet werden, jedoch nicht mehr am Entwicklungspunkt selbst. Durch diese Symmetrie bzgl. des Entwicklungspunkts ergibt sich ein besseres, hier quadratisches, Konvergenzverhalten.</p>
-<div id="1b64b777" class="cell" data-execution_count="10">
+<div id="5b25ad2a" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswertung an den beiden Stellen</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>fnh <span class="op">=</span> fkt(x0 <span class="op">-</span> h)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fph <span class="op">=</span> fkt(x0 <span class="op">+</span> h)</span>
@@ -653,7 +653,7 @@ Exakter Wert: -0.49</code></pre>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung der Ableitungsnäherung</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>fp <span class="op">=</span> (fph <span class="op">-</span> fnh) <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>h)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f272a43e" class="cell" data-execution_count="11">
+<div id="55149c05" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Die numerische Näherung der Ableitung an der Stelle </span><span class="sc">{</span>x0<span class="sc">:.2f}</span><span class="ss">:"</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Näherung mit Schrittweite </span><span class="sc">{</span>h<span class="sc">:.2f}</span><span class="ss">: </span><span class="sc">{</span>fp<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Exakter Wert: </span><span class="sc">{</span>fp_exakt<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -664,7 +664,7 @@ Exakter Wert: -0.49</code></pre>
 </div>
 </div>
 <p>Die Methode kann auch graphisch dargestellt werden. Die gesuchte Steigung ist die Steigung der eingezeichneten Geraden.</p>
-<div id="8b8d85b4" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="12">
+<div id="9a46947f" class="cell" data-tags="[&quot;hide_input&quot;]" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">"Funktion"</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.scatter([x0], [f0], color<span class="op">=</span><span class="st">'C3'</span>, label<span class="op">=</span><span class="st">'Entwicklungspunkt'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.scatter([x0<span class="op">-</span>h, x0<span class="op">+</span>h], [fnh, fph], color<span class="op">=</span><span class="st">'C4'</span>, label<span class="op">=</span><span class="st">'Auswertepunkte'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
@@ -698,7 +698,7 @@ Exakter Wert: -0.49</code></pre>
 <section id="approximationsfehler" class="level3" data-number="35.4.1">
 <h3 data-number="35.4.1" class="anchored" data-anchor-id="approximationsfehler"><span class="header-section-number">35.4.1</span> Approximationsfehler</h3>
 <p>Die Ordnung des Verfahrens kann durch die Betrachtung des Fehlers, hier zum bekannten exakten Wert, bestimmt werden. Dazu wird die Schrittweite kontinuierlich verkleinert.</p>
-<div id="bc6e73ec" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="14">
+<div id="92c26c40" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
@@ -712,7 +712,7 @@ Exakter Wert: -0.49</code></pre>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>fp_exakt <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="fl">0.85</span>) <span class="op">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="0abc96e2" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="15">
+<div id="1116d2f2" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fl">0.85</span></span>
@@ -738,7 +738,7 @@ Exakter Wert: -0.49</code></pre>
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    fpcs.append(fpc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="ab9e3beb" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="16">
+<div id="675fabf4" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>plt.plot(hs, np.<span class="bu">abs</span>(fpfs <span class="op">-</span> fp_exakt), label<span class="op">=</span><span class="st">'vorwärts'</span>)</span>
@@ -769,7 +769,7 @@ Exakter Wert: -0.49</code></pre>
 <section id="rundungsfehler" class="level3" data-number="35.4.2">
 <h3 data-number="35.4.2" class="anchored" data-anchor-id="rundungsfehler"><span class="header-section-number">35.4.2</span> Rundungsfehler</h3>
 <p>Wird nun die Schrittweiter noch weiter verkleinert, wirkt sich die Genauigkeit der Darstellung von Zahlen bzw. Rundungsfehler auf die Approximation aus.</p>
-<div id="74443e0d" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="17">
+<div id="f9f6426a" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="fl">0.85</span></span>
@@ -795,7 +795,7 @@ Exakter Wert: -0.49</code></pre>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    fpcs.append(fpc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="ac81cbfc" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="18">
+<div id="21fd164d" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.plot(hs, np.<span class="bu">abs</span>(fpfs <span class="op">-</span> fp_exakt), label<span class="op">=</span><span class="st">'vorwärts'</span>)</span>

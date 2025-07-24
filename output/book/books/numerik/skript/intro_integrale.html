@@ -517,7 +517,7 @@ window.Quarto = {
 </ul>
 <section id="ober--und-untersumme" class="level3" data-number="34.0.1">
 <h3 data-number="34.0.1" class="anchored" data-anchor-id="ober--und-untersumme"><span class="header-section-number">34.0.1</span> Ober- und Untersumme</h3>
-<div id="e75d24ff" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="1">
+<div id="53fc15b5" class="cell" data-tags="[&quot;hide-input&quot;]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -537,7 +537,7 @@ window.Quarto = {
 <h2 data-number="34.2" class="anchored" data-anchor-id="beispiel"><span class="header-section-number">34.2</span> Beispiel</h2>
 <p>Beispielhaft soll folgendes Integral bestimmt werden</p>
 <p><span class="math display">\[ \mathsf{I = \int_0^2\sin(3x) + 2x \ dx} \]</span></p>
-<div id="8baa036a" class="cell" data-execution_count="2">
+<div id="3399ffd6" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -549,14 +549,14 @@ window.Quarto = {
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>I_exakt <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Als erstes werden die Stützstellen gleichmäßig im Intervall <span class="math inline">\(\mathsf{[0,2]}\)</span> verteilt.</p>
-<div id="ab568926" class="cell" data-execution_count="3">
+<div id="338623e9" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die beiden Summen benötigen die Extremwerte der zu integrierenden Funktion in den Teilintervallen. Diese werden mit Hilfe einer Funktionsauswertung auf dem Teilintervall bestimmt. Für die nachfolgende Visualisierung hat die Menge der Summen ebenfalls <span class="math inline">\(\mathsf{n}\)</span> Elemente.</p>
-<div id="6517e84a" class="cell" data-execution_count="4">
+<div id="57bad3be" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>oben <span class="op">=</span> np.zeros(n)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>unten <span class="op">=</span> np.zeros(n)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -567,12 +567,12 @@ window.Quarto = {
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    unten[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> np.<span class="bu">min</span>(cy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die ersten Elemente der beiden Summenlisten werden auf die ersten Funktionswerte gesetzt, dies dient nur der folgenden Darstellung.</p>
-<div id="bc6a9f4d" class="cell" data-execution_count="5">
+<div id="b3b56bfc" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>oben[<span class="dv">0</span>] <span class="op">=</span> yi[<span class="dv">0</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>unten[<span class="dv">0</span>] <span class="op">=</span> yi[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Visualisierung der einzelnen Funktionen.</p>
-<div id="788f174d" class="cell" data-execution_count="6">
+<div id="a8d040d4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'Funktion'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, label<span class="op">=</span><span class="st">'Stützstellen'</span>, c<span class="op">=</span><span class="st">'C3'</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot(xi, oben, drawstyle<span class="op">=</span><span class="st">'steps-pre'</span>, label<span class="op">=</span><span class="st">'Obersumme'</span>)</span>
@@ -595,7 +595,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Das obige Verfahren kann nun in einer Funktion zusammengefasst werden, welche die Summen der beiden Folgen zurückgibt.</p>
-<div id="1d8f11af" class="cell" data-execution_count="7">
+<div id="e3957dcf" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ou_summe(n, a<span class="op">=</span><span class="dv">0</span>, b<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    xi <span class="op">=</span> np.linspace(a, b, n)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi)</span>
@@ -615,7 +615,7 @@ window.Quarto = {
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sum_oben, sum_unten</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Für eine systematische Untersuchung des Konvergenzverhaltens, wird die Integrationsfunktion für verschiedene Anzahlen von Stützstellen aufgerufen.</p>
-<div id="31f13935" class="cell" data-execution_count="8">
+<div id="4b4a0347" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(<span class="dv">2</span>, n_max, <span class="dv">1</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>os <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
@@ -628,7 +628,7 @@ window.Quarto = {
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    us[i] <span class="op">=</span> u</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die graphische Darstellung der beiden Summen zeigt eine kontinuierliche Annäherung dieser.</p>
-<div id="1be6f31e" class="cell" data-execution_count="9">
+<div id="5c6fd216" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, os, label<span class="op">=</span><span class="st">'Obersumme'</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, us, label<span class="op">=</span><span class="st">'Untersumme'</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -648,7 +648,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Dies wird insbesondere deutlich, wenn die Differenz der beiden Summen aufgetragen wird. Mit einer logarithmischen Darstellung kann die kontinuierliche Annäherung auch quantitativ abgelesen werden.</p>
-<div id="6707a4a2" class="cell" data-tags="[]" data-execution_count="10">
+<div id="d9184878" class="cell" data-tags="[]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, os<span class="op">-</span>us)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
@@ -675,7 +675,7 @@ window.Quarto = {
 <p>Die Trapezregel beruht auf der Annäherung der zu integrierenden Funktion durch Geraden, d.h. Polynome vom Grad 1, auf den Teilintervallen. Die Approximation des Integralwertes ergibt sich entsprechend aus den Flächeninhalten der so entstandenen Trapeze.</p>
 <p>Wie im vorhergehenden Kapitel wird das Verfahren anhand folgender Funktion demonstriert</p>
 <p><span class="math display">\[ \mathsf{I = \int_0^2\sin(3x) + 2x \ dx} \]</span></p>
-<div id="17668e6c" class="cell" data-execution_count="12">
+<div id="e8dcda25" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -687,14 +687,14 @@ window.Quarto = {
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>I_exakt <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Bildung der Stützpunkte:</p>
-<div id="a2001f4f" class="cell" data-execution_count="13">
+<div id="9babd6b8" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zunächst erfolgt noch die Visualisierung des Verfahrens.</p>
-<div id="dc0e2e71" class="cell" data-execution_count="14">
+<div id="c38e24c1" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'Funktion'</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, label<span class="op">=</span><span class="st">'Stützstellen'</span>, c<span class="op">=</span><span class="st">'C3'</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>plt.plot(xi, yi, label<span class="op">=</span><span class="st">'Approximation'</span>, c<span class="op">=</span><span class="st">'C1'</span>)</span>
@@ -711,41 +711,33 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Die Integration selbst kann mittels der <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapz.html#scipy.integrate.trapz">Funktion <code>scipy.integrate.trapz</code></a> ausgeführt werden.</p>
-<div id="56aa94bb" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> scipy.integrate.trapz(yi, xi)</span>
+<p>Die Integration selbst kann mittels der <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html#scipy.integrate.trapezoid">Funktion <code>scipy.integrate.trapezoid</code></a> ausgeführt werden.</p>
+<div id="1bf7cb7d" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> scipy.integrate.trapezoid(yi, xi)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Integralwert mit </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> Stützstellen: </span><span class="sc">{</span>res<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Integralwert mit 5 Stützstellen: 4.0107</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_26426/2607466481.py:1: DeprecationWarning: 'scipy.integrate.trapz' is deprecated in favour of 'scipy.integrate.trapezoid' and will be removed in SciPy 1.14.0
-  res = scipy.integrate.trapz(yi, xi)</code></pre>
-</div>
 </div>
 <p>Der so ermittelte Wert nähert sich dem exakten Wert mit zunehmender Anzahl der Stützstellen.</p>
-<div id="de246370" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(<span class="dv">2</span>, n_max, <span class="dv">1</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi)</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    tr[i] <span class="op">=</span> scipy.integrate.trapz(yi, xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_26426/3326232058.py:8: DeprecationWarning: 'scipy.integrate.trapz' is deprecated in favour of 'scipy.integrate.trapezoid' and will be removed in SciPy 1.14.0
-  tr[i] = scipy.integrate.trapz(yi, xi)</code></pre>
+<div id="bad71f98" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(<span class="dv">2</span>, n_max, <span class="dv">1</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    tr[i] <span class="op">=</span> scipy.integrate.trapezoid(yi, xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="8ede10f7" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, tr)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span>I_exakt, color<span class="op">=</span><span class="st">'C3'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Integralwert'</span>)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="670efe59" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, tr)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span>I_exakt, color<span class="op">=</span><span class="st">'C3'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Integralwert'</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -754,16 +746,16 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="7f3072d2" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(tr<span class="op">-</span>I_exakt))</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c9db5382" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(tr<span class="op">-</span>I_exakt))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -777,37 +769,37 @@ window.Quarto = {
 <h3 data-number="34.3.2" class="anchored" data-anchor-id="simpsonregel"><span class="header-section-number">34.3.2</span> Simpsonregel</h3>
 <p>Die Verwendung eines Polynoms vom zweiten Grad führt zur Simpsonregel. Hierzu wird die Funktion an einem Zwischenwert, mittig im Teilintervall, ausgewertet und zusammen mit den Werten an den Stützstellen zur Bestimmung der Polynomkoeffizienten verwendet.</p>
 <p>Anhand des obigen Beispiels wird die Simpsonregel visuell demonstriert.</p>
-<div id="9d71eee2" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="545a24a2" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e1ad2125" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'Funktion'</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, label<span class="op">=</span><span class="st">'Stützstellen'</span>, c<span class="op">=</span><span class="st">'C3'</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung und Plotten der Polynome</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> xi[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> xi[i]</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    cx <span class="op">=</span> (xi[i] <span class="op">+</span> xi[i<span class="op">+</span><span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    cy <span class="op">=</span> fkt(cx)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    P <span class="op">=</span> np.polyfit([xi[i], cx, xi[i<span class="op">+</span><span class="dv">1</span>]], [yi[i], cy, yi[i<span class="op">+</span><span class="dv">1</span>]], <span class="dv">2</span>)</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    Px <span class="op">=</span> np.linspace(xi[i], xi[i<span class="op">+</span><span class="dv">1</span>], <span class="dv">20</span>)</span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    Py <span class="op">=</span> np.polyval(P, Px)</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="va">None</span></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>: </span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">'Approximation'</span></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    plt.plot(Px, Py, color<span class="op">=</span><span class="st">'C1'</span>, label<span class="op">=</span>label)</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>plt.vlines(xi, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span>yi, color<span class="op">=</span><span class="st">'C1'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>plt.legend()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b66e3fb4" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'Funktion'</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(xi, yi, label<span class="op">=</span><span class="st">'Stützstellen'</span>, c<span class="op">=</span><span class="st">'C3'</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmung und Plotten der Polynome</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> xi[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> xi[i]</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    cx <span class="op">=</span> (xi[i] <span class="op">+</span> xi[i<span class="op">+</span><span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    cy <span class="op">=</span> fkt(cx)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    P <span class="op">=</span> np.polyfit([xi[i], cx, xi[i<span class="op">+</span><span class="dv">1</span>]], [yi[i], cy, yi[i<span class="op">+</span><span class="dv">1</span>]], <span class="dv">2</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    Px <span class="op">=</span> np.linspace(xi[i], xi[i<span class="op">+</span><span class="dv">1</span>], <span class="dv">20</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    Py <span class="op">=</span> np.polyval(P, Px)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="va">None</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i<span class="op">==</span><span class="dv">0</span>: </span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">'Approximation'</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>    plt.plot(Px, Py, color<span class="op">=</span><span class="st">'C1'</span>, label<span class="op">=</span>label)</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>plt.vlines(xi, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span>yi, color<span class="op">=</span><span class="st">'C1'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>plt.legend()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -816,37 +808,162 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Die Simpsonregel ist bereits in der <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simps.html#scipy.integrate.simps">Funktion <code>scipy.integrate.simps</code></a> implementiert. Im Folgenden wird nur die Differenz zur Trapezregel demonstriert.</p>
-<div id="5eafe0d7" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(<span class="dv">3</span>, n_max, <span class="dv">2</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>si <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi)</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    si[i] <span class="op">=</span> scipy.integrate.simps(yi, xi)</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    tr[i] <span class="op">=</span> scipy.integrate.trapz(yi, xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Die Simpsonregel ist bereits in der <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html#scipy.integrate.simpson">Funktion <code>scipy.integrate.simpson</code></a> implementiert. Im Folgenden wird nur die Differenz zur Trapezregel demonstriert.</p>
+<div id="b9132d40" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(<span class="dv">3</span>, n_max, <span class="dv">2</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>si <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    xi <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, n)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    si[i] <span class="op">=</span> scipy.integrate.simpson(yi, xi)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    tr[i] <span class="op">=</span> scipy.integrate.trapezoid(yi, xi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_26426/1089908967.py:9: DeprecationWarning: 'scipy.integrate.simps' is deprecated in favour of 'scipy.integrate.simpson' and will be removed in SciPy 1.14.0
-  si[i] = scipy.integrate.simps(yi, xi)
-/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_26426/1089908967.py:10: DeprecationWarning: 'scipy.integrate.trapz' is deprecated in favour of 'scipy.integrate.trapezoid' and will be removed in SciPy 1.14.0
-  tr[i] = scipy.integrate.trapz(yi, xi)</code></pre>
+<pre><code>/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0. 1. 2.] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.  0.5 1.  1.5 2. ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.33333333 0.66666667 1.         1.33333333 1.66666667
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.   0.25 0.5  0.75 1.   1.25 1.5  1.75 2.  ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.  0.2 0.4 0.6 0.8 1.  1.2 1.4 1.6 1.8 2. ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.16666667 0.33333333 0.5        0.66666667 0.83333333
+ 1.         1.16666667 1.33333333 1.5        1.66666667 1.83333333
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.14285714 0.28571429 0.42857143 0.57142857 0.71428571
+ 0.85714286 1.         1.14285714 1.28571429 1.42857143 1.57142857
+ 1.71428571 1.85714286 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.    0.125 0.25  0.375 0.5   0.625 0.75  0.875 1.    1.125 1.25  1.375
+ 1.5   1.625 1.75  1.875 2.   ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.11111111 0.22222222 0.33333333 0.44444444 0.55555556
+ 0.66666667 0.77777778 0.88888889 1.         1.11111111 1.22222222
+ 1.33333333 1.44444444 1.55555556 1.66666667 1.77777778 1.88888889
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.  1.1 1.2 1.3 1.4 1.5 1.6 1.7
+ 1.8 1.9 2. ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.09090909 0.18181818 0.27272727 0.36363636 0.45454545
+ 0.54545455 0.63636364 0.72727273 0.81818182 0.90909091 1.
+ 1.09090909 1.18181818 1.27272727 1.36363636 1.45454545 1.54545455
+ 1.63636364 1.72727273 1.81818182 1.90909091 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.08333333 0.16666667 0.25       0.33333333 0.41666667
+ 0.5        0.58333333 0.66666667 0.75       0.83333333 0.91666667
+ 1.         1.08333333 1.16666667 1.25       1.33333333 1.41666667
+ 1.5        1.58333333 1.66666667 1.75       1.83333333 1.91666667
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.07692308 0.15384615 0.23076923 0.30769231 0.38461538
+ 0.46153846 0.53846154 0.61538462 0.69230769 0.76923077 0.84615385
+ 0.92307692 1.         1.07692308 1.15384615 1.23076923 1.30769231
+ 1.38461538 1.46153846 1.53846154 1.61538462 1.69230769 1.76923077
+ 1.84615385 1.92307692 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.07142857 0.14285714 0.21428571 0.28571429 0.35714286
+ 0.42857143 0.5        0.57142857 0.64285714 0.71428571 0.78571429
+ 0.85714286 0.92857143 1.         1.07142857 1.14285714 1.21428571
+ 1.28571429 1.35714286 1.42857143 1.5        1.57142857 1.64285714
+ 1.71428571 1.78571429 1.85714286 1.92857143 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.06666667 0.13333333 0.2        0.26666667 0.33333333
+ 0.4        0.46666667 0.53333333 0.6        0.66666667 0.73333333
+ 0.8        0.86666667 0.93333333 1.         1.06666667 1.13333333
+ 1.2        1.26666667 1.33333333 1.4        1.46666667 1.53333333
+ 1.6        1.66666667 1.73333333 1.8        1.86666667 1.93333333
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.     0.0625 0.125  0.1875 0.25   0.3125 0.375  0.4375 0.5    0.5625
+ 0.625  0.6875 0.75   0.8125 0.875  0.9375 1.     1.0625 1.125  1.1875
+ 1.25   1.3125 1.375  1.4375 1.5    1.5625 1.625  1.6875 1.75   1.8125
+ 1.875  1.9375 2.    ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.05882353 0.11764706 0.17647059 0.23529412 0.29411765
+ 0.35294118 0.41176471 0.47058824 0.52941176 0.58823529 0.64705882
+ 0.70588235 0.76470588 0.82352941 0.88235294 0.94117647 1.
+ 1.05882353 1.11764706 1.17647059 1.23529412 1.29411765 1.35294118
+ 1.41176471 1.47058824 1.52941176 1.58823529 1.64705882 1.70588235
+ 1.76470588 1.82352941 1.88235294 1.94117647 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.05555556 0.11111111 0.16666667 0.22222222 0.27777778
+ 0.33333333 0.38888889 0.44444444 0.5        0.55555556 0.61111111
+ 0.66666667 0.72222222 0.77777778 0.83333333 0.88888889 0.94444444
+ 1.         1.05555556 1.11111111 1.16666667 1.22222222 1.27777778
+ 1.33333333 1.38888889 1.44444444 1.5        1.55555556 1.61111111
+ 1.66666667 1.72222222 1.77777778 1.83333333 1.88888889 1.94444444
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.05263158 0.10526316 0.15789474 0.21052632 0.26315789
+ 0.31578947 0.36842105 0.42105263 0.47368421 0.52631579 0.57894737
+ 0.63157895 0.68421053 0.73684211 0.78947368 0.84210526 0.89473684
+ 0.94736842 1.         1.05263158 1.10526316 1.15789474 1.21052632
+ 1.26315789 1.31578947 1.36842105 1.42105263 1.47368421 1.52631579
+ 1.57894737 1.63157895 1.68421053 1.73684211 1.78947368 1.84210526
+ 1.89473684 1.94736842 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.   0.05 0.1  0.15 0.2  0.25 0.3  0.35 0.4  0.45 0.5  0.55 0.6  0.65
+ 0.7  0.75 0.8  0.85 0.9  0.95 1.   1.05 1.1  1.15 1.2  1.25 1.3  1.35
+ 1.4  1.45 1.5  1.55 1.6  1.65 1.7  1.75 1.8  1.85 1.9  1.95 2.  ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.04761905 0.0952381  0.14285714 0.19047619 0.23809524
+ 0.28571429 0.33333333 0.38095238 0.42857143 0.47619048 0.52380952
+ 0.57142857 0.61904762 0.66666667 0.71428571 0.76190476 0.80952381
+ 0.85714286 0.9047619  0.95238095 1.         1.04761905 1.0952381
+ 1.14285714 1.19047619 1.23809524 1.28571429 1.33333333 1.38095238
+ 1.42857143 1.47619048 1.52380952 1.57142857 1.61904762 1.66666667
+ 1.71428571 1.76190476 1.80952381 1.85714286 1.9047619  1.95238095
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.04545455 0.09090909 0.13636364 0.18181818 0.22727273
+ 0.27272727 0.31818182 0.36363636 0.40909091 0.45454545 0.5
+ 0.54545455 0.59090909 0.63636364 0.68181818 0.72727273 0.77272727
+ 0.81818182 0.86363636 0.90909091 0.95454545 1.         1.04545455
+ 1.09090909 1.13636364 1.18181818 1.22727273 1.27272727 1.31818182
+ 1.36363636 1.40909091 1.45454545 1.5        1.54545455 1.59090909
+ 1.63636364 1.68181818 1.72727273 1.77272727 1.81818182 1.86363636
+ 1.90909091 1.95454545 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.04347826 0.08695652 0.13043478 0.17391304 0.2173913
+ 0.26086957 0.30434783 0.34782609 0.39130435 0.43478261 0.47826087
+ 0.52173913 0.56521739 0.60869565 0.65217391 0.69565217 0.73913043
+ 0.7826087  0.82608696 0.86956522 0.91304348 0.95652174 1.
+ 1.04347826 1.08695652 1.13043478 1.17391304 1.2173913  1.26086957
+ 1.30434783 1.34782609 1.39130435 1.43478261 1.47826087 1.52173913
+ 1.56521739 1.60869565 1.65217391 1.69565217 1.73913043 1.7826087
+ 1.82608696 1.86956522 1.91304348 1.95652174 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)
+/var/folders/p_/ks3trxjx0jd839_g4g0vm4nc0000gn/T/ipykernel_39894/1922737122.py:9: DeprecationWarning: You are passing x=[0.         0.04166667 0.08333333 0.125      0.16666667 0.20833333
+ 0.25       0.29166667 0.33333333 0.375      0.41666667 0.45833333
+ 0.5        0.54166667 0.58333333 0.625      0.66666667 0.70833333
+ 0.75       0.79166667 0.83333333 0.875      0.91666667 0.95833333
+ 1.         1.04166667 1.08333333 1.125      1.16666667 1.20833333
+ 1.25       1.29166667 1.33333333 1.375      1.41666667 1.45833333
+ 1.5        1.54166667 1.58333333 1.625      1.66666667 1.70833333
+ 1.75       1.79166667 1.83333333 1.875      1.91666667 1.95833333
+ 2.        ] as a positional argument. Please change your invocation to use keyword arguments. From SciPy 1.14, passing these as positional arguments will result in an error.
+  si[i] = scipy.integrate.simpson(yi, xi)</code></pre>
 </div>
 </div>
-<div id="7b7c34e0" class="cell" data-tags="[]" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(tr<span class="op">-</span>I_exakt), label<span class="op">=</span><span class="st">'Trapezregel'</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(si<span class="op">-</span>I_exakt), label<span class="op">=</span><span class="st">'Simpsonregel'</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="74eb6af2" class="cell" data-tags="[]" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(tr<span class="op">-</span>I_exakt), label<span class="op">=</span><span class="st">'Trapezregel'</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(si<span class="op">-</span>I_exakt), label<span class="op">=</span><span class="st">'Simpsonregel'</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -863,50 +980,50 @@ window.Quarto = {
 <p>Für <span class="math inline">\(\mathsf{n \gg 1}\)</span> zufällige Stützstellen <span class="math inline">\(\mathsf{x_i \in [a, b]}\)</span> gilt folgende Näherung</p>
 <p><span class="math display">\[\mathsf{I = \int_a^b f(x)\ dx \approx \frac{b-a}{n}\sum_{i=1}^n f(x_i)} \]</span></p>
 <p>Für das Beispiel aus den vorhergehenden Kapiteln gilt</p>
-<div id="9478d52b" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten für die Visualisierung</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fkt(x)</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Exakte Lösung</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>I_exakt <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="32c3d171" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fkt(x):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(<span class="dv">3</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten für die Visualisierung</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fkt(x)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Exakte Lösung</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>I_exakt <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">2</span><span class="op">**</span><span class="dv">2</span>) <span class="op">-</span> (<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4e4e3d7a" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">2000</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>n <span class="op">*</span> np.<span class="bu">sum</span>(yi)</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Integralwert für </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> Stützstellen: </span><span class="sc">{</span>I<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7dbbc099" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">2000</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> fkt(xi)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>n <span class="op">*</span> np.<span class="bu">sum</span>(yi)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Integralwert für </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> Stützstellen: </span><span class="sc">{</span>I<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Integralwert für 2000 Stützstellen: 3.9867</code></pre>
+<pre><code>Integralwert für 2000 Stützstellen: 4.0532</code></pre>
 </div>
 </div>
-<div id="4a76e899" class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50000</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>dn <span class="op">=</span> <span class="dv">250</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(dn, n_max, dn, dtype<span class="op">=</span><span class="bu">int</span>)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.zeros(n_max)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    xi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi[:n])</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    mc[i] <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>n <span class="op">*</span> np.<span class="bu">sum</span>(yi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="53d56a56" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50000</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dn <span class="op">=</span> <span class="dv">250</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(dn, n_max, dn, dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.zeros(n_max)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    xi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>    yi <span class="op">=</span> fkt(xi[:n])</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    mc[i] <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">1</span><span class="op">/</span>n <span class="op">*</span> np.<span class="bu">sum</span>(yi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9ad35a67" class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(mc<span class="op">-</span>I_exakt))</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5ee9ccbb" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(mc<span class="op">-</span>I_exakt))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -918,44 +1035,44 @@ window.Quarto = {
 <p>Alternativ kann auch das Flächenverhältnis zwischen der zu integrierenden Funktion und einer Referenzfläche <span class="math inline">\(\mathsf{A_r}\)</span> gebildet werden. Hierzu werden <span class="math inline">\(\mathsf{n}\)</span> Zufallszahlenpaare <span class="math inline">\(\mathsf{(x_i, y_i)}\)</span> generiert und gezählt wieviele davon in der gesuchten Fläche liegen. Die Annahme ist, dass sich beide Verhältnisse für große <span class="math inline">\(\mathsf{n}\)</span> annähern. Im einfachsten Fall, wenn <span class="math inline">\(\mathsf{f(x) \ge 0}\)</span>, gilt folgende Abschätzung</p>
 <p><span class="math display">\[\mathsf {I \approx \frac{A_r \cdot \left|\left\{y_i \ |\  y_i &lt; f(x_i)\right\}\right|}{n}} \]</span></p>
 <p>Im obigen Beispiel kann die Fläche <span class="math inline">\(\mathsf{[0, 2] \times [0, 4] = 8}\)</span> als Referenzfläche verwendet werden.</p>
-<div id="c468a038" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">2000</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">4</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.<span class="bu">sum</span>(yi <span class="op">&lt;</span> fkt(xi))</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> z <span class="op">/</span> n <span class="op">*</span> <span class="dv">8</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Integralwert für </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> Stützstellen: </span><span class="sc">{</span>I<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="68707bba" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">2000</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> np.random.random(n) <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.<span class="bu">sum</span>(yi <span class="op">&lt;</span> fkt(xi))</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> z <span class="op">/</span> n <span class="op">*</span> <span class="dv">8</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Integralwert für </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> Stützstellen: </span><span class="sc">{</span>I<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Integralwert für 2000 Stützstellen: 3.94</code></pre>
+<pre><code>Integralwert für 2000 Stützstellen: 3.948</code></pre>
 </div>
 </div>
-<div id="09bb04c3" class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50000</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>dn <span class="op">=</span> <span class="dv">250</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(dn, n_max, dn, dtype<span class="op">=</span><span class="bu">int</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.zeros(n_max)</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> np.zeros(n_max)</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    xi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    yi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">4</span></span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> np.<span class="bu">sum</span>(yi[:n] <span class="op">&lt;</span> fkt(xi[:n]))</span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    mc[i] <span class="op">=</span> z <span class="op">/</span> n <span class="op">*</span> <span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1d82585f" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>n_max <span class="op">=</span> <span class="dv">50000</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>dn <span class="op">=</span> <span class="dv">250</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> np.arange(dn, n_max, dn, dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> np.zeros(<span class="bu">len</span>(ns))</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>xi <span class="op">=</span> np.zeros(n_max)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>yi <span class="op">=</span> np.zeros(n_max)</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, n <span class="kw">in</span> <span class="bu">enumerate</span>(ns):</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    xi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    yi[n<span class="op">-</span>dn:n] <span class="op">=</span> np.random.random(dn) <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> np.<span class="bu">sum</span>(yi[:n] <span class="op">&lt;</span> fkt(xi[:n]))</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    mc[i] <span class="op">=</span> z <span class="op">/</span> n <span class="op">*</span> <span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a0e57601" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(mc<span class="op">-</span>I_exakt))</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="afaf464b" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.plot(ns, np.<span class="bu">abs</span>(mc<span class="op">-</span>I_exakt))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Anzahl der Stützstellen n'</span>)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Differenz zum exakten Wert'</span>)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xscale('log')</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>plt.yscale(<span class="st">'log'</span>)</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

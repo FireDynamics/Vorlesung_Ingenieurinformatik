@@ -547,18 +547,18 @@ window.Quarto = {
 <p>Die Kompexität dieses Verfahrens kann leicht abgeschätzt werden. Bei jedem Durchlauf wir das Minimum / Maximum gesucht, was anfangs <span class="math inline">\(\mathsf n\)</span> Operationen benötigt. Beim nächsten Durchlauf sind es nur noch <span class="math inline">\(\mathsf n − 1\)</span> Operationen und so weiter. In der Summe sind es also</p>
 <p><span class="math display">\[ \mathsf f(n) = \sum_{i=0}^n i = \frac{n(n-1)}{2} \approx \mathcal{O}(n^2) \]</span></p>
 <p>Damit hat der Selectionsort eine Komplexität von <span class="math inline">\(\mathcal{O}(n^2)\)</span>. Die folgende Abbildung verdeutlicht dies nochmals.</p>
-<div id="1d7b22de" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
+<div id="457498de" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;jupyter&quot;,&quot;value&quot;:{&quot;outputs_hidden&quot;:true,&quot;source_hidden&quot;:true}}" data-tags="[&quot;remove_cell&quot;]" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 41.928
-20 180.727
-30 419.485
-40 756.621
-50 1194.116
-60 1730.421
-70 2368.934
-80 3102.49
-90 3940.435
-100 4875.626</code></pre>
+<pre><code>10 41.989
+20 180.766
+30 419.547
+40 757.118
+50 1193.255
+60 1732.344
+70 2365.573
+80 3104.131
+90 3941.413
+100 4881.544</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -577,18 +577,18 @@ window.Quarto = {
 <li>average case: <span class="math inline">\(\mathcal{O} (n^2)\)</span></li>
 </ul>
 <p>Der best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes <span class="math inline">\(\mathsf n\)</span> jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.</p>
-<div id="069d60ba" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
+<div id="89baeecd" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 42.0008
-20 180.9861
-30 418.9104
-40 756.6006
-50 1194.3014
-60 1732.2399
-70 2368.3167
-80 3104.1945
-90 3941.7008
-100 4877.9209</code></pre>
+<pre><code>10 42.0579
+20 181.0355
+30 419.407
+40 756.5538
+50 1194.3781
+60 1732.2329
+70 2368.4465
+80 3105.4017
+90 3941.7954
+100 4878.1801</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -597,18 +597,18 @@ window.Quarto = {
 <figcaption>Abschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung</figcaption>
 </figure>
 </div>
-<div id="e1f8b296" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
+<div id="d6a27956" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
-<pre><code>10 30.1466
-20 126.1403
-30 301.87
-40 544.1495
-50 907.3181
-60 1309.2982
-70 1862.7993
-80 2438.3483
-90 3198.3215
-100 3958.6333</code></pre>
+<pre><code>10 30.1403
+20 126.7865
+30 303.873
+40 543.9807
+50 907.6736
+60 1316.7905
+70 1860.8113
+80 2447.6622
+90 3206.3051
+100 3969.7775</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
